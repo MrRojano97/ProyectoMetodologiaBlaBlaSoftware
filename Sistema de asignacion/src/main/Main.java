@@ -13,10 +13,10 @@ import java.util.ArrayList;
  */
 public class Main {
     static ArrayList<Semestre> semestres=new ArrayList<>();
-    static ArrayList<Carrera> carreras=new ArrayList<>();
-    static ArrayList<Sala> salas=new ArrayList<>();;
-    static ArrayList<Profesor> profesores=new ArrayList<>();;
-    static ArrayList<Horario> horarios=new ArrayList<>();;
+    static ArrayList<Carrera> carrerasQueSeImparten=new ArrayList<>();
+    static ArrayList<Sala> salasDisponibles=new ArrayList<>();;
+    static ArrayList<Profesor> profesoresContratados=new ArrayList<>();;
+    static ArrayList<Horario> horariosDisponibles=new ArrayList<>();;
     static ArrayList<Curso> cursos=new ArrayList<>();;//cursos de la carrera
     static Carrera carrera;
     static Curso curso;

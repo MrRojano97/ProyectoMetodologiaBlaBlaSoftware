@@ -12,10 +12,12 @@ import java.util.ArrayList;
  * @author Javiera
  */
 public class Semestre {
-    static ArrayList<Carrera> carrerasDictadas=new ArrayList<>();
-    static ArrayList<Sala> salasUtilizadas=new ArrayList<>();;
-    static ArrayList<Profesor> profesoresContratados=new ArrayList<>();;
-    static ArrayList<Horario> horarios=new ArrayList<>();;
-    static ArrayList<Curso> cursos=new ArrayList<>();;//cursos de la carrera
+    static ArrayList<Carrera> carrerasImpartidasEnSemestre=new ArrayList<>();
+    static ArrayList<Sala> salasUtilizadasEnSemestre=new ArrayList<>();;
+    static ArrayList<Profesor> profesoresContratadosEnSemestre=new ArrayList<>();;
+    static ArrayList<Horario> horariosSemanal=new ArrayList<>();;
+    static ArrayList<Curso> cursosImprtidos=new ArrayList<>();;//cursos de la carrera
+    
+    
     
 }
