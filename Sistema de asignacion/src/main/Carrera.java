@@ -5,10 +5,25 @@
  */
 package main;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Javiera
  */
 public class Carrera {
+    String nombre;//nombre de la carrera
+    ArrayList<Curso> cursos=new ArrayList<>();;//cursos de la carrera
+    
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public void addCurso(Curso curso){
+        cursos.add(curso);
+    }
     
 }

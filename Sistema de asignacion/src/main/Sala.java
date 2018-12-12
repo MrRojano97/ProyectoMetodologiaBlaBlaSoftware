@@ -5,10 +5,23 @@
  */
 package main;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Javiera
  */
 public class Sala {
-    
+    String numero;
+    ArrayList <Curso> cursosEnLaSala=new ArrayList<>();
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+    public void addCurso(Curso curso){
+        this.cursosEnLaSala.add(curso);
+    }
 }
