@@ -29,5 +29,36 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
     }
+     public static void addCurso(String nombre){
+        curso=new Curso();
+        curso.setNombre(nombre);
+        cursos.add(curso);
+    }
+    // Sala  //
+    public static void addSala(String numero){
+        sala=new Sala();
+        sala.setNumero(numero);
+        salas.add(sala);
+    }
+    // PROFESOR //
+     public static void addProfesor(String nombre){
+        profesor=new Profesor();
+        profesor.setNombre(nombre);
+        profesores.add(profesor);
+    }
+
+     // Carrera //
+     public static void addCarrera(String nombre){
+        carrera=new Carrera();
+        carrera.setNombre(nombre);
+        carreras.add(carrera);
+    }
+    // Horario //
+    public static void addHorario(int h_inicio,int m_inicio, int h_termino, int m_termino){
+        horario=new Horario();
+        horario.setHoraInicio(h_inicio, m_inicio);
+        horario.setHoraTermino(h_termino, m_termino);
+        horarios.add(horario);
+    }
     
 }
