@@ -23,6 +23,6 @@ public class Sala {
     }
     //Agrega un curso al horario
     public void addCurso(Curso curso ){
-        this.planificacionSemanal.
+        
     }
 }
