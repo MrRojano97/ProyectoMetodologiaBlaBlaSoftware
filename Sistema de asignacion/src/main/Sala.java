@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Sala {
     String numero;
-    ArrayList <Curso> cursosEnLaSala=new ArrayList<>();
+    Horario planificacionSemanal;
     public String getNumero() {
         return numero;
     }
@@ -21,7 +21,8 @@ public class Sala {
     public void setNumero(String numero) {
         this.numero = numero;
     }
-    public void addCurso(Curso curso){
-        this.cursosEnLaSala.add(curso);
+    //Agrega un curso al horario
+    public void addCurso(Curso curso ){
+        this.planificacionSemanal.
     }
 }
