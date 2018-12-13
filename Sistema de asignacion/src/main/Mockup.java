@@ -5,6 +5,12 @@
  */
 package main;
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Hugo
@@ -16,8 +22,9 @@ public class Mockup extends javax.swing.JFrame {
      */
     public Mockup() {
         initComponents();
+        //carreraWindows();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -90,7 +97,7 @@ public class Mockup extends javax.swing.JFrame {
             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(59, 59, 59)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -361,10 +368,54 @@ public class Mockup extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-
+        
+        this.crearCarrera = new javax.swing.JFrame();
+        this.crearCarrera.setTitle("Crear carrera");
+        this.crearCarrera.setPreferredSize(new Dimension (400, 600));
+        this.crearCarrera.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.crearCarrera.setLayout(new BorderLayout());
+        this.crearCarrera.setResizable(true);
+        this.jPanel5 = new javax.swing.JPanel();
+        this.jPanel5.setPreferredSize(new Dimension(600, 600)); 
+        this.jPanel5.setBackground(new java.awt.Color(51, 0, 0));
+        this.jPanel5.setOpaque(true);
+        this.jButton7 = new JButton();
+        this.crearCarrera.getContentPane().add(this.jPanel5, BorderLayout.CENTER);
+        
+        this.jTextField1 = new JTextField(16);
+        this.jTextField1.setText("Ingrese nombre carrera");
+        this.jPanel5.add(jTextField1);
+        
+        this.jTextField2 = new JTextField(16);
+        this.jTextField2.setText("Ingrese numero de creditos");
+        this.jPanel5.add(jTextField2);
+        
+        this.jTextField3 = new JTextField(16);
+        this.jTextField3.setText("Ingrese cupo de alumnos");
+        this.jPanel5.add(jTextField3);
+        
+        
+        jButton7.setBackground(new java.awt.Color(102, 0, 0));
+        jButton7.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jButton7.setText("Aceptar");
+        jButton7.setPreferredSize(new Dimension(200, 50));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        this.jPanel5.add(jButton7);
+        
+        this.crearCarrera.setVisible(false);
+        this.crearCarrera.pack();
+        this.crearCarrera.repaint();
+        
         pack();
+        
     }// </editor-fold>//GEN-END:initComponents
-
+  
+    
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -408,12 +459,14 @@ public class Mockup extends javax.swing.JFrame {
     private javax.swing.JFrame crearCuso;
     private javax.swing.JFrame crearProfesor;
     private javax.swing.JFrame crearSala;
+    private javax.swing.JFrame crearCarrera;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -430,6 +483,7 @@ public class Mockup extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -442,5 +496,10 @@ public class Mockup extends javax.swing.JFrame {
     private javax.swing.JTextPane jTextPane4;
     private javax.swing.JTextPane jTextPane5;
     private javax.swing.JTextPane jTextPane6;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+ 
+    
     // End of variables declaration//GEN-END:variables
 }
