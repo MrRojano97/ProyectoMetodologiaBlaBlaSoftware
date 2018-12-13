@@ -36,9 +36,16 @@ public class Main {
     }
     // Sala  //
     public static void addSala(String numero){
-        sala=new Sala();
-        sala.setNumero(numero);
+        sala=new Sala(numero);
         salasDisponibles.add(sala);
+    }
+    public static void delSala(String numero){
+        for(int i=0;i< salasDisponibles.size();i++){
+            if(salasDisponibles.get(i).getNumero().equals(numero)){
+                salasDisponibles.remove(i);
+                i= salasDisponibles.size();
+            }
+        }
     }
     // PROFESOR //
      public static void addProfesor(String nombre){

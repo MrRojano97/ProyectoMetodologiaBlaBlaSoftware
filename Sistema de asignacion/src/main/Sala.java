@@ -23,9 +23,8 @@ public class Sala {
         this.planificacionSemanal = planificacionSemanal;
     }
 
-    public Sala(String numero, Horario planificacionSemanal) {
+    public Sala(String numero) {
         this.numero = numero;
-        this.planificacionSemanal = planificacionSemanal;
     }
     
     public String getNumero() {
