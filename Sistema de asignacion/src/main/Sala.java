@@ -5,10 +5,37 @@
  */
 package main;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Javiera
  */
 public class Sala {
+    String numero;
+    Horario planificacionSemanal;
+
+    public Horario getPlanificacionSemanal() {
+        return planificacionSemanal;
+    }
+
+    public void setPlanificacionSemanal(Horario planificacionSemanal) {
+        this.planificacionSemanal = planificacionSemanal;
+    }
+
+    public Sala(String numero) {
+        this.numero = numero;
+    }
     
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+    //Agrega un curso al horario
+    public void addCurso(Curso curso ){
+        
+    }
 }

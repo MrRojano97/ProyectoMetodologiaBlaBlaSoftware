@@ -5,10 +5,24 @@
  */
 package main;
 
+import java.time.LocalTime;
+import java.util.ArrayList;
+
 /**
  *
  * @author Javiera
  */
 public class Horario {
+    ArrayList< ArrayList<Bloque>> horarioSemanal = new ArrayList< ArrayList<Bloque>>();
+    ArrayList<Bloque> diaDeLaSemana=    new ArrayList<>();
+    
+    public void crearSemana(){
+        
+                
+    }
+    public void addBloque(){
+    
+    
+    }
     
 }

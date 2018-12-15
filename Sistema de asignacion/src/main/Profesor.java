@@ -10,5 +10,12 @@ package main;
  * @author Javiera
  */
 public class Profesor {
-    
+    String nombre;
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 }
