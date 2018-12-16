@@ -35,10 +35,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
         background2 = new javax.swing.JPanel();
         bannerAd1 = new javax.swing.JLabel();
         botonAd0Atras = new javax.swing.JButton();
-        crearSala = new javax.swing.JButton();
-        ingresarProfesor = new javax.swing.JButton();
-        crearCurso = new javax.swing.JButton();
-        crearCarrera = new javax.swing.JButton();
+        botonCS = new javax.swing.JButton();
+        botonIP = new javax.swing.JButton();
+        botonCCu = new javax.swing.JButton();
+        botonCCa = new javax.swing.JButton();
         alumno0 = new javax.swing.JFrame();
         background3 = new javax.swing.JPanel();
         bannerAl1 = new javax.swing.JLabel();
@@ -157,47 +157,47 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         });
 
-        crearSala.setBackground(new java.awt.Color(208, 22, 22));
-        crearSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        crearSala.setText("Crear sala");
-        crearSala.setToolTipText("");
-        crearSala.setActionCommand("crearSala");
-        crearSala.addActionListener(new java.awt.event.ActionListener() {
+        botonCS.setBackground(new java.awt.Color(208, 22, 22));
+        botonCS.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        botonCS.setText("Crear sala");
+        botonCS.setToolTipText("");
+        botonCS.setActionCommand("crearSala");
+        botonCS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                crearSalaActionPerformed(evt);
+                botonCSActionPerformed(evt);
             }
         });
 
-        ingresarProfesor.setBackground(new java.awt.Color(208, 22, 22));
-        ingresarProfesor.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        ingresarProfesor.setText("Ingresar profesor");
-        ingresarProfesor.setToolTipText("");
-        ingresarProfesor.setActionCommand("crearSala");
-        ingresarProfesor.addActionListener(new java.awt.event.ActionListener() {
+        botonIP.setBackground(new java.awt.Color(208, 22, 22));
+        botonIP.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        botonIP.setText("Ingresar profesor");
+        botonIP.setToolTipText("");
+        botonIP.setActionCommand("crearSala");
+        botonIP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ingresarProfesorActionPerformed(evt);
+                botonIPActionPerformed(evt);
             }
         });
 
-        crearCurso.setBackground(new java.awt.Color(208, 22, 22));
-        crearCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        crearCurso.setText("Crear curso");
-        crearCurso.setToolTipText("");
-        crearCurso.setActionCommand("crearSala");
-        crearCurso.addActionListener(new java.awt.event.ActionListener() {
+        botonCCu.setBackground(new java.awt.Color(208, 22, 22));
+        botonCCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        botonCCu.setText("Crear curso");
+        botonCCu.setToolTipText("");
+        botonCCu.setActionCommand("crearSala");
+        botonCCu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                crearCursoActionPerformed(evt);
+                botonCCuActionPerformed(evt);
             }
         });
 
-        crearCarrera.setBackground(new java.awt.Color(208, 22, 22));
-        crearCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        crearCarrera.setText("Crear carrera");
-        crearCarrera.setToolTipText("");
-        crearCarrera.setActionCommand("crearSala");
-        crearCarrera.addActionListener(new java.awt.event.ActionListener() {
+        botonCCa.setBackground(new java.awt.Color(208, 22, 22));
+        botonCCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        botonCCa.setText("Crear carrera");
+        botonCCa.setToolTipText("");
+        botonCCa.setActionCommand("crearSala");
+        botonCCa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                crearCarreraActionPerformed(evt);
+                botonCCaActionPerformed(evt);
             }
         });
 
@@ -213,10 +213,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(background2Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ingresarProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(crearSala, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(crearCurso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(crearCarrera, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(botonIP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonCS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonCCu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonCCa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         background2Layout.setVerticalGroup(
@@ -224,13 +224,13 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(background2Layout.createSequentialGroup()
                 .addComponent(bannerAd1)
                 .addGap(48, 48, 48)
-                .addComponent(crearSala, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonCS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ingresarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonIP, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(crearCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonCCu, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(crearCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addComponent(botonAd0Atras, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -302,7 +302,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         adminCrearSala.setSize(new java.awt.Dimension(720, 512));
 
         background4.setBackground(new java.awt.Color(236, 236, 236));
-        background4.setMinimumSize(new java.awt.Dimension(720, 512));
+        background4.setMinimumSize(new java.awt.Dimension(0, 0));
 
         bannerAdminCS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-cs1.jpg"))); // NOI18N
 
@@ -395,9 +395,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
         adminCrearProfesor.setSize(new java.awt.Dimension(720, 512));
 
         background5.setBackground(new java.awt.Color(236, 236, 236));
-        background5.setMinimumSize(new java.awt.Dimension(720, 512));
+        background5.setMinimumSize(new java.awt.Dimension(0, 0));
         background5.setPreferredSize(new java.awt.Dimension(720, 512));
-        background5.setRequestFocusEnabled(false);
 
         bannerAdminIP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-ip1.jpg"))); // NOI18N
         bannerAdminIP.setToolTipText("");
@@ -485,11 +484,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         adminCrearCurso.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         adminCrearCurso.setTitle("Administrador: Crear Curso");
-        adminCrearCurso.setMinimumSize(new java.awt.Dimension(720, 512));
         adminCrearCurso.setResizable(false);
 
         background6.setBackground(new java.awt.Color(236, 236, 236));
-        background6.setMinimumSize(new java.awt.Dimension(720, 512));
+        background6.setMinimumSize(new java.awt.Dimension(0, 0));
+        background6.setPreferredSize(new java.awt.Dimension(720, 512));
 
         bannerAdminCCu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-cc1.jpg"))); // NOI18N
 
@@ -640,12 +639,13 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         adminCrearCarrera.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         adminCrearCarrera.setTitle("Administrador: Crear Carrera");
-        adminCrearCarrera.setMinimumSize(new java.awt.Dimension(726, 512));
+        adminCrearCarrera.setPreferredSize(new java.awt.Dimension(720, 512));
         adminCrearCarrera.setResizable(false);
 
         background7.setBackground(new java.awt.Color(236, 236, 236));
-        background7.setMinimumSize(new java.awt.Dimension(726, 512));
+        background7.setMinimumSize(new java.awt.Dimension(0, 0));
         background7.setName(""); // NOI18N
+        background7.setPreferredSize(new java.awt.Dimension(720, 512));
 
         bannerAdminCCa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-cca1.jpg"))); // NOI18N
 
@@ -698,31 +698,26 @@ public class InterfazGrafica extends javax.swing.JFrame {
         background7Layout.setHorizontalGroup(
             background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background7Layout.createSequentialGroup()
-                .addComponent(bannerAdminCCa)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(background7Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(background7Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(background7Layout.createSequentialGroup()
-                                .addComponent(botonAceptCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(botonCancelCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(background7Layout.createSequentialGroup()
-                                .addComponent(numCreditos)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(valorCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background7Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(valorNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addComponent(botonAceptCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(botonCancelCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(numCreditos))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background7Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(valorCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, 447, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(valorNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, 447, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31))
+            .addComponent(bannerAdminCCa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(background7Layout.createSequentialGroup()
                     .addGap(22, 22, 22)
                     .addComponent(nombreCa)
-                    .addContainerGap(530, Short.MAX_VALUE)))
+                    .addContainerGap(536, Short.MAX_VALUE)))
         );
         background7Layout.setVerticalGroup(
             background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -750,7 +745,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         adminCrearCarrera.getContentPane().setLayout(adminCrearCarreraLayout);
         adminCrearCarreraLayout.setHorizontalGroup(
             adminCrearCarreraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(background7, javax.swing.GroupLayout.DEFAULT_SIZE, 720, Short.MAX_VALUE)
         );
         adminCrearCarreraLayout.setVerticalGroup(
             adminCrearCarreraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -901,15 +896,17 @@ public class InterfazGrafica extends javax.swing.JFrame {
         this.adminCrearSala.setVisible(false);
     }//GEN-LAST:event_botonCancelCSActionPerformed
 
-    private void crearSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearSalaActionPerformed
-        this.administrador0.setVisible(false);
+    private void botonCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCSActionPerformed
+        this.adminCrearSala.pack();
         this.adminCrearSala.setVisible(true);
-    }//GEN-LAST:event_crearSalaActionPerformed
-
-    private void ingresarProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ingresarProfesorActionPerformed
         this.administrador0.setVisible(false);
+    }//GEN-LAST:event_botonCSActionPerformed
+
+    private void botonIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIPActionPerformed
+        this.adminCrearProfesor.pack();
         this.adminCrearProfesor.setVisible(true);
-    }//GEN-LAST:event_ingresarProfesorActionPerformed
+        this.administrador0.setVisible(false);        
+    }//GEN-LAST:event_botonIPActionPerformed
 
     private void botonAceptIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptIPActionPerformed
         this.administrador0.setVisible(true);
@@ -939,10 +936,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
         this.administrador0.setVisible(true);
     }//GEN-LAST:event_botonAcepCCuActionPerformed
 
-    private void crearCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearCursoActionPerformed
+    private void botonCCuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCCuActionPerformed
+        this.adminCrearCurso.pack();
         this.adminCrearCurso.setVisible(true);
         this.administrador0.setVisible(false);
-    }//GEN-LAST:event_crearCursoActionPerformed
+    }//GEN-LAST:event_botonCCuActionPerformed
 
     private void valorCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorCreditosActionPerformed
         // TODO add your handling code here:
@@ -962,10 +960,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
         this.administrador0.setVisible(true);
     }//GEN-LAST:event_botonCancelCCaActionPerformed
 
-    private void crearCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearCarreraActionPerformed
+    private void botonCCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCCaActionPerformed
+        this.adminCrearCarrera.pack();
         this.adminCrearCarrera.setVisible(true);
         this.administrador0.setVisible(false);
-    }//GEN-LAST:event_crearCarreraActionPerformed
+    }//GEN-LAST:event_botonCCaActionPerformed
   
     
     
@@ -1008,18 +1007,18 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JButton botonAdmin;
     private javax.swing.JButton botonAl0Atras;
     private javax.swing.JButton botonAlumno;
+    private javax.swing.JButton botonCCa;
+    private javax.swing.JButton botonCCu;
+    private javax.swing.JButton botonCS;
     private javax.swing.JButton botonCancelCCa;
     private javax.swing.JButton botonCancelCCu;
     private javax.swing.JButton botonCancelCS;
     private javax.swing.JButton botonCancelIP;
+    private javax.swing.JButton botonIP;
     private javax.swing.JButton botonPr0Atras;
     private javax.swing.JButton botonProfe;
-    private javax.swing.JButton crearCarrera;
-    private javax.swing.JButton crearCurso;
-    private javax.swing.JButton crearSala;
     private javax.swing.JLabel horario;
     private javax.swing.JLabel ingComo;
-    private javax.swing.JButton ingresarProfesor;
     private javax.swing.JLabel logoUniversidad;
     private javax.swing.JLabel nombreCa;
     private javax.swing.JLabel nombreCu;
