@@ -38,6 +38,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         crearSala = new javax.swing.JButton();
         ingresarProfesor = new javax.swing.JButton();
         crearCurso = new javax.swing.JButton();
+        crearCarrera = new javax.swing.JButton();
         alumno0 = new javax.swing.JFrame();
         background3 = new javax.swing.JPanel();
         bannerAl1 = new javax.swing.JLabel();
@@ -71,6 +72,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
         adminCrearCarrera = new javax.swing.JFrame();
         background7 = new javax.swing.JPanel();
         bannerAdminCCa = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        JTextFieldnúmeroDeCreditos = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        JTextFieldnombreCarrera1 = new javax.swing.JTextField();
+        aceptarCrearCarrera = new javax.swing.JButton();
+        cancelarCrearCarrera = new javax.swing.JButton();
         background = new javax.swing.JPanel();
         banner = new javax.swing.JLabel();
         ingComo = new javax.swing.JLabel();
@@ -183,6 +190,17 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         });
 
+        crearCarrera.setBackground(new java.awt.Color(208, 22, 22));
+        crearCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        crearCarrera.setText("Crear carrera");
+        crearCarrera.setToolTipText("");
+        crearCarrera.setActionCommand("crearSala");
+        crearCarrera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                crearCarreraActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout background2Layout = new javax.swing.GroupLayout(background2);
         background2.setLayout(background2Layout);
         background2Layout.setHorizontalGroup(
@@ -197,7 +215,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(ingresarProfesor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(crearSala, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(crearCurso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(crearCurso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(crearCarrera, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         background2Layout.setVerticalGroup(
@@ -210,7 +229,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addComponent(ingresarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(crearCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(crearCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addComponent(botonAd0Atras, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -370,7 +391,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         adminCrearProfesor.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         adminCrearProfesor.setTitle("Administrador: Crear Profesor");
-        adminCrearProfesor.setPreferredSize(new java.awt.Dimension(720, 512));
         adminCrearProfesor.setResizable(false);
         adminCrearProfesor.setSize(new java.awt.Dimension(720, 512));
 
@@ -616,11 +636,56 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         adminCrearCarrera.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         adminCrearCarrera.setTitle("Administrador: Crear Carrera");
+        adminCrearCarrera.setMinimumSize(new java.awt.Dimension(726, 512));
         adminCrearCarrera.setResizable(false);
 
         background7.setBackground(new java.awt.Color(236, 236, 236));
+        background7.setMinimumSize(new java.awt.Dimension(726, 512));
+        background7.setName(""); // NOI18N
 
         bannerAdminCCa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-cca1.jpg"))); // NOI18N
+
+        jLabel6.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        jLabel6.setText("Número de creditos");
+
+        JTextFieldnúmeroDeCreditos.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        JTextFieldnúmeroDeCreditos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTextFieldnúmeroDeCreditosActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        jLabel7.setText("Nombre carrera");
+
+        JTextFieldnombreCarrera1.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        JTextFieldnombreCarrera1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JTextFieldnombreCarrera1ActionPerformed(evt);
+            }
+        });
+
+        aceptarCrearCarrera.setBackground(new java.awt.Color(208, 22, 22));
+        aceptarCrearCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        aceptarCrearCarrera.setText("Aceptar");
+        aceptarCrearCarrera.setToolTipText("");
+        aceptarCrearCarrera.setActionCommand("aceptarIngresarProfesor");
+        aceptarCrearCarrera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aceptarCrearCarreraActionPerformed(evt);
+            }
+        });
+
+        cancelarCrearCarrera.setBackground(new java.awt.Color(208, 22, 22));
+        cancelarCrearCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        cancelarCrearCarrera.setText("Cancelar");
+        cancelarCrearCarrera.setToolTipText("");
+        cancelarCrearCarrera.setActionCommand("cancelarIngresarProfesor");
+        cancelarCrearCarrera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelarCrearCarreraActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout background7Layout = new javax.swing.GroupLayout(background7);
         background7.setLayout(background7Layout);
@@ -629,12 +694,50 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(background7Layout.createSequentialGroup()
                 .addComponent(bannerAdminCCa)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(background7Layout.createSequentialGroup()
+                .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(background7Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(background7Layout.createSequentialGroup()
+                                .addComponent(aceptarCrearCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(cancelarCrearCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(background7Layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(JTextFieldnúmeroDeCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background7Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(JTextFieldnombreCarrera1, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+            .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(background7Layout.createSequentialGroup()
+                    .addGap(22, 22, 22)
+                    .addComponent(jLabel7)
+                    .addContainerGap(530, Short.MAX_VALUE)))
         );
         background7Layout.setVerticalGroup(
             background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background7Layout.createSequentialGroup()
                 .addComponent(bannerAdminCCa)
-                .addGap(0, 384, Short.MAX_VALUE))
+                .addGap(19, 19, 19)
+                .addComponent(JTextFieldnombreCarrera1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(JTextFieldnúmeroDeCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE)
+                .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(aceptarCrearCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cancelarCrearCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23))
+            .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(background7Layout.createSequentialGroup()
+                    .addGap(152, 152, 152)
+                    .addComponent(jLabel7)
+                    .addContainerGap(332, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout adminCrearCarreraLayout = new javax.swing.GroupLayout(adminCrearCarrera.getContentPane());
@@ -834,6 +937,29 @@ public class InterfazGrafica extends javax.swing.JFrame {
         this.adminCrearCurso.setVisible(true);
         this.administrador0.setVisible(false);
     }//GEN-LAST:event_crearCursoActionPerformed
+
+    private void JTextFieldnúmeroDeCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTextFieldnúmeroDeCreditosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTextFieldnúmeroDeCreditosActionPerformed
+
+    private void JTextFieldnombreCarrera1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTextFieldnombreCarrera1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JTextFieldnombreCarrera1ActionPerformed
+
+    private void aceptarCrearCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarCrearCarreraActionPerformed
+        this.adminCrearCarrera.setVisible(false);
+        this.administrador0.setVisible(true);
+    }//GEN-LAST:event_aceptarCrearCarreraActionPerformed
+
+    private void cancelarCrearCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarCrearCarreraActionPerformed
+        this.adminCrearCarrera.setVisible(false);
+        this.administrador0.setVisible(true);
+    }//GEN-LAST:event_cancelarCrearCarreraActionPerformed
+
+    private void crearCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearCarreraActionPerformed
+        this.adminCrearCarrera.setVisible(true);
+        this.administrador0.setVisible(false);
+    }//GEN-LAST:event_crearCarreraActionPerformed
   
     
     
@@ -844,6 +970,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField JTextFieldnombreCarrera1;
+    private javax.swing.JTextField JTextFieldnúmeroDeCreditos;
+    private javax.swing.JButton aceptarCrearCarrera;
     private javax.swing.JButton aceptarCrearCurso;
     private javax.swing.JButton aceptarCrearSala;
     private javax.swing.JButton aceptarIngresarProfesor;
@@ -875,9 +1004,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JButton botonAlumno;
     private javax.swing.JButton botonPr0Atras;
     private javax.swing.JButton botonProfe;
+    private javax.swing.JButton cancelarCrearCarrera;
     private javax.swing.JButton cancelarCrearCurso;
     private javax.swing.JButton cancelarCrearSala;
     private javax.swing.JButton cancelarIngresarProfesor1;
+    private javax.swing.JButton crearCarrera;
     private javax.swing.JButton crearCurso;
     private javax.swing.JButton crearSala;
     private javax.swing.JLabel ingComo;
@@ -887,6 +1018,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
