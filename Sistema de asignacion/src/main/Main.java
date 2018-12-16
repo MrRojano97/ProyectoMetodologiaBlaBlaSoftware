@@ -36,6 +36,13 @@ public class Main {
         sala1.planificacionSemanal=horario1;
         System.out.println("Numero sala1: "+sala1.numero);
         
+        //MODIFICACION DE SALA A MODO DE PRUEBA (Se modifica el numero y su planificacion)
+        sala1.setNumero("5");
+        Horario horario2=new Horario();
+        horario2.crearSemana();
+        sala1.planificacionSemanal=horario2;
+        
+        
     }
      public static void addCurso(String nombre){
         curso=new Curso();
