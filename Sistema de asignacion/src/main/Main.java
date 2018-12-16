@@ -42,6 +42,11 @@ public class Main {
         horario2.crearSemana();
         sala1.planificacionSemanal=horario2;
         
+        salasDisponibles.add(sala1);
+        
+        //ELIMINACION DE SALA (al ser la unica tiene indice 0)
+        salasDisponibles.remove(0);
+        
         
     }
      public static void addCurso(String nombre){
