@@ -46,38 +46,38 @@ public class InterfazGrafica extends javax.swing.JFrame {
         adminCrearSala = new javax.swing.JFrame();
         background4 = new javax.swing.JPanel();
         bannerAdminCS = new javax.swing.JLabel();
-        textFieldNombreSala = new javax.swing.JTextField();
-        aceptarCrearSala = new javax.swing.JButton();
-        cancelarCrearSala = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        nombreS = new javax.swing.JLabel();
+        valorNombreSala = new javax.swing.JTextField();
+        botonAceptCS = new javax.swing.JButton();
+        botonCancelCS = new javax.swing.JButton();
         adminCrearProfesor = new javax.swing.JFrame();
         background5 = new javax.swing.JPanel();
         bannerAdminIP = new javax.swing.JLabel();
-        aceptarIngresarProfesor = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        textFieldNombreProfesor = new javax.swing.JTextField();
-        cancelarIngresarProfesor1 = new javax.swing.JButton();
+        nombreP = new javax.swing.JLabel();
+        valorNombreProfe = new javax.swing.JTextField();
+        botonAceptIP = new javax.swing.JButton();
+        botonCancelIP = new javax.swing.JButton();
         adminCrearCurso = new javax.swing.JFrame();
         background6 = new javax.swing.JPanel();
         bannerAdminCCu = new javax.swing.JLabel();
-        cancelarCrearCurso = new javax.swing.JButton();
-        textFieldNombreCurso = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        aceptarCrearCurso = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jLabel5 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        nombreCu = new javax.swing.JLabel();
+        valorNombreCu = new javax.swing.JTextField();
+        anual = new javax.swing.JLabel();
+        boolAnual = new javax.swing.JRadioButton();
+        horario = new javax.swing.JLabel();
+        scrollHorario = new javax.swing.JScrollPane();
+        tablaValorHorario = new javax.swing.JTable();
+        botonAcepCCu = new javax.swing.JButton();
+        botonCancelCCu = new javax.swing.JButton();
         adminCrearCarrera = new javax.swing.JFrame();
         background7 = new javax.swing.JPanel();
         bannerAdminCCa = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        JTextFieldnúmeroDeCreditos = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        JTextFieldnombreCarrera1 = new javax.swing.JTextField();
-        aceptarCrearCarrera = new javax.swing.JButton();
-        cancelarCrearCarrera = new javax.swing.JButton();
+        nombreCa = new javax.swing.JLabel();
+        valorNombreCa = new javax.swing.JTextField();
+        numCreditos = new javax.swing.JLabel();
+        valorCreditos = new javax.swing.JTextField();
+        botonAceptCCa = new javax.swing.JButton();
+        botonCancelCCa = new javax.swing.JButton();
         background = new javax.swing.JPanel();
         banner = new javax.swing.JLabel();
         ingComo = new javax.swing.JLabel();
@@ -306,38 +306,39 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         bannerAdminCS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-cs1.jpg"))); // NOI18N
 
-        textFieldNombreSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        textFieldNombreSala.setToolTipText("");
-        textFieldNombreSala.addActionListener(new java.awt.event.ActionListener() {
+        nombreS.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        nombreS.setForeground(new java.awt.Color(51, 51, 51));
+        nombreS.setText("Nombre sala");
+
+        valorNombreSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        valorNombreSala.setToolTipText("");
+        valorNombreSala.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldNombreSalaActionPerformed(evt);
+                valorNombreSalaActionPerformed(evt);
             }
         });
 
-        aceptarCrearSala.setBackground(new java.awt.Color(208, 22, 22));
-        aceptarCrearSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        aceptarCrearSala.setText("Aceptar");
-        aceptarCrearSala.setToolTipText("");
-        aceptarCrearSala.setActionCommand("aceptarCrearSala");
-        aceptarCrearSala.addActionListener(new java.awt.event.ActionListener() {
+        botonAceptCS.setBackground(new java.awt.Color(208, 22, 22));
+        botonAceptCS.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        botonAceptCS.setText("Aceptar");
+        botonAceptCS.setToolTipText("");
+        botonAceptCS.setActionCommand("aceptarCrearSala");
+        botonAceptCS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aceptarCrearSalaActionPerformed(evt);
+                botonAceptCSActionPerformed(evt);
             }
         });
 
-        cancelarCrearSala.setBackground(new java.awt.Color(208, 22, 22));
-        cancelarCrearSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        cancelarCrearSala.setText("Cancelar");
-        cancelarCrearSala.setToolTipText("");
-        cancelarCrearSala.setActionCommand("cancelarCrearSala");
-        cancelarCrearSala.addActionListener(new java.awt.event.ActionListener() {
+        botonCancelCS.setBackground(new java.awt.Color(208, 22, 22));
+        botonCancelCS.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        botonCancelCS.setText("Cancelar");
+        botonCancelCS.setToolTipText("");
+        botonCancelCS.setActionCommand("cancelarCrearSala");
+        botonCancelCS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelarCrearSalaActionPerformed(evt);
+                botonCancelCSActionPerformed(evt);
             }
         });
-
-        jLabel2.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        jLabel2.setText("Nombre sala");
 
         javax.swing.GroupLayout background4Layout = new javax.swing.GroupLayout(background4);
         background4.setLayout(background4Layout);
@@ -348,33 +349,34 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(background4Layout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(nombreS)
+                    .addComponent(botonAceptCS, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(background4Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(21, 21, 21)
-                        .addComponent(textFieldNombreSala, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(background4Layout.createSequentialGroup()
-                        .addComponent(aceptarCrearSala, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cancelarCrearSala, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(botonCancelCS, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(background4Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(valorNombreSala, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         background4Layout.setVerticalGroup(
             background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background4Layout.createSequentialGroup()
                 .addComponent(bannerAdminCS)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(textFieldNombreSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(256, 256, 256)
+                    .addComponent(nombreS)
+                    .addComponent(valorNombreSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
                 .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cancelarCrearSala, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aceptarCrearSala, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonCancelCS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonAceptCS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46))
         );
 
-        textFieldNombreSala.getAccessibleContext().setAccessibleName("textFieldNombreCurso");
+        valorNombreSala.getAccessibleContext().setAccessibleName("textFieldNombreCurso");
 
         javax.swing.GroupLayout adminCrearSalaLayout = new javax.swing.GroupLayout(adminCrearSala.getContentPane());
         adminCrearSala.getContentPane().setLayout(adminCrearSalaLayout);
@@ -384,9 +386,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         );
         adminCrearSalaLayout.setVerticalGroup(
             adminCrearSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(adminCrearSalaLayout.createSequentialGroup()
-                .addComponent(background4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(background4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         adminCrearProfesor.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -402,35 +402,36 @@ public class InterfazGrafica extends javax.swing.JFrame {
         bannerAdminIP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-ip1.jpg"))); // NOI18N
         bannerAdminIP.setToolTipText("");
 
-        aceptarIngresarProfesor.setBackground(new java.awt.Color(208, 22, 22));
-        aceptarIngresarProfesor.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        aceptarIngresarProfesor.setText("Aceptar");
-        aceptarIngresarProfesor.setToolTipText("");
-        aceptarIngresarProfesor.setActionCommand("aceptarIngresarProfesor");
-        aceptarIngresarProfesor.addActionListener(new java.awt.event.ActionListener() {
+        nombreP.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        nombreP.setForeground(new java.awt.Color(51, 51, 51));
+        nombreP.setText("Nombre profesor");
+
+        valorNombreProfe.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        valorNombreProfe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aceptarIngresarProfesorActionPerformed(evt);
+                valorNombreProfeActionPerformed(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        jLabel3.setText("Nombre profesor");
-
-        textFieldNombreProfesor.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        textFieldNombreProfesor.addActionListener(new java.awt.event.ActionListener() {
+        botonAceptIP.setBackground(new java.awt.Color(208, 22, 22));
+        botonAceptIP.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        botonAceptIP.setText("Aceptar");
+        botonAceptIP.setToolTipText("");
+        botonAceptIP.setActionCommand("aceptarIngresarProfesor");
+        botonAceptIP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldNombreProfesorActionPerformed(evt);
+                botonAceptIPActionPerformed(evt);
             }
         });
 
-        cancelarIngresarProfesor1.setBackground(new java.awt.Color(208, 22, 22));
-        cancelarIngresarProfesor1.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        cancelarIngresarProfesor1.setText("Cancelar");
-        cancelarIngresarProfesor1.setToolTipText("");
-        cancelarIngresarProfesor1.setActionCommand("cancelarIngresarProfesor");
-        cancelarIngresarProfesor1.addActionListener(new java.awt.event.ActionListener() {
+        botonCancelIP.setBackground(new java.awt.Color(208, 22, 22));
+        botonCancelIP.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        botonCancelIP.setText("Cancelar");
+        botonCancelIP.setToolTipText("");
+        botonCancelIP.setActionCommand("cancelarIngresarProfesor");
+        botonCancelIP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelarIngresarProfesor1ActionPerformed(evt);
+                botonCancelIPActionPerformed(evt);
             }
         });
 
@@ -445,13 +446,13 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(background5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(background5Layout.createSequentialGroup()
-                        .addComponent(aceptarIngresarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonAceptIP, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cancelarIngresarProfesor1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(botonCancelIP, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(background5Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
+                        .addComponent(nombreP)
                         .addGap(18, 18, 18)
-                        .addComponent(textFieldNombreProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(valorNombreProfe, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         background5Layout.setVerticalGroup(
@@ -460,16 +461,16 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addComponent(bannerAdminIP)
                 .addGap(18, 18, 18)
                 .addGroup(background5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(textFieldNombreProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nombreP)
+                    .addComponent(valorNombreProfe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 243, Short.MAX_VALUE)
                 .addGroup(background5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(aceptarIngresarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cancelarIngresarProfesor1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonAceptIP, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonCancelIP, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40))
         );
 
-        aceptarIngresarProfesor.getAccessibleContext().setAccessibleName("aceptarIngresarProfesor");
+        botonAceptIP.getAccessibleContext().setAccessibleName("aceptarIngresarProfesor");
 
         javax.swing.GroupLayout adminCrearProfesorLayout = new javax.swing.GroupLayout(adminCrearProfesor.getContentPane());
         adminCrearProfesor.getContentPane().setLayout(adminCrearProfesorLayout);
@@ -492,45 +493,26 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         bannerAdminCCu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-cc1.jpg"))); // NOI18N
 
-        cancelarCrearCurso.setBackground(new java.awt.Color(208, 22, 22));
-        cancelarCrearCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        cancelarCrearCurso.setText("Cancelar");
-        cancelarCrearCurso.setToolTipText("");
-        cancelarCrearCurso.setActionCommand("cancelarIngresarProfesor");
-        cancelarCrearCurso.addActionListener(new java.awt.event.ActionListener() {
+        nombreCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        nombreCu.setForeground(new java.awt.Color(51, 51, 51));
+        nombreCu.setText("Nombre curso");
+
+        valorNombreCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        valorNombreCu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelarCrearCursoActionPerformed(evt);
+                valorNombreCuActionPerformed(evt);
             }
         });
 
-        textFieldNombreCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        textFieldNombreCurso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldNombreCursoActionPerformed(evt);
-            }
-        });
+        anual.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        anual.setForeground(new java.awt.Color(51, 51, 51));
+        anual.setText("Anual");
 
-        jLabel4.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        jLabel4.setText("Nombre curso");
+        horario.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        horario.setForeground(new java.awt.Color(51, 51, 51));
+        horario.setText("Horario");
 
-        aceptarCrearCurso.setBackground(new java.awt.Color(208, 22, 22));
-        aceptarCrearCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        aceptarCrearCurso.setText("Aceptar");
-        aceptarCrearCurso.setToolTipText("");
-        aceptarCrearCurso.setActionCommand("aceptarIngresarProfesor");
-        aceptarCrearCurso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aceptarCrearCursoActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        jLabel1.setText("Anual");
-
-        jLabel5.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        jLabel5.setText("Horario");
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaValorHorario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"1", null, null, null, null, null, null},
                 {"2", null, null, null, null, null, null},
@@ -563,16 +545,38 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setResizable(false);
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
-            jTable1.getColumnModel().getColumn(3).setResizable(false);
-            jTable1.getColumnModel().getColumn(4).setResizable(false);
-            jTable1.getColumnModel().getColumn(5).setResizable(false);
-            jTable1.getColumnModel().getColumn(6).setResizable(false);
+        scrollHorario.setViewportView(tablaValorHorario);
+        if (tablaValorHorario.getColumnModel().getColumnCount() > 0) {
+            tablaValorHorario.getColumnModel().getColumn(0).setResizable(false);
+            tablaValorHorario.getColumnModel().getColumn(1).setResizable(false);
+            tablaValorHorario.getColumnModel().getColumn(2).setResizable(false);
+            tablaValorHorario.getColumnModel().getColumn(3).setResizable(false);
+            tablaValorHorario.getColumnModel().getColumn(4).setResizable(false);
+            tablaValorHorario.getColumnModel().getColumn(5).setResizable(false);
+            tablaValorHorario.getColumnModel().getColumn(6).setResizable(false);
         }
+
+        botonAcepCCu.setBackground(new java.awt.Color(208, 22, 22));
+        botonAcepCCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        botonAcepCCu.setText("Aceptar");
+        botonAcepCCu.setToolTipText("");
+        botonAcepCCu.setActionCommand("aceptarIngresarProfesor");
+        botonAcepCCu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAcepCCuActionPerformed(evt);
+            }
+        });
+
+        botonCancelCCu.setBackground(new java.awt.Color(208, 22, 22));
+        botonCancelCCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        botonCancelCCu.setText("Cancelar");
+        botonCancelCCu.setToolTipText("");
+        botonCancelCCu.setActionCommand("cancelarIngresarProfesor");
+        botonCancelCCu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonCancelCCuActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout background6Layout = new javax.swing.GroupLayout(background6);
         background6.setLayout(background6Layout);
@@ -585,19 +589,19 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(background6Layout.createSequentialGroup()
-                        .addComponent(aceptarCrearCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonAcepCCu, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cancelarCrearCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(botonCancelCCu, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(background6Layout.createSequentialGroup()
                         .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel5))
+                            .addComponent(nombreCu)
+                            .addComponent(anual)
+                            .addComponent(horario))
                         .addGap(18, 18, 18)
                         .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButton1)
-                            .addComponent(textFieldNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(scrollHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(boolAnual)
+                            .addComponent(valorNombreCu, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         background6Layout.setVerticalGroup(
@@ -606,20 +610,20 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addComponent(bannerAdminCCu)
                 .addGap(1, 1, 1)
                 .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textFieldNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                    .addComponent(valorNombreCu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nombreCu))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(boolAnual, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(anual))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(horario)
+                    .addComponent(scrollHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(aceptarCrearCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cancelarCrearCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonAcepCCu, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonCancelCCu, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
@@ -645,45 +649,47 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         bannerAdminCCa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-cca1.jpg"))); // NOI18N
 
-        jLabel6.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        jLabel6.setText("Número de creditos");
+        nombreCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        nombreCa.setForeground(new java.awt.Color(51, 51, 51));
+        nombreCa.setText("Nombre carrera");
 
-        JTextFieldnúmeroDeCreditos.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        JTextFieldnúmeroDeCreditos.addActionListener(new java.awt.event.ActionListener() {
+        valorNombreCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        valorNombreCa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTextFieldnúmeroDeCreditosActionPerformed(evt);
+                valorNombreCaActionPerformed(evt);
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        jLabel7.setText("Nombre carrera");
+        numCreditos.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        numCreditos.setForeground(new java.awt.Color(51, 51, 51));
+        numCreditos.setText("Número de creditos");
 
-        JTextFieldnombreCarrera1.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        JTextFieldnombreCarrera1.addActionListener(new java.awt.event.ActionListener() {
+        valorCreditos.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        valorCreditos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JTextFieldnombreCarrera1ActionPerformed(evt);
+                valorCreditosActionPerformed(evt);
             }
         });
 
-        aceptarCrearCarrera.setBackground(new java.awt.Color(208, 22, 22));
-        aceptarCrearCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        aceptarCrearCarrera.setText("Aceptar");
-        aceptarCrearCarrera.setToolTipText("");
-        aceptarCrearCarrera.setActionCommand("aceptarIngresarProfesor");
-        aceptarCrearCarrera.addActionListener(new java.awt.event.ActionListener() {
+        botonAceptCCa.setBackground(new java.awt.Color(208, 22, 22));
+        botonAceptCCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        botonAceptCCa.setText("Aceptar");
+        botonAceptCCa.setToolTipText("");
+        botonAceptCCa.setActionCommand("aceptarIngresarProfesor");
+        botonAceptCCa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aceptarCrearCarreraActionPerformed(evt);
+                botonAceptCCaActionPerformed(evt);
             }
         });
 
-        cancelarCrearCarrera.setBackground(new java.awt.Color(208, 22, 22));
-        cancelarCrearCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        cancelarCrearCarrera.setText("Cancelar");
-        cancelarCrearCarrera.setToolTipText("");
-        cancelarCrearCarrera.setActionCommand("cancelarIngresarProfesor");
-        cancelarCrearCarrera.addActionListener(new java.awt.event.ActionListener() {
+        botonCancelCCa.setBackground(new java.awt.Color(208, 22, 22));
+        botonCancelCCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
+        botonCancelCCa.setText("Cancelar");
+        botonCancelCCa.setToolTipText("");
+        botonCancelCCa.setActionCommand("cancelarIngresarProfesor");
+        botonCancelCCa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelarCrearCarreraActionPerformed(evt);
+                botonCancelCCaActionPerformed(evt);
             }
         });
 
@@ -700,22 +706,22 @@ public class InterfazGrafica extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(background7Layout.createSequentialGroup()
-                                .addComponent(aceptarCrearCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(botonAceptCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(cancelarCrearCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(botonCancelCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(background7Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
+                                .addComponent(numCreditos)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(JTextFieldnúmeroDeCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(valorCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background7Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(JTextFieldnombreCarrera1, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(valorNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(background7Layout.createSequentialGroup()
                     .addGap(22, 22, 22)
-                    .addComponent(jLabel7)
+                    .addComponent(nombreCa)
                     .addContainerGap(530, Short.MAX_VALUE)))
         );
         background7Layout.setVerticalGroup(
@@ -723,20 +729,20 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(background7Layout.createSequentialGroup()
                 .addComponent(bannerAdminCCa)
                 .addGap(19, 19, 19)
-                .addComponent(JTextFieldnombreCarrera1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(valorNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(JTextFieldnúmeroDeCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(numCreditos)
+                    .addComponent(valorCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE)
                 .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(aceptarCrearCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cancelarCrearCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonAceptCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonCancelCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23))
             .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(background7Layout.createSequentialGroup()
                     .addGap(152, 152, 152)
-                    .addComponent(jLabel7)
+                    .addComponent(nombreCa)
                     .addContainerGap(332, Short.MAX_VALUE)))
         );
 
@@ -881,19 +887,19 @@ public class InterfazGrafica extends javax.swing.JFrame {
         this.setVisible(true);
     }//GEN-LAST:event_botonAl0AtrasActionPerformed
 
-    private void textFieldNombreSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldNombreSalaActionPerformed
+    private void valorNombreSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorNombreSalaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldNombreSalaActionPerformed
+    }//GEN-LAST:event_valorNombreSalaActionPerformed
 
-    private void aceptarCrearSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarCrearSalaActionPerformed
+    private void botonAceptCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptCSActionPerformed
         this.administrador0.setVisible(true);
         this.adminCrearSala.setVisible(false);
-    }//GEN-LAST:event_aceptarCrearSalaActionPerformed
+    }//GEN-LAST:event_botonAceptCSActionPerformed
 
-    private void cancelarCrearSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarCrearSalaActionPerformed
+    private void botonCancelCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelCSActionPerformed
         this.administrador0.setVisible(true);
         this.adminCrearSala.setVisible(false);
-    }//GEN-LAST:event_cancelarCrearSalaActionPerformed
+    }//GEN-LAST:event_botonCancelCSActionPerformed
 
     private void crearSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearSalaActionPerformed
         this.administrador0.setVisible(false);
@@ -905,56 +911,56 @@ public class InterfazGrafica extends javax.swing.JFrame {
         this.adminCrearProfesor.setVisible(true);
     }//GEN-LAST:event_ingresarProfesorActionPerformed
 
-    private void aceptarIngresarProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarIngresarProfesorActionPerformed
+    private void botonAceptIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptIPActionPerformed
         this.administrador0.setVisible(true);
         this.adminCrearProfesor.setVisible(false);
-    }//GEN-LAST:event_aceptarIngresarProfesorActionPerformed
+    }//GEN-LAST:event_botonAceptIPActionPerformed
 
-    private void textFieldNombreProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldNombreProfesorActionPerformed
+    private void valorNombreProfeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorNombreProfeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldNombreProfesorActionPerformed
+    }//GEN-LAST:event_valorNombreProfeActionPerformed
 
-    private void cancelarIngresarProfesor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarIngresarProfesor1ActionPerformed
+    private void botonCancelIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelIPActionPerformed
         this.administrador0.setVisible(true);
         this.adminCrearProfesor.setVisible(false);
-    }//GEN-LAST:event_cancelarIngresarProfesor1ActionPerformed
+    }//GEN-LAST:event_botonCancelIPActionPerformed
 
-    private void cancelarCrearCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarCrearCursoActionPerformed
+    private void botonCancelCCuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelCCuActionPerformed
         this.adminCrearCurso.setVisible(false);
         this.administrador0.setVisible(true);
-    }//GEN-LAST:event_cancelarCrearCursoActionPerformed
+    }//GEN-LAST:event_botonCancelCCuActionPerformed
 
-    private void textFieldNombreCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldNombreCursoActionPerformed
+    private void valorNombreCuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorNombreCuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldNombreCursoActionPerformed
+    }//GEN-LAST:event_valorNombreCuActionPerformed
 
-    private void aceptarCrearCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarCrearCursoActionPerformed
+    private void botonAcepCCuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAcepCCuActionPerformed
         this.adminCrearCurso.setVisible(false);
         this.administrador0.setVisible(true);
-    }//GEN-LAST:event_aceptarCrearCursoActionPerformed
+    }//GEN-LAST:event_botonAcepCCuActionPerformed
 
     private void crearCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearCursoActionPerformed
         this.adminCrearCurso.setVisible(true);
         this.administrador0.setVisible(false);
     }//GEN-LAST:event_crearCursoActionPerformed
 
-    private void JTextFieldnúmeroDeCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTextFieldnúmeroDeCreditosActionPerformed
+    private void valorCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorCreditosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JTextFieldnúmeroDeCreditosActionPerformed
+    }//GEN-LAST:event_valorCreditosActionPerformed
 
-    private void JTextFieldnombreCarrera1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTextFieldnombreCarrera1ActionPerformed
+    private void valorNombreCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorNombreCaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JTextFieldnombreCarrera1ActionPerformed
+    }//GEN-LAST:event_valorNombreCaActionPerformed
 
-    private void aceptarCrearCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarCrearCarreraActionPerformed
+    private void botonAceptCCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptCCaActionPerformed
         this.adminCrearCarrera.setVisible(false);
         this.administrador0.setVisible(true);
-    }//GEN-LAST:event_aceptarCrearCarreraActionPerformed
+    }//GEN-LAST:event_botonAceptCCaActionPerformed
 
-    private void cancelarCrearCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarCrearCarreraActionPerformed
+    private void botonCancelCCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelCCaActionPerformed
         this.adminCrearCarrera.setVisible(false);
         this.administrador0.setVisible(true);
-    }//GEN-LAST:event_cancelarCrearCarreraActionPerformed
+    }//GEN-LAST:event_botonCancelCCaActionPerformed
 
     private void crearCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearCarreraActionPerformed
         this.adminCrearCarrera.setVisible(true);
@@ -970,18 +976,13 @@ public class InterfazGrafica extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField JTextFieldnombreCarrera1;
-    private javax.swing.JTextField JTextFieldnúmeroDeCreditos;
-    private javax.swing.JButton aceptarCrearCarrera;
-    private javax.swing.JButton aceptarCrearCurso;
-    private javax.swing.JButton aceptarCrearSala;
-    private javax.swing.JButton aceptarIngresarProfesor;
     private javax.swing.JFrame adminCrearCarrera;
     private javax.swing.JFrame adminCrearCurso;
     private javax.swing.JFrame adminCrearProfesor;
     private javax.swing.JFrame adminCrearSala;
     private javax.swing.JFrame administrador0;
     private javax.swing.JFrame alumno0;
+    private javax.swing.JLabel anual;
     private javax.swing.JPanel background;
     private javax.swing.JPanel background1;
     private javax.swing.JPanel background2;
@@ -998,35 +999,40 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JLabel bannerAdminIP;
     private javax.swing.JLabel bannerAl1;
     private javax.swing.JLabel bannerP1;
+    private javax.swing.JRadioButton boolAnual;
+    private javax.swing.JButton botonAcepCCu;
+    private javax.swing.JButton botonAceptCCa;
+    private javax.swing.JButton botonAceptCS;
+    private javax.swing.JButton botonAceptIP;
     private javax.swing.JButton botonAd0Atras;
     private javax.swing.JButton botonAdmin;
     private javax.swing.JButton botonAl0Atras;
     private javax.swing.JButton botonAlumno;
+    private javax.swing.JButton botonCancelCCa;
+    private javax.swing.JButton botonCancelCCu;
+    private javax.swing.JButton botonCancelCS;
+    private javax.swing.JButton botonCancelIP;
     private javax.swing.JButton botonPr0Atras;
     private javax.swing.JButton botonProfe;
-    private javax.swing.JButton cancelarCrearCarrera;
-    private javax.swing.JButton cancelarCrearCurso;
-    private javax.swing.JButton cancelarCrearSala;
-    private javax.swing.JButton cancelarIngresarProfesor1;
     private javax.swing.JButton crearCarrera;
     private javax.swing.JButton crearCurso;
     private javax.swing.JButton crearSala;
+    private javax.swing.JLabel horario;
     private javax.swing.JLabel ingComo;
     private javax.swing.JButton ingresarProfesor;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel logoUniversidad;
+    private javax.swing.JLabel nombreCa;
+    private javax.swing.JLabel nombreCu;
+    private javax.swing.JLabel nombreP;
+    private javax.swing.JLabel nombreS;
+    private javax.swing.JLabel numCreditos;
     private javax.swing.JFrame profesor0;
-    private javax.swing.JTextField textFieldNombreCurso;
-    private javax.swing.JTextField textFieldNombreProfesor;
-    private javax.swing.JTextField textFieldNombreSala;
+    private javax.swing.JScrollPane scrollHorario;
+    private javax.swing.JTable tablaValorHorario;
+    private javax.swing.JTextField valorCreditos;
+    private javax.swing.JTextField valorNombreCa;
+    private javax.swing.JTextField valorNombreCu;
+    private javax.swing.JTextField valorNombreProfe;
+    private javax.swing.JTextField valorNombreSala;
     // End of variables declaration//GEN-END:variables
 }
