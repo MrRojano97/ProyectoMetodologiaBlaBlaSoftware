@@ -28,6 +28,14 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        // CREACION DE SALA A MODO DE PRUEBA CON SU RESPECTIVO HORARIO (VACIO)
+        Sala sala1=new Sala("1");
+        Horario horario1=new Horario();
+        horario1.crearSemana();
+        sala1.planificacionSemanal=horario1;
+        System.out.println("Numero sala1: "+sala1.numero);
+        
     }
      public static void addCurso(String nombre){
         curso=new Curso();
@@ -35,6 +43,7 @@ public class Main {
         cursos.add(curso);
     }
     // Sala  //
+     
     public static void addSala(String numero){
         sala=new Sala(numero);
         salasDisponibles.add(sala);
@@ -47,6 +56,7 @@ public class Main {
             }
         }
     }
+    
     // PROFESOR //
      public static void addProfesor(String nombre){
         profesor=new Profesor();

@@ -21,10 +21,7 @@ public class Horario {
         for(int i=0;i<7;i++){
             diaDeLaSemana=new ArrayList<>();
             horarioSemanal.add(diaDeLaSemana);
-        }
-        
-        
-                
+        }           
     }
     //se da por supuesto que la introduccion de los bloques esta en un correcto orden temporal
     public void addBloque(int dia,Bloque bloque){
