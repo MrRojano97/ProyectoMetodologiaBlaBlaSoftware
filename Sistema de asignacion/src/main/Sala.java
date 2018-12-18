@@ -14,6 +14,19 @@ import java.util.ArrayList;
 public class Sala {
     String numero;
     Horario planificacionSemanal;
+
+    public Horario getPlanificacionSemanal() {
+        return planificacionSemanal;
+    }
+
+    public void setPlanificacionSemanal(Horario planificacionSemanal) {
+        this.planificacionSemanal = planificacionSemanal;
+    }
+
+    public Sala(String numero) {
+        this.numero = numero;
+    }
+    
     public String getNumero() {
         return numero;
     }
