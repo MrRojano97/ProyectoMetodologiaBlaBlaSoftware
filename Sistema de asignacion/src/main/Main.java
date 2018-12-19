@@ -5,49 +5,45 @@
  */
 package main;
 
-import java.util.ArrayList;
 
 /**
  *
  * @author Javiera
  */
 public class Main {
-    static ArrayList<Semestre> semestres=new ArrayList<>();
-    static ArrayList<Carrera> carrerasQueSeImparten=new ArrayList<>();
-    static ArrayList<Sala> salasDisponibles=new ArrayList<>();;
-    static ArrayList<Profesor> profesoresContratados=new ArrayList<>();;
-    static ArrayList<Horario> horariosDisponibles=new ArrayList<>();;
-    static ArrayList<Curso> cursos=new ArrayList<>();;//cursos de la carrera
-    static Carrera carrera;
-    static Curso curso;
-    static Horario horario;
-    static Profesor profesor;
-    static Sala sala;
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Mockup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Mockup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Mockup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Mockup.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Mockup().setVisible(true);
+            }
+        });
         
-        // CREACION DE SALA A MODO DE PRUEBA CON SU RESPECTIVO HORARIO (VACIO)
-        Sala sala1=new Sala("1");
-        Horario horario1=new Horario();
-        horario1.crearSemana();
-        sala1.planificacionSemanal=horario1;
-        System.out.println("Numero sala1: "+sala1.numero);
         
-        //MODIFICACION DE SALA A MODO DE PRUEBA (Se modifica el numero y su planificacion)
-        sala1.setNumero("5");
-        Horario horario2=new Horario();
-        horario2.crearSemana();
-        sala1.planificacionSemanal=horario2;
-        
-        salasDisponibles.add(sala1);
-        
-        //ELIMINACION DE SALA (al ser la unica tiene indice 0)
-        salasDisponibles.remove(0);
-        
-        
+        Gestion gestion=new Gestion();
     }
      public static void addCurso(String nombre){
         curso=new Curso();
@@ -82,6 +78,7 @@ public class Main {
         carrera.setNombre(nombre);
         carrerasQueSeImparten.add(carrera);
     }
+    
     
     
 }
