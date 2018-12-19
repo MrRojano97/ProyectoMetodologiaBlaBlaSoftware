@@ -70,11 +70,23 @@ public class Gestion {
         curso.setNombre(nombre);
         cursos.add(curso);
     }
+     public void modificarSala(Sala sala,String numero, Horario planificacion){
+         sala.numero=numero;
+         sala.planificacionSemanal=planificacion;
+     }
+     public void eliminarSala(String numero){
+         int eliminar=0;
+         for (int i=0;i<salasDisponibles.size();i++){
+             if (salasDisponibles.get(i).numero.equals(numero)){
+                 eliminar=i;
+             }
+         }
+         salasDisponibles.remove(eliminar);
+     }
     // SALA  //
     public void addSala(String numero){
-        sala=new Sala();
-        sala.setNumero(numero);
-        salasDisponibles.add(sala);
+        Sala sala=new Sala();
+        salasDisponibles.add(sala.crearSala(numero));
     }
     // PROFESOR //
     /**

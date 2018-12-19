@@ -45,40 +45,6 @@ public class Main {
         
         Gestion gestion=new Gestion();
     }
-     public static void addCurso(String nombre){
-        curso=new Curso();
-        curso.setNombre(nombre);
-        cursos.add(curso);
-    }
-    // Sala  //
-     
-    public static void addSala(String numero){
-        sala=new Sala(numero);
-        salasDisponibles.add(sala);
-    }
-    public static void delSala(String numero){
-        for(int i=0;i< salasDisponibles.size();i++){
-            if(salasDisponibles.get(i).getNumero().equals(numero)){
-                salasDisponibles.remove(i);
-                i= salasDisponibles.size();
-            }
-        }
-    }
-    
-    // PROFESOR //
-     public static void addProfesor(String nombre){
-        profesor=new Profesor();
-        profesor.setNombre(nombre);
-        profesoresContratados.add(profesor);
-    }
-
-     // Carrera //
-     public static void addCarrera(String nombre){
-        carrera=new Carrera();
-        carrera.setNombre(nombre);
-        carrerasQueSeImparten.add(carrera);
-    }
-    
     
     
 }
