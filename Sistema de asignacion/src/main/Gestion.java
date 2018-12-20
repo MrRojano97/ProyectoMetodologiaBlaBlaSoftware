@@ -79,44 +79,38 @@ public class Gestion {
         sala.horario.visualizarPlanificacionSemanal();//visualizaion de la planificacion semanal(bloques) de la sala
         
          //TESTEO DE CALIDAD DEL MODELO
-        Sala s = new Sala("105");
-        System.out.println("Sala instanciada correctamente "+s.getNumero());
+        sala = new Sala("105");
+        System.out.println("\nSala instanciada correctamente "+sala.getNumero());
         
-        Sala s1 = new Sala("T2");
-        System.out.println("Sala instanciada correctamente "+s.getNumero());
+        sala = new Sala("T2");
+        System.out.println("\nSala instanciada correctamente "+sala.getNumero());
         
-        Bloque b= new Bloque();
+        bloque= new Bloque();
         Curso c2=new Curso("Metodologias y blabla");
-        b.setCurso(c2);
-        b.setHoraInicio(8,30);
-        b.setHoraTermino(9,30);
-        System.out.println("Bloque instanciado correctamente- Inicio:  "+b.getHoraInicio()+"  Fin:  "+b.getHoraTermino()+"  Curso:  "+b.getCurso());
-        System.out.println("\n");
+        bloque.setCurso(c2);
+        bloque.setHoraInicio(8,30);
+        bloque.setHoraTermino(9,30);
+        System.out.println("\nBloque instanciado correctamente- Inicio:  "+bloque.getHoraInicio()+"  Fin:  "+bloque.getHoraTermino()+"  Curso:  "+bloque.getCurso().getNombre());
         
-        Bloque b1= new Bloque();
-        b1.setCurso(new Curso("Proyecto de programacion"));
-        b1.setHoraInicio(18,00);
-        b1.setHoraTermino(19,00);
-        System.out.println("Bloque instanciado correctamente- Inicio:  "+b1.getHoraInicio()+"  Fin:  "+b1.getHoraTermino()+"  Curso:  "+b1.getCurso());
-        System.out.println("\n");
+        bloque= new Bloque();
+        bloque.setCurso(new Curso("Proyecto de programacion"));
+        bloque.setHoraInicio(18,00);
+        bloque.setHoraTermino(19,00);
+        System.out.println("\nBloque instanciado correctamente- Inicio:  "+bloque.getHoraInicio()+"  Fin:  "+bloque.getHoraTermino()+"  Curso:  "+bloque.getCurso().getNombre());
         
-        Profesor p= new Profesor("Rodrigo ","rodrigo@gmail.com","99929292929","profesorRodrigo@utalca.cl");
-        System.out.println("Profesor instanciado correctamente Nombre: ");
-        p.visualizarDatos();
-        System.out.println("\n");
+        profesor= new Profesor("Rodrigo ","rodrigo@gmail.com","99929292929","profesorRodrigo@utalca.cl");
+        System.out.println("\nProfesor instanciado correctamente Nombre: ");
+        profesor.visualizarDatos();
         
-        Profesor p1= new Profesor("Jose","jose@gmail.com","99945254359","profesorJose@utalca.cl");
-        System.out.println("Profesor instanciado correctamente Nombre: ");
-        p1.visualizarDatos();
-        System.out.println("\n");
+        profesor= new Profesor("Jose","jose@gmail.com","99945254359","profesorJose@utalca.cl");
+        System.out.println("\nProfesor instanciado correctamente Nombre: ");
+        profesor.visualizarDatos();
         
-        Carrera c= new Carrera("Compu");
-        System.out.println("Carrera instanciada correctamente : "+c.getNombre());
-        System.out.println("\n");
+        carrera= new Carrera("Compu");
+        System.out.println("\nCarrera instanciada correctamente : "+carrera.getNombre());
         
-        Carrera c1= new Carrera("Electrica");
-        System.out.println("Carrera instanciada correctamente : "+c1.getNombre());
-        System.out.println("\n");
+        carrera= new Carrera("Electrica");
+        System.out.println("\nCarrera instanciada correctamente : "+carrera.getNombre());
         
         
     
