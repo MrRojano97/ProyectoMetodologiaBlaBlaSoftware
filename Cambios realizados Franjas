@@ -1,7 +1,6 @@
 Historial de cambios y/o modificaciones realizadas.
-Nombre: Francisco Gamboa
 
-Fecha 18-12-2018
+Nombre: Francisco Gamboa Fecha 18-12-2018
 1.- Cambios en la clase profesor; se añadieron nuevos datos a la clase profesor con la finalidad de cubrir atributos necesarios que no estaban presentes. Se crean los Setter and Getter de los atributos, quedan pendiente la asignación de bloques al horario debido a su dependencia con la clase Horario que está aún incompleta.:
 String correoInstitucional;
 String correoPersonal;
@@ -25,12 +24,7 @@ public void crearProfesor(String nombre, String correoP){}
 5.- Se procede a hacer un commit y un push de los cambios realizados en las clases Main, Gestion, Profesor y se mueve la tarjeta de trello correspondiente a la espera de su aprobación. 
 
 
-
-
-
-
-
-Fecha 19-12-2018
+Nombre: Francisco Gamboa Fecha 19-12-2018
 1.- Cambios en la clase Horario, se agrega el constructor a la clase, el cual crea una semana con 6 días y cada día con 10 bloques. Ahora se pueden asignar cursos a bloques de cualquier día dentro de la planificación semanal (6 días con 10 bloques cada uno (desde las 8:30 en adelante)) de un curso, sala o profesor.
 se agregaron los siguientes métodos: 
 public void visualizarPlanificacionSemanal(){}
@@ -51,3 +45,30 @@ public void quitarCursoDeBloque(int dia, int bloque){}
 5.- Cambios en el constructor de la clase Sala.
 
 6.-Se crearon instancias de Sala, permitiendo crear una sala con un nombre, para posteriormente asignarle un curso a un determinado bloque. También se puede consultar por la disponibilidad de un determinado  bloque de un determinado día. 
+
+Nombre: Javiera Cabrera Fecha: 19-12-2018
+1.- Correción de errores en nombre de atributos
+
+		antes:
+	this.cursoQueSeDicta= cursoQueSeDicta; 
+		despues:
+	this.curso=cursoQueSeDicta; 
+		antes:
+	sala.planificacionSemanal=planificacion; 
+	despues:
+	sala.horario=planificacion; 
+
+2.- Eliminacion de acoplamiento de  addSala:
+	codigo eliminado:
+	public void addSala(String numero){
+	Sala sala=new Sala();
+   salasDisponibles.add(sala.crearSala(numero));
+}
+
+3.- Eliminacion metodo crearProfesor
+
+4.- Eliminacion de Arrays HorarioSemanal y diaDeLaSemana
+
+5.- Eliminacion de metodos crearSemana y horarioSemanal de la clase Horario
+
+6.-Metodos comentados; crearSala y ModificarSaladelaclase
