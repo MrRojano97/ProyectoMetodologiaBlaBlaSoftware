@@ -14,7 +14,9 @@ import java.util.ArrayList;
 public class Carrera {
     String nombre;//nombre de la carrera
     ArrayList<Curso> cursos=new ArrayList<>();;//cursos de la carrera
-    
+    public Carrera(String nombre){
+        this.nombre=nombre;
+    }
     public String getNombre() {
         return nombre;
     }
