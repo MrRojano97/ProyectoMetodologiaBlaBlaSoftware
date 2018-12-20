@@ -22,10 +22,6 @@ public class Sala {
     public void setPlanificacionSemanal(Horario planificacionSemanal) {
         this.planificacionSemanal = planificacionSemanal;
     }
-
-    public Sala(String numero) {
-        this.numero = numero;
-    }
     
     public String getNumero() {
         return numero;
@@ -37,5 +33,17 @@ public class Sala {
     //Agrega un curso al horario
     public void addCurso(Curso curso ){
         
+    }
+    public Sala crearSala(String numero){
+        Horario horarioo=new Horario();
+        Sala sala=new Sala();
+        sala.numero=numero;
+        sala.planificacionSemanal=horarioo;
+        return sala;
+    }
+    
+    public void modificarSala(String numero,Horario planificacionSemanal){
+        this.numero=numero;
+        this.planificacionSemanal=planificacionSemanal;
     }
 }

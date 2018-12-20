@@ -6,6 +6,7 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 
 /**
@@ -37,14 +38,14 @@ public class Gestion {
         //creacion de un profesor con sus datos basicos
         this.crearProfesor("Obi-Wan Kenobi","quelafuerzateacompañe@gmail.com","+5697263847");
         profesor.setCorreoInstitucional("OWKenobi@alianza.com");
-        this.addProfesor(profesor);
+        
         
         this.crearProfesor(" Chewbacca", "aararrggwwwww@gmail.com","+56926361781");
         profesor.setCorreoInstitucional("Chew@alianza.com");
-        this.addProfesor(profesor);
         
         //muestra en consola los profesores contenidos en la lista
         this.mostrarListaDeProfesores();
+        
         
         
     
@@ -70,11 +71,23 @@ public class Gestion {
         curso.setNombre(nombre);
         cursos.add(curso);
     }
+     public void modificarSala(Sala sala,String numero, Horario planificacion){
+         sala.numero=numero;
+         sala.planificacionSemanal=planificacion;
+     }
+     public void eliminarSala(String numero){
+         int eliminar=0;
+         for (int i=0;i<salasDisponibles.size();i++){
+             if (salasDisponibles.get(i).numero.equals(numero)){
+                 eliminar=i;
+             }
+         }
+         salasDisponibles.remove(eliminar);
+     }
     // SALA  //
     public void addSala(String numero){
-        sala=new Sala();
-        sala.setNumero(numero);
-        salasDisponibles.add(sala);
+        Sala sala=new Sala();
+        salasDisponibles.add(sala.crearSala(numero));
     }
     // PROFESOR //
     /**
@@ -82,13 +95,14 @@ public class Gestion {
      * @param nombre nombre del profesor a crear
      * @param correoP correo personal del profesor a crear
      */
+    // creacion de profesor, sus valores de entrada deben ser su nombre, seguido de su correo, y finalizando 
+    //  con su numero de celular
     public void crearProfesor(String nombre, String correoP, String numC){
-        this.profesor=new Profesor(nombre,correoP,numC);
         
+        this.profesor=new Profesor(nombre,correoP,numC);
+        this.profesoresContratados.add(profesor);
     }
-     public void addProfesor(Profesor p){
-        this.profesoresContratados.add(p);
-    }
+     
 
      // CARRERA //
      public void addCarrera(String nombre){
@@ -96,4 +110,28 @@ public class Gestion {
         carrera.setNombre(nombre);
         carrerasQueSeImparten.add(carrera);
     }
+
+    public void modificarProfesor(String nombre, String correoP, String numC, String correoI,Date fecha) {
+        this.profesor.setCorreoInstitucional(correoP);
+        this.profesor.setNombre(nombre);
+        this.profesor.setNumeroContacto(numC);
+        this.profesor.setCorreoInstitucional(correoI);
+        this.profesor.setFechaContratacion(fecha);
+    }
+    public void eliminarProfesor(String nombre){
+        int indice=-1;
+        for(int i=0;i<profesoresContratados.size();i++){
+            if(profesoresContratados.get(i).nombre.equals(nombre)){
+                indice=i;               
+            }
+        }
+        if(indice!= -1){
+            profesoresContratados.remove(indice);
+        }
+        else{
+            System.out.println("no se encuentra el profesor buscado");
+        }
+            
+    }
+     
 }
