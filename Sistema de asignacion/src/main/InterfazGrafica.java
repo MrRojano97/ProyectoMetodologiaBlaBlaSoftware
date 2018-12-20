@@ -1267,10 +1267,15 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }//GEN-LAST:event_valorNombreSalaActionPerformed
 
     private void botonAceptCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptCSActionPerformed
-        this.administrador0.setVisible(true);
-        //gestion.addSala(this.valorNombreSala.getText()); //Llamada clase gestión. Hacer merge con La Gripe para que funcione
-        JOptionPane.showMessageDialog(null,"Sala creada con éxito");
-        this.adminCrearSala.setVisible(false);
+        if (this.valorNombreSala.getText().equals("")) {
+                JOptionPane.showMessageDialog(null,"Nombre de sala no válido, inténtelo nuevamente");
+            }
+            else {
+                gestion.addSala(new Sala(this.valorNombreSala.getText())); //Llamada clase gestión. Hacer merge con La Gripe para que funcione
+                JOptionPane.showMessageDialog(null,"Sala creada con éxito");
+                this.administrador0.setVisible(true);
+                this.adminCrearSala.setVisible(false);
+            }
     }//GEN-LAST:event_botonAceptCSActionPerformed
 
     private void botonCancelCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelCSActionPerformed
