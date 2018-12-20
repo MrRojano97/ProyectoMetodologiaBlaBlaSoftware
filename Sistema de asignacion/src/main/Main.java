@@ -62,7 +62,7 @@ public class Main {
     }
     // Sala  //
     public static void addSala(String numero){
-        sala=new Sala(numero);
+        //sala=new Sala(numero);
         salasDisponibles.add(sala);
     }
     public static void delSala(String numero){

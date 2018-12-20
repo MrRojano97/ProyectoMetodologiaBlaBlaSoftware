@@ -5,12 +5,14 @@
  */
 package main;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Hugo
  */
 public class InterfazGrafica extends javax.swing.JFrame {
-
+    private Gestion gestion = new Gestion();
     /**
      * Creates new form Mockup
      */
@@ -1067,6 +1069,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     private void botonAceptCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptCSActionPerformed
         this.administrador0.setVisible(true);
+        //gestion.addSala(this.valorNombreSala.getText()); //Llamada clase gestión. Hacer merge con La Gripe para que funcione
+        JOptionPane.showMessageDialog(null,"Sala creada con éxito");
         this.adminCrearSala.setVisible(false);
     }//GEN-LAST:event_botonAceptCSActionPerformed
 
