@@ -5,12 +5,14 @@
  */
 package main;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Hugo
  */
 public class InterfazGrafica extends javax.swing.JFrame {
-
+    private Gestion gestion = new Gestion();
     /**
      * Creates new form Mockup
      */
@@ -119,7 +121,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         profesor0.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         profesor0.setTitle("Profesor");
         profesor0.setLocation(new java.awt.Point(0, 0));
-        profesor0.setPreferredSize(new java.awt.Dimension(720, 512));
         profesor0.setResizable(false);
 
         background1.setBackground(new java.awt.Color(236, 236, 236));
@@ -185,7 +186,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         );
 
         administrador0.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        administrador0.setPreferredSize(new java.awt.Dimension(720, 512));
         administrador0.setResizable(false);
 
         background2.setBackground(new java.awt.Color(236, 236, 236));
@@ -294,7 +294,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         );
 
         alumno0.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        alumno0.setPreferredSize(new java.awt.Dimension(720, 512));
         alumno0.setResizable(false);
 
         background3.setBackground(new java.awt.Color(236, 236, 236));
@@ -344,12 +343,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         adminCrearSala.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         adminCrearSala.setTitle("Administrador: Crear Sala");
-        adminCrearSala.setPreferredSize(new java.awt.Dimension(720, 512));
         adminCrearSala.setResizable(false);
-        adminCrearSala.setSize(new java.awt.Dimension(720, 512));
+        adminCrearSala.setSize(new java.awt.Dimension(0, 0));
 
         background4.setBackground(new java.awt.Color(236, 236, 236));
         background4.setMinimumSize(new java.awt.Dimension(0, 0));
+        background4.setPreferredSize(new java.awt.Dimension(720, 512));
 
         bannerAdminCS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-cs1.jpg"))); // NOI18N
 
@@ -416,7 +415,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nombreS)
                     .addComponent(valorNombreSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 274, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 272, Short.MAX_VALUE)
                 .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonAceptCS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonCancelCS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -726,7 +725,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         adminCrearCarrera.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         adminCrearCarrera.setTitle("Administrador: Crear Carrera");
-        adminCrearCarrera.setPreferredSize(new java.awt.Dimension(720, 512));
 
         background7.setBackground(new java.awt.Color(236, 236, 236));
         background7.setMinimumSize(new java.awt.Dimension(0, 0));
@@ -840,7 +838,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         adminVincular.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         adminVincular.setTitle("Administrador: Vincular");
-        adminVincular.setPreferredSize(new java.awt.Dimension(720, 512));
         adminVincular.setResizable(false);
         adminVincular.setSize(new java.awt.Dimension(720, 512));
 
@@ -1263,6 +1260,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     private void botonAceptCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptCSActionPerformed
         this.administrador0.setVisible(true);
+        //gestion.addSala(this.valorNombreSala.getText()); //Llamada clase gestión. Hacer merge con La Gripe para que funcione
+        JOptionPane.showMessageDialog(null,"Sala creada con éxito");
         this.adminCrearSala.setVisible(false);
     }//GEN-LAST:event_botonAceptCSActionPerformed
 
