@@ -12,9 +12,15 @@ package main;
 public class Curso {
     String nombre;
     Horario horario;
-    Profesor profesor;
+    Profesor profesor=null;
 
+    public Curso(String nombre) {
+        this.nombre = nombre;
+        this.horario=new Horario();
+    }
+    
     public String getNombre() {
+        
         return nombre;
     }
 
@@ -37,6 +43,11 @@ public class Curso {
     public void setProfesor(Profesor profesor) {
         this.profesor = profesor;
     }
-    
+    public void deleteProfesor() {
+        this.profesor = null;
+    }
+    public void visualizarDatos(){
+        System.out.println("\n Curso: "+this.nombre+"\n Profesor: "+profesor.getNombre());
+    }
     
 }

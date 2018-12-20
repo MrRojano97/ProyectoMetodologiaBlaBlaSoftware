@@ -41,8 +41,6 @@ public class Main {
                 new InterfazGrafica().setVisible(true);
             }
         });
-        
-        
         Gestion gestion=new Gestion();
     }
     
