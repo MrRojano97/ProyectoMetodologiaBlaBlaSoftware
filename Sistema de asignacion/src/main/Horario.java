@@ -32,21 +32,20 @@ public class Horario {
             }
             planificacionSemanal.add(diaDeLaSemana);//agregamos a la semana el dia con sus bloques creados
         }
-    ArrayList< ArrayList<Bloque>> horarioSemanal = new ArrayList< ArrayList<Bloque>>();
-    ArrayList<Bloque> diaDeLaSemana=    new ArrayList<>();
+    }
     
     //los dias de la semana se representan desde 0(lunes) hasta 6(sabado) 
-    public void crearSemana(){
-        for(int i=0;i<7;i++){
-            diaDeLaSemana=new ArrayList<>();
-            horarioSemanal.add(diaDeLaSemana);
-        }           
-    }
-    //se da por supuesto que la introduccion de los bloques esta en un correcto orden temporal
-    public void addBloque(int dia,Bloque bloque){
-        horarioSemanal.get(dia).add(bloque);
-        
-    }
+//    public void crearSemana(){
+//        for(int i=0;i<7;i++){
+//            diaDeLaSemana=new ArrayList<>();
+//            horarioSemanal.add(diaDeLaSemana);
+//        }           
+//    }
+//    //se da por supuesto que la introduccion de los bloques esta en un correcto orden temporal
+//    public void addBloque(int dia,Bloque bloque){
+//        horarioSemanal.get(dia).add(bloque);
+//        
+//    }
     /**
      * permite vizualizar la planificacion semanal ya sea de un profesor, un curso o una sala
      */

@@ -19,7 +19,7 @@ public class Bloque {
     
     //CONSTRUCTOR
     public Bloque(Curso cursoQueSeDicta, LocalTime horaInicio, LocalTime horaTermino) {
-        this.cursoQueSeDicta = cursoQueSeDicta;
+        this.curso= cursoQueSeDicta;
         this.horaInicio = horaInicio;
         this.horaTermino = horaTermino;
     }
