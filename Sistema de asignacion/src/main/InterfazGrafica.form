@@ -152,6 +152,8 @@
                           <Component id="botonCCu" alignment="0" max="32767" attributes="0"/>
                           <Component id="botonCCa" alignment="0" min="-2" pref="201" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="botonVin" min="-2" pref="201" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -161,7 +163,10 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="bannerAd1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                      <Component id="botonCS" min="-2" pref="49" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="botonCS" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                          <Component id="botonVin" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="botonIP" min="-2" pref="49" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -263,6 +268,22 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCCaActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="botonVin">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="16" green="16" red="d0" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Eras Medium ITC" size="22" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Vincular"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+                <Property name="actionCommand" type="java.lang.String" value="crearSala"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonVinActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -695,31 +716,21 @@
                               </Group>
                               <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="valorNombreCu" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="crearCursoVincularCarrera" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="boolAnual" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="crearCursoVincularSala" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="scrollHorario" min="-2" pref="500" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="crearCursoVincularCarrera" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="boolAnual" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="crearCursoVincularSala" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="scrollHorario" min="-2" pref="500" max="-2" attributes="0"/>
+                                  <Component id="valorNombreCu" min="-2" pref="514" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="nombreCu" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="botonAcepCCu" min="-2" pref="133" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="botonCancelCCu" min="-2" pref="138" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="nombreCu" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="botonAcepCCu" min="-2" pref="133" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="botonCancelCCu" min="-2" pref="138" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="bannerAdminCCu" min="-2" max="-2" attributes="0"/>
@@ -761,12 +772,12 @@
                               <Component id="scrollHorario" min="-2" pref="203" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="botonAcepCCu" min="-2" max="-2" attributes="0"/>
-                          <Component id="botonCancelCCu" min="-2" pref="36" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="botonCancelCCu" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="botonAcepCCu" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="2" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1291,7 +1302,7 @@
             <Component class="javax.swing.JLabel" name="bannerVin">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/admin-ip1.jpg"/>
+                  <Image iconType="3" name="/images/admin-v.jpg"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel1"/>
               </Properties>
@@ -1508,7 +1519,7 @@
             <Component class="javax.swing.JLabel" name="bannerVerCu">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/images/admin-ip1.jpg"/>
+                  <Image iconType="3" name="/images/profe-vCu.jpg"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="jLabel1"/>
               </Properties>
@@ -1590,12 +1601,12 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="background10" alignment="0" max="32767" attributes="0"/>
+              <Component id="background10" min="-2" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="background10" alignment="0" max="32767" attributes="0"/>
+              <Component id="background10" min="-2" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -1610,11 +1621,6 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="174" max="32767" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -1625,13 +1631,14 @@
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
+                  <Component id="jLabel1" alignment="0" pref="599" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
@@ -1639,7 +1646,7 @@
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="80" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="31" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1653,7 +1660,10 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="33" red="33" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="[Banner y nombre curso]"/>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/profe-vCu-info.jpg"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="[nombre curso]"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
