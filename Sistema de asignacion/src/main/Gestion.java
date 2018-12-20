@@ -86,31 +86,37 @@ public class Gestion {
         System.out.println("Sala instanciada correctamente "+s.getNumero());
         
         Bloque b= new Bloque();
-        bloque.setCurso(new Curso("Metodologias y blabla"));
-        bloque.setHoraInicio(8,30);
-        bloque.setHoraTermino(9,30);
+        Curso c2=new Curso("Metodologias y blabla");
+        b.setCurso(c2);
+        b.setHoraInicio(8,30);
+        b.setHoraTermino(9,30);
         System.out.println("Bloque instanciado correctamente- Inicio:  "+b.getHoraInicio()+"  Fin:  "+b.getHoraTermino()+"  Curso:  "+b.getCurso());
-    
+        System.out.println("\n");
+        
         Bloque b1= new Bloque();
-        bloque.setCurso(new Curso("Proyecto de programacion"));
-        bloque.setHoraInicio(18,00);
-        bloque.setHoraTermino(19,00);
+        b1.setCurso(new Curso("Proyecto de programacion"));
+        b1.setHoraInicio(18,00);
+        b1.setHoraTermino(19,00);
         System.out.println("Bloque instanciado correctamente- Inicio:  "+b1.getHoraInicio()+"  Fin:  "+b1.getHoraTermino()+"  Curso:  "+b1.getCurso());
+        System.out.println("\n");
         
         Profesor p= new Profesor("Rodrigo ","rodrigo@gmail.com","99929292929","profesorRodrigo@utalca.cl");
         System.out.println("Profesor instanciado correctamente Nombre: ");
         p.visualizarDatos();
+        System.out.println("\n");
         
         Profesor p1= new Profesor("Jose","jose@gmail.com","99945254359","profesorJose@utalca.cl");
         System.out.println("Profesor instanciado correctamente Nombre: ");
         p1.visualizarDatos();
+        System.out.println("\n");
         
         Carrera c= new Carrera("Compu");
         System.out.println("Carrera instanciada correctamente : "+c.getNombre());
+        System.out.println("\n");
         
         Carrera c1= new Carrera("Electrica");
         System.out.println("Carrera instanciada correctamente : "+c1.getNombre());
-        
+        System.out.println("\n");
         
         
     
