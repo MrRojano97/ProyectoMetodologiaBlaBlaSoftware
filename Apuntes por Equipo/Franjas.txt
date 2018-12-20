@@ -1,2 +1,50 @@
 Apuntes de: Franjas
+Historial de cambios y/o modificaciones realizadas.
+
+Nombre: Francisco Gamboa Fecha 18-12-2018
+1.- Cambios en la clase profesor; se añadieron nuevos datos a la clase profesor con la finalidad de cubrir atributos necesarios que no estaban presentes. Se crean los Setter and Getter de los atributos, quedan pendiente la asignación de bloques al horario debido a su dependencia con la clase Horario que está aún incompleta.:
+String correoInstitucional;
+String correoPersonal;
+Date fechaContratacion;
+int numeroContacto;
+Horario horarioSemanal;
+ArrayList<Curso> cursosAsignados;
+
+2.-Cambios en la clase Main y Gestion; se movio la totalidad de atributos y métodos desde la clase Main a la clase Gestion, para evitar problemas o restricciones al momento de trabajar con datos tipo static. Dejando en la clase main únicamente una nueva instancia de la clase Gestion.
+
+3.- Se añadieron/ modificaron metodos en la clase Gestion con la finalidad de instanciar un nuevo profesor.
+        Añadidos
+public void inicio(){}
+	public void mostrarListaDeProfesores(){}
+public void crearProfesor(String nombre, String correoP){}
+       Modificados
+
+
+4.-Se procede al instanciamiento exitoso de nuevos profesores (con datos básicos: nombre, correo y numero de contacto, se dejó el correo institucional fuera del constructor de Profesor debido a que la asignación de un correo institucional es una tarea posterior a la contratación del profesor) posteriormente almacenados en el ArrayList “profesoresContratados” y finalmente desplegados por consola mediante el método “mostrarListaDeProfesores()”. 
+ 
+5.- Se procede a hacer un commit y un push de los cambios realizados en las clases Main, Gestion, Profesor y se mueve la tarjeta de trello correspondiente a la espera de su aprobación. 
+
+
+
+Nombre: Francisco Gamboa Fecha 19-12-2018
+1.- Cambios en la clase Horario, se agrega el constructor a la clase, el cual crea una semana con 6 días y cada día con 10 bloques. Ahora se pueden asignar cursos a bloques de cualquier día dentro de la planificación semanal (6 días con 10 bloques cada uno (desde las 8:30 en adelante)) de un curso, sala o profesor.
+se agregaron los siguientes métodos: 
+public void visualizarPlanificacionSemanal(){}
+public boolean verificarDisponibilidadDeBloque(int dia, int bloque){}
+public void asignarCursoABloque(Curso curso, int dia, int bloque){
+public void quitarCursoDeBloque(int dia, int bloque){}
+
+
+2.- Se agregó un método a la clase Curso.
+	 public void visualizarDatos(){}
+
+3.-Cambios en la clase Gestion, se agrego un método para visualizar los cursos contenidos en la lista.
+ 	public void mostrarListaDeCursos(){
+
+4 Se crearon instancias de Curso, permitiendo crear un curso con un nombre y asignarle/quitarle un profesor., se añadieron los sig métodos:
+	public void deleteProfesor() {}
+
+5.- Cambios en el constructor de la clase Sala.
+
+6.-Se crearon instancias de Sala, permitiendo crear una sala con un nombre, para posteriormente asignarle un curso a un determinado bloque. También se puede consultar por la disponibilidad de un determinado  bloque de un determinado día. 
 
