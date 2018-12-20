@@ -1,1 +1,48 @@
 Apuntes de: LosMorenitos
+
+Scrum Master: Matias Pizarro
+
+Sprint 1: 
+    Daily 12/12/18
+
+    Tareas Tomadas para Sprint: Interfaz Menu Inicial (1)
+                                Interfaz Creacion Salas (1)
+                                Interfaz Creacion Profesor (1)
+                                Interfaz Creacion Curso (1)
+                                Interfaz Creacion Carrera (1)
+
+                                Total "esfuerzo": 5
+    
+    Asignacion Tareas: 
+        Luciano Garcia: Implementacion interfaces. (botones, titulos, etc)
+        Hugo Rodriguez: Creacion de Interfaces (ventanas)
+        Ruben Ramirez: Implementacion interfaces.(botones, titulos, etc)
+
+
+
+
+Sprint 2:
+    Daily 15/12/18
+        Mejoras y termino tareas faltantes Sprint 1:
+
+        Ruben Ramirez: Arreglo de errores en ventanas, mejoras en interfaces 
+        Luciano Garcia: Mejora de interfaces, arreglo de errores menores.
+
+        Todos (hugo,luciano,ruben): Vinculacion entre interfaces. (estas no estaban vinculadas 
+                                                al momento de la reunion del dia jueves 13)
+
+
+    Daily 19/12/18
+
+    Tareas Tomadas para Sprint: Interfaz Vinculacion Curso-Carrera (1)
+                                Interfaz Vinculacion Curso-Sala (1)
+                                Interfaz Visualizacion Cursos (2)
+                                Integrar funcionalidades clase sala a Interfaz Grafica (1)  (en compañia 
+                                                                con integrante grupo "La Gripe")
+
+                                Total "esfuerzo": 5
+
+    Asignacion Tareas:
+        Luciano Garcia: Interfaz Vinculacion Curso-Carrera, Intergaz Vinculacion Curso-Sala
+        Hugo Rodriguez: Interfaz Visualizacion Cursos
+        Ruben Ramirez: Integrar funcionalidades clase sala a Interfaz Grafica
