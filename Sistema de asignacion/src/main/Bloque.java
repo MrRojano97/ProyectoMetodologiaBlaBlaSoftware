@@ -16,6 +16,13 @@ public class Bloque {
     Curso curso=null;
     LocalTime horaInicio;
     LocalTime horaTermino;
+    
+    //CONSTRUCTOR
+    public Bloque(Curso cursoQueSeDicta, LocalTime horaInicio, LocalTime horaTermino) {
+        this.cursoQueSeDicta = cursoQueSeDicta;
+        this.horaInicio = horaInicio;
+        this.horaTermino = horaTermino;
+    }
 
     public Bloque() {
     }
@@ -27,7 +34,6 @@ public class Bloque {
     public void setCursoQueSeDicta(Curso curso) {
         this.curso = curso;
     }
-
     
     public LocalTime getHoraInicio() {
         return horaInicio;

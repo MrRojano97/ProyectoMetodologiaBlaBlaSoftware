@@ -36,4 +36,20 @@ public class Sala {
         this.numero = numero;
     }
    
+    //Agrega un curso al horario
+    public void addCurso(Curso curso ){
+        
+    }
+    public Sala crearSala(String numero){
+        Horario horarioo=new Horario();
+        Sala sala=new Sala();
+        sala.numero=numero;
+        sala.planificacionSemanal=horarioo;
+        return sala;
+    }
+    
+    public void modificarSala(String numero,Horario planificacionSemanal){
+        this.numero=numero;
+        this.planificacionSemanal=planificacionSemanal;
+    }
 }

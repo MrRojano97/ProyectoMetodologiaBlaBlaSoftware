@@ -32,6 +32,11 @@ public class Profesor {
         this.horario= new Horario();
         this.numeroContacto=numC;
     }
+
+    Profesor() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
   
     public String getNombre() {
         return nombre;
