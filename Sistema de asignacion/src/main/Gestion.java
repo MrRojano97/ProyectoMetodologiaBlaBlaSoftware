@@ -78,6 +78,38 @@ public class Gestion {
         System.out.println("\n Disponibilidad Sala: "+sala.getNumero()+" martes, bloque 6: "+sala.horario.verificarDisponibilidadDeBloque(1,5));
         sala.horario.visualizarPlanificacionSemanal();//visualizaion de la planificacion semanal(bloques) de la sala
         
+         //TESTEO DE CALIDAD DEL MODELO
+        Sala s = new Sala("105");
+        System.out.println("Sala instanciada correctamente "+s.getNumero());
+        
+        Sala s1 = new Sala("T2");
+        System.out.println("Sala instanciada correctamente "+s.getNumero());
+        
+        Bloque b= new Bloque();
+        bloque.setCurso(new Curso("Metodologias y blabla"));
+        bloque.setHoraInicio(8,30);
+        bloque.setHoraTermino(9,30);
+        System.out.println("Bloque instanciado correctamente- Inicio:  "+b.getHoraInicio()+"  Fin:  "+b.getHoraTermino()+"  Curso:  "+b.getCurso());
+    
+        Bloque b1= new Bloque();
+        bloque.setCurso(new Curso("Proyecto de programacion"));
+        bloque.setHoraInicio(18,00);
+        bloque.setHoraTermino(19,00);
+        System.out.println("Bloque instanciado correctamente- Inicio:  "+b1.getHoraInicio()+"  Fin:  "+b1.getHoraTermino()+"  Curso:  "+b1.getCurso());
+        
+        Profesor p= new Profesor("Rodrigo ","rodrigo@gmail.com","99929292929","profesorRodrigo@utalca.cl");
+        System.out.println("Profesor instanciado correctamente Nombre: ");
+        p.visualizarDatos();
+        
+        Profesor p1= new Profesor("Jose","jose@gmail.com","99945254359","profesorJose@utalca.cl");
+        System.out.println("Profesor instanciado correctamente Nombre: ");
+        p1.visualizarDatos();
+        
+        Carrera c= new Carrera("Compu");
+        System.out.println("Carrera instanciada correctamente : "+c.getNombre());
+        
+        Carrera c1= new Carrera("Electrica");
+        System.out.println("Carrera instanciada correctamente : "+c1.getNombre());
         
         
         
@@ -137,7 +169,7 @@ public class Gestion {
 
      // CARRERA //
      public void addCarrera(String nombre){
-        carrera=new Carrera();
+        carrera=new Carrera(nombre);
         carrera.setNombre(nombre);
         carrerasQueSeImparten.add(carrera);
     }

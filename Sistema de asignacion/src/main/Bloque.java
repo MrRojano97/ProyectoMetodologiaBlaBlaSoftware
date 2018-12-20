@@ -27,11 +27,11 @@ public class Bloque {
     public Bloque() {
     }
     
-    public Curso getCursoQueSeDicta() {
+    public Curso getCurso() {
         return curso;
     }
 
-    public void setCursoQueSeDicta(Curso curso) {
+    public void setCurso(Curso curso) {
         this.curso = curso;
     }
     
