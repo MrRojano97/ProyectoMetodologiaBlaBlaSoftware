@@ -1,0 +1,16 @@
+Apuntes de: Franjas
+
+Sprint 1: (Hasta 13-12-2018)
+
+-Testear Calidad de Modelo
+-Crear Diseño Preliminar(2) -> Encargado/s: Francisco González
+-Definir Clases (1) -> Encargado/s: Francisco Gamboa y Javiera Cabrera
+-Definir Atributos y Métodos (1) -> Encargado/s: Francisco González y Francisco Gamboa
+
+Sprint 2: (Hasta 20-12-2018)
+
+-Crear Diseño Preliminar(2) -> Encargado/s Francisco González (Pequeñas Correciones).
+-Testear Calidad de Modelo(1) -> Encargado/s: Javiera Cabrera y Francisco Gamboa
+-Crear Profesor(1) -> Encargado/s: Francisco Gamboa
+-Crear Curso(1) -> Encargado/s: Francisco Gamboa
+-Crear Sala(1) -> Encargado/s: Francisco Gamboa
