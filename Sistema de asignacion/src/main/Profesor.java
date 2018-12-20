@@ -21,17 +21,18 @@ public class Profesor {
     Date fechaContratacion;//fecha en la cual se contrato al profesor
     String numeroContacto;//numero celular personal del profesor
     //horario que contiene los bloques semanales y sus cursos asignados
-    Horario horarioSemanal;
+    Horario horario;
     ArrayList<Curso> cursosAsignados;//cursos que esta dictando el profesor
     
-    public Profesor(String nombre, String correoP, String numC){
+    public Profesor(String nombre, String correoP, String numC,String correoI){
         this.nombre=nombre;
         this.correoPersonal=correoP;
+        this.correoPersonal=correoI;
         this.fechaContratacion= new Date();
-        this.horarioSemanal= new Horario();
-        this.setNumeroContacto(numC);
+        this.horario= new Horario();
+        this.numeroContacto=numC;
     }
-
+  
     public String getNombre() {
         return nombre;
     }
@@ -71,6 +72,10 @@ public class Profesor {
     public void setNumeroContacto(String numeroContacto) {
         this.numeroContacto = numeroContacto;
     }
-
+    public void visualizarDatos() {
+        System.out.println("\n Nombre: "+this.getNombre()+"\n Correo: "+this.getCorreoPersonal()+"\n Correo institucional: "+this.getCorreoInstitucional());
+        System.out.println(" Numero de contato: "+this.getNumeroContacto()+"\n Fecha/Hora de contratacion: "+this.getFechaContratacion());
+    }
+    
     
 }

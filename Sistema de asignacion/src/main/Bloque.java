@@ -13,16 +13,19 @@ import java.time.LocalTime;
  * @author FrancsicoGP
  */
 public class Bloque {
-    Curso cursoQueSeDicta;
+    Curso curso=null;
     LocalTime horaInicio;
     LocalTime horaTermino;
 
+    public Bloque() {
+    }
+    
     public Curso getCursoQueSeDicta() {
-        return cursoQueSeDicta;
+        return curso;
     }
 
-    public void setCursoQueSeDicta(Curso cursoQueSeDicta) {
-        this.cursoQueSeDicta = cursoQueSeDicta;
+    public void setCursoQueSeDicta(Curso curso) {
+        this.curso = curso;
     }
 
     
