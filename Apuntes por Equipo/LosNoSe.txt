@@ -1,2 +1,18 @@
 Apuntes de: LosNoSe
 
+Tareas:
+
+Sprint 1:
+
+Matías Erenchun: Definir Arquitectura, Definir Esquema de Persistencia.
+Ramiro Rodríguez: Definir Arquitectura.
+Elías Avendaño: Definir Lenguaje, Definir IDE, Armar Git.
+
+Sprint 2:
+
+Matías Erenchun: Implementar Esquema de Persistencia.
+Ramiro Rodríguez: Definir Arquitectura.
+Elías Avendaño: Scrum Master.
+
+Daily 1 (15/12/2018 22:00): Se decide que se implementará la interfaz Serializable para guardar los datos en un TXT.
+Daily 2 (18/12/2018 22:05): Se conversa sobre cómo funciona Serializable y la imagen de Arquitectura.
