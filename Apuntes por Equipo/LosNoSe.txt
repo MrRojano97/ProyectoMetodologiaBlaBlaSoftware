@@ -15,4 +15,11 @@ Ramiro Rodríguez: Definir Arquitectura.
 Elías Avendaño: Scrum Master.
 
 Daily 1 (15/12/2018 22:00): Se decide que se implementará la interfaz Serializable para guardar los datos en un TXT.
+
 Daily 2 (18/12/2018 22:05): Se conversa sobre cómo funciona Serializable y la imagen de Arquitectura.
+
+Daily 3 (21/12/2018 22:30)
+Se deciden tomar las tareas del Product Bakclog:
+"El Administrador necesita vincular profesores y cursos (2)"
+"El Administrador necesita vincular cursos a semestres (2)"
+Se conversa sobre replantear esquema de persistencia
