@@ -110,6 +110,15 @@ public class Gestion {
         carrera.setNombre(nombre);
         carrerasQueSeImparten.add(carrera);
     }
+     public void eliminarCarrera(String nombre){
+         int eliminar=0;
+         for (int i=0;i<carrerasQueSeImparten.size();i++){
+             if (carrerasQueSeImparten.get(i).nombre.equals(nombre)){
+                 eliminar=i;
+             }
+         }
+         carrerasQueSeImparten.remove(eliminar);
+     }
 
     public void modificarProfesor(String nombre, String correoP, String numC, String correoI,Date fecha) {
         this.profesor.setCorreoInstitucional(correoP);
