@@ -5,7 +5,7 @@
  */
 package main;
 
-import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -13,18 +13,19 @@ import java.util.ArrayList;
  */
 public class Sala {
     String numero;
-    Horario planificacionSemanal;
-
+    Horario horario;
+    
+    
+    public Sala(String numero) {
+        this.numero = numero;
+        this.horario=new Horario();
+    }
     public Horario getPlanificacionSemanal() {
-        return planificacionSemanal;
+        return horario;
     }
 
     public void setPlanificacionSemanal(Horario planificacionSemanal) {
-        this.planificacionSemanal = planificacionSemanal;
-    }
-
-    public Sala(String numero) {
-        this.numero = numero;
+        this.horario = planificacionSemanal;
     }
     
     public String getNumero() {
@@ -34,8 +35,15 @@ public class Sala {
     public void setNumero(String numero) {
         this.numero = numero;
     }
+   
     //Agrega un curso al horario
     public void addCurso(Curso curso ){
         
     }
+//    public Sala crearSala(Sala sala){      
+//        return sala;
+//    }
+//    public void modificarSala(){
+//        
+//    }
 }
