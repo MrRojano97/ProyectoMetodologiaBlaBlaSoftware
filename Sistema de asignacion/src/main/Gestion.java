@@ -76,13 +76,18 @@ public class Gestion {
          sala.planificacionSemanal=planificacion;
      }
      public void eliminarSala(String numero){
-         int eliminar=0;
+         int eliminar=-1;
          for (int i=0;i<salasDisponibles.size();i++){
              if (salasDisponibles.get(i).numero.equals(numero)){
                  eliminar=i;
              }
          }
-         salasDisponibles.remove(eliminar);
+         if(eliminar!=-1){
+             salasDisponibles.remove(eliminar);
+         }
+         else{
+             System.out.println("No se encuentra esa Sala en nuestros datos.");
+         }
      }
     // SALA  //
     public void addSala(String numero){
@@ -106,18 +111,49 @@ public class Gestion {
 
      // CARRERA //
      public void addCarrera(String nombre){
-        carrera=new Carrera();
-        carrera.setNombre(nombre);
+        carrera=new Carrera(nombre);
         carrerasQueSeImparten.add(carrera);
     }
-     public void eliminarCarrera(String nombre){
-         int eliminar=0;
+     public int buscarCarrera(String carrera){
+         int j=-1;
          for (int i=0;i<carrerasQueSeImparten.size();i++){
-             if (carrerasQueSeImparten.get(i).nombre.equals(nombre)){
-                 eliminar=i;
+             if (carrerasQueSeImparten.get(i).nombre.equals(carrera)){
+                 j=i;
              }
          }
-         carrerasQueSeImparten.remove(eliminar);
+         return j;
+     }
+     public void agregarCurso_Carrera(String carrera, Curso curso){
+         int j= buscarCarrera(carrera);
+         if(j!=-1)
+            carrerasQueSeImparten.get(j).addCurso(curso);
+         else
+             System.out.println("No se encuentra esa Carrera en nuestros datos.");
+     }
+     public void eliminarCurso_Carrera(String carrera, String curso){
+         int j= buscarCarrera(carrera);
+         if(j!=-1)
+            carrerasQueSeImparten.get(j).delCurso(curso);
+         else
+             System.out.println("No se encuentra esa Carrera en nuestros datos.");
+     }
+     public void modificarNombreCarrera(String nombre,String nombre_nuevo){
+         int j=buscarCarrera(nombre);
+         if(j!=-1){
+             carrerasQueSeImparten.get(j).setNombre(nombre_nuevo);
+         }
+         else{
+             System.out.println("No se encuentra esa Carrera en nuestros datos.");
+         }
+     }
+     public void eliminarCarrera(String nombre){
+         int eliminar=buscarCarrera(nombre);
+         if(eliminar!=-1){
+             carrerasQueSeImparten.remove(eliminar);
+         }
+         else{
+             System.out.println("No se encuentra esa Carrera en nuestros datos.");
+         }
      }
 
     public void modificarProfesor(String nombre, String correoP, String numC, String correoI,Date fecha) {
