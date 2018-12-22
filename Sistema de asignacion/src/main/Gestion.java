@@ -78,7 +78,39 @@ public class Gestion {
         System.out.println("\n Disponibilidad Sala: "+sala.getNumero()+" martes, bloque 6: "+sala.horario.verificarDisponibilidadDeBloque(1,5));
         sala.horario.visualizarPlanificacionSemanal();//visualizaion de la planificacion semanal(bloques) de la sala
         
+         //TESTEO DE CALIDAD DEL MODELO
+        sala = new Sala("105");
+        System.out.println("\nSala instanciada correctamente "+sala.getNumero());
         
+        sala = new Sala("T2");
+        System.out.println("\nSala instanciada correctamente "+sala.getNumero());
+        
+        bloque= new Bloque();
+        Curso c2=new Curso("Metodologias y blabla");
+        bloque.setCurso(c2);
+        bloque.setHoraInicio(8,30);
+        bloque.setHoraTermino(9,30);
+        System.out.println("\nBloque instanciado correctamente- Inicio:  "+bloque.getHoraInicio()+"  Fin:  "+bloque.getHoraTermino()+"  Curso:  "+bloque.getCurso().getNombre());
+        
+        bloque= new Bloque();
+        bloque.setCurso(new Curso("Proyecto de programacion"));
+        bloque.setHoraInicio(18,00);
+        bloque.setHoraTermino(19,00);
+        System.out.println("\nBloque instanciado correctamente- Inicio:  "+bloque.getHoraInicio()+"  Fin:  "+bloque.getHoraTermino()+"  Curso:  "+bloque.getCurso().getNombre());
+        
+        profesor= new Profesor("Rodrigo ","rodrigo@gmail.com","99929292929","profesorRodrigo@utalca.cl");
+        System.out.println("\nProfesor instanciado correctamente Nombre: ");
+        profesor.visualizarDatos();
+        
+        profesor= new Profesor("Jose","jose@gmail.com","99945254359","profesorJose@utalca.cl");
+        System.out.println("\nProfesor instanciado correctamente Nombre: ");
+        profesor.visualizarDatos();
+        
+        carrera= new Carrera("Compu");
+        System.out.println("\nCarrera instanciada correctamente : "+carrera.getNombre());
+        
+        carrera= new Carrera("Electrica");
+        System.out.println("\nCarrera instanciada correctamente : "+carrera.getNombre());
         
         
     
@@ -137,7 +169,7 @@ public class Gestion {
 
      // CARRERA //
      public void addCarrera(String nombre){
-        carrera=new Carrera();
+        carrera=new Carrera(nombre);
         carrera.setNombre(nombre);
         carrerasQueSeImparten.add(carrera);
     }

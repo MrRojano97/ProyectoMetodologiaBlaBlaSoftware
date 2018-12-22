@@ -83,7 +83,7 @@ public class Horario {
       * @param bloque posicion del bloque especifico
       */
     public void asignarCursoABloque(Curso curso, int dia, int bloque){
-            this.planificacionSemanal.get(dia).get(bloque).setCursoQueSeDicta(curso);
+            this.planificacionSemanal.get(dia).get(bloque).setCurso(curso);
     }
     /**
      * elimina un curso de un determinado bloque
@@ -91,7 +91,7 @@ public class Horario {
      * @param bloque posicion del bloque especifico 
      */
     public void quitarCursoDeBloque(int dia, int bloque){
-        this.planificacionSemanal.get(dia).get(bloque).setCursoQueSeDicta(null);
+        this.planificacionSemanal.get(dia).get(bloque).setCurso(null);
     }
     
     
