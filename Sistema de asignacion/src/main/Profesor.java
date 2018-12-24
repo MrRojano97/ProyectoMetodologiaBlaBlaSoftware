@@ -14,7 +14,7 @@ import java.util.Date;
  * @author Francisco Gamboa
  * @author Javiera
  */
-public class Profesor {
+public class Profesor implements cambios {
     String nombre;//nombre completo del profesor
     String correoInstitucional;//correo asignado por la universidad
     String correoPersonal;//correo personal del profesor
@@ -32,12 +32,7 @@ public class Profesor {
         this.horario= new Horario();
         this.numeroContacto=numC;
     }
-
-    Profesor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-  
+ 
     public String getNombre() {
         return nombre;
     }
@@ -81,4 +76,16 @@ public class Profesor {
         System.out.println("\n Nombre: "+this.getNombre()+"\n Correo: "+this.getCorreoPersonal()+"\n Correo institucional: "+this.getCorreoInstitucional());
         System.out.println(" Numero de contato: "+this.getNumeroContacto()+"\n Fecha/Hora de contratacion: "+this.getFechaContratacion());
     }
+    //Los profesores solo deberian poder modificar el horario de un curso
+
+    @Override
+    public Curso modificarCurso(Curso c, String n, Horario h, Profesor p) {
+        c.setHorario(h);
+        return c;
+    }
+
+    @Override
+    public void eliminarCurso(Curso c) {
+        cursosAsignados.remove(c);
+    } 
 }

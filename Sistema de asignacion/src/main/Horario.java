@@ -85,14 +85,14 @@ public class Horario {
     public void asignarCursoABloque(Curso curso, int dia, int bloque){
             this.planificacionSemanal.get(dia).get(bloque).setCurso(curso);
     }
-    /**
-     * elimina un curso de un determinado bloque
-     * @param dia posicion del día; de lunes(0) a sabado(5)
-     * @param bloque posicion del bloque especifico 
-     */
+//    /**
+//     * elimina un curso de un determinado bloque
+//     * @param dia posicion del día; de lunes(0) a sabado(5)
+//     * @param bloque posicion del bloque especifico 
+//     */
     public void quitarCursoDeBloque(int dia, int bloque){
         this.planificacionSemanal.get(dia).get(bloque).setCurso(null);
     }
-    
+//    
     
 }

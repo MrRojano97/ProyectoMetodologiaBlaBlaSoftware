@@ -12,7 +12,7 @@ import java.time.LocalTime;
  *
  * @author FrancsicoGP
  */
-public class Bloque {
+public class Bloque{
     Curso curso=null;
     LocalTime horaInicio;
     LocalTime horaTermino;
