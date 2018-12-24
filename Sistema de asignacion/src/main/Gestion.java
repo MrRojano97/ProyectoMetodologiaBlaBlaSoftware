@@ -45,6 +45,8 @@ public class Gestion {
         
         //muestra en consola los profesores contenidos en la lista
         this.mostrarListaDeProfesores();
+        this.addSala("asd");
+        this.visualizarSalas();
         
         
         
@@ -93,6 +95,12 @@ public class Gestion {
     public void addSala(String numero){
         Sala sala=new Sala();
         salasDisponibles.add(sala.crearSala(numero));
+    }
+    public void visualizarSalas(){
+        for(int i=0;i<salasDisponibles.size();i++){
+            System.out.println(salasDisponibles.get(i).toString());
+        
+        }
     }
     // PROFESOR //
     /**

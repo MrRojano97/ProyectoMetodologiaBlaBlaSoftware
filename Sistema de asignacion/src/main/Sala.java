@@ -12,6 +12,8 @@ import java.util.ArrayList;
  * @author Javiera
  */
 public class Sala {
+
+    
     String numero;
     Horario planificacionSemanal;
 
@@ -45,5 +47,9 @@ public class Sala {
     public void modificarSala(String numero,Horario planificacionSemanal){
         this.numero=numero;
         this.planificacionSemanal=planificacionSemanal;
+    }
+    @Override
+    public String toString() {
+        return "Sala{" + "numero=" + numero + ", planificacionSemanal=" + planificacionSemanal + '}';
     }
 }
