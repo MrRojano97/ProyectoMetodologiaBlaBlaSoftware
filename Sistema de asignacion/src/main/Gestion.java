@@ -102,6 +102,11 @@ public class Gestion {
         
         }
     }
+    public void visualizarCarreras(){
+        for(int i=0;i<carrerasQueSeImparten.size();i++){
+            System.out.println(carrerasQueSeImparten.get(i).toString());
+        }
+    }
     // PROFESOR //
     /**
      * Metodo encargado de crear un nuevo profesor con sus datos basicos
