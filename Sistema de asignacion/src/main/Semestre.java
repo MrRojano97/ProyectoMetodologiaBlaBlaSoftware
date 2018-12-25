@@ -16,31 +16,36 @@ public class Semestre
     private String nombre;
     private String fechaInicio;
     private String fechaFin;
-    static ArrayList<Carrera> carrerasImpartidasEnSemestre=new ArrayList<>();
-    static ArrayList<Sala> salasUtilizadasEnSemestre=new ArrayList<>();
-    static ArrayList<Profesor> profesoresContratadosEnSemestre=new ArrayList<>();
-    static ArrayList<Curso> cursosImpartidos=new ArrayList<>();//cursos de la carrera
+    private ArrayList<Carrera> carrerasImpartidasEnSemestre;
+    private ArrayList<Sala> salasUtilizadasEnSemestre;
+    private ArrayList<Profesor> profesoresContratadosEnSemestre;
+    private ArrayList<Curso> cursosImpartidos;//cursos de la carrera
 
     public Semestre(String nombre, String fechaInicio, String fechaFin) 
     {
         this.nombre=nombre;
         this.fechaInicio=fechaInicio;
         this.fechaFin=fechaFin;
+        this.carrerasImpartidasEnSemestre=new ArrayList<>();
+        this.salasUtilizadasEnSemestre=new ArrayList<>();
+        this.profesoresContratadosEnSemestre=new ArrayList<>();
+        this.cursosImpartidos=new ArrayList<>();
+        
     }
 
     public String getNombre() 
     {
-        return nombre;
+        return this.nombre;
     }
 
     public String getFechaInicio() 
     {
-        return fechaInicio;
+        return this.fechaInicio;
     }
 
     public String getFechaFin() 
     {
-        return fechaFin;
+        return this.fechaFin;
     }
     
     
@@ -50,14 +55,14 @@ public class Semestre
     {
         if(!this.cursoExiste(curso))// si el curso no existe
         {
-            return cursosImpartidos.add(curso);
+            return this.cursosImpartidos.add(curso);
         }
          return false;
     }
     
     public boolean cursoExiste(Curso curso)
     {
-        for(Curso auxCurso: cursosImpartidos)
+        for(Curso auxCurso: this.cursosImpartidos)
         {
             if(auxCurso.equals(curso))
             {
@@ -75,7 +80,7 @@ public class Semestre
     
     public void mostrarCurso()
     {
-        for(Curso auxCurso: cursosImpartidos)
+        for(Curso auxCurso: this.cursosImpartidos)
         {
             auxCurso.visualizarDatos();
         }
