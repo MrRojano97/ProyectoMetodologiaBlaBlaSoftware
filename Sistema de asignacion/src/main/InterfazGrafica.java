@@ -27,156 +27,179 @@ public class InterfazGrafica extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jTabbedPane4 = new javax.swing.JTabbedPane();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
-        jTabbedPane3 = new javax.swing.JTabbedPane();
+        tabsNivel0 = new javax.swing.JTabbedPane();
+        tabsAdminNivel1 = new javax.swing.JTabbedPane();
+        background0 = new javax.swing.JPanel();
+        bannerAdminCCu = new javax.swing.JLabel();
+        background1 = new javax.swing.JPanel();
+        background2 = new javax.swing.JPanel();
+        nombreCarrera = new javax.swing.JLabel();
+        valorNombreCa = new javax.swing.JTextField();
+        background3 = new javax.swing.JPanel();
+        nombreSala = new javax.swing.JLabel();
+        scrollNombreSala = new javax.swing.JScrollPane();
+        valorNombreSala = new javax.swing.JTextPane();
+        botonAceptar = new javax.swing.JButton();
+        tabsProfeNivel1 = new javax.swing.JTabbedPane();
+        tabsAlumnoNivel1 = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setPreferredSize(new java.awt.Dimension(1920, 1040));
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
 
-        jTabbedPane1.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
-        jTabbedPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jTabbedPane1.setDoubleBuffered(true);
-        jTabbedPane1.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        tabsNivel0.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
+        tabsNivel0.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tabsNivel0.setDoubleBuffered(true);
+        tabsNivel0.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        tabsNivel0.setPreferredSize(new java.awt.Dimension(1920, 1080));
 
-        jTabbedPane4.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
-        jTabbedPane4.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
+        tabsAdminNivel1.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
+        tabsAdminNivel1.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
+        tabsAdminNivel1.setPreferredSize(new java.awt.Dimension(1910, 1036));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        background0.setBackground(new java.awt.Color(216, 216, 216));
+        background0.setPreferredSize(new java.awt.Dimension(1910, 1007));
+
+        bannerAdminCCu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminCrearCurso.jpg"))); // NOI18N
+        bannerAdminCCu.setText("jLabel4");
+        bannerAdminCCu.setIconTextGap(0);
+        bannerAdminCCu.setPreferredSize(new java.awt.Dimension(1910, 103));
+
+        javax.swing.GroupLayout background0Layout = new javax.swing.GroupLayout(background0);
+        background0.setLayout(background0Layout);
+        background0Layout.setHorizontalGroup(
+            background0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(background0Layout.createSequentialGroup()
+                .addComponent(bannerAdminCCu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        background0Layout.setVerticalGroup(
+            background0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(background0Layout.createSequentialGroup()
+                .addComponent(bannerAdminCCu, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 913, Short.MAX_VALUE))
+        );
+
+        tabsAdminNivel1.addTab("Crear curso", background0);
+
+        background1.setBackground(new java.awt.Color(216, 216, 216));
+
+        javax.swing.GroupLayout background1Layout = new javax.swing.GroupLayout(background1);
+        background1.setLayout(background1Layout);
+        background1Layout.setHorizontalGroup(
+            background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1910, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 963, Short.MAX_VALUE)
+        background1Layout.setVerticalGroup(
+            background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1007, Short.MAX_VALUE)
         );
 
-        jTabbedPane4.addTab("Crear curso", jPanel3);
+        tabsAdminNivel1.addTab("Crear profesor", background1);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1910, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 963, Short.MAX_VALUE)
-        );
+        background2.setBackground(new java.awt.Color(216, 216, 216));
 
-        jTabbedPane4.addTab("Crear profesor", jPanel4);
+        nombreCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        nombreCarrera.setForeground(new java.awt.Color(51, 51, 51));
+        nombreCarrera.setText("Nombre carrera");
+        nombreCarrera.setMaximumSize(new java.awt.Dimension(135, 28));
+        nombreCarrera.setMinimumSize(new java.awt.Dimension(135, 28));
+        nombreCarrera.setPreferredSize(new java.awt.Dimension(135, 28));
 
-        jLabel2.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        jLabel2.setText("Nombre carrera");
-        jLabel2.setMaximumSize(new java.awt.Dimension(135, 28));
-        jLabel2.setMinimumSize(new java.awt.Dimension(135, 28));
-        jLabel2.setPreferredSize(new java.awt.Dimension(135, 28));
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        valorNombreCa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                valorNombreCaActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout background2Layout = new javax.swing.GroupLayout(background2);
+        background2.setLayout(background2Layout);
+        background2Layout.setHorizontalGroup(
+            background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(background2Layout.createSequentialGroup()
                 .addGap(91, 91, 91)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nombreCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(valorNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(1143, Short.MAX_VALUE))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        background2Layout.setVerticalGroup(
+            background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(background2Layout.createSequentialGroup()
                 .addGap(119, 119, 119)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(812, Short.MAX_VALUE))
+                .addGroup(background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nombreCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(valorNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(856, Short.MAX_VALUE))
         );
 
-        jTabbedPane4.addTab("Crear carrera", jPanel5);
+        tabsAdminNivel1.addTab("Crear carrera", background2);
 
-        jButton2.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        jButton2.setText("Aceptar");
+        background3.setBackground(new java.awt.Color(216, 216, 216));
 
-        jLabel1.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        jLabel1.setText("Nombre sala");
+        nombreSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        nombreSala.setForeground(new java.awt.Color(51, 51, 51));
+        nombreSala.setText("Nombre sala");
 
-        jScrollPane1.setViewportView(jTextPane1);
+        scrollNombreSala.setViewportView(valorNombreSala);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        botonAceptar.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonAceptar.setText("Aceptar");
+
+        javax.swing.GroupLayout background3Layout = new javax.swing.GroupLayout(background3);
+        background3.setLayout(background3Layout);
+        background3Layout.setHorizontalGroup(
+            background3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(background3Layout.createSequentialGroup()
                 .addGap(93, 93, 93)
-                .addComponent(jLabel1)
+                .addComponent(nombreSala)
                 .addGap(35, 35, 35)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1203, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(scrollNombreSala, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background3Layout.createSequentialGroup()
+                .addContainerGap(1071, Short.MAX_VALUE)
+                .addComponent(botonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(683, 683, 683))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        background3Layout.setVerticalGroup(
+            background3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background3Layout.createSequentialGroup()
                 .addGap(118, 118, 118)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 749, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(background3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(scrollNombreSala)
+                    .addComponent(nombreSala, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 755, Short.MAX_VALUE)
+                .addComponent(botonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49))
         );
 
-        jTabbedPane4.addTab("Crear sala", jPanel2);
+        tabsAdminNivel1.addTab("Crear sala", background3);
 
-        jTabbedPane1.addTab("Administrador", jTabbedPane4);
-        jTabbedPane4.getAccessibleContext().setAccessibleName("Crear Sala");
-        jTabbedPane4.getAccessibleContext().setAccessibleDescription("");
+        tabsNivel0.addTab("Administrador", tabsAdminNivel1);
+        tabsAdminNivel1.getAccessibleContext().setAccessibleName("Crear Sala");
+        tabsAdminNivel1.getAccessibleContext().setAccessibleDescription("");
 
-        jTabbedPane1.addTab("Profesor", jTabbedPane2);
-        jTabbedPane1.addTab("Alumno", jTabbedPane3);
+        tabsNivel0.addTab("Profesor", tabsProfeNivel1);
+        tabsNivel0.addTab("Alumno", tabsAlumnoNivel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(tabsNivel0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1040, Short.MAX_VALUE)
+            .addComponent(tabsNivel0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void valorNombreCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorNombreCaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_valorNombreCaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -214,19 +237,20 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JPanel background0;
+    private javax.swing.JPanel background1;
+    private javax.swing.JPanel background2;
+    private javax.swing.JPanel background3;
+    private javax.swing.JLabel bannerAdminCCu;
+    private javax.swing.JButton botonAceptar;
+    private javax.swing.JLabel nombreCarrera;
+    private javax.swing.JLabel nombreSala;
+    private javax.swing.JScrollPane scrollNombreSala;
+    private javax.swing.JTabbedPane tabsAdminNivel1;
+    private javax.swing.JTabbedPane tabsAlumnoNivel1;
+    private javax.swing.JTabbedPane tabsNivel0;
+    private javax.swing.JTabbedPane tabsProfeNivel1;
+    private javax.swing.JTextField valorNombreCa;
+    private javax.swing.JTextPane valorNombreSala;
     // End of variables declaration//GEN-END:variables
 }
