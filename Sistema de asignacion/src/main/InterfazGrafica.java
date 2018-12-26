@@ -32,10 +32,14 @@ public class InterfazGrafica extends javax.swing.JFrame {
         background0 = new javax.swing.JPanel();
         bannerAdminCCu = new javax.swing.JLabel();
         background1 = new javax.swing.JPanel();
+        bannerAdminIP = new javax.swing.JLabel();
         background2 = new javax.swing.JPanel();
+        bannerAdminCCa = new javax.swing.JLabel();
         nombreCarrera = new javax.swing.JLabel();
-        valorNombreCa = new javax.swing.JTextField();
+        scrollNombreCa = new javax.swing.JScrollPane();
+        valorNombreCa = new javax.swing.JTextPane();
         background3 = new javax.swing.JPanel();
+        bannerAdminCS = new javax.swing.JLabel();
         nombreSala = new javax.swing.JLabel();
         scrollNombreSala = new javax.swing.JScrollPane();
         valorNombreSala = new javax.swing.JTextPane();
@@ -45,17 +49,26 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
+        setBackground(new java.awt.Color(59, 59, 59));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setIconImages(null);
         setPreferredSize(new java.awt.Dimension(1920, 1080));
+        setResizable(false);
 
+        tabsNivel0.setBackground(new java.awt.Color(59, 59, 59));
+        tabsNivel0.setForeground(new java.awt.Color(204, 204, 204));
         tabsNivel0.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
         tabsNivel0.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tabsNivel0.setDoubleBuffered(true);
         tabsNivel0.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        tabsNivel0.setMinimumSize(new java.awt.Dimension(0, 0));
         tabsNivel0.setPreferredSize(new java.awt.Dimension(1920, 1080));
 
+        tabsAdminNivel1.setBackground(new java.awt.Color(59, 59, 59));
+        tabsAdminNivel1.setForeground(new java.awt.Color(204, 204, 204));
         tabsAdminNivel1.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
         tabsAdminNivel1.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
+        tabsAdminNivel1.setMinimumSize(new java.awt.Dimension(0, 0));
         tabsAdminNivel1.setPreferredSize(new java.awt.Dimension(1910, 1036));
 
         background0.setBackground(new java.awt.Color(216, 216, 216));
@@ -77,28 +90,37 @@ public class InterfazGrafica extends javax.swing.JFrame {
         background0Layout.setVerticalGroup(
             background0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background0Layout.createSequentialGroup()
-                .addComponent(bannerAdminCCu, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 913, Short.MAX_VALUE))
+                .addComponent(bannerAdminCCu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 904, Short.MAX_VALUE))
         );
 
         tabsAdminNivel1.addTab("Crear curso", background0);
 
         background1.setBackground(new java.awt.Color(216, 216, 216));
 
+        bannerAdminIP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminCrearProfesor.jpg"))); // NOI18N
+
         javax.swing.GroupLayout background1Layout = new javax.swing.GroupLayout(background1);
         background1.setLayout(background1Layout);
         background1Layout.setHorizontalGroup(
             background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1910, Short.MAX_VALUE)
+            .addGroup(background1Layout.createSequentialGroup()
+                .addComponent(bannerAdminIP)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         background1Layout.setVerticalGroup(
             background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1007, Short.MAX_VALUE)
+            .addGroup(background1Layout.createSequentialGroup()
+                .addComponent(bannerAdminIP)
+                .addGap(0, 904, Short.MAX_VALUE))
         );
 
         tabsAdminNivel1.addTab("Crear profesor", background1);
 
         background2.setBackground(new java.awt.Color(216, 216, 216));
+
+        bannerAdminCCa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminCrearCarrera.jpg"))); // NOI18N
+        bannerAdminCCa.setToolTipText("");
 
         nombreCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
         nombreCarrera.setForeground(new java.awt.Color(51, 51, 51));
@@ -107,11 +129,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         nombreCarrera.setMinimumSize(new java.awt.Dimension(135, 28));
         nombreCarrera.setPreferredSize(new java.awt.Dimension(135, 28));
 
-        valorNombreCa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorNombreCaActionPerformed(evt);
-            }
-        });
+        scrollNombreCa.setViewportView(valorNombreCa);
 
         javax.swing.GroupLayout background2Layout = new javax.swing.GroupLayout(background2);
         background2.setLayout(background2Layout);
@@ -120,23 +138,29 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(background2Layout.createSequentialGroup()
                 .addGap(91, 91, 91)
                 .addComponent(nombreCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
-                .addComponent(valorNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1143, Short.MAX_VALUE))
+                .addGap(44, 44, 44)
+                .addComponent(scrollNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(background2Layout.createSequentialGroup()
+                .addComponent(bannerAdminCCa)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         background2Layout.setVerticalGroup(
             background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background2Layout.createSequentialGroup()
-                .addGap(119, 119, 119)
-                .addGroup(background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombreCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(valorNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(856, Short.MAX_VALUE))
+                .addComponent(bannerAdminCCa)
+                .addGap(104, 104, 104)
+                .addGroup(background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(scrollNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nombreCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(772, Short.MAX_VALUE))
         );
 
         tabsAdminNivel1.addTab("Crear carrera", background2);
 
         background3.setBackground(new java.awt.Color(216, 216, 216));
+
+        bannerAdminCS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminCrearSala.jpg"))); // NOI18N
 
         nombreSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
         nombreSala.setForeground(new java.awt.Color(51, 51, 51));
@@ -158,20 +182,24 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addComponent(scrollNombreSala, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background3Layout.createSequentialGroup()
-                .addContainerGap(1071, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(683, 683, 683))
+                .addGap(34, 34, 34))
+            .addGroup(background3Layout.createSequentialGroup()
+                .addComponent(bannerAdminCS)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         background3Layout.setVerticalGroup(
             background3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background3Layout.createSequentialGroup()
-                .addGap(118, 118, 118)
+                .addComponent(bannerAdminCS)
+                .addGap(103, 103, 103)
                 .addGroup(background3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(scrollNombreSala)
                     .addComponent(nombreSala, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 755, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 695, Short.MAX_VALUE)
                 .addComponent(botonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49))
+                .addGap(21, 21, 21))
         );
 
         tabsAdminNivel1.addTab("Crear sala", background3);
@@ -180,7 +208,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
         tabsAdminNivel1.getAccessibleContext().setAccessibleName("Crear Sala");
         tabsAdminNivel1.getAccessibleContext().setAccessibleDescription("");
 
+        tabsProfeNivel1.setBackground(new java.awt.Color(59, 59, 59));
+        tabsProfeNivel1.setMinimumSize(new java.awt.Dimension(0, 0));
         tabsNivel0.addTab("Profesor", tabsProfeNivel1);
+
+        tabsAlumnoNivel1.setMinimumSize(new java.awt.Dimension(0, 0));
         tabsNivel0.addTab("Alumno", tabsAlumnoNivel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -191,66 +223,66 @@ public class InterfazGrafica extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tabsNivel0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tabsNivel0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void valorNombreCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorNombreCaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_valorNombreCaActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new InterfazGrafica().setVisible(true);
-            }
-        });
-    }
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new InterfazGrafica().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background0;
     private javax.swing.JPanel background1;
     private javax.swing.JPanel background2;
     private javax.swing.JPanel background3;
+    private javax.swing.JLabel bannerAdminCCa;
     private javax.swing.JLabel bannerAdminCCu;
+    private javax.swing.JLabel bannerAdminCS;
+    private javax.swing.JLabel bannerAdminIP;
     private javax.swing.JButton botonAceptar;
     private javax.swing.JLabel nombreCarrera;
     private javax.swing.JLabel nombreSala;
+    private javax.swing.JScrollPane scrollNombreCa;
     private javax.swing.JScrollPane scrollNombreSala;
     private javax.swing.JTabbedPane tabsAdminNivel1;
     private javax.swing.JTabbedPane tabsAlumnoNivel1;
     private javax.swing.JTabbedPane tabsNivel0;
     private javax.swing.JTabbedPane tabsProfeNivel1;
-    private javax.swing.JTextField valorNombreCa;
+    private javax.swing.JTextPane valorNombreCa;
     private javax.swing.JTextPane valorNombreSala;
     // End of variables declaration//GEN-END:variables
 }
