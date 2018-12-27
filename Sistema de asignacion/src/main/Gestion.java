@@ -91,11 +91,14 @@ public class Gestion {
         Sala sala=new Sala();
         salasDisponibles.add(sala.crearSala(numero));
     }
-    public void visualizarSalas(){
+    public ArrayList<String> visualizarSalas(){
+        ArrayList<String> salas= new ArrayList<>();
         for(int i=0;i<salasDisponibles.size();i++){
             System.out.println(salasDisponibles.get(i).toString());
+            salas.add(salasDisponibles.get(i).getNumero());
         
         }
+        return salas;
     }
     //RETORNA STRING CON NOMBRES DE CARRERAS
     public ArrayList<String> visualizarCarreras(){
