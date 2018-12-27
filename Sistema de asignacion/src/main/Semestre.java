@@ -52,7 +52,7 @@ public class Semestre
     {
         for(Sala sala: this.salasUtilizadasEnSemestre)
         {
-            // mostrar info sala.
+            sala.toString();
         }
     }
     
@@ -166,7 +166,7 @@ public class Semestre
     {
         for(Carrera carrera: this.carrerasImpartidasEnSemestre)
         {
-            //mostrar carrera
+            carrera.mostrarInfo();
         }
     }
     
