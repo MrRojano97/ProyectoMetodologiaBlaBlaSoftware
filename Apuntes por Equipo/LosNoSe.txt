@@ -1,2 +1,33 @@
 Apuntes de: LosNoSe
 
+Tareas:
+
+Sprint 1:
+
+Matías Erenchun: Definir Arquitectura, Definir Esquema de Persistencia.
+Ramiro Rodríguez: Definir Arquitectura.
+Elías Avendaño: Definir Lenguaje, Definir IDE, Armar Git.
+
+Sprint 2:
+
+Matías Erenchun: Implementar Esquema de Persistencia.
+Ramiro Rodríguez: Definir Arquitectura.
+Elías Avendaño: Scrum Master.
+
+Daily 1 (15/12/2018 22:00): Se decide que se implementará la interfaz Serializable para guardar los datos en un TXT.
+
+Daily 2 (18/12/2018 22:05): Se conversa sobre cómo funciona Serializable y la imagen de Arquitectura.
+
+Daily 3 (21/12/2018 22:30)
+Se deciden tomar las tareas del Product Bakclog:
+"El Administrador necesita vincular profesores y cursos (2)"
+"El Administrador necesita vincular cursos a semestres (2)"
+Se conversa sobre replantear esquema de persistencia
+
+Daily 4 (25/12/2018 22:30)
+Se decide bloquear las tareas de interfaz gráfica de vinc. Profesores y cursos y Cursos a semestres debido a que aún no se define una interfaz gráfica base a utlizar con tal de mantener el mismo formato.
+Se decide añadir a Product Backlog la tarea "El administrador necesita gestinar seemstres (3)".
+Se comienza el Sprint Backlog de "Crear Semestre (1)"
+Se conversa sobre la Arquitectura.
+
+Se realizá charla sobre el uso de Json con el grupo y se informa a los demás Scrum Masters cómo agregar la librería para su correcto funcionamiento (21:30 26/12/2018)
