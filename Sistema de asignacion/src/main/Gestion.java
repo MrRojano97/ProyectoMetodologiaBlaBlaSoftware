@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package main;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
+
 
 /**
  * @author FranciscoGP
@@ -27,7 +23,8 @@ public class Gestion {
     Sala sala;
     Bloque bloque;
     
-    public Gestion(){
+    public Gestion()
+    {
         this.inicio();
     }
     /**
@@ -48,6 +45,7 @@ public class Gestion {
         
         //muestra en consola los profesores contenidos en la lista
         this.mostrarListaDeProfesores();
+        this.visualizarSalas();
         
          //INSTANCIAMIENTO DE UN NUEVO CURSO Y PROFESOR //
         curso=new Curso("Metodologia");//creamos el curso
@@ -78,7 +76,39 @@ public class Gestion {
         System.out.println("\n Disponibilidad Sala: "+sala.getNumero()+" martes, bloque 6: "+sala.horario.verificarDisponibilidadDeBloque(1,5));
         sala.horario.visualizarPlanificacionSemanal();//visualizaion de la planificacion semanal(bloques) de la sala
         
+         //TESTEO DE CALIDAD DEL MODELO
+        sala = new Sala("105");
+        System.out.println("\nSala instanciada correctamente "+sala.getNumero());
         
+        sala = new Sala("T2");
+        System.out.println("\nSala instanciada correctamente "+sala.getNumero());
+        
+        bloque= new Bloque();
+        Curso c2=new Curso("Metodologias y blabla");
+        bloque.setCurso(c2);
+        bloque.setHoraInicio(8,30);
+        bloque.setHoraTermino(9,30);
+        System.out.println("\nBloque instanciado correctamente- Inicio:  "+bloque.getHoraInicio()+"  Fin:  "+bloque.getHoraTermino()+"  Curso:  "+bloque.getCurso().getNombre());
+        
+        bloque= new Bloque();
+        bloque.setCurso(new Curso("Proyecto de programacion"));
+        bloque.setHoraInicio(18,00);
+        bloque.setHoraTermino(19,00);
+        System.out.println("\nBloque instanciado correctamente- Inicio:  "+bloque.getHoraInicio()+"  Fin:  "+bloque.getHoraTermino()+"  Curso:  "+bloque.getCurso().getNombre());
+        
+        profesor= new Profesor("Rodrigo ","rodrigo@gmail.com","99929292929","profesorRodrigo@utalca.cl");
+        System.out.println("\nProfesor instanciado correctamente Nombre: ");
+        profesor.visualizarDatos();
+        
+        profesor= new Profesor("Jose","jose@gmail.com","99945254359","profesorJose@utalca.cl");
+        System.out.println("\nProfesor instanciado correctamente Nombre: ");
+        profesor.visualizarDatos();
+        
+        carrera= new Carrera("Compu");
+        System.out.println("\nCarrera instanciada correctamente : "+carrera.getNombre());
+        
+        carrera= new Carrera("Electrica");
+        System.out.println("\nCarrera instanciada correctamente : "+carrera.getNombre());
         
         
     
@@ -115,19 +145,47 @@ public class Gestion {
          sala.horario=planificacion;
      }
      public void eliminarSala(String numero){
-         int eliminar=0;
+         int eliminar=-1;
          for (int i=0;i<salasDisponibles.size();i++){
              if (salasDisponibles.get(i).numero.equals(numero)){
                  eliminar=i;
              }
          }
-         salasDisponibles.remove(eliminar);
+         if(eliminar!=-1){
+             salasDisponibles.remove(eliminar);
+         }
+         else{
+             System.out.println("No se encuentra esa Sala en nuestros datos.");
+         }
      }
     // SALA  //
     public void addSala(Sala sala){      
         salasDisponibles.add(sala);
     }
-    //           //
+    public void visualizarSalas(){
+        for(int i=0;i<salasDisponibles.size();i++){
+            System.out.println(salasDisponibles.get(i).toString());
+        
+        }
+    }
+    //RETORNA STRING CON NOMBRES DE CARRERAS
+    public ArrayList<String> visualizarCarreras(){
+        ArrayList<String> carreras=new ArrayList<>();
+        for(int i=0;i<carrerasQueSeImparten.size();i++){
+            System.out.println(carrerasQueSeImparten.get(i).toString());
+            carreras.add(carrerasQueSeImparten.get(i).nombre);
+        }
+        return carreras;
+    }
+    public void visualizarCarrera(String nombre){
+        boolean encontrado=false;
+        for(int i=0;i<carrerasQueSeImparten.size() && encontrado==false;i++){
+            if (carrerasQueSeImparten.get(i).nombre.equals(nombre)){
+                System.out.println(carrerasQueSeImparten.get(i).toString());
+                encontrado=true;
+            }
+        }
+    }
     // PROFESOR //
     //          //
      public void addProfesor(Profesor p){
@@ -137,11 +195,50 @@ public class Gestion {
 
      // CARRERA //
      public void addCarrera(String nombre){
-        carrera=new Carrera();
-        carrera.setNombre(nombre);
+        carrera=new Carrera(nombre);
         carrerasQueSeImparten.add(carrera);
     }
-     //         //
+     public int buscarCarrera(String carrera){
+         int j=-1;
+         for (int i=0;i<carrerasQueSeImparten.size();i++){
+             if (carrerasQueSeImparten.get(i).nombre.equals(carrera)){
+                 j=i;
+             }
+         }
+         return j;
+     }
+     public void agregarCurso_Carrera(String carrera, Curso curso){
+         int j= buscarCarrera(carrera);
+         if(j!=-1)
+            carrerasQueSeImparten.get(j).addCurso(curso);
+         else
+             System.out.println("No se encuentra esa Carrera en nuestros datos.");
+     }
+     public void eliminarCurso_Carrera(String carrera, String curso){
+         int j= buscarCarrera(carrera);
+         if(j!=-1)
+            carrerasQueSeImparten.get(j).delCurso(curso);
+         else
+             System.out.println("No se encuentra esa Carrera en nuestros datos.");
+     }
+     public void modificarNombreCarrera(String nombre,String nombre_nuevo){
+         int j=buscarCarrera(nombre);
+         if(j!=-1){
+             carrerasQueSeImparten.get(j).setNombre(nombre_nuevo);
+         }
+         else{
+             System.out.println("No se encuentra esa Carrera en nuestros datos.");
+         }
+     }
+     public void eliminarCarrera(String nombre){
+         int eliminar=buscarCarrera(nombre);
+         if(eliminar!=-1){
+             carrerasQueSeImparten.remove(eliminar);
+         }
+         else{
+             System.out.println("No se encuentra esa Carrera en nuestros datos.");
+         }
+     }
 
     public void modificarProfesor(String nombre, String correoP, String numC, String correoI,Date fecha) {
         this.profesor.setCorreoInstitucional(correoP);
@@ -164,6 +261,51 @@ public class Gestion {
             System.out.println("no se encuentra el profesor buscado");
         }
             
+    }
+    
+    /*@
+    retorna 1 si se agrego correctamente el curso al semestre
+    retorna 0 si ocurrio un erro inesperado al agregar
+    retorna -1  si el semestre indicado no existe
+    retorna -2 si el curso indicado ya existe en el semestre
+    */
+    public int agregarCursoSemeste(String nombreSemestre, Curso curso)
+    {
+        int i =this.semestreExiste(nombreSemestre);
+        if(-1<i)
+        {
+           return  this.semestres.get(i).agregarCurso(curso);// puede retornar los siguentes valores : 1,0 y -2.
+           
+        }
+        else
+        {
+            
+            return -1;// retorna -1 si el smestre no existe
+        }
+        
+        
+    }
+    
+    public  void mostrarSemestres ()
+    {
+        for(Semestre semestre: this.semestres)
+        {
+            semestre.mostrarDatos();
+        }
+    }
+    
+    public int semestreExiste(String nombreSemestre)
+    {
+        int i=0;
+        for(Semestre semestre: this.semestres)
+        {
+            if(semestre.getNombre().equalsIgnoreCase(nombreSemestre))
+            {
+                return i;// retorna la posicion del semestre indicado.
+            }
+            i++;
+        }
+        return -1;// retorna -1 si el semestre no existe
     }
      
 }
