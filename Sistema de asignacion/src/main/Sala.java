@@ -56,6 +56,6 @@ public class Sala {
     }
     @Override
     public String toString() {
-        return "Sala{" + "numero=" + numero + ", planificacionSemanal=" + planificacionSemanal + '}';
+        return "Sala{" + "numero=" + numero + ", planificacionSemanal=" + this.horario + '}';
     }
 }
