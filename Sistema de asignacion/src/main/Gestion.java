@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package main;
 
 import java.util.ArrayList;
@@ -102,11 +97,14 @@ public class Gestion {
         
         }
     }
-    public void visualizarCarreras(){
+    //RETORNA STRING CON NOMBRES DE CARRERAS
+    public ArrayList<String> visualizarCarreras(){
+        ArrayList<String> carreras=new ArrayList<>();
         for(int i=0;i<carrerasQueSeImparten.size();i++){
             System.out.println(carrerasQueSeImparten.get(i).toString());
-        
+            carreras.add(carrerasQueSeImparten.get(i).nombre);
         }
+        return carreras;
     }
     public void visualizarCarrera(String nombre){
         boolean encontrado=false;
