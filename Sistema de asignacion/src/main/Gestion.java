@@ -203,6 +203,29 @@ public class Gestion {
             
     }
     
+    // recordar validar las fechas
+    public int crearSemestre(String nombreSemestre,String fechainicio,String fechaFin)
+    {
+        int i=this.semestreExiste(nombreSemestre);
+        if(i>-1)
+        {
+            Semestre semestre = new Semestre(nombreSemestre,fechainicio,fechaFin);
+            boolean b =this.semestres.add(semestre);
+            if(b)
+            {
+                return 1;// se agrego correctamente
+            }
+            else
+            {
+                return 0;//  ocurrio un error al agregar semestre
+            }
+        }
+        else
+        {
+            return -2;// semestre ya existe
+        }
+    }
+    
     /*@
     retorna 1 si se agrego correctamente el curso al semestre
     retorna 0 si ocurrio un erro inesperado al agregar
