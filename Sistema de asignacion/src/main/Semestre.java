@@ -273,6 +273,7 @@ public class Semestre
     public void mostrarDatos()
     {
         System.out.println("semestre: "+this.nombre+", fecha de inicio: "+this.fechaInicio+", fecha de fin: "+this.fechaFin);
+        this.mostrarCursos();
     }
     
     public void mostrarCursos()
