@@ -91,6 +91,7 @@ public class Gestion {
         Sala sala=new Sala();
         salasDisponibles.add(sala.crearSala(numero));
     }
+    // RETORNA STRING CON NOMBRES DE SALAS
     public ArrayList<String> visualizarSalas(){
         ArrayList<String> salas= new ArrayList<>();
         for(int i=0;i<salasDisponibles.size();i++){
@@ -126,12 +127,6 @@ public class Gestion {
      */
     // creacion de profesor, sus valores de entrada deben ser su nombre, seguido de su correo, y finalizando 
     //  con su numero de celular
-    public void crearProfesor(String nombre, String correoP, String numC){
-        
-        this.profesor=new Profesor(nombre,correoP,numC);
-        this.profesoresContratados.add(profesor);
-    }
-     
 
      // CARRERA //
      public void addCarrera(String nombre){
@@ -179,6 +174,24 @@ public class Gestion {
              System.out.println("No se encuentra esa Carrera en nuestros datos.");
          }
      }
+     
+    public void crearProfesor(String nombre, String correoP, String numC){
+        
+        this.profesor=new Profesor(nombre,correoP,numC);
+        this.profesoresContratados.add(profesor);
+    }
+     
+    public String[][] visualizarProfesores(){
+        String[][] profesores=new String[this.profesoresContratados.size()][4];
+        for(int i=0;i<this.profesoresContratados.size();i++){
+             profesores[i][0]=this.profesoresContratados.get(i).getNombre();
+             profesores[i][1]=this.profesoresContratados.get(i).getNumeroContacto();
+             profesores[i][2]=this.profesoresContratados.get(i).getCorreoPersonal();
+             profesores[i][3]=this.profesoresContratados.get(i).getCorreoInstitucional();
+             
+            }
+        return profesores;
+    }
 
     public void modificarProfesor(String nombre, String correoP, String numC, String correoI,Date fecha) {
         this.profesor.setCorreoInstitucional(correoP);
