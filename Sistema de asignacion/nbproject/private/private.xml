@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
         <group>
-            <file>file:/D:/GitKraken/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Horario.java</file>
-            <file>file:/D:/GitKraken/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/InterfazGrafica.java</file>
+            <file>file:/D:/repo%20git%20local%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Sala.java</file>
+            <file>file:/D:/repo%20git%20local%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Gestion.java</file>
+            <file>file:/D:/repo%20git%20local%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Profesor.java</file>
+            <file>file:/D:/repo%20git%20local%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Semestre.java</file>
+            <file>file:/D:/repo%20git%20local%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Main.java</file>
+            <file>file:/D:/repo%20git%20local%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/InterfazGrafica.java</file>
+            <file>file:/D:/repo%20git%20local%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Horario.java</file>
+            <file>file:/D:/repo%20git%20local%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Curso.java</file>
+            <file>file:/D:/repo%20git%20local%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Carrera.java</file>
         </group>
-=======
-        <group/>
->>>>>>> LaGripe
     </open-files>
 </project-private>

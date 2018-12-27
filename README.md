@@ -11,3 +11,5 @@ Razón: Es el IDE de Java que mejor conocemos y, aunque IntelliJ era una buena o
 
 En Daily de LosNoSe (15/12/2018 22:00)
 Se decide que se implementará la interfaz Serializable para guardar los datos en un TXT.
+
+Serializable se utilizará como viene por defecto definido en su API, es decir, en un String extendido dentro de un TXT.
