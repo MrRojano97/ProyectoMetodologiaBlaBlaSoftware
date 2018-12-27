@@ -5,11 +5,15 @@
  */
 package main;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Luciano García
  */
 public class InterfazGrafica extends javax.swing.JFrame {
+    
+    Gestion g = new Gestion();
 
     /**
      * Creates new form InterfazGrafica
@@ -31,8 +35,23 @@ public class InterfazGrafica extends javax.swing.JFrame {
         tabsAdminNivel1 = new javax.swing.JTabbedPane();
         background0 = new javax.swing.JPanel();
         bannerAdminCCu = new javax.swing.JLabel();
+        scrollNombreCurso = new javax.swing.JScrollPane();
+        valorNombreCurso1 = new javax.swing.JTextPane();
+        nombreCurso1 = new javax.swing.JLabel();
         background1 = new javax.swing.JPanel();
         bannerAdminIP = new javax.swing.JLabel();
+        nombreProfesor = new javax.swing.JLabel();
+        scrollProfesor2 = new javax.swing.JScrollPane();
+        valorCorreoInstitucional = new javax.swing.JTextPane();
+        correoPersonal = new javax.swing.JLabel();
+        correoInstitucional = new javax.swing.JLabel();
+        scrollProfesor1 = new javax.swing.JScrollPane();
+        valorNombreProfesor2 = new javax.swing.JTextPane();
+        scrollProfesor3 = new javax.swing.JScrollPane();
+        valorCorreoPersonal = new javax.swing.JTextPane();
+        contacto = new javax.swing.JLabel();
+        scrollProfesor4 = new javax.swing.JScrollPane();
+        valorContacto = new javax.swing.JTextPane();
         background2 = new javax.swing.JPanel();
         bannerAdminCCa = new javax.swing.JLabel();
         nombreCarrera = new javax.swing.JLabel();
@@ -52,7 +71,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         setBackground(new java.awt.Color(59, 59, 59));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setIconImages(null);
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
         setResizable(false);
 
         tabsNivel0.setBackground(new java.awt.Color(59, 59, 59));
@@ -79,6 +97,15 @@ public class InterfazGrafica extends javax.swing.JFrame {
         bannerAdminCCu.setIconTextGap(0);
         bannerAdminCCu.setPreferredSize(new java.awt.Dimension(1910, 103));
 
+        scrollNombreCurso.setViewportView(valorNombreCurso1);
+
+        nombreCurso1.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        nombreCurso1.setForeground(new java.awt.Color(51, 51, 51));
+        nombreCurso1.setText("Nombre curso");
+        nombreCurso1.setMaximumSize(new java.awt.Dimension(135, 28));
+        nombreCurso1.setMinimumSize(new java.awt.Dimension(135, 28));
+        nombreCurso1.setPreferredSize(new java.awt.Dimension(135, 28));
+
         javax.swing.GroupLayout background0Layout = new javax.swing.GroupLayout(background0);
         background0.setLayout(background0Layout);
         background0Layout.setHorizontalGroup(
@@ -86,12 +113,22 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(background0Layout.createSequentialGroup()
                 .addComponent(bannerAdminCCu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(background0Layout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(nombreCurso1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scrollNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         background0Layout.setVerticalGroup(
             background0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background0Layout.createSequentialGroup()
                 .addComponent(bannerAdminCCu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 904, Short.MAX_VALUE))
+                .addGap(102, 102, 102)
+                .addGroup(background0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(scrollNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nombreCurso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 774, Short.MAX_VALUE))
         );
 
         tabsAdminNivel1.addTab("Crear curso", background0);
@@ -100,6 +137,42 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         bannerAdminIP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminCrearProfesor.jpg"))); // NOI18N
 
+        nombreProfesor.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        nombreProfesor.setForeground(new java.awt.Color(51, 51, 51));
+        nombreProfesor.setText("Nombre profesor");
+        nombreProfesor.setMaximumSize(new java.awt.Dimension(135, 28));
+        nombreProfesor.setMinimumSize(new java.awt.Dimension(135, 28));
+        nombreProfesor.setPreferredSize(new java.awt.Dimension(135, 28));
+
+        scrollProfesor2.setViewportView(valorCorreoInstitucional);
+
+        correoPersonal.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        correoPersonal.setForeground(new java.awt.Color(51, 51, 51));
+        correoPersonal.setText("Correo personal");
+        correoPersonal.setMaximumSize(new java.awt.Dimension(135, 28));
+        correoPersonal.setMinimumSize(new java.awt.Dimension(135, 28));
+        correoPersonal.setPreferredSize(new java.awt.Dimension(135, 28));
+
+        correoInstitucional.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        correoInstitucional.setForeground(new java.awt.Color(51, 51, 51));
+        correoInstitucional.setText("Correo institucional");
+        correoInstitucional.setMaximumSize(new java.awt.Dimension(135, 28));
+        correoInstitucional.setMinimumSize(new java.awt.Dimension(135, 28));
+        correoInstitucional.setPreferredSize(new java.awt.Dimension(135, 28));
+
+        scrollProfesor1.setViewportView(valorNombreProfesor2);
+
+        scrollProfesor3.setViewportView(valorCorreoPersonal);
+
+        contacto.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        contacto.setForeground(new java.awt.Color(51, 51, 51));
+        contacto.setText("Contacto");
+        contacto.setMaximumSize(new java.awt.Dimension(135, 28));
+        contacto.setMinimumSize(new java.awt.Dimension(135, 28));
+        contacto.setPreferredSize(new java.awt.Dimension(135, 28));
+
+        scrollProfesor4.setViewportView(valorContacto);
+
         javax.swing.GroupLayout background1Layout = new javax.swing.GroupLayout(background1);
         background1.setLayout(background1Layout);
         background1Layout.setHorizontalGroup(
@@ -107,12 +180,43 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(background1Layout.createSequentialGroup()
                 .addComponent(bannerAdminIP)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(background1Layout.createSequentialGroup()
+                .addGap(135, 135, 135)
+                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(correoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(correoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(nombreProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(contacto, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrollProfesor3, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scrollProfesor2, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scrollProfesor1, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scrollProfesor4, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         background1Layout.setVerticalGroup(
             background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background1Layout.createSequentialGroup()
                 .addComponent(bannerAdminIP)
-                .addGap(0, 904, Short.MAX_VALUE))
+                .addGap(91, 91, 91)
+                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(nombreProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scrollProfesor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(correoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scrollProfesor2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(correoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scrollProfesor3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(contacto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scrollProfesor4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 647, Short.MAX_VALUE))
         );
 
         tabsAdminNivel1.addTab("Crear profesor", background1);
@@ -274,15 +378,30 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JLabel bannerAdminCS;
     private javax.swing.JLabel bannerAdminIP;
     private javax.swing.JButton botonAceptar;
+    private javax.swing.JLabel contacto;
+    private javax.swing.JLabel correoInstitucional;
+    private javax.swing.JLabel correoPersonal;
     private javax.swing.JLabel nombreCarrera;
+    private javax.swing.JLabel nombreCurso1;
+    private javax.swing.JLabel nombreProfesor;
     private javax.swing.JLabel nombreSala;
     private javax.swing.JScrollPane scrollNombreCa;
+    private javax.swing.JScrollPane scrollNombreCurso;
     private javax.swing.JScrollPane scrollNombreSala;
+    private javax.swing.JScrollPane scrollProfesor1;
+    private javax.swing.JScrollPane scrollProfesor2;
+    private javax.swing.JScrollPane scrollProfesor3;
+    private javax.swing.JScrollPane scrollProfesor4;
     private javax.swing.JTabbedPane tabsAdminNivel1;
     private javax.swing.JTabbedPane tabsAlumnoNivel1;
     private javax.swing.JTabbedPane tabsNivel0;
     private javax.swing.JTabbedPane tabsProfeNivel1;
+    private javax.swing.JTextPane valorContacto;
+    private javax.swing.JTextPane valorCorreoInstitucional;
+    private javax.swing.JTextPane valorCorreoPersonal;
     private javax.swing.JTextPane valorNombreCa;
+    private javax.swing.JTextPane valorNombreCurso1;
+    private javax.swing.JTextPane valorNombreProfesor2;
     private javax.swing.JTextPane valorNombreSala;
     // End of variables declaration//GEN-END:variables
 }
