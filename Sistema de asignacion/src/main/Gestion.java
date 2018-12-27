@@ -30,7 +30,8 @@ public class Gestion {
     Bloque bloque;
     private Gson  miGson;
     
-    public Gestion(){
+    public Gestion()
+    {
         this.inicio();
         this.miGson = new Gson();
     }
@@ -202,26 +203,24 @@ public class Gestion {
             
     }
     
-    public boolean agregarCursoSemeste(String nombreSemestre, Curso curso)
+    /*@
+    retorna 1 si se agrego correctamente el curso al semestre
+    retorna 0 si ocurrio un erro inesperado al agregar
+    retorna -1  si el semestre indicado no existe
+    retorna -2 si el curso indicado ya existe en el semestre
+    */
+    public int agregarCursoSemeste(String nombreSemestre, Curso curso)
     {
         int i =this.semestreExiste(nombreSemestre);
         if(-1<i)
         {
-            boolean respuestaCurso= this.semestres.get(i).agregarCurso(curso);//retorn true si se agrego el curso
-            if(respuestaCurso)
-            {
-                return respuestaCurso;
-            }
-            else
-            {
-                System.out.println("error al agregar curso");
-                return respuestaCurso;
-            }
+           return  this.semestres.get(i).agregarCurso(curso);// puede retornar los siguentes valores : 1,0 y -2.
+           
         }
         else
         {
-            System.out.println("el semestre ingresado no existe");
-            return false;// retorna false si el smestre no existe
+            
+            return -1;// retorna -1 si el smestre no existe
         }
         
         
@@ -232,7 +231,6 @@ public class Gestion {
         for(Semestre semestre: this.semestres)
         {
             semestre.mostrarDatos();
-            semestre.mostrarCurso();
         }
     }
     
@@ -243,11 +241,11 @@ public class Gestion {
         {
             if(semestre.getNombre().equalsIgnoreCase(nombreSemestre))
             {
-                return i;
+                return i;// retorna la posicion del semestre indicado.
             }
             i++;
         }
-        return -1;
+        return -1;// retorna -1 si el semestre no existe
     }
      
 }
