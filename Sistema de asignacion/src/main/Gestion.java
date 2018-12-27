@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 
+import com.google.gson.*;
+
 /**
  * @author FranciscoGP
  * @author Javiera
@@ -26,9 +28,12 @@ public class Gestion {
     Profesor profesor;
     Sala sala;
     Bloque bloque;
+    private Gson  miGson;
     
-    public Gestion(){
+    public Gestion()
+    {
         this.inicio();
+        this.miGson = new Gson();
     }
     /**
      * Metodo creado con la finalidad de gestionar
@@ -196,6 +201,51 @@ public class Gestion {
             System.out.println("no se encuentra el profesor buscado");
         }
             
+    }
+    
+    /*@
+    retorna 1 si se agrego correctamente el curso al semestre
+    retorna 0 si ocurrio un erro inesperado al agregar
+    retorna -1  si el semestre indicado no existe
+    retorna -2 si el curso indicado ya existe en el semestre
+    */
+    public int agregarCursoSemeste(String nombreSemestre, Curso curso)
+    {
+        int i =this.semestreExiste(nombreSemestre);
+        if(-1<i)
+        {
+           return  this.semestres.get(i).agregarCurso(curso);// puede retornar los siguentes valores : 1,0 y -2.
+           
+        }
+        else
+        {
+            
+            return -1;// retorna -1 si el smestre no existe
+        }
+        
+        
+    }
+    
+    public  void mostrarSemestres ()
+    {
+        for(Semestre semestre: this.semestres)
+        {
+            semestre.mostrarDatos();
+        }
+    }
+    
+    public int semestreExiste(String nombreSemestre)
+    {
+        int i=0;
+        for(Semestre semestre: this.semestres)
+        {
+            if(semestre.getNombre().equalsIgnoreCase(nombreSemestre))
+            {
+                return i;// retorna la posicion del semestre indicado.
+            }
+            i++;
+        }
+        return -1;// retorna -1 si el semestre no existe
     }
      
 }
