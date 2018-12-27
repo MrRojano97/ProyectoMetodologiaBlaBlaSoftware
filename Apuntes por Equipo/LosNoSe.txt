@@ -29,3 +29,5 @@ Se decide bloquear las tareas de interfaz gráfica de vinc. Profesores y cursos 
 Se decide añadir a Product Backlog la tarea "El administrador necesita gestinar seemstres (3)".
 Se comienza el Sprint Backlog de "Crear Semestre (1)"
 Se conversa sobre la Arquitectura.
+
+Se realizá charla sobre el uso de Json con el grupo y se informa a los demás Scrum Masters cómo agregar la librería para su correcto funcionamiento (21:30 26/12/2018)
