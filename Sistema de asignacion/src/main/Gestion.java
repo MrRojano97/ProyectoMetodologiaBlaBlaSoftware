@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 
-import com.google.gson.*;
 
 /**
  * @author FranciscoGP
@@ -23,12 +22,10 @@ public class Gestion {
     Profesor profesor;
     Sala sala;
     Bloque bloque;
-    private Gson  miGson;
     
     public Gestion()
     {
         this.inicio();
-        this.miGson = new Gson();
     }
     /**
      * Metodo creado con la finalidad de gestionar
@@ -48,7 +45,6 @@ public class Gestion {
         
         //muestra en consola los profesores contenidos en la lista
         this.mostrarListaDeProfesores();
-        this.addSala("asd");
         this.visualizarSalas();
         
          //INSTANCIAMIENTO DE UN NUEVO CURSO Y PROFESOR //

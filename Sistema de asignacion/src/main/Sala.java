@@ -44,15 +44,15 @@ public class Sala {
     }
     public Sala crearSala(String numero){
         Horario horarioo=new Horario();
-        Sala sala=new Sala();
+        Sala sala=new Sala(numero);
         sala.numero=numero;
-        sala.planificacionSemanal=horarioo;
+        sala.horario=horarioo;
         return sala;
     }
     
     public void modificarSala(String numero,Horario planificacionSemanal){
         this.numero=numero;
-        this.planificacionSemanal=planificacionSemanal;
+        this.horario=planificacionSemanal;
     }
     @Override
     public String toString() {
