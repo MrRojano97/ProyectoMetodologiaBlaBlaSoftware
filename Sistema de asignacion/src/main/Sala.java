@@ -56,6 +56,7 @@ public class Sala {
     }
     @Override
     public String toString() {
+        String planificacionSemanal = null;
         return "Sala{" + "numero=" + numero + ", planificacionSemanal=" + planificacionSemanal + '}';
     }
 }
