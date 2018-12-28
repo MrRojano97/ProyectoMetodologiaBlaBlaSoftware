@@ -7,6 +7,7 @@ package main;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -95,11 +96,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
         bannerAdminVi = new javax.swing.JLabel();
         profesoresV = new javax.swing.JLabel();
         salasV = new javax.swing.JLabel();
-        scrollProfeVi = new javax.swing.JScrollPane();
-        valorProfeVi = new javax.swing.JList<>();
         scrollSalaVi = new javax.swing.JScrollPane();
         valorSalaVi = new javax.swing.JList<>();
         botonAceptarVi = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         tabsProfeNivel1 = new javax.swing.JTabbedPane();
         tabsAlumnoNivel1 = new javax.swing.JTabbedPane();
 
@@ -239,47 +240,51 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(background1Layout.createSequentialGroup()
                 .addComponent(bannerAdminIP)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(background1Layout.createSequentialGroup()
-                .addGap(135, 135, 135)
-                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(correoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(correoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(nombreProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(contacto, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrollProfesor3, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollProfesor2, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollProfesor1, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollProfesor4, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonAceptarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))
+            .addGroup(background1Layout.createSequentialGroup()
+                .addGap(135, 135, 135)
+                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(background1Layout.createSequentialGroup()
+                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(nombreProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(contacto, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(correoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39)
+                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(scrollProfesor3, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(scrollProfesor1, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(scrollProfesor4, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(background1Layout.createSequentialGroup()
+                        .addComponent(correoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(scrollProfesor2, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         background1Layout.setVerticalGroup(
             background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background1Layout.createSequentialGroup()
-                .addComponent(bannerAdminIP)
-                .addGap(91, 91, 91)
                 .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(nombreProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollProfesor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(correoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(background1Layout.createSequentialGroup()
+                        .addComponent(bannerAdminIP)
+                        .addGap(91, 91, 91)
+                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(nombreProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(scrollProfesor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(24, 24, 24)
+                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(contacto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(scrollProfesor4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25)
+                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(correoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(scrollProfesor3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addComponent(correoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(scrollProfesor2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(correoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollProfesor3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(contacto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollProfesor4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 570, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 548, Short.MAX_VALUE)
                 .addComponent(botonAceptarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
@@ -620,21 +625,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
         salasV.setForeground(new java.awt.Color(59, 59, 59));
         salasV.setText("Salas");
 
-        scrollProfeVi.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-
-        valorProfeVi.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-        valorProfeVi.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        scrollProfeVi.setViewportView(valorProfeVi);
-
         valorSalaVi.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
         valorSalaVi.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+
+            ArrayList<String> strings = g.visualizarSalas();
+            public int getSize() { return strings.size(); }
+            public String getElementAt(int i) { return strings.get(i); }
         });
         scrollSalaVi.setViewportView(valorSalaVi);
 
@@ -646,20 +642,26 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         });
 
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            g.visualizarProfesores(),
+            new String [] {
+                "Nombre", "Contacto", "Correo Personal", "Correo Institucional"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(jTable2);
+
         javax.swing.GroupLayout background4Layout = new javax.swing.GroupLayout(background4);
         background4.setLayout(background4Layout);
         background4Layout.setHorizontalGroup(
             background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(background4Layout.createSequentialGroup()
-                .addGap(116, 116, 116)
-                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(profesoresV, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(scrollProfeVi))
-                .addGap(132, 132, 132)
-                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(salasV)
-                    .addComponent(scrollSalaVi, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(background4Layout.createSequentialGroup()
                 .addComponent(bannerAdminVi)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -667,20 +669,33 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonAceptarVi, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
+            .addGroup(background4Layout.createSequentialGroup()
+                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(background4Layout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(salasV)
+                            .addComponent(scrollSalaVi, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(background4Layout.createSequentialGroup()
+                        .addGap(116, 116, 116)
+                        .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(profesoresV)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 587, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         background4Layout.setVerticalGroup(
             background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background4Layout.createSequentialGroup()
                 .addComponent(bannerAdminVi)
-                .addGap(81, 81, 81)
-                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(profesoresV)
-                    .addComponent(salasV))
-                .addGap(18, 18, 18)
-                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrollProfeVi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollSalaVi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 510, Short.MAX_VALUE)
+                .addGap(44, 44, 44)
+                .addComponent(profesoresV)
+                .addGap(30, 30, 30)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(108, 108, 108)
+                .addComponent(salasV)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(scrollSalaVi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 364, Short.MAX_VALUE)
                 .addComponent(botonAceptarVi, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
@@ -718,8 +733,13 @@ public class InterfazGrafica extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Ingrese un nombre válido para la sala");
         }
         else {
-            Sala s = new Sala(a);
-            g.addSala(s);
+            g.addSala(a);
+            valorSalaVi.setModel(new javax.swing.AbstractListModel<String>() {
+                ArrayList<String> strings = g.visualizarSalas();
+                public int getSize() { return strings.size(); }
+                public String getElementAt(int i) { return strings.get(i); }
+            });
+
             JOptionPane.showMessageDialog(rootPane, "Sala creada con éxito");
         }
     }//GEN-LAST:event_botonAceptarActionPerformed
@@ -745,7 +765,21 @@ public class InterfazGrafica extends javax.swing.JFrame {
         }
         else {
             Profesor p = new Profesor(a, c, d, b);
-            g.addProfesor(p);
+            g.crearProfesor(a, c, d, b);
+            jTable2.setModel(new javax.swing.table.DefaultTableModel(
+                g.visualizarProfesores(),
+                new String [] {
+                    "Nombre", "Contacto", "Correo Personal", "Correo Institucional"
+                }
+            ) {
+                Class[] types = new Class [] {
+                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                };
+
+                public Class getColumnClass(int columnIndex) {
+                    return types [columnIndex];
+                }
+            });
             JOptionPane.showMessageDialog(rootPane, "Profesor creado y añadido con éxito");
         }
     }//GEN-LAST:event_botonAceptarProfesorActionPerformed
@@ -756,8 +790,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Ingrese un nombre válido para el curso");
         }
         else {
-            Curso c = new Curso(a);
-            g.addCurso(c);
+            g.addCurso(a);
             JOptionPane.showMessageDialog(rootPane, "Curso creado con éxito");
         }
     }//GEN-LAST:event_botonAceptarCursoActionPerformed
@@ -848,6 +881,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JLabel elijaProfesor;
     private javax.swing.JLabel elijaSala;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable2;
     private javax.swing.JLabel nombreCarrera;
     private javax.swing.JLabel nombreCurso1;
     private javax.swing.JLabel nombreProfesor;
@@ -856,7 +891,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrollNombreCa;
     private javax.swing.JScrollPane scrollNombreCurso;
     private javax.swing.JScrollPane scrollNombreSala;
-    private javax.swing.JScrollPane scrollProfeVi;
     private javax.swing.JScrollPane scrollProfesor1;
     private javax.swing.JScrollPane scrollProfesor2;
     private javax.swing.JScrollPane scrollProfesor3;
@@ -880,7 +914,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JTextPane valorNombreCurso1;
     private javax.swing.JTextPane valorNombreProfesor2;
     private javax.swing.JTextPane valorNombreSala;
-    private javax.swing.JList<String> valorProfeVi;
     private javax.swing.JList<String> valorSalaVi;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 
-
 /**
  * @author FranciscoGP
  * @author Javiera
@@ -12,103 +11,36 @@ import java.util.Iterator;
 public class Gestion {
     ArrayList<Semestre> semestres=new ArrayList<>();
     ArrayList<Carrera> carrerasQueSeImparten=new ArrayList<>();
-    ArrayList<Sala> salasDisponibles=new ArrayList<>();
-    ArrayList<Profesor> profesoresContratados=new ArrayList<>();
-    ArrayList<Horario> horariosDisponibles=new ArrayList<>();
-    ArrayList<Curso> cursos=new ArrayList<>();//cursos de la carrera
+    ArrayList<Sala> salasDisponibles=new ArrayList<>();;
+    ArrayList<Profesor> profesoresContratados=new ArrayList<>();;
+    ArrayList<Horario> horariosDisponibles=new ArrayList<>();;
+    ArrayList<Curso> cursos=new ArrayList<>();;//cursos de la carrera
     Carrera carrera;
     Curso curso;
     Horario horario;
     Profesor profesor;
     Sala sala;
-    Bloque bloque;
     
-    public Gestion()
-    {
+    public Gestion(){
         this.inicio();
     }
     /**
-     * Metodo creado con la finalidad de gestionar
-     * metodos y/o instancias de variables contenidos en la clase
+     * Metodo creado con la finalidad de gestionare 
+     * metodos y/o instancias de variables contenidos la calse
      */
     public void inicio(){
         // INSTANCIAMIENTO DE UN NUEVO PROFESOR //
-        //creacion de un profesor con sus datos
-        profesor = new Profesor("Obi-Wan Kenobi","quelafuerzateacompañe@gmail.com","+5697263847","OWKenobi@alianza.com");
-        this.addProfesor(profesor);//agregamos el profesor a la lista
         //creacion de un profesor con sus datos basicos
-        profesor = new Profesor("Obi-Wan Kenobi","quelafuerzateacompañe@gmail.com","+5697263847","OWKenobi@alianza.com");
-        this.addProfesor(profesor);//agregamos el profesor a la lista
-    
-        profesor = new Profesor(" Chewbacca", "aararrggwwwww@gmail.com","+56926361781","Chew@alianza.com");
-        this.addProfesor(profesor);//agregamos el profesor a la lista
+        this.crearProfesor("Obi-Wan Kenobi","quelafuerzateacompañe@gmail.com","+5697263847", "OWKenobi@alianza.com");
         
+        
+        this.crearProfesor(" Chewbacca", "aararrggwwwww@gmail.com","+56926361781", "Chew@alianza.com");
+
         //muestra en consola los profesores contenidos en la lista
         this.mostrarListaDeProfesores();
+        this.addSala("asd");
         this.visualizarSalas();
         
-         //INSTANCIAMIENTO DE UN NUEVO CURSO Y PROFESOR //
-        curso=new Curso("Metodologia");//creamos el curso
-        //asignamos el horario del curso
-        curso.horario.asignarCursoABloque(curso, 1, 3);//asignamos el curso a un bloque de un día (martes bloque 4)
-        curso.horario.asignarCursoABloque(curso, 1, 4);//asignamos el curso a un bloque de un día (martes bloque 5)
-        
-        //creacion de un profesor con sus datos
-        profesor = new Profesor("pepe","sdfd@gmail.com","+6456454657","sdafd@adsf.com");
-        profesor.horario.asignarCursoABloque(curso, 1, 3);//asignamos el curso a un bloque de un día (martes bloque 4)
-        profesor.horario.asignarCursoABloque(curso, 1, 4);//asignamos el curso a un bloque de un día (martes bloque 4)
-        this.addProfesor(profesor);//agregamos el profesor a la lista
-        
-        curso.setProfesor(profesor);//podemos asignar un profesor al curso
-        //curso.deleteProfesor();//podemos quitar un profesor del curso
-        this.cursos.add(curso);//agregamos el curso a la lista
-        //System.out.println(curso.horario.verificarDisponibilidadDeBloque(1, 0));//podemos verificar la disponibilidad de un bloque, indicando su dia y posicion del bloque
-        this.mostrarListaDeCursos();//muestra los cursos añadidos al semesntre
-        
-        
-        //INSTANCIAMIENTO DE UNA NUEVA SALA //
-        sala=new Sala("11");
-        //le asignamos un curso a un bloque, especificando:  (el curso, dia de la semana,  numero del bloque)
-        sala.horario.asignarCursoABloque(curso, 1, 3);
-        sala.horario.asignarCursoABloque(curso, 1, 4);
-        System.out.println("\n Disponibilidad Sala: "+sala.getNumero()+" martes, bloque 4: "+sala.horario.verificarDisponibilidadDeBloque(1,3));//podemos verificar la disponibilidad de un bloque, indicando su dia y posicion del bloque
-        System.out.println("\n Disponibilidad Sala: "+sala.getNumero()+" martes, bloque 5: "+sala.horario.verificarDisponibilidadDeBloque(1,4));
-        System.out.println("\n Disponibilidad Sala: "+sala.getNumero()+" martes, bloque 6: "+sala.horario.verificarDisponibilidadDeBloque(1,5));
-        sala.horario.visualizarPlanificacionSemanal();//visualizaion de la planificacion semanal(bloques) de la sala
-        
-         //TESTEO DE CALIDAD DEL MODELO
-        sala = new Sala("105");
-        System.out.println("\nSala instanciada correctamente "+sala.getNumero());
-        
-        sala = new Sala("T2");
-        System.out.println("\nSala instanciada correctamente "+sala.getNumero());
-        
-        bloque= new Bloque();
-        Curso c2=new Curso("Metodologias y blabla");
-        bloque.setCurso(c2);
-        bloque.setHoraInicio(8,30);
-        bloque.setHoraTermino(9,30);
-        System.out.println("\nBloque instanciado correctamente- Inicio:  "+bloque.getHoraInicio()+"  Fin:  "+bloque.getHoraTermino()+"  Curso:  "+bloque.getCurso().getNombre());
-        
-        bloque= new Bloque();
-        bloque.setCurso(new Curso("Proyecto de programacion"));
-        bloque.setHoraInicio(18,00);
-        bloque.setHoraTermino(19,00);
-        System.out.println("\nBloque instanciado correctamente- Inicio:  "+bloque.getHoraInicio()+"  Fin:  "+bloque.getHoraTermino()+"  Curso:  "+bloque.getCurso().getNombre());
-        
-        profesor= new Profesor("Rodrigo ","rodrigo@gmail.com","99929292929","profesorRodrigo@utalca.cl");
-        System.out.println("\nProfesor instanciado correctamente Nombre: ");
-        profesor.visualizarDatos();
-        
-        profesor= new Profesor("Jose","jose@gmail.com","99945254359","profesorJose@utalca.cl");
-        System.out.println("\nProfesor instanciado correctamente Nombre: ");
-        profesor.visualizarDatos();
-        
-        carrera= new Carrera("Compu");
-        System.out.println("\nCarrera instanciada correctamente : "+carrera.getNombre());
-        
-        carrera= new Carrera("Electrica");
-        System.out.println("\nCarrera instanciada correctamente : "+carrera.getNombre());
         
         
     
@@ -119,27 +51,20 @@ public class Gestion {
      */
     public void mostrarListaDeProfesores(){
         Iterator<Profesor> it;
+        Profesor p;
         it = this.profesoresContratados.iterator();
-        System.out.println("\nListado de profesores");
+        System.out.println("Listado de profesores contratados ");
         while (it.hasNext() ) {
-                profesor = it.next();
-                profesor.visualizarDatos();
+                p = it.next();
+                System.out.println("\n Nombre: "+p.getNombre()+"\n Correo: "+p.getCorreoPersonal()+"\n Correo institucional: "+p.getCorreoInstitucional());
+                System.out.println(" Numero de contato: "+p.getNumeroContacto()+"\n Fecha/Hora de contratacion: "+p.getFechaContratacion());
             }
     }
     // CURSO //
-     public void addCurso(Curso curso){
+     public void addCurso(String nombre){
+        curso=new Curso(nombre);
         cursos.add(curso);
     }
-    public void mostrarListaDeCursos(){
-        Iterator<Curso> it;
-        it = this.cursos.iterator();
-        System.out.println("\nListado de cursos");
-        while (it.hasNext() ) {
-                curso = it.next();
-                curso.visualizarDatos();
-            }
-    }
-    //        //
      public void modificarSala(Sala sala,String numero, Horario planificacion){
          sala.numero=numero;
          sala.horario=planificacion;
@@ -159,14 +84,18 @@ public class Gestion {
          }
      }
     // SALA  //
-    public void addSala(Sala sala){      
-        salasDisponibles.add(sala);
+    public void addSala(String numero){
+        salasDisponibles.add(new Sala(numero));
     }
-    public void visualizarSalas(){
+    // RETORNA STRING CON NOMBRES DE SALAS
+    public ArrayList<String> visualizarSalas(){
+        ArrayList<String> salas= new ArrayList<>();
         for(int i=0;i<salasDisponibles.size();i++){
             System.out.println(salasDisponibles.get(i).toString());
+            salas.add(salasDisponibles.get(i).getNumero());
         
         }
+        return salas;
     }
     //RETORNA STRING CON NOMBRES DE CARRERAS
     public ArrayList<String> visualizarCarreras(){
@@ -187,11 +116,13 @@ public class Gestion {
         }
     }
     // PROFESOR //
-    //          //
-     public void addProfesor(Profesor p){
-        this.profesoresContratados.add(p);
-    }
-
+    /**
+     * Metodo encargado de crear un nuevo profesor con sus datos basicos
+     * @param nombre nombre del profesor a crear
+     * @param correoP correo personal del profesor a crear
+     */
+    // creacion de profesor, sus valores de entrada deben ser su nombre, seguido de su correo, y finalizando 
+    //  con su numero de celular
 
      // CARRERA //
      public void addCarrera(String nombre){
@@ -239,6 +170,24 @@ public class Gestion {
              System.out.println("No se encuentra esa Carrera en nuestros datos.");
          }
      }
+     
+    public void crearProfesor(String nombre, String correoP, String numC, String correoI){
+        
+        this.profesor=new Profesor(nombre,correoP,numC, correoI);
+        this.profesoresContratados.add(profesor);
+    }
+     
+    public String[][] visualizarProfesores(){
+        String[][] profesores=new String[this.profesoresContratados.size()][4];
+        for(int i=0;i<this.profesoresContratados.size();i++){
+             profesores[i][0]=this.profesoresContratados.get(i).getNombre();
+             profesores[i][1]=this.profesoresContratados.get(i).getNumeroContacto();
+             profesores[i][2]=this.profesoresContratados.get(i).getCorreoPersonal();
+             profesores[i][3]=this.profesoresContratados.get(i).getCorreoInstitucional();
+             
+            }
+        return profesores;
+    }
 
     public void modificarProfesor(String nombre, String correoP, String numC, String correoI,Date fecha) {
         this.profesor.setCorreoInstitucional(correoP);
@@ -261,51 +210,6 @@ public class Gestion {
             System.out.println("no se encuentra el profesor buscado");
         }
             
-    }
-    
-    /*@
-    retorna 1 si se agrego correctamente el curso al semestre
-    retorna 0 si ocurrio un erro inesperado al agregar
-    retorna -1  si el semestre indicado no existe
-    retorna -2 si el curso indicado ya existe en el semestre
-    */
-    public int agregarCursoSemeste(String nombreSemestre, Curso curso)
-    {
-        int i =this.semestreExiste(nombreSemestre);
-        if(-1<i)
-        {
-           return  this.semestres.get(i).agregarCurso(curso);// puede retornar los siguentes valores : 1,0 y -2.
-           
-        }
-        else
-        {
-            
-            return -1;// retorna -1 si el smestre no existe
-        }
-        
-        
-    }
-    
-    public  void mostrarSemestres ()
-    {
-        for(Semestre semestre: this.semestres)
-        {
-            semestre.mostrarDatos();
-        }
-    }
-    
-    public int semestreExiste(String nombreSemestre)
-    {
-        int i=0;
-        for(Semestre semestre: this.semestres)
-        {
-            if(semestre.getNombre().equalsIgnoreCase(nombreSemestre))
-            {
-                return i;// retorna la posicion del semestre indicado.
-            }
-            i++;
-        }
-        return -1;// retorna -1 si el semestre no existe
     }
      
 }
