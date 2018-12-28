@@ -145,6 +145,7 @@ public class Gestion implements cambios{
          else
              System.out.println("No se encuentra esa Carrera en nuestros datos.");
      }
+     /*
      public void eliminarCurso_Carrera(String carrera, String curso){
          int j= buscarCarrera(carrera);
          if(j!=-1)
@@ -152,6 +153,7 @@ public class Gestion implements cambios{
          else
              System.out.println("No se encuentra esa Carrera en nuestros datos.");
      }
+     */
      public void modificarNombreCarrera(String nombre,String nombre_nuevo){
          int j=buscarCarrera(nombre);
          if(j!=-1){
