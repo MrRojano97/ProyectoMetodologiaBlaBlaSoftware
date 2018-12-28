@@ -78,3 +78,9 @@ Nombre Javiera Cabrera Fecha: 20-12-2018
 
 1.- Testeo de la calidad del modelo
 	Creacionde objetos de clases
+	
+Nombre Javiera Cabrera Fecha 24-12-2018
+
+1.- Implementacion de interface cambios para agregar los metodos que se repiten en varias clases. En esta ocasión los métodos serian modificar curso y eliminar un curso.
+
+2,- Se implemento la interface en las clases; Profesor, Semestre, Carrera

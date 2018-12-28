@@ -12,7 +12,7 @@ package main;
 public class Curso {
     String nombre;
     Horario horario;
-    Profesor profesor=null;
+    String profesor="";
 
     public Curso(String nombre) {
         this.nombre = nombre;
@@ -36,18 +36,18 @@ public class Curso {
         this.horario = horario;
     }
 
-    public Profesor getProfesor() {
+    public String getProfesor() {
         return profesor;
     }
 
     public void setProfesor(Profesor profesor) {
-        this.profesor = profesor;
+        this.profesor = profesor.getNombre();
     }
     public void deleteProfesor() {
         this.profesor = null;
     }
     public void visualizarDatos(){
-        System.out.println("\n Curso: "+this.nombre+"\n Profesor: "+profesor.getNombre());
+        System.out.println("\n Curso: "+this.nombre+"\n Profesor: "+profesor);
     }
     
 }
