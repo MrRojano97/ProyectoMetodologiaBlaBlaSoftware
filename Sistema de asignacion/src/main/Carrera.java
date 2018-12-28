@@ -27,6 +27,7 @@ public class Carrera implements cambios{
     public void addCurso(Curso curso){
         cursos.add(curso);
     }
+<<<<<<< HEAD
 
     @Override
     public Curso modificarCurso(Curso c, String n, Horario h, Profesor p) {
@@ -39,6 +40,25 @@ public class Carrera implements cambios{
     @Override
     public void eliminarCurso(Curso c) {
        cursos.remove(c);
+=======
+    public void delCurso(String curso){
+        int j=-1;
+        for (int i=0;i<cursos.size();i++){
+            if(cursos.get(i).nombre.equals(nombre))
+                j=i;
+        }
+        if(j!=-1){
+            this.cursos.remove(j);
+        }
+        else{
+            System.out.println("No se encuentra ese Curso en nuestros datos.");
+        }
+        
+>>>>>>> master
     }
     
+    public void mostrarInfo()
+    {
+        
+    }
 }

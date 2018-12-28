@@ -1,15 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package main;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 
-import com.google.gson.*;
 
 /**
  * @author FranciscoGP
@@ -28,12 +22,10 @@ public class Gestion implements cambios{
     Profesor profesor;
     Sala sala;
     Bloque bloque;
-    private Gson  miGson;
     
     public Gestion()
     {
         this.inicio();
-        this.miGson = new Gson();
     }
     /**
      * Metodo creado con la finalidad de gestionar
@@ -53,6 +45,7 @@ public class Gestion implements cambios{
         
         //muestra en consola los profesores contenidos en la lista
         this.mostrarListaDeProfesores();
+        this.visualizarSalas();
         
          //INSTANCIAMIENTO DE UN NUEVO CURSO Y PROFESOR //
         curso=new Curso("Metodologia");//creamos el curso
@@ -152,19 +145,47 @@ public class Gestion implements cambios{
          sala.horario=planificacion;
      }
      public void eliminarSala(String numero){
-         int eliminar=0;
+         int eliminar=-1;
          for (int i=0;i<salasDisponibles.size();i++){
              if (salasDisponibles.get(i).numero.equals(numero)){
                  eliminar=i;
              }
          }
-         salasDisponibles.remove(eliminar);
+         if(eliminar!=-1){
+             salasDisponibles.remove(eliminar);
+         }
+         else{
+             System.out.println("No se encuentra esa Sala en nuestros datos.");
+         }
      }
     // SALA  //
     public void addSala(Sala sala){      
         salasDisponibles.add(sala);
     }
-    //           //
+    public void visualizarSalas(){
+        for(int i=0;i<salasDisponibles.size();i++){
+            System.out.println(salasDisponibles.get(i).toString());
+        
+        }
+    }
+    //RETORNA STRING CON NOMBRES DE CARRERAS
+    public ArrayList<String> visualizarCarreras(){
+        ArrayList<String> carreras=new ArrayList<>();
+        for(int i=0;i<carrerasQueSeImparten.size();i++){
+            System.out.println(carrerasQueSeImparten.get(i).toString());
+            carreras.add(carrerasQueSeImparten.get(i).nombre);
+        }
+        return carreras;
+    }
+    public void visualizarCarrera(String nombre){
+        boolean encontrado=false;
+        for(int i=0;i<carrerasQueSeImparten.size() && encontrado==false;i++){
+            if (carrerasQueSeImparten.get(i).nombre.equals(nombre)){
+                System.out.println(carrerasQueSeImparten.get(i).toString());
+                encontrado=true;
+            }
+        }
+    }
     // PROFESOR //
     //          //
      public void addProfesor(Profesor p){
@@ -175,10 +196,49 @@ public class Gestion implements cambios{
      // CARRERA //
      public void addCarrera(String nombre){
         carrera=new Carrera(nombre);
-        carrera.setNombre(nombre);
         carrerasQueSeImparten.add(carrera);
     }
-     //         //
+     public int buscarCarrera(String carrera){
+         int j=-1;
+         for (int i=0;i<carrerasQueSeImparten.size();i++){
+             if (carrerasQueSeImparten.get(i).nombre.equals(carrera)){
+                 j=i;
+             }
+         }
+         return j;
+     }
+     public void agregarCurso_Carrera(String carrera, Curso curso){
+         int j= buscarCarrera(carrera);
+         if(j!=-1)
+            carrerasQueSeImparten.get(j).addCurso(curso);
+         else
+             System.out.println("No se encuentra esa Carrera en nuestros datos.");
+     }
+     public void eliminarCurso_Carrera(String carrera, String curso){
+         int j= buscarCarrera(carrera);
+         if(j!=-1)
+            carrerasQueSeImparten.get(j).delCurso(curso);
+         else
+             System.out.println("No se encuentra esa Carrera en nuestros datos.");
+     }
+     public void modificarNombreCarrera(String nombre,String nombre_nuevo){
+         int j=buscarCarrera(nombre);
+         if(j!=-1){
+             carrerasQueSeImparten.get(j).setNombre(nombre_nuevo);
+         }
+         else{
+             System.out.println("No se encuentra esa Carrera en nuestros datos.");
+         }
+     }
+     public void eliminarCarrera(String nombre){
+         int eliminar=buscarCarrera(nombre);
+         if(eliminar!=-1){
+             carrerasQueSeImparten.remove(eliminar);
+         }
+         else{
+             System.out.println("No se encuentra esa Carrera en nuestros datos.");
+         }
+     }
 
     public void modificarProfesor(String nombre, String correoP, String numC, String correoI,Date fecha) {
         this.profesor.setCorreoInstitucional(correoP);
@@ -213,6 +273,29 @@ public class Gestion implements cambios{
     @Override
     public void eliminarCurso(Curso c) {
         cursos.remove(c);
+    }
+    
+    // recordar validar las fechas
+    public int crearSemestre(String nombreSemestre,String fechainicio,String fechaFin)
+    {
+        int i=this.semestreExiste(nombreSemestre);
+        if(i>-1)
+        {
+            Semestre semestre = new Semestre(nombreSemestre,fechainicio,fechaFin);
+            boolean b =this.semestres.add(semestre);
+            if(b)
+            {
+                return 1;// se agrego correctamente
+            }
+            else
+            {
+                return 0;//  ocurrio un error al agregar semestre
+            }
+        }
+        else
+        {
+            return -2;// semestre ya existe
+        }
     }
     
     /*@
