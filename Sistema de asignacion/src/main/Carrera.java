@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Javiera
  */
-public class Carrera {
+public class Carrera implements cambios{
     String nombre;//nombre de la carrera
     ArrayList<Curso> cursos=new ArrayList<>();;//cursos de la carrera
     public Carrera(String nombre){
@@ -26,6 +26,19 @@ public class Carrera {
     }
     public void addCurso(Curso curso){
         cursos.add(curso);
+    }
+
+    @Override
+    public Curso modificarCurso(Curso c, String n, Horario h, Profesor p) {
+        c.setHorario(h);
+        c.setNombre(n);
+        c.setProfesor(p);
+        return c;
+    }
+
+    @Override
+    public void eliminarCurso(Curso c) {
+       cursos.remove(c);
     }
     
 }

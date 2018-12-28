@@ -15,7 +15,7 @@ import com.google.gson.*;
  * @author FranciscoGP
  * @author Javiera
  */
-public class Gestion {
+public class Gestion implements cambios{
     ArrayList<Semestre> semestres=new ArrayList<>();
     ArrayList<Carrera> carrerasQueSeImparten=new ArrayList<>();
     ArrayList<Sala> salasDisponibles=new ArrayList<>();
@@ -201,6 +201,18 @@ public class Gestion {
             System.out.println("no se encuentra el profesor buscado");
         }
             
+    }
+
+    @Override
+    public Curso modificarCurso(Curso c, String n, Horario h, Profesor p) {
+        c.setNombre(n);
+        c.setHorario(h);
+        c.setProfesor(p);
+        return c;
+    }
+    @Override
+    public void eliminarCurso(Curso c) {
+        cursos.remove(c);
     }
     
     /*@
