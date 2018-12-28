@@ -52,7 +52,7 @@ public class Semestre
     {
         for(Sala sala: this.salasUtilizadasEnSemestre)
         {
-            // mostrar info sala.
+            sala.toString();
         }
     }
     
@@ -166,7 +166,7 @@ public class Semestre
     {
         for(Carrera carrera: this.carrerasImpartidasEnSemestre)
         {
-            //mostrar carrera
+            carrera.mostrarInfo();
         }
     }
     
@@ -273,6 +273,7 @@ public class Semestre
     public void mostrarDatos()
     {
         System.out.println("semestre: "+this.nombre+", fecha de inicio: "+this.fechaInicio+", fecha de fin: "+this.fechaFin);
+        this.mostrarCursos();
     }
     
     public void mostrarCursos()
