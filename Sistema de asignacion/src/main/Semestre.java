@@ -11,6 +11,7 @@ import java.util.ArrayList;
  *
  * @author Javiera
  */
+   
 public class Semestre 
 {
     private String nombre;
@@ -52,7 +53,7 @@ public class Semestre
     {
         for(Sala sala: this.salasUtilizadasEnSemestre)
         {
-            // mostrar info sala.
+            sala.toString();
         }
     }
     
@@ -166,7 +167,7 @@ public class Semestre
     {
         for(Carrera carrera: this.carrerasImpartidasEnSemestre)
         {
-            //mostrar carrera
+            carrera.mostrarInfo();
         }
     }
     
@@ -219,7 +220,7 @@ public class Semestre
         }
     }
     
-    public Curso eliminarCurso(Curso curso)
+   /* public Curso eliminarCurso(Curso curso)
     {
         Curso auxCurso=new Curso("-1");
         int i=this.cursoExiste(curso);
@@ -233,6 +234,7 @@ public class Semestre
         }
         
     }
+*/
     
     public int agregarCurso(Curso curso)
     {
@@ -273,6 +275,7 @@ public class Semestre
     public void mostrarDatos()
     {
         System.out.println("semestre: "+this.nombre+", fecha de inicio: "+this.fechaInicio+", fecha de fin: "+this.fechaFin);
+        this.mostrarCursos();
     }
     
     public void mostrarCursos()
@@ -281,5 +284,18 @@ public class Semestre
         {
             auxCurso.visualizarDatos();
         }
+    }
+    
+     //@Override
+    public Curso modificarCurso(Curso c,String n, Horario h,Profesor p) {
+        c.setNombre(n);
+        c.setHorario(h);
+        c.setProfesor(p);
+        return c;
+    }
+
+    //@Override
+    public void eliminarCurso(Curso c) {
+        cursosImpartidos.remove(c);
     }
 }

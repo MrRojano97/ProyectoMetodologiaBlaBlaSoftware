@@ -12,6 +12,8 @@ import java.util.Iterator;
  * @author Javiera
  */
 public class Sala {
+
+    
     String numero;
     Horario horario;
     
@@ -40,10 +42,21 @@ public class Sala {
     public void addCurso(Curso curso ){
         
     }
-//    public Sala crearSala(Sala sala){      
-//        return sala;
-//    }
-//    public void modificarSala(){
-//        
-//    }
+    public Sala crearSala(String numero){
+        Horario horarioo=new Horario();
+        Sala sala=new Sala(numero);
+        sala.numero=numero;
+        sala.horario=horarioo;
+        return sala;
+    }
+    
+    public void modificarSala(String numero,Horario planificacionSemanal){
+        this.numero=numero;
+        this.horario=planificacionSemanal;
+    }
+    @Override
+    public String toString() {
+        String planificacionSemanal = null;
+        return "Sala{" + "numero=" + numero + ", planificacionSemanal=" + planificacionSemanal + '}';
+    }
 }

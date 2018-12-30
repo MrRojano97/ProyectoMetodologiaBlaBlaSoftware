@@ -1,1 +1,58 @@
-Apuntes de: LaGripe
+Sprint 1: 
+    Daily 12/12/18
+
+    Tareas Tomadas para Sprint: Crear Sala (1)
+				Eliminar Sala (1)
+				Modificar Sala (1)
+
+                                Total "esfuerzo": 3
+    
+    Asignacion Tareas: 
+        Marcelo Muñoz: Eliminar Sala
+        Eduardo Soto: Crear Sala
+        Juan Nuñez: Modificar Sala
+
+Nota Importante Sprint 1: por errores del grupo y principalmente del scrum master en la organización estas taréas no se completaron en plenitud.
+
+
+Sprint 2:
+    Daily 18/12/18
+        Ordenamiento del grupo y arreglo de errores del git de Marcelo Muñoz con la vinculación con git:
+	
+
+
+    Daily 19/12/18
+
+    Tareas Tomadas para Sprint: Eliminar Profesor (1)
+                                Modificar Profesor (1)
+                                Modificar Sala (1)
+				Eliminar Sala (1)
+                                Integrar funcionalidades clase sala a Interfaz Grafica (1)  (en compañia 
+                                                                con integrante grupo "Los Morenitos")
+
+                                Total "esfuerzo": 5
+
+    Asignacion Tareas:
+        Marcelo Muñoz: Eliminar Profesor, Modificar Profesor 
+        Eduardo Soto: -
+        Juan Nuñez: Modificar Sala, Eliminar Sala, Integrar funcionalidades clase sala a Interfaz Grafica
+
+
+Sprint 3:
+    Daily 21/12/18	
+
+	Tareas Tomadas Para Sprint: 	Visualizar Salas (1)
+					Crear Carrera (1)
+					Modificar Carrera (1)
+					Eliminar Carrera (1)
+					Visualizar Carrera (1)
+					Vincular Carrera con interfaz (1)
+					
+
+					Total "esfuerzo": 6
+
+
+	Asignación Tareas:
+		Marcelo Muñoz: Visualizar Salas
+        	Eduardo Soto: Crear Carrera, Eliminar Carrera, Modificar Carrera
+        	Juan Nuñez: Visualizar Carrera, Vincular carrera con Interfaz

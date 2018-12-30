@@ -27,7 +27,7 @@ public class Profesor implements cambios {
     public Profesor(String nombre, String correoP, String numC,String correoI){
         this.nombre=nombre;
         this.correoPersonal=correoP;
-        this.correoPersonal=correoI;
+        this.correoInstitucional=correoI;
         this.fechaContratacion= new Date();
         this.horario= new Horario();
         this.numeroContacto=numC;
