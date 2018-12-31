@@ -33,29 +33,14 @@ public class Horario {
             planificacionSemanal.add(diaDeLaSemana);//agregamos a la semana el dia con sus bloques creados
         }
     }
-    
-    //los dias de la semana se representan desde 0(lunes) hasta 6(sabado) 
-//    public void crearSemana(){
-//        for(int i=0;i<7;i++){
-//            diaDeLaSemana=new ArrayList<>();
-//            horarioSemanal.add(diaDeLaSemana);
-//        }           
-//    }
-//    //se da por supuesto que la introduccion de los bloques esta en un correcto orden temporal
-//    public void addBloque(int dia,Bloque bloque){
-//        horarioSemanal.get(dia).add(bloque);
-//        
-//    }
-    /**
-     * permite vizualizar la planificacion semanal ya sea de un profesor, un curso o una sala
-     */
+   
      public void visualizarPlanificacionSemanal(){
         System.out.println("\nPlanificacion semanal ");
         for(int x=0; x<planificacionSemanal.size(); x++){
             System.out.println("\n Día: "+x);
             for(int i=0;i<planificacionSemanal.get(x).size();i++){
                 if(this.planificacionSemanal.get(x).get(i).curso != null){
-                    System.out.println("  "+this.planificacionSemanal.get(x).get(i).getHoraInicio().toString()+"-"+this.planificacionSemanal.get(x).get(i).getHoraTermino().toString()+" "+this.planificacionSemanal.get(x).get(i).curso.nombre);
+                    System.out.println("  "+this.planificacionSemanal.get(x).get(i).getHoraInicio().toString()+"-"+this.planificacionSemanal.get(x).get(i).getHoraTermino().toString()+" "+this.planificacionSemanal.get(x).get(i).getCurso());
                 }
                 else{
                 System.out.println("  "+this.planificacionSemanal.get(x).get(i).getHoraInicio().toString()+"-"+this.planificacionSemanal.get(x).get(i).getHoraTermino().toString());
@@ -82,7 +67,7 @@ public class Horario {
       * @param dia posicion del día; de lunes(0) a sabado(5)
       * @param bloque posicion del bloque especifico
       */
-    public void asignarCursoABloque(Curso curso, int dia, int bloque){
+    public void asignarCursoABloque(String curso, int dia, int bloque){
             this.planificacionSemanal.get(dia).get(bloque).setCurso(curso);
     }
 //    /**

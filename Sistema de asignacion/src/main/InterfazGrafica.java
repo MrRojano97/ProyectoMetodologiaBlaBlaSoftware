@@ -728,7 +728,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Ingrese un nombre válido para la sala");
         }
         else {
-            g.addSala(a);
+            g.crearSala(a);
             valorSalaVi.setModel(new javax.swing.AbstractListModel<String>() {
                 ArrayList<String> strings = g.visualizarSalas();
                 public int getSize() { return strings.size(); }
@@ -745,7 +745,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Ingrese un nombre válido para la carrera");
         }
         else {
-            g.addCarrera(a);
+            g.crearCarrera(a);
             JOptionPane.showMessageDialog(rootPane, "Carrera creada con éxito");
         }
     }//GEN-LAST:event_botonAceptarCarreraActionPerformed
@@ -785,7 +785,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Ingrese un nombre válido para el curso");
         }
         else {
-            g.addCurso(a);
+            g.crearCurso(a);
             JOptionPane.showMessageDialog(rootPane, "Curso creado con éxito");
         }
     }//GEN-LAST:event_botonAceptarCursoActionPerformed

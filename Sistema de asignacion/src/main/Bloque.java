@@ -13,12 +13,12 @@ import java.time.LocalTime;
  * @author FrancsicoGP
  */
 public class Bloque{
-    Curso curso=null;
-    LocalTime horaInicio;
-    LocalTime horaTermino;
+    String curso="";
+    private LocalTime horaInicio;
+    private LocalTime horaTermino;
     
     //CONSTRUCTOR
-    public Bloque(Curso cursoQueSeDicta, LocalTime horaInicio, LocalTime horaTermino) {
+    public Bloque(String cursoQueSeDicta, LocalTime horaInicio, LocalTime horaTermino) {
         this.curso= cursoQueSeDicta;
         this.horaInicio = horaInicio;
         this.horaTermino = horaTermino;
@@ -27,24 +27,24 @@ public class Bloque{
     public Bloque() {
     }
     
-    public Curso getCurso() {
+    public String getCurso() {
         return curso;
     }
 
-    public void setCurso(Curso curso) {
+    public void setCurso(String curso) {
         this.curso = curso;
     }
     
-    public LocalTime getHoraInicio() {
-        return horaInicio;
+    public String getHoraInicio() {
+        return horaInicio.toString();
     }
 
     public void setHoraInicio(int hora, int minuto) {
         this.horaInicio = LocalTime.of(hora, minuto);
     }
 
-    public LocalTime getHoraTermino() {
-        return horaTermino;
+    public String getHoraTermino() {
+        return horaTermino.toString();
     }
 
     public void setHoraTermino(int hora, int minuto) {
