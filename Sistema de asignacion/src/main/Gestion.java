@@ -152,10 +152,10 @@ public class Gestion{
             salas.put(sala.getNumero(), sala);
          }
      }
-     public void eliminarSala(String id){
+     public void eliminarSala(String numero_sala){
          //si la sala existe la eliminamos
-         if(salas.containsKey(id)){
-             salas.remove(id);
+         if(salas.containsKey(numero_sala)){
+             salas.remove(numero_sala);
          }else{
              System.out.println("No se encuentra esa Sala en nuestros datos.");
          }
@@ -193,23 +193,23 @@ public class Gestion{
              System.out.println("No se encuentra esa Carrera en nuestros datos.");
          }
      }
-    public ArrayList visualizarCursosCarrera(String idCarrera){
-        if(carreras.containsKey(idCarrera)){
-             return carreras.get(idCarrera).getCursos();
+    public ArrayList visualizarCursosCarrera(String nombre_carrera){
+        if(carreras.containsKey(nombre_carrera)){
+             return carreras.get(nombre_carrera).getCursos();
          }
         return null;
     }
-    public void agregarCursoACarrera(String idCarrera, String curso){
-         if(carreras.containsKey(idCarrera)){
-             carreras.get(idCarrera).addCurso(curso);
+    public void agregarCursoACarrera(String nombre_carrera, String curso){
+         if(carreras.containsKey(nombre_carrera)){
+             carreras.get(nombre_carrera).addCurso(curso);
          }
          else{
              System.out.println("No se encuentra esa Carrera en nuestros datos.");
      }
     }
-    public void eliminarCarrera(String idCarrera){
-         if(carreras.containsKey(idCarrera)){
-             carreras.remove(idCarrera);
+    public void eliminarCarrera(String nombre_carrera){
+         if(carreras.containsKey(nombre_carrera)){
+             carreras.remove(nombre_carrera);
          }
          else{
              System.out.println("No se encuentra esa Carrera en nuestros datos.");
@@ -231,22 +231,27 @@ public class Gestion{
         this.profesores.put(profesor.getNombre(),profesor);
     }
    
-
-    public void modificarProfesor(String nombre, String correoP, String numC, String correoI, Date fecha) {
+    //
+    public void modificarProfesor(String nombre, String nuevo_nombre, String correoP, String numC, String correoI, Date fecha) {
+        profesor=profesores.get(nombre);
+        profesores.remove(nombre);
         this.profesor.setCorreoInstitucional(correoP);
-        this.profesor.setNombre(nombre);
+        this.profesor.setNombre(nuevo_nombre);
         this.profesor.setNumeroContacto(numC);
         this.profesor.setCorreoInstitucional(correoI);
         this.profesor.setFechaContratacion(fecha);
+        profesores.put(profesor.getNombre(), profesor);
+       
     }
-    public void eliminarProfesor(String idProfesor){
-        if(profesores.containsKey(idProfesor)){
-             profesores.remove(idProfesor);
+    public void eliminarProfesor(String nombre_profesor){
+        if(profesores.containsKey(nombre_profesor)){
+             profesores.remove(nombre_profesor);
          }
         else{
             System.out.println("no se encuentra el profesor buscado");
         }
     }
+    //retorna String con datos de profesores
      public String[][] visualizarProfesores(){
         String[][] prof=new String[this.profesores.size()][4];
         int i=0;
