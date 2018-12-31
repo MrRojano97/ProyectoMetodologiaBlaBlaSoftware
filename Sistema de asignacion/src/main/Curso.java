@@ -10,15 +10,15 @@ package main;
  * @author Javiera
  */
 public class Curso {
-    String nombre;
-    Horario horario;
-    String profesor="";
+    private String nombre;
+    private Horario horario;
+    private String profesor="";
 
     public Curso(String nombre) {
         this.nombre = nombre;
         this.horario=new Horario();
     }
-    
+
     public String getNombre() {
         
         return nombre;
@@ -40,8 +40,8 @@ public class Curso {
         return profesor;
     }
 
-    public void setProfesor(Profesor profesor) {
-        this.profesor = profesor.getNombre();
+    public void setProfesor(String profesor) {
+        this.profesor = profesor;
     }
     public void deleteProfesor() {
         this.profesor = null;
