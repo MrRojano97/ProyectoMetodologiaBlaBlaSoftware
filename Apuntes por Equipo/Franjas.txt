@@ -1,4 +1,4 @@
-Apuntes de: Franjas
+﻿Apuntes de: Franjas
 
 Sprint 1: (Hasta 13-12-2018)
 
@@ -20,5 +20,9 @@ Sprint 2: (Hasta 20-12-2018)
 -Vincular cursos y salas (1) -> Encargado/s: Francisco Gamboa
 
 Sprint 3: (Hasta 27-12-2018)
--
+-Eliminar Curso (1) -> Encargado/s: Javiera Cabrera
+-Modificar Curso (1) -> Encargado/s: Javiera Cabrera
+-Actualizar Diagrama de Clases (2) -> Encargado/s Francisco González
+-Cambiar Listas por HashMap (2) -> Encargado/s: Francisco Gamboa
+-Interface a Profesor, Semestre y Carrera (1) -> Encargado/s: Javiera Cabrera
 

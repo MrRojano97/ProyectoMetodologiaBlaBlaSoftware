@@ -46,3 +46,17 @@ Sprint 2:
         Luciano Garcia: Interfaz Vinculacion Curso-Carrera, Intergaz Vinculacion Curso-Sala
         Hugo Rodriguez: Interfaz Visualizacion Cursos
         Ruben Ramirez: Integrar funcionalidades clase sala a Interfaz Grafica
+
+Sprint 3 
+    Daily 23/12/18
+        Despues de la reunion del dia jueves 20/12 se decidio que se necesitaba muchas mejoras con respecto
+            a la interfaz grafica del programa (hecha por nuestro grupo) por lo que decidimos modificarla nosotros
+            mismos. Para ello se creo la tarea en trello "Modificar/Rehacer/Cambiar interfaz actual".
+
+    Tareas tomadas para Sprint: Modificar/Rehacer/Cambiar Interfaz Actual (5)
+                                Total esfuerzo: 5
+
+    Para este sprint, al ser solo una tarea, todos los miembros participaran en la realizacion de esta. 
+    
+
+    

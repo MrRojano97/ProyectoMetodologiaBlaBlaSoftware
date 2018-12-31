@@ -2,310 +2,292 @@ package main;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
-
+import java.util.Map;
 
 /**
  * @author FranciscoGP
  * @author Javiera
  */
-public class Gestion {
-    ArrayList<Semestre> semestres=new ArrayList<>();
-    ArrayList<Carrera> carrerasQueSeImparten=new ArrayList<>();
-    ArrayList<Sala> salasDisponibles=new ArrayList<>();
-    ArrayList<Profesor> profesoresContratados=new ArrayList<>();
-    ArrayList<Horario> horariosDisponibles=new ArrayList<>();
-    ArrayList<Curso> cursos=new ArrayList<>();//cursos de la carrera
+public class Gestion{
+    HashMap<String, Semestre> semestres = new HashMap<>();
+    HashMap<String, Carrera> carreras = new HashMap<>();
+    HashMap<String, Profesor> profesores = new HashMap<>();
+    HashMap<String, Curso> cursos = new HashMap<>();
+    HashMap<String, Sala> salas = new HashMap<>();
+    
+    Semestre semestre;
     Carrera carrera;
     Curso curso;
     Horario horario;
     Profesor profesor;
     Sala sala;
-    Bloque bloque;
     
-    public Gestion()
-    {
+    public Gestion(){
         this.inicio();
     }
     /**
-     * Metodo creado con la finalidad de gestionar
-     * metodos y/o instancias de variables contenidos en la clase
+     * Metodo creado con la finalidad de gestionare 
+     * metodos y/o instancias de variables contenidos la calse
      */
     public void inicio(){
         // INSTANCIAMIENTO DE UN NUEVO PROFESOR //
-        //creacion de un profesor con sus datos
-        profesor = new Profesor("Obi-Wan Kenobi","quelafuerzateacompañe@gmail.com","+5697263847","OWKenobi@alianza.com");
-        this.addProfesor(profesor);//agregamos el profesor a la lista
         //creacion de un profesor con sus datos basicos
-        profesor = new Profesor("Obi-Wan Kenobi","quelafuerzateacompañe@gmail.com","+5697263847","OWKenobi@alianza.com");
-        this.addProfesor(profesor);//agregamos el profesor a la lista
+        this.crearProfesor("Obi-Wan Kenobi","quelafuerzateacompañe@gmail.com","+5697263847", "OWKenobi@alianza.com");
+        
+        
+        this.crearProfesor("Chewbacca", "aararrggwwwww@gmail.com","+56926361781", "Chew@alianza.com");
+        
+        
+        
+        this.crearSala("4C");
+        
+        /**
+         * IMPORTNTE
+         * LAS VARIABLES INDEPENDIENTES DE CADA CLASE ALMACENAN EL VALOR 
+         * DEL OBJETO CON EL QUE SE DESEA TRABAJAR
+         * POR TANTO PARA MODIFICAR ALGUN DATO DEBEMOS PRIMERO EXTRAERLO A SU RESPECTIVA
+         * VARIABLE
+         * 
+         * CADA PROFESOR, SALA Y CURSO POSEE UN atributo de tipo HORARIO, PARA MODIFICAR SU HORARIO 
+         * SE DEBE ACCEDER DIRECTAMENTE AL ATRIBUTO planificacionSemanal el cual provee
+         * los metodos asignarCursoABloque, quitarCursoDeBloque y verificarDisponibilidadDeBloque
+         */
+        
+        
+        //EJEMPLO PARA crear y MODIFICAR curso
+        this.crearCurso("met");
+        //extraemos el curso a modificar
+        curso=cursos.get("met");
+        //cambiamos el nombre del curso y si lo deseamos su prfesor
+        this.modificarCurso(curso.getNombre(), "Metodología","");
+        //asignamos un profesor existente al curso
+        curso.setProfesor(profesores.get("Chewbacca").getNombre());
+        //para modificar un HORARIO (esto aplica a todo lo que posea un horario)
+       //verificamos que el bloque al cual deseamos asignar un curso este disponible 
+        if(curso.getHorario().verificarDisponibilidadDeBloque(1, 3)==false){
+            curso.getHorario().asignarCursoABloque(curso.getNombre(), 1, 3);//asigamos el curso al dia martes, bloque 4
+        }
+        if(curso.getHorario().verificarDisponibilidadDeBloque(1, 4)==false){
+            curso.getHorario().asignarCursoABloque(curso.getNombre(), 1, 4);//asigamos el curso al dia martes, bloque 5
+        }
+        
+        //verifica si el bloque esta disponible, esto se debe hacer al tratar de asiganr un bloque
+        System.out.println("\n 111111 ");
+        curso.getHorario().visualizarPlanificacionSemanal();
+        System.out.println("\n 22222222222 ");
+        
+        this.crearSala("11");
+        sala=salas.get("11");
+        //MODIFICAR SALA SOLO CAMBIA EL NOMBRE DE ESTA, 
+        //YA QUE PARA CAMBIAR SU HORARIO ESTA DISPONIBLE EN SU ATRIBUTO HORARIO EL METODO
+        //asignarCursoABloque Y quitarCursoDeBloque
+        //CAMBIAMOS EL NUMERO DE LA SALA Y MANTENEMOS SU PLANIFICACION SEMANAL
+        this.modificarSala(sala.getNumero(), "12");
     
-        profesor = new Profesor(" Chewbacca", "aararrggwwwww@gmail.com","+56926361781","Chew@alianza.com");
-        this.addProfesor(profesor);//agregamos el profesor a la lista
-        
-        //muestra en consola los profesores contenidos en la lista
-        this.mostrarListaDeProfesores();
-        this.visualizarSalas();
-        
-         //INSTANCIAMIENTO DE UN NUEVO CURSO Y PROFESOR //
-        curso=new Curso("Metodologia");//creamos el curso
-        //asignamos el horario del curso
-        curso.horario.asignarCursoABloque(curso, 1, 3);//asignamos el curso a un bloque de un día (martes bloque 4)
-        curso.horario.asignarCursoABloque(curso, 1, 4);//asignamos el curso a un bloque de un día (martes bloque 5)
-        
-        //creacion de un profesor con sus datos
-        profesor = new Profesor("pepe","sdfd@gmail.com","+6456454657","sdafd@adsf.com");
-        profesor.horario.asignarCursoABloque(curso, 1, 3);//asignamos el curso a un bloque de un día (martes bloque 4)
-        profesor.horario.asignarCursoABloque(curso, 1, 4);//asignamos el curso a un bloque de un día (martes bloque 4)
-        this.addProfesor(profesor);//agregamos el profesor a la lista
-        
-        curso.setProfesor(profesor);//podemos asignar un profesor al curso
-        //curso.deleteProfesor();//podemos quitar un profesor del curso
-        this.cursos.add(curso);//agregamos el curso a la lista
-        //System.out.println(curso.horario.verificarDisponibilidadDeBloque(1, 0));//podemos verificar la disponibilidad de un bloque, indicando su dia y posicion del bloque
-        this.mostrarListaDeCursos();//muestra los cursos añadidos al semesntre
-        
-        
-        //INSTANCIAMIENTO DE UNA NUEVA SALA //
-        sala=new Sala("11");
-        //le asignamos un curso a un bloque, especificando:  (el curso, dia de la semana,  numero del bloque)
-        sala.horario.asignarCursoABloque(curso, 1, 3);
-        sala.horario.asignarCursoABloque(curso, 1, 4);
-        System.out.println("\n Disponibilidad Sala: "+sala.getNumero()+" martes, bloque 4: "+sala.horario.verificarDisponibilidadDeBloque(1,3));//podemos verificar la disponibilidad de un bloque, indicando su dia y posicion del bloque
-        System.out.println("\n Disponibilidad Sala: "+sala.getNumero()+" martes, bloque 5: "+sala.horario.verificarDisponibilidadDeBloque(1,4));
-        System.out.println("\n Disponibilidad Sala: "+sala.getNumero()+" martes, bloque 6: "+sala.horario.verificarDisponibilidadDeBloque(1,5));
-        sala.horario.visualizarPlanificacionSemanal();//visualizaion de la planificacion semanal(bloques) de la sala
-        
-         //TESTEO DE CALIDAD DEL MODELO
-        sala = new Sala("105");
-        System.out.println("\nSala instanciada correctamente "+sala.getNumero());
-        
-        sala = new Sala("T2");
-        System.out.println("\nSala instanciada correctamente "+sala.getNumero());
-        
-        bloque= new Bloque();
-        Curso c2=new Curso("Metodologias y blabla");
-        bloque.setCurso(c2);
-        bloque.setHoraInicio(8,30);
-        bloque.setHoraTermino(9,30);
-        System.out.println("\nBloque instanciado correctamente- Inicio:  "+bloque.getHoraInicio()+"  Fin:  "+bloque.getHoraTermino()+"  Curso:  "+bloque.getCurso().getNombre());
-        
-        bloque= new Bloque();
-        bloque.setCurso(new Curso("Proyecto de programacion"));
-        bloque.setHoraInicio(18,00);
-        bloque.setHoraTermino(19,00);
-        System.out.println("\nBloque instanciado correctamente- Inicio:  "+bloque.getHoraInicio()+"  Fin:  "+bloque.getHoraTermino()+"  Curso:  "+bloque.getCurso().getNombre());
-        
-        profesor= new Profesor("Rodrigo ","rodrigo@gmail.com","99929292929","profesorRodrigo@utalca.cl");
-        System.out.println("\nProfesor instanciado correctamente Nombre: ");
-        profesor.visualizarDatos();
-        
-        profesor= new Profesor("Jose","jose@gmail.com","99945254359","profesorJose@utalca.cl");
-        System.out.println("\nProfesor instanciado correctamente Nombre: ");
-        profesor.visualizarDatos();
-        
-        carrera= new Carrera("Compu");
-        System.out.println("\nCarrera instanciada correctamente : "+carrera.getNombre());
-        
-        carrera= new Carrera("Electrica");
-        System.out.println("\nCarrera instanciada correctamente : "+carrera.getNombre());
-        
-        
-    
-    }
-    /**
-     * Metodo encargado de mostrar por consola
-     * los profesores contenidos en la lista profesoresContratados
-     */
-    public void mostrarListaDeProfesores(){
-        Iterator<Profesor> it;
-        it = this.profesoresContratados.iterator();
-        System.out.println("\nListado de profesores");
-        while (it.hasNext() ) {
-                profesor = it.next();
-                profesor.visualizarDatos();
-            }
     }
     // CURSO //
-     public void addCurso(Curso curso){
-        cursos.add(curso);
+    public void crearCurso(String nombre){
+        //si el curso no existe lo creamos
+        if(!cursos.containsKey(nombre)){
+            curso=new Curso(nombre);
+            cursos.put(curso.getNombre(),curso);
+        }
     }
-    public void mostrarListaDeCursos(){
-        Iterator<Curso> it;
-        it = this.cursos.iterator();
-        System.out.println("\nListado de cursos");
-        while (it.hasNext() ) {
-                curso = it.next();
-                curso.visualizarDatos();
-            }
+    public void modificarCurso(String nombreCurso, String nuevo_nombre, String profesor) {
+        //Si el curso existe  lo modificamos
+        if(cursos.containsKey(nombreCurso)){
+            //extraemos el curso
+            curso=cursos.get(nombreCurso);
+            //eliminamos el curso con datos antiguos
+            cursos.remove(nombreCurso);
+            //modificamos el curso extraido
+            curso.setNombre(nuevo_nombre);
+            curso.setProfesor(profesor);
+            //insertamos el curso modificado
+            cursos.put(curso.getNombre(), curso);
+            
+        } 
     }
-    //        //
-     public void modificarSala(Sala sala,String numero, Horario planificacion){
-         sala.numero=numero;
-         sala.horario=planificacion;
+    
+    public void asignarProfesorACurso(String nombreProfesor, String nombreCurso){
+        if(profesores.containsKey(nombreProfesor) && cursos.containsKey(nombreCurso) ){
+             cursos.get(nombreCurso).setProfesor(nombreProfesor);
+         }
+    }
+    public void eliminarCurso(String nombreCurso) {
+        //si el curso existe lo eliminamos
+        if(cursos.containsKey(nombreCurso)){
+            cursos.remove(nombreCurso);
+        }
+    }
+    //Retorna String[][] "curs" con nombre del curso
+    //en curs[0] y su profesor asignado en curs[1]
+    public String[][] visualizarCursos(){
+        String[][] curs=new String[this.cursos.size()][2];
+        int i=0;
+        for (Map.Entry<String, Curso> entry : cursos.entrySet()) {
+            curs[i][0]=entry.getValue().getNombre();
+            curs[i][1]=entry.getValue().getProfesor();
+            i++;
+        }
+        return curs;
+    }
+     
+    // SALA  //
+    public void crearSala(String numero){
+     //si la sala no existe en el hash map la creamos y agregamos
+     if(!salas.containsKey(numero)){
+        this.sala=new Sala(numero);
+        salas.put(sala.getNumero(),sala);
+     }   
+    }
+    public void modificarSala(String numero,String numero_nuevo){
+        //si la sala existe la modificamos
+         if(salas.containsKey(numero)){
+            sala=salas.get(numero);
+            salas.remove(numero);
+            sala.setNumero(numero_nuevo);
+            salas.put(sala.getNumero(), sala);
+         }
      }
-     public void eliminarSala(String numero){
-         int eliminar=-1;
-         for (int i=0;i<salasDisponibles.size();i++){
-             if (salasDisponibles.get(i).numero.equals(numero)){
-                 eliminar=i;
-             }
-         }
-         if(eliminar!=-1){
-             salasDisponibles.remove(eliminar);
-         }
-         else{
+     public void eliminarSala(String numero_sala){
+         //si la sala existe la eliminamos
+         if(salas.containsKey(numero_sala)){
+             salas.remove(numero_sala);
+         }else{
              System.out.println("No se encuentra esa Sala en nuestros datos.");
          }
      }
-    // SALA  //
-    public void addSala(Sala sala){      
-        salasDisponibles.add(sala);
-    }
-    public void visualizarSalas(){
-        for(int i=0;i<salasDisponibles.size();i++){
-            System.out.println(salasDisponibles.get(i).toString());
-        
+    // RETORNA ArrayLis CON NOMBRES DE SALAS
+    public ArrayList<String> visualizarSalas(){
+        ArrayList<String> s= new ArrayList<>();
+        for (Map.Entry<String, Sala> entry : salas.entrySet()) {
+            s.add(entry.getValue().getNumero());
         }
+        return s;
     }
-    //RETORNA STRING CON NOMBRES DE CARRERAS
-    public ArrayList<String> visualizarCarreras(){
-        ArrayList<String> carreras=new ArrayList<>();
-        for(int i=0;i<carrerasQueSeImparten.size();i++){
-            System.out.println(carrerasQueSeImparten.get(i).toString());
-            carreras.add(carrerasQueSeImparten.get(i).nombre);
-        }
-        return carreras;
-    }
-    public void visualizarCarrera(String nombre){
-        boolean encontrado=false;
-        for(int i=0;i<carrerasQueSeImparten.size() && encontrado==false;i++){
-            if (carrerasQueSeImparten.get(i).nombre.equals(nombre)){
-                System.out.println(carrerasQueSeImparten.get(i).toString());
-                encontrado=true;
-            }
-        }
-    }
-    // PROFESOR //
-    //          //
-     public void addProfesor(Profesor p){
-        this.profesoresContratados.add(p);
-    }
-
-
-     // CARRERA //
-     public void addCarrera(String nombre){
+    
+    
+    //----------------- CARRERA --------------------- //
+    
+    public void crearCarrera(String nombre){
         carrera=new Carrera(nombre);
-        carrerasQueSeImparten.add(carrera);
+        carreras.put(carrera.getNombre(),carrera);
     }
-     public int buscarCarrera(String carrera){
-         int j=-1;
-         for (int i=0;i<carrerasQueSeImparten.size();i++){
-             if (carrerasQueSeImparten.get(i).nombre.equals(carrera)){
-                 j=i;
-             }
-         }
-         return j;
-     }
-     public void agregarCurso_Carrera(String carrera, Curso curso){
-         int j= buscarCarrera(carrera);
-         if(j!=-1)
-            carrerasQueSeImparten.get(j).addCurso(curso);
-         else
-             System.out.println("No se encuentra esa Carrera en nuestros datos.");
-     }
-     public void eliminarCurso_Carrera(String carrera, String curso){
-         int j= buscarCarrera(carrera);
-         if(j!=-1)
-            carrerasQueSeImparten.get(j).delCurso(curso);
-         else
-             System.out.println("No se encuentra esa Carrera en nuestros datos.");
-     }
-     public void modificarNombreCarrera(String nombre,String nombre_nuevo){
-         int j=buscarCarrera(nombre);
-         if(j!=-1){
-             carrerasQueSeImparten.get(j).setNombre(nombre_nuevo);
+  
+     public void modificarNombreCarrera(String nombreCarrera, String nombre_nuevo){
+         //si la carrera existe la modificamos
+         if(carreras.containsKey(nombreCarrera)){
+             //copiamos la carrera y le cambiamos el nombre
+             carrera=carreras.get(nombreCarrera);
+             carrera.setNombre(nombre_nuevo);
+             //agregamos al carrera con nuevo nombre
+             carreras.put(nombre_nuevo, carrera);
+             //eliminamos la carrera con el nombre antiguo
+             carreras.remove(nombreCarrera);
+             
          }
          else{
              System.out.println("No se encuentra esa Carrera en nuestros datos.");
          }
      }
-     public void eliminarCarrera(String nombre){
-         int eliminar=buscarCarrera(nombre);
-         if(eliminar!=-1){
-             carrerasQueSeImparten.remove(eliminar);
+    public ArrayList visualizarCursosCarrera(String nombre_carrera){
+        if(carreras.containsKey(nombre_carrera)){
+             return carreras.get(nombre_carrera).getCursos();
+         }
+        return null;
+    }
+    public void agregarCursoACarrera(String nombre_carrera, String curso){
+         if(carreras.containsKey(nombre_carrera)){
+             carreras.get(nombre_carrera).addCurso(curso);
          }
          else{
              System.out.println("No se encuentra esa Carrera en nuestros datos.");
-         }
      }
-
-    public void modificarProfesor(String nombre, String correoP, String numC, String correoI,Date fecha) {
+    }
+    public void eliminarCarrera(String nombre_carrera){
+         if(carreras.containsKey(nombre_carrera)){
+             carreras.remove(nombre_carrera);
+         }
+         else{
+             System.out.println("No se encuentra esa Carrera en nuestros datos.");
+     }
+     }
+    //RETORNA ArrayLis CON NOMBRES DE CARRERAS
+    public ArrayList<String> visualizarCarreras(){
+        ArrayList<String> c=new ArrayList<>();
+        for (Map.Entry<String, Carrera> entry : carreras.entrySet()) {
+            c.add(entry.getValue().getNombre());
+        }
+        return c;
+    }
+    //-----------------------------------------------------------------------------//
+    
+    //------------------------------ PROFESOR ------------------------------ //
+    public void crearProfesor(String nombre, String correoP, String numC, String correoI){
+        this.profesor=new Profesor(nombre,correoP,numC, correoI);
+        this.profesores.put(profesor.getNombre(),profesor);
+    }
+   
+    //
+    public void modificarProfesor(String nombre, String nuevo_nombre, String correoP, String numC, String correoI, Date fecha) {
+        profesor=profesores.get(nombre);
+        profesores.remove(nombre);
         this.profesor.setCorreoInstitucional(correoP);
-        this.profesor.setNombre(nombre);
+        this.profesor.setNombre(nuevo_nombre);
         this.profesor.setNumeroContacto(numC);
         this.profesor.setCorreoInstitucional(correoI);
         this.profesor.setFechaContratacion(fecha);
+        profesores.put(profesor.getNombre(), profesor);
+       
     }
-    public void eliminarProfesor(String nombre){
-        int indice=-1;
-        for(int i=0;i<profesoresContratados.size();i++){
-            if(profesoresContratados.get(i).nombre.equals(nombre)){
-                indice=i;               
-            }
-        }
-        if(indice!= -1){
-            profesoresContratados.remove(indice);
-        }
+    public void eliminarProfesor(String nombre_profesor){
+        if(profesores.containsKey(nombre_profesor)){
+             profesores.remove(nombre_profesor);
+         }
         else{
             System.out.println("no se encuentra el profesor buscado");
         }
-            
     }
-    
-    /*@
-    retorna 1 si se agrego correctamente el curso al semestre
-    retorna 0 si ocurrio un erro inesperado al agregar
-    retorna -1  si el semestre indicado no existe
-    retorna -2 si el curso indicado ya existe en el semestre
-    */
-    public int agregarCursoSemeste(String nombreSemestre, Curso curso)
-    {
-        int i =this.semestreExiste(nombreSemestre);
-        if(-1<i)
-        {
-           return  this.semestres.get(i).agregarCurso(curso);// puede retornar los siguentes valores : 1,0 y -2.
-           
-        }
-        else
-        {
-            
-            return -1;// retorna -1 si el smestre no existe
-        }
-        
-        
-    }
-    
-    public  void mostrarSemestres ()
-    {
-        for(Semestre semestre: this.semestres)
-        {
-            semestre.mostrarDatos();
-        }
-    }
-    
-    public int semestreExiste(String nombreSemestre)
-    {
+    //retorna String con datos de profesores
+     public String[][] visualizarProfesores(){
+        String[][] prof=new String[this.profesores.size()][4];
         int i=0;
-        for(Semestre semestre: this.semestres)
-        {
-            if(semestre.getNombre().equalsIgnoreCase(nombreSemestre))
-            {
-                return i;// retorna la posicion del semestre indicado.
-            }
+        for (Map.Entry<String, Profesor> entry : profesores.entrySet()) {
+            prof[i][0]=entry.getValue().getNombre();
+            prof[i][1]=entry.getValue().getNumeroContacto();
+            prof[i][2]=entry.getValue().getCorreoPersonal();
+            prof[i][3]=entry.getValue().getCorreoInstitucional();
             i++;
         }
-        return -1;// retorna -1 si el semestre no existe
+        return prof;
     }
-     
+    //------------------------------ Semestre ------------------------------ //
+    // recordar validar las fechas
+    public void crearSemestre(String nombreSemestre,String fechainicio,String fechaFin){
+        semestre=new Semestre(nombreSemestre, fechainicio, fechaFin);
+        semestres.put(semestre.getNombre(),semestre);
+        
+    }
+    public void agregarCursoASemeste(String nombreSemestre, String nombreCurso){
+        //si el curso y semestre existen, agregamos el curso al semstre
+        if(semestres.containsKey(nombreSemestre) && this.cursos.containsKey(nombreCurso)){
+            semestres.get(nombreSemestre).agregarCurso(nombreCurso);
+         }
+    }
+    public  ArrayList<String> visualizarSemestres (){
+        ArrayList<String> s=new ArrayList<>();
+        for (Map.Entry<String, Semestre> entry : semestres.entrySet()) {
+            s.add(entry.getValue().getNombre());
+        }
+        return s;
+    }
+    public void eliminarSemestre(String nombreSemestre){
+        if(semestres.containsKey(nombreSemestre)){
+            semestres.remove(nombreSemestre);
+         }
+        
+    }
 }

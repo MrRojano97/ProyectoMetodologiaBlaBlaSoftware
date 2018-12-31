@@ -12,21 +12,20 @@ import java.util.Iterator;
  * @author Javiera
  */
 public class Sala {
-
-    
-    String numero;
-    Horario horario;
+    private String numero;
+    private Horario horario;
     
     
     public Sala(String numero) {
         this.numero = numero;
         this.horario=new Horario();
     }
-    public Horario getPlanificacionSemanal() {
+    
+    public Horario getHorario() {
         return horario;
     }
 
-    public void setPlanificacionSemanal(Horario planificacionSemanal) {
+    public void setHorario(Horario planificacionSemanal) {
         this.horario = planificacionSemanal;
     }
     
@@ -56,6 +55,7 @@ public class Sala {
     }
     @Override
     public String toString() {
+        String planificacionSemanal = null;
         return "Sala{" + "numero=" + numero + ", planificacionSemanal=" + planificacionSemanal + '}';
     }
 }
