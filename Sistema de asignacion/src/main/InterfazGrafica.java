@@ -686,9 +686,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
         valorSalaVi.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
         valorSalaVi.setModel(new javax.swing.AbstractListModel<String>() {
 
-            ArrayList<String> strings = g.visualizarSalas();
-            public int getSize() { return strings.size(); }
-            public String getElementAt(int i) { return strings.get(i); }
+            String[] strings = g.visualizarSalas();
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
         });
         scrollSalaVi.setViewportView(valorSalaVi);
 
@@ -1035,7 +1035,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         sala1.setText("Sala");
 
         valorSalaGe.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-        valorSalaGe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        valorSalaGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarSalas()));
 
         nuevoNombreSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
         nuevoNombreSala.setForeground(new java.awt.Color(51, 51, 51));
@@ -1128,9 +1128,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
         else {
             g.crearSala(a);
             valorSalaVi.setModel(new javax.swing.AbstractListModel<String>() {
-                ArrayList<String> strings = g.visualizarSalas();
-                public int getSize() { return strings.size(); }
-                public String getElementAt(int i) { return strings.get(i); }
+                String[] strings = g.visualizarSalas();
+                public int getSize() { return strings.length; }
+                public String getElementAt(int i) { return strings[i]; }
             });
 
             JOptionPane.showMessageDialog(rootPane, "Sala creada con éxito");
@@ -1222,7 +1222,14 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }//GEN-LAST:event_botonAceptarGeCaActionPerformed
 
     private void botonAceptarGeSaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarGeSaActionPerformed
-        // TODO add your handling code here:
+        if (this.valorNewNombreSala.equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "Ingrese un nombre válido para la sala");
+        }
+        else {
+            g.modificarSala(this.valorSalaGe.getSelectedItem().toString(), this.valorNewNombreSala.getText());
+            valorSalaGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarSalas()));
+            JOptionPane.showMessageDialog(rootPane, "Sala modificada con éxito");
+        }
     }//GEN-LAST:event_botonAceptarGeSaActionPerformed
 
     private void valorGeCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorGeCursoActionPerformed
