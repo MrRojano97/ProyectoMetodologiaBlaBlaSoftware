@@ -966,7 +966,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         carrera1.setPreferredSize(new java.awt.Dimension(135, 28));
 
         valorCarreraGe.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-        valorCarreraGe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        valorCarreraGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
 
         nuevoNombreCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
         nuevoNombreCarrera.setForeground(new java.awt.Color(51, 51, 51));
@@ -1144,6 +1144,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         }
         else {
             g.crearCarrera(a);
+            valorCarreraGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
             JOptionPane.showMessageDialog(rootPane, "Carrera creada con éxito");
         }
     }//GEN-LAST:event_botonAceptarCarreraActionPerformed
@@ -1209,7 +1210,15 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }//GEN-LAST:event_botonAceptarGePrActionPerformed
 
     private void botonAceptarGeCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarGeCaActionPerformed
-        // TODO add your handling code here:
+        if (this.valorNewNombreCarrera.equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "Ingrese un nombre válido para la carrera");
+        }
+        else {
+            g.modificarNombreCarrera(valorCarreraGe.getSelectedItem().toString(), this.valorNewNombreCarrera.getText());
+            valorCarreraGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
+            JOptionPane.showMessageDialog(rootPane, "Carrera modificada con éxito");
+        }
+
     }//GEN-LAST:event_botonAceptarGeCaActionPerformed
 
     private void botonAceptarGeSaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarGeSaActionPerformed
