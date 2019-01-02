@@ -11,9 +11,9 @@ import java.util.ArrayList;
  *
  * @author Javiera
  */
-public class Carrera {
-    String nombre;//nombre de la carrera
-    ArrayList<Curso> cursos=new ArrayList<>();;//cursos de la carrera
+public class Carrera{
+    private String nombre;//nombre de la carrera
+    private ArrayList<String> cursos=new ArrayList<>();;//cursos de la carrera
     public Carrera(String nombre){
         this.nombre=nombre;
     }
@@ -24,21 +24,23 @@ public class Carrera {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public void addCurso(Curso curso){
+    public void addCurso(String curso){
         cursos.add(curso);
     }
-    public void delCurso(String curso){
-        int j=-1;
-        for (int i=0;i<cursos.size();i++){
-            if(cursos.get(i).nombre.equals(nombre))
-                j=i;
+    public void eliminarCurso(String curso) {
+        if(cursos.contains(curso)){
+             cursos.remove(curso);
         }
-        if(j!=-1){
-            this.cursos.remove(j);
+    }
+    public ArrayList getCursos(){
+        ArrayList<String> c=new ArrayList<>();
+        for (int x=0; x<this.cursos.size();x++) {
+            c.add(this.cursos.get(x));
         }
-        else{
-            System.out.println("No se encuentra ese Curso en nuestros datos.");
-        }
+        return c;
+    }
+    public void mostrarInfo(){
         
     }
+
 }

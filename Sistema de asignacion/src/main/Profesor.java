@@ -15,11 +15,11 @@ import java.util.Date;
  * @author Javiera
  */
 public class Profesor {
-    String nombre;//nombre completo del profesor
-    String correoInstitucional;//correo asignado por la universidad
-    String correoPersonal;//correo personal del profesor
-    Date fechaContratacion;//fecha en la cual se contrato al profesor
-    String numeroContacto;//numero celular personal del profesor
+    private String nombre;//nombre completo del profesor
+    private String correoInstitucional;//correo asignado por la universidad
+    private String correoPersonal;//correo personal del profesor
+    private Date fechaContratacion;//fecha en la cual se contrato al profesor
+    private String numeroContacto;//numero celular personal del profesor
     //horario que contiene los bloques semanales y sus cursos asignados
     Horario horario;
     ArrayList<Curso> cursosAsignados;//cursos que esta dictando el profesor
@@ -32,12 +32,7 @@ public class Profesor {
         this.horario= new Horario();
         this.numeroContacto=numC;
     }
-
-    Profesor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-  
+ 
     public String getNombre() {
         return nombre;
     }
@@ -81,4 +76,5 @@ public class Profesor {
         System.out.println("\n Nombre: "+this.getNombre()+"\n Correo: "+this.getCorreoPersonal()+"\n Correo institucional: "+this.getCorreoInstitucional());
         System.out.println(" Numero de contato: "+this.getNumeroContacto()+"\n Fecha/Hora de contratacion: "+this.getFechaContratacion());
     }
+    //Los profesores solo deberian poder modificar el horario de un curso
 }
