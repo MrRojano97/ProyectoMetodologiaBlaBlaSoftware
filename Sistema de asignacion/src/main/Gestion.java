@@ -292,4 +292,20 @@ public class Gestion{
          }
         
     }
+    
+    public boolean agregarCursoAProfesor(String nombreProfesor, String nombreCurso)
+    {
+        
+        if(this.profesores.containsKey(nombreProfesor))
+        {
+            Profesor profe = this.profesores.get(nombreProfesor);
+            if(this.cursos.containsKey(nombreCurso))
+            {
+                Curso curso =this.cursos.get(nombreCurso);
+                return profe.agregarCurso(curso);
+            }
+        }
+        
+        return false;
+    }
 }
