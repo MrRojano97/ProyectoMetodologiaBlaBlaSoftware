@@ -98,9 +98,6 @@ public class Gestion{
         //asignarCursoABloque Y quitarCursoDeBloque
         //CAMBIAMOS EL NUMERO DE LA SALA Y MANTENEMOS SU PLANIFICACION SEMANAL
         this.modificarSala(sala.getNumero(), "12");
-        //muestra en consola los profesores contenidos en la lista
-        this.mostrarListaDeProfesores();
-        this.addSala("asd");
         this.visualizarSalas();
     }
     
