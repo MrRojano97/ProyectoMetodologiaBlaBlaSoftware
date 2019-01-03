@@ -41,7 +41,11 @@ public class Main {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new InterfazGrafica().setInicioSesionVisible();
+                try {
+                    new InterfazGrafica().setInicioSesionVisible();
+                } catch (IOException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
