@@ -36,6 +36,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private void initComponents() {
 
         tabsNivel0 = new javax.swing.JTabbedPane();
+        tabsProfeNivel1 = new javax.swing.JTabbedPane();
+        tabsAlumnoNivel1 = new javax.swing.JTabbedPane();
         tabsAdminNivel1 = new javax.swing.JTabbedPane();
         background0 = new javax.swing.JPanel();
         bannerAdminCCu = new javax.swing.JLabel();
@@ -102,14 +104,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         valorSalaVi = new javax.swing.JList<>();
         botonAceptarVi = new javax.swing.JButton();
         tabsAdminGestNivel2 = new javax.swing.JTabbedPane();
-        background8 = new javax.swing.JPanel();
-        bannerAdminGeCu = new javax.swing.JLabel();
-        cursoGe = new javax.swing.JLabel();
-        valorGeCurso = new javax.swing.JComboBox<>();
-        nuevoNombreCurso = new javax.swing.JLabel();
-        scrollNewNombreCurso = new javax.swing.JScrollPane();
-        valorNewNombreCurso = new javax.swing.JTextPane();
-        botonAceptarGeCu = new javax.swing.JButton();
         background9 = new javax.swing.JPanel();
         bannerAdminGePr = new javax.swing.JLabel();
         profesorGe = new javax.swing.JLabel();
@@ -143,8 +137,14 @@ public class InterfazGrafica extends javax.swing.JFrame {
         scrollNewNombreSala = new javax.swing.JScrollPane();
         valorNewNombreSala = new javax.swing.JTextPane();
         botonAceptarGeSa = new javax.swing.JButton();
-        tabsProfeNivel1 = new javax.swing.JTabbedPane();
-        tabsAlumnoNivel1 = new javax.swing.JTabbedPane();
+        background8 = new javax.swing.JPanel();
+        bannerAdminGeCu = new javax.swing.JLabel();
+        cursoGe = new javax.swing.JLabel();
+        valorGeCurso = new javax.swing.JComboBox<>();
+        nuevoNombreCurso = new javax.swing.JLabel();
+        scrollNewNombreCurso = new javax.swing.JScrollPane();
+        valorNewNombreCurso = new javax.swing.JTextPane();
+        botonAceptarGeCu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
@@ -160,7 +160,14 @@ public class InterfazGrafica extends javax.swing.JFrame {
         tabsNivel0.setDoubleBuffered(true);
         tabsNivel0.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
         tabsNivel0.setMinimumSize(new java.awt.Dimension(0, 0));
-        tabsNivel0.setPreferredSize(new java.awt.Dimension(1920, 1080));
+        tabsNivel0.setPreferredSize(new java.awt.Dimension(1300, 700));
+
+        tabsProfeNivel1.setBackground(new java.awt.Color(59, 59, 59));
+        tabsProfeNivel1.setMinimumSize(new java.awt.Dimension(0, 0));
+        tabsNivel0.addTab("Profesor", tabsProfeNivel1);
+
+        tabsAlumnoNivel1.setMinimumSize(new java.awt.Dimension(0, 0));
+        tabsNivel0.addTab("Alumno", tabsAlumnoNivel1);
 
         tabsAdminNivel1.setBackground(new java.awt.Color(59, 59, 59));
         tabsAdminNivel1.setForeground(new java.awt.Color(204, 204, 204));
@@ -210,7 +217,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background0Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonAceptarCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
+                .addGap(637, 637, 637))
         );
         background0Layout.setVerticalGroup(
             background0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,14 +227,15 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(background0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(scrollNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 694, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 315, Short.MAX_VALUE)
                 .addComponent(botonAceptarCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+                .addContainerGap())
         );
 
         tabsAdminNivel1.addTab("Crear curso", background0);
 
         background1.setBackground(new java.awt.Color(216, 216, 216));
+        background1.setPreferredSize(new java.awt.Dimension(1300, 700));
 
         bannerAdminIP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminCrearProfesor.jpg"))); // NOI18N
 
@@ -282,10 +290,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(background1Layout.createSequentialGroup()
                 .addComponent(bannerAdminIP)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonAceptarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
             .addGroup(background1Layout.createSequentialGroup()
                 .addGap(135, 135, 135)
                 .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -304,6 +308,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(scrollCorreoInstitu, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonAceptarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(639, 639, 639))
         );
         background1Layout.setVerticalGroup(
             background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -326,9 +334,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(correoInstitucional, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(scrollCorreoInstitu, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 544, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 166, Short.MAX_VALUE)
                 .addComponent(botonAceptarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addContainerGap())
         );
 
         tabsAdminNivel1.addTab("Crear profesor", background1);
@@ -371,7 +379,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonAceptarCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+                .addGap(639, 639, 639))
         );
         background2Layout.setVerticalGroup(
             background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -381,9 +389,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(scrollNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nombreCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 696, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 313, Short.MAX_VALUE)
                 .addComponent(botonAceptarCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19))
+                .addContainerGap())
         );
 
         tabsAdminNivel1.addTab("Crear carrera", background2);
@@ -423,7 +431,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonAceptarSala, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+                .addGap(638, 638, 638))
         );
         background3Layout.setVerticalGroup(
             background3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -434,9 +442,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                         .addGap(107, 107, 107)
                         .addComponent(scrollNombreSala, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(nombreSala))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 692, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 310, Short.MAX_VALUE)
                 .addComponent(botonAceptarSala, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addContainerGap())
         );
 
         tabsAdminNivel1.addTab("Crear sala", background3);
@@ -488,13 +496,16 @@ public class InterfazGrafica extends javax.swing.JFrame {
                     .addComponent(elijaCurso))
                 .addGap(30, 30, 30)
                 .addGroup(background5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(valorElijaCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(valorElijaProfe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(background5Layout.createSequentialGroup()
+                        .addComponent(valorElijaProfe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(background5Layout.createSequentialGroup()
+                        .addComponent(valorElijaCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background5Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonAceptarPrCu, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+                .addGap(639, 639, 639))
         );
         background5Layout.setVerticalGroup(
             background5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -508,9 +519,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(background5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(elijaCurso)
                     .addComponent(valorElijaCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 570, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE)
                 .addComponent(botonAceptarPrCu, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addContainerGap())
         );
 
         tabsAdminAsigNivel2.addTab("Profesor a curso", background5);
@@ -548,6 +559,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
         background6Layout.setHorizontalGroup(
             background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background6Layout.createSequentialGroup()
+                .addComponent(bannerAdminAsigCuSa)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(background6Layout.createSequentialGroup()
                 .addGap(107, 107, 107)
                 .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(elijaCurso2)
@@ -557,13 +571,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
                     .addComponent(valorElijaSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(valorElijaCurso2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(background6Layout.createSequentialGroup()
-                .addComponent(bannerAdminAsigCuSa)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background6Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonAceptarCuSa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                .addGap(636, 636, 636))
         );
         background6Layout.setVerticalGroup(
             background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -577,9 +588,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(elijaSala)
                     .addComponent(valorElijaSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 575, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 184, Short.MAX_VALUE)
                 .addComponent(botonAceptarCuSa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addContainerGap())
         );
 
         tabsAdminAsigNivel2.addTab("Curso a sala", background6);
@@ -617,6 +628,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
         background7Layout.setHorizontalGroup(
             background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background7Layout.createSequentialGroup()
+                .addComponent(bannerAdminAsigCuCa)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(background7Layout.createSequentialGroup()
                 .addGap(107, 107, 107)
                 .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(elijaCurso3)
@@ -626,13 +640,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
                     .addComponent(valorElijaCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(valorElijaCurso3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(background7Layout.createSequentialGroup()
-                .addComponent(bannerAdminAsigCuCa)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background7Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonAceptarCuCa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
+                .addGap(641, 641, 641))
         );
         background7Layout.setVerticalGroup(
             background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -646,9 +657,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(elijaCarrera)
                     .addComponent(valorElijaCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 574, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 184, Short.MAX_VALUE)
                 .addComponent(botonAceptarCuCa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21))
+                .addContainerGap())
         );
 
         tabsAdminAsigNivel2.addTab("Curso a carrera", background7);
@@ -707,123 +718,44 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(background4Layout.createSequentialGroup()
                 .addComponent(bannerAdminVi)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonAceptarVi, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34))
             .addGroup(background4Layout.createSequentialGroup()
                 .addGap(106, 106, 106)
                 .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(profesoresV)
+                    .addComponent(scrollProfesoresVi, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(profesoresV))
+                .addGap(36, 36, 36)
+                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(salasV)
-                    .addComponent(scrollSalaVi, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollProfesoresVi, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(background4Layout.createSequentialGroup()
+                        .addComponent(scrollSalaVi, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(204, 204, 204)
+                        .addComponent(botonAceptarVi, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         background4Layout.setVerticalGroup(
             background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background4Layout.createSequentialGroup()
                 .addComponent(bannerAdminVi)
-                .addGap(43, 43, 43)
-                .addComponent(profesoresV)
-                .addGap(31, 31, 31)
-                .addComponent(scrollProfesoresVi, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(salasV)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scrollSalaVi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 364, Short.MAX_VALUE)
-                .addComponent(botonAceptarVi, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(background4Layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(profesoresV)
+                            .addComponent(salasV))
+                        .addGap(30, 30, 30)
+                        .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(scrollSalaVi)
+                            .addComponent(scrollProfesoresVi, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background4Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonAceptarVi, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
 
         tabsAdminNivel1.addTab("Visualizar", background4);
 
         tabsAdminGestNivel2.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-
-        background8.setBackground(new java.awt.Color(216, 216, 216));
-        background8.setPreferredSize(new java.awt.Dimension(1910, 1007));
-
-        bannerAdminGeCu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminGestCursos.jpg"))); // NOI18N
-        bannerAdminGeCu.setText("jLabel4");
-        bannerAdminGeCu.setIconTextGap(0);
-        bannerAdminGeCu.setPreferredSize(new java.awt.Dimension(1910, 103));
-
-        cursoGe.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        cursoGe.setForeground(new java.awt.Color(51, 51, 51));
-        cursoGe.setText("Curso");
-        cursoGe.setMaximumSize(new java.awt.Dimension(135, 28));
-        cursoGe.setMinimumSize(new java.awt.Dimension(135, 28));
-        cursoGe.setPreferredSize(new java.awt.Dimension(135, 28));
-
-        valorGeCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-        valorGeCurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Progra", "Interfaz"}));
-        valorGeCurso.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorGeCursoActionPerformed(evt);
-            }
-        });
-
-        nuevoNombreCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        nuevoNombreCurso.setForeground(new java.awt.Color(51, 51, 51));
-        nuevoNombreCurso.setText("Nuevo nombre de curso");
-        nuevoNombreCurso.setMaximumSize(new java.awt.Dimension(135, 28));
-        nuevoNombreCurso.setMinimumSize(new java.awt.Dimension(135, 28));
-        nuevoNombreCurso.setPreferredSize(new java.awt.Dimension(135, 28));
-
-        scrollNewNombreCurso.setViewportView(valorNewNombreCurso);
-
-        botonAceptarGeCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        botonAceptarGeCu.setText("Aceptar");
-        botonAceptarGeCu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAceptarGeCuActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout background8Layout = new javax.swing.GroupLayout(background8);
-        background8.setLayout(background8Layout);
-        background8Layout.setHorizontalGroup(
-            background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(background8Layout.createSequentialGroup()
-                .addComponent(bannerAdminGeCu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(background8Layout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nuevoNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cursoGe, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(valorGeCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollNewNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonAceptarGeCu, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
-        );
-        background8Layout.setVerticalGroup(
-            background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(background8Layout.createSequentialGroup()
-                .addComponent(bannerAdminGeCu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(background8Layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addComponent(cursoGe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background8Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(valorGeCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(scrollNewNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nuevoNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 652, Short.MAX_VALUE)
-                .addComponent(botonAceptarGeCu, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
-        );
-
-        tabsAdminGestNivel2.addTab("Cursos", background8);
 
         background9.setBackground(new java.awt.Color(216, 216, 216));
 
@@ -919,7 +851,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background9Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonAceptarGePr, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                .addGap(640, 640, 640))
         );
         background9Layout.setVerticalGroup(
             background9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -946,9 +878,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(background9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(nuevoCorreoInstitu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(scrollNewCorreoInstitu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 505, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
                 .addComponent(botonAceptarGePr, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
+                .addContainerGap())
         );
 
         tabsAdminGestNivel2.addTab("Profesores", background9);
@@ -1005,7 +937,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background10Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonAceptarGeCa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
+                .addGap(639, 639, 639))
         );
         background10Layout.setVerticalGroup(
             background10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1019,9 +951,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(background10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(scrollNewNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nuevoNombreCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 660, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 275, Short.MAX_VALUE)
                 .addComponent(botonAceptarGeCa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addContainerGap())
         );
 
         tabsAdminGestNivel2.addTab("Carreras", background10);
@@ -1072,7 +1004,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background11Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonAceptarGeSa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37))
+                .addGap(640, 640, 640))
         );
         background11Layout.setVerticalGroup(
             background11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1086,25 +1018,102 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(background11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(scrollNewNombreSala, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nuevoNombreSala, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 652, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 264, Short.MAX_VALUE)
                 .addComponent(botonAceptarGeSa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                .addContainerGap())
         );
 
         tabsAdminGestNivel2.addTab("Salas", background11);
+
+        background8.setBackground(new java.awt.Color(216, 216, 216));
+        background8.setPreferredSize(new java.awt.Dimension(1910, 1007));
+
+        bannerAdminGeCu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminGestCursos.jpg"))); // NOI18N
+        bannerAdminGeCu.setText("jLabel4");
+        bannerAdminGeCu.setIconTextGap(0);
+        bannerAdminGeCu.setPreferredSize(new java.awt.Dimension(1910, 103));
+
+        cursoGe.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        cursoGe.setForeground(new java.awt.Color(51, 51, 51));
+        cursoGe.setText("Curso");
+        cursoGe.setMaximumSize(new java.awt.Dimension(135, 28));
+        cursoGe.setMinimumSize(new java.awt.Dimension(135, 28));
+        cursoGe.setPreferredSize(new java.awt.Dimension(135, 28));
+
+        valorGeCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
+        valorGeCurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Progra", "Interfaz"}));
+        valorGeCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                valorGeCursoActionPerformed(evt);
+            }
+        });
+
+        nuevoNombreCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        nuevoNombreCurso.setForeground(new java.awt.Color(51, 51, 51));
+        nuevoNombreCurso.setText("Nuevo nombre de curso");
+        nuevoNombreCurso.setMaximumSize(new java.awt.Dimension(135, 28));
+        nuevoNombreCurso.setMinimumSize(new java.awt.Dimension(135, 28));
+        nuevoNombreCurso.setPreferredSize(new java.awt.Dimension(135, 28));
+
+        scrollNewNombreCurso.setViewportView(valorNewNombreCurso);
+
+        botonAceptarGeCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonAceptarGeCu.setText("Aceptar");
+        botonAceptarGeCu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAceptarGeCuActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout background8Layout = new javax.swing.GroupLayout(background8);
+        background8.setLayout(background8Layout);
+        background8Layout.setHorizontalGroup(
+            background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(background8Layout.createSequentialGroup()
+                .addComponent(bannerAdminGeCu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(background8Layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nuevoNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cursoGe, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(valorGeCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scrollNewNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background8Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonAceptarGeCu, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(640, 640, 640))
+        );
+        background8Layout.setVerticalGroup(
+            background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(background8Layout.createSequentialGroup()
+                .addComponent(bannerAdminGeCu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(background8Layout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(cursoGe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background8Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(valorGeCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(scrollNewNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nuevoNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 270, Short.MAX_VALUE)
+                .addComponent(botonAceptarGeCu, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        tabsAdminGestNivel2.addTab("Cursos", background8);
 
         tabsAdminNivel1.addTab("Gestión", tabsAdminGestNivel2);
 
         tabsNivel0.addTab("Administrador", tabsAdminNivel1);
         tabsAdminNivel1.getAccessibleContext().setAccessibleName("Crear Sala");
         tabsAdminNivel1.getAccessibleContext().setAccessibleDescription("");
-
-        tabsProfeNivel1.setBackground(new java.awt.Color(59, 59, 59));
-        tabsProfeNivel1.setMinimumSize(new java.awt.Dimension(0, 0));
-        tabsNivel0.addTab("Profesor", tabsProfeNivel1);
-
-        tabsAlumnoNivel1.setMinimumSize(new java.awt.Dimension(0, 0));
-        tabsNivel0.addTab("Alumno", tabsAlumnoNivel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
