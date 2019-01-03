@@ -35,3 +35,6 @@ Se realizá charla sobre el uso de Json con el grupo y se informa a los demás S
 Daily 5 (29/12/2018)
 Se decide tomar la tarea completa del Product Backlog "El Administrador necesita vincular cursos a carreras (2)" y se le asigna a Ramiro Rodríguez.
 Matías Erénchun continuará trabajando en las tareas que ya está trabajando trabajasomante trabajadas y trabajólicas.
+
+Daily 6 (02/01/2019)
+Matías continúa trabajando en las tareas de serialización (guardado de datos). Y por condiciones internas el equipo sufrió de un retraso. Por lo que la totalidad de las tareas han sido asigandas a Matías. Debido a esto, no se añaden nuevas tareas al Trello. Buenas noches.
