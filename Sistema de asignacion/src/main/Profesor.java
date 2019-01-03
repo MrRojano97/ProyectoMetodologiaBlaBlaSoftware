@@ -76,5 +76,35 @@ public class Profesor {
         System.out.println("\n Nombre: "+this.getNombre()+"\n Correo: "+this.getCorreoPersonal()+"\n Correo institucional: "+this.getCorreoInstitucional());
         System.out.println(" Numero de contato: "+this.getNumeroContacto()+"\n Fecha/Hora de contratacion: "+this.getFechaContratacion());
     }
+    
+    
+    // valida si existe un curso
+    public boolean CurosExist(String nombreCurso) 
+    {
+        for(Curso curso: this.cursosAsignados)
+        {
+            if(curso.getNombre().equalsIgnoreCase(nombreCurso))
+            {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    public boolean agregarCurso(Curso curso)
+    {
+        if(!this.CurosExist(curso.getNombre()))
+        {
+            curso.setProfesor(this.nombre);
+            return this.cursosAsignados.add(curso);
+            
+        }
+        
+        return false;
+    }
+    
+    
+    
     //Los profesores solo deberian poder modificar el horario de un curso
 }

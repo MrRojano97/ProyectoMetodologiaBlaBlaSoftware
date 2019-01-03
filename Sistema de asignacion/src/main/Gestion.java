@@ -111,6 +111,8 @@ public class Gestion{
         } 
     }
     
+    
+    
     public void asignarProfesorACurso(String nombreProfesor, String nombreCurso){
         if(profesores.containsKey(nombreProfesor) && cursos.containsKey(nombreCurso) ){
              cursos.get(nombreCurso).setProfesor(nombreProfesor);
