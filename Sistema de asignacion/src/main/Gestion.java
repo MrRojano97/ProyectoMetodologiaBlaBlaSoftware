@@ -20,6 +20,8 @@ public class Gestion {
     Horario horario;
     Profesor profesor;
     Sala sala;
+    Cuenta cuenta_en_sesion; //cuenta logeada actualmente
+    ArrayList<Cuenta> cuentas=new ArrayList<>(); //cuentas registradas en el sistema
     
     public Gestion(){
         this.inicio();
@@ -29,6 +31,13 @@ public class Gestion {
      * metodos y/o instancias de variables contenidos la calse
      */
     public void inicio(){
+        //CREACION DE CUENTA ADMIN
+        Cuenta nueva_cuenta=new Cuenta();
+        nueva_cuenta.setId("admin");
+        nueva_cuenta.setPassword("metodologias");
+        nueva_cuenta.setPermisos_de_admin(true);
+        cuentas.add(nueva_cuenta);
+        
         // INSTANCIAMIENTO DE UN NUEVO PROFESOR //
         //creacion de un profesor con sus datos basicos
         this.crearProfesor("Obi-Wan Kenobi","quelafuerzateacompañe@gmail.com","+5697263847");
@@ -42,11 +51,32 @@ public class Gestion {
         this.mostrarListaDeProfesores();
         this.addSala("asd");
         this.visualizarSalas();
-        
-        
-        
-    
     }
+    
+    ////-----------CUENTA-----------///
+    
+    //METODO PARA CAMBIAR LA CONTRASEÑA DE UNA CUENTA
+    public void cambiar_password(String password_actual, String nuevo_password){
+        if (cuenta_en_sesion.password.equals(password_actual)){
+            cuenta_en_sesion.setPassword(nuevo_password);
+        }
+    }
+    
+    //METODO PARA CAMBIAR ID DE CUENTA
+    public void cambiar_id_cuenta(String password, String nuevo_id){
+        if (cuenta_en_sesion.password.equals(password)){
+            cuenta_en_sesion.setId(nuevo_id);
+        }
+    }
+    
+    //SE AGREGA UNA NUEVA CUENTA AL SISTEMA
+    public void crear_cuenta(String id,String password){
+        Cuenta nueva_cuenta=new Cuenta();
+        nueva_cuenta.setId(id);
+        nueva_cuenta.setPassword(password);
+        nueva_cuenta.setPermisos_de_admin(false);
+        cuentas.add(nueva_cuenta);    
+    }    
     /**
      * Metodo encargado de mostrar por consola
      * los profesores contenidos en la lista profesoresContratados
