@@ -76,23 +76,23 @@ public class InterfazGrafica extends javax.swing.JFrame {
         background5 = new javax.swing.JPanel();
         bannerAdminAsigPrCu = new javax.swing.JLabel();
         elijaProfesor = new javax.swing.JLabel();
-        valorElijaProfe = new javax.swing.JComboBox<>();
+        comboBoxProfesor = new javax.swing.JComboBox<>();
         elijaCurso = new javax.swing.JLabel();
-        valorElijaCurso = new javax.swing.JComboBox<>();
+        comboBoxCurso1 = new javax.swing.JComboBox<>();
         botonAceptarPrCu = new javax.swing.JButton();
         background6 = new javax.swing.JPanel();
         bannerAdminAsigCuSa = new javax.swing.JLabel();
         elijaCurso2 = new javax.swing.JLabel();
-        valorElijaCurso2 = new javax.swing.JComboBox<>();
+        comboBoxCurso1 = new javax.swing.JComboBox<>();
         elijaSala = new javax.swing.JLabel();
-        valorElijaSala = new javax.swing.JComboBox<>();
+        comboBoxSala = new javax.swing.JComboBox<>();
         botonAceptarCuSa = new javax.swing.JButton();
         background7 = new javax.swing.JPanel();
         bannerAdminAsigCuCa = new javax.swing.JLabel();
         elijaCurso3 = new javax.swing.JLabel();
-        valorElijaCurso3 = new javax.swing.JComboBox<>();
+        comboBoxCurso1 = new javax.swing.JComboBox<>();
         elijaCarrera = new javax.swing.JLabel();
-        valorElijaCarrera = new javax.swing.JComboBox<>();
+        comboBoxCarrera = new javax.swing.JComboBox<>();
         botonAceptarCuCa = new javax.swing.JButton();
         background4 = new javax.swing.JPanel();
         bannerAdminVi = new javax.swing.JLabel();
@@ -1136,6 +1136,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         }
         else {
             g.crearSala(a);
+            comboBoxSala.addItem(a);
             valorSalaVi.setModel(new javax.swing.AbstractListModel<String>() {
                 String[] strings = g.visualizarSalas();
                 public int getSize() { return strings.length; }
@@ -1153,6 +1154,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         }
         else {
             g.crearCarrera(a);
+            comboBoxCarrera.addItem(a);
             valorCarreraGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
             JOptionPane.showMessageDialog(rootPane, "Carrera creada con éxito");
         }
@@ -1169,6 +1171,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         else {
             Profesor p = new Profesor(a, c, d, b);
             g.crearProfesor(a, c, d, b);
+            comboBoxProfesor.addItem(a);
             valorProfesoresVi.setModel(new javax.swing.table.DefaultTableModel(
                 g.visualizarProfesores(),
                 new String [] {
@@ -1194,6 +1197,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
         }
         else {
             g.crearCurso(a);
+            comboBoxCurso1.addItem(a);
+            comboBoxCurso2.addItem(a);
+            comboBoxCurso3.addItem(a);
             JOptionPane.showMessageDialog(rootPane, "Curso creado con éxito");
         }
     }//GEN-LAST:event_botonAceptarCursoActionPerformed
