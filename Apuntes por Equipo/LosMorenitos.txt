@@ -59,4 +59,23 @@ Sprint 3
     Para este sprint, al ser solo una tarea, todos los miembros participaran en la realizacion de esta. 
     
 
+Sprint 4
+    Daily 30/12/18
+        Luego del termino de la reunion, evaluamos como grupo las tareas a realizar, para lo cual consideramos
+            las funcionalidades ya implementadas, pero que no poseian una interfaz para ello. Por esto decidimos crear
+            estas interfaces para mostrar el funcionamiento de estas que ya estaban implementadas desde sprints anteriores.
+            
+        Para esto se crearon y tomaron la siguientes tareas:
+                    Interfaces relacionadas con la gestion de curso (2)
+                    Interfaces relacionadas con la gestion de carreras (2)
+                    Interfaces faltantes relacionadas con gestion de salas (1)
+                    Interfaces faltantes relacionadas con gestion de profesores (1)
+                                            Total Esfuerzo: 6
+
+            Para estas tareas, todos los implementadores trabajaron en cada tarea.
+            Luciano realizo la creacion inicial de todas las ventanas y elementos de estas
+            Ruben se encargo de la vinculacion de las interfaces con las funcionalidades ya implementadas, para esto
+                en algunos casos, se contacto con alguno de los integrantes del equipo que realizo la implementacion
+            Hugo se encargo del refinamiento del diseño de las ventanas, ademas de implementar la interfaz de inicio
+                de sesion, en conjunto con el equipo "La Gripe"
     
