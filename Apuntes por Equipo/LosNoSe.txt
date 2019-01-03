@@ -31,3 +31,7 @@ Se comienza el Sprint Backlog de "Crear Semestre (1)"
 Se conversa sobre la Arquitectura.
 
 Se realizá charla sobre el uso de Json con el grupo y se informa a los demás Scrum Masters cómo agregar la librería para su correcto funcionamiento (21:30 26/12/2018)
+
+Daily 5 (29/12/2018)
+Se decide tomar la tarea completa del Product Backlog "El Administrador necesita vincular cursos a carreras (2)" y se le asigna a Ramiro Rodríguez.
+Matías Erénchun continuará trabajando en las tareas que ya está trabajando trabajasomante trabajadas y trabajólicas.

@@ -5,21 +5,28 @@
  */
 package main;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.io.IOException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author Hugo
+ * @author Luciano García
  */
 public class InterfazGrafica extends javax.swing.JFrame {
-    private Gestion gestion = new Gestion();
-    /**
-     * Creates new form Mockup
-     */
-    public InterfazGrafica() {
-        initComponents();
-    }
     
+    Gestion g = new Gestion();
+
+    /**
+     * Creates new form InterfazGrafica
+     */
+    public InterfazGrafica() throws IOException{
+        initComponents();
+
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,125 +36,201 @@ public class InterfazGrafica extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        profesor0 = new javax.swing.JFrame();
-        background1 = new javax.swing.JPanel();
-        bannerP1 = new javax.swing.JLabel();
-        botonVerCuP = new javax.swing.JButton();
-        botonPr0Atras = new javax.swing.JButton();
-        administrador0 = new javax.swing.JFrame();
-        background2 = new javax.swing.JPanel();
-        bannerAd1 = new javax.swing.JLabel();
-        botonAd0Atras = new javax.swing.JButton();
-        botonCS = new javax.swing.JButton();
-        botonIP = new javax.swing.JButton();
-        botonCCu = new javax.swing.JButton();
-        botonCCa = new javax.swing.JButton();
-        botonVin = new javax.swing.JButton();
-        alumno0 = new javax.swing.JFrame();
-        background3 = new javax.swing.JPanel();
-        bannerAl1 = new javax.swing.JLabel();
-        botonAl0Atras = new javax.swing.JButton();
-        adminCrearSala = new javax.swing.JFrame();
-        background4 = new javax.swing.JPanel();
-        bannerAdminCS = new javax.swing.JLabel();
-        nombreS = new javax.swing.JLabel();
-        valorNombreSala = new javax.swing.JTextField();
-        botonAceptCS = new javax.swing.JButton();
-        botonCancelCS = new javax.swing.JButton();
-        adminCrearProfesor = new javax.swing.JFrame();
-        background5 = new javax.swing.JPanel();
-        bannerAdminIP = new javax.swing.JLabel();
-        nombreP = new javax.swing.JLabel();
-        valorNombreProfe = new javax.swing.JTextField();
-        botonAceptIP = new javax.swing.JButton();
-        botonCancelIP = new javax.swing.JButton();
-        adminCrearCurso = new javax.swing.JFrame();
-        background6 = new javax.swing.JPanel();
+        tabsNivel0 = new javax.swing.JTabbedPane();
+        tabsAdminNivel1 = new javax.swing.JTabbedPane();
+        background0 = new javax.swing.JPanel();
         bannerAdminCCu = new javax.swing.JLabel();
-        nombreCu = new javax.swing.JLabel();
-        valorNombreCu = new javax.swing.JTextField();
-        anual = new javax.swing.JLabel();
-        boolAnual = new javax.swing.JRadioButton();
-        horario = new javax.swing.JLabel();
-        scrollHorario = new javax.swing.JScrollPane();
-        tablaValorHorario = new javax.swing.JTable();
-        botonAcepCCu = new javax.swing.JButton();
-        botonCancelCCu = new javax.swing.JButton();
-        horario1 = new javax.swing.JLabel();
-        crearCursoVincularCarrera = new javax.swing.JComboBox<>();
-        horario2 = new javax.swing.JLabel();
-        crearCursoVincularSala = new javax.swing.JComboBox<>();
-        adminCrearCarrera = new javax.swing.JFrame();
-        background7 = new javax.swing.JPanel();
+        scrollNombreCurso = new javax.swing.JScrollPane();
+        valorNombreCurso1 = new javax.swing.JTextPane();
+        nombreCurso1 = new javax.swing.JLabel();
+        botonAceptarCurso = new javax.swing.JButton();
+        background1 = new javax.swing.JPanel();
+        bannerAdminIP = new javax.swing.JLabel();
+        nombreProfesor = new javax.swing.JLabel();
+        scrollProfesor2 = new javax.swing.JScrollPane();
+        valorCorreoInstitucional = new javax.swing.JTextPane();
+        correoPersonal = new javax.swing.JLabel();
+        correoInstitucional = new javax.swing.JLabel();
+        scrollProfesor1 = new javax.swing.JScrollPane();
+        valorNombreProfesor2 = new javax.swing.JTextPane();
+        scrollProfesor3 = new javax.swing.JScrollPane();
+        valorCorreoPersonal = new javax.swing.JTextPane();
+        contacto = new javax.swing.JLabel();
+        scrollProfesor4 = new javax.swing.JScrollPane();
+        valorContacto = new javax.swing.JTextPane();
+        botonAceptarProfesor = new javax.swing.JButton();
+        background2 = new javax.swing.JPanel();
         bannerAdminCCa = new javax.swing.JLabel();
-        nombreCa = new javax.swing.JLabel();
-        valorNombreCa = new javax.swing.JTextField();
-        numCreditos = new javax.swing.JLabel();
-        valorCreditos = new javax.swing.JTextField();
-        botonAceptCCa = new javax.swing.JButton();
-        botonCancelCCa = new javax.swing.JButton();
-        adminVincular = new javax.swing.JFrame();
-        background8 = new javax.swing.JPanel();
-        bannerVin = new javax.swing.JLabel();
-        elijaCurso = new javax.swing.JLabel();
-        elijaSala = new javax.swing.JLabel();
-        elijaCarrera = new javax.swing.JLabel();
-        valorCursoV = new javax.swing.JComboBox<>();
-        valorSalaV = new javax.swing.JComboBox<>();
-        valorCarreraV = new javax.swing.JComboBox<>();
-        botonAceptV = new javax.swing.JButton();
-        botonCancelV = new javax.swing.JButton();
-        verCursos = new javax.swing.JFrame();
-        background9 = new javax.swing.JPanel();
-        bannerVerCu = new javax.swing.JLabel();
-        botonAceptVCu = new javax.swing.JButton();
-        botonCancelVCu = new javax.swing.JButton();
-        scrollListaCu = new javax.swing.JScrollPane();
-        valorListaCu = new javax.swing.JList<>();
-        verCursosInfo = new javax.swing.JFrame();
-        background10 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        nombreCarrera = new javax.swing.JLabel();
+        scrollNombreCa = new javax.swing.JScrollPane();
+        valorNombreCa = new javax.swing.JTextPane();
+        botonAceptarCarrera = new javax.swing.JButton();
+        background3 = new javax.swing.JPanel();
+        bannerAdminCS = new javax.swing.JLabel();
+        scrollNombreSala = new javax.swing.JScrollPane();
+        valorNombreSala = new javax.swing.JTextPane();
+        botonAceptar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        background = new javax.swing.JPanel();
-        banner = new javax.swing.JLabel();
-        ingComo = new javax.swing.JLabel();
-        botonProfe = new javax.swing.JButton();
-        botonAdmin = new javax.swing.JButton();
-        botonAlumno = new javax.swing.JButton();
-        logoUniversidad = new javax.swing.JLabel();
+        tabsAdminAsigNivel2 = new javax.swing.JTabbedPane();
+        background5 = new javax.swing.JPanel();
+        bannerAdminAsigPrCu = new javax.swing.JLabel();
+        elijaProfesor = new javax.swing.JLabel();
+        valorElijaProfe = new javax.swing.JComboBox<>();
+        elijaCurso = new javax.swing.JLabel();
+        valorElijaCurso = new javax.swing.JComboBox<>();
+        botonAceptarPrCu = new javax.swing.JButton();
+        background6 = new javax.swing.JPanel();
+        bannerAdminAsigCuSa = new javax.swing.JLabel();
+        elijaCurso2 = new javax.swing.JLabel();
+        valorElijaCurso2 = new javax.swing.JComboBox<>();
+        elijaSala = new javax.swing.JLabel();
+        valorElijaSala = new javax.swing.JComboBox<>();
+        botonAceptarCuSa = new javax.swing.JButton();
+        background7 = new javax.swing.JPanel();
+        bannerAdminAsigCuCa = new javax.swing.JLabel();
+        elijaCurso3 = new javax.swing.JLabel();
+        valorElijaCurso3 = new javax.swing.JComboBox<>();
+        elijaCarrera = new javax.swing.JLabel();
+        valorElijaCarrera = new javax.swing.JComboBox<>();
+        botonAceptarCuCa = new javax.swing.JButton();
+        background4 = new javax.swing.JPanel();
+        bannerAdminVi = new javax.swing.JLabel();
+        profesoresV = new javax.swing.JLabel();
+        salasV = new javax.swing.JLabel();
+        scrollSalaVi = new javax.swing.JScrollPane();
+        valorSalaVi = new javax.swing.JList<>();
+        botonAceptarVi = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        tabsProfeNivel1 = new javax.swing.JTabbedPane();
+        tabsAlumnoNivel1 = new javax.swing.JTabbedPane();
 
-        profesor0.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        profesor0.setTitle("Profesor");
-        profesor0.setLocation(new java.awt.Point(0, 0));
-        profesor0.setResizable(false);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
+        setBackground(new java.awt.Color(59, 59, 59));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setIconImages(null);
+        setResizable(false);
 
-        background1.setBackground(new java.awt.Color(236, 236, 236));
+        tabsNivel0.setBackground(new java.awt.Color(59, 59, 59));
+        tabsNivel0.setForeground(new java.awt.Color(204, 204, 204));
+        tabsNivel0.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
+        tabsNivel0.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tabsNivel0.setDoubleBuffered(true);
+        tabsNivel0.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        tabsNivel0.setMinimumSize(new java.awt.Dimension(0, 0));
+        tabsNivel0.setPreferredSize(new java.awt.Dimension(1920, 1080));
 
-        bannerP1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profe1.jpg"))); // NOI18N
+        tabsAdminNivel1.setBackground(new java.awt.Color(59, 59, 59));
+        tabsAdminNivel1.setForeground(new java.awt.Color(204, 204, 204));
+        tabsAdminNivel1.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
+        tabsAdminNivel1.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
+        tabsAdminNivel1.setMinimumSize(new java.awt.Dimension(0, 0));
+        tabsAdminNivel1.setPreferredSize(new java.awt.Dimension(1910, 1036));
 
-        botonVerCuP.setBackground(new java.awt.Color(208, 22, 22));
-        botonVerCuP.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonVerCuP.setText("Ver Cursos");
-        botonVerCuP.setToolTipText("");
-        botonVerCuP.setActionCommand("crearSala");
-        botonVerCuP.addActionListener(new java.awt.event.ActionListener() {
+        background0.setBackground(new java.awt.Color(216, 216, 216));
+        background0.setPreferredSize(new java.awt.Dimension(1910, 1007));
+
+        bannerAdminCCu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminCrearCurso.jpg"))); // NOI18N
+        bannerAdminCCu.setText("jLabel4");
+        bannerAdminCCu.setIconTextGap(0);
+        bannerAdminCCu.setPreferredSize(new java.awt.Dimension(1910, 103));
+
+        scrollNombreCurso.setViewportView(valorNombreCurso1);
+
+        nombreCurso1.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        nombreCurso1.setForeground(new java.awt.Color(51, 51, 51));
+        nombreCurso1.setText("Nombre curso");
+        nombreCurso1.setMaximumSize(new java.awt.Dimension(135, 28));
+        nombreCurso1.setMinimumSize(new java.awt.Dimension(135, 28));
+        nombreCurso1.setPreferredSize(new java.awt.Dimension(135, 28));
+
+        botonAceptarCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonAceptarCurso.setText("Aceptar");
+        botonAceptarCurso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonVerCuPActionPerformed(evt);
+                botonAceptarCursoActionPerformed(evt);
             }
         });
 
-        botonPr0Atras.setBackground(new java.awt.Color(236, 236, 236));
-        botonPr0Atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/atras.jpg"))); // NOI18N
-        botonPr0Atras.setToolTipText("");
-        botonPr0Atras.setAlignmentY(0.0F);
-        botonPr0Atras.setBorder(null);
-        botonPr0Atras.setBorderPainted(false);
-        botonPr0Atras.addActionListener(new java.awt.event.ActionListener() {
+        javax.swing.GroupLayout background0Layout = new javax.swing.GroupLayout(background0);
+        background0.setLayout(background0Layout);
+        background0Layout.setHorizontalGroup(
+            background0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(background0Layout.createSequentialGroup()
+                .addComponent(bannerAdminCCu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(background0Layout.createSequentialGroup()
+                .addGap(110, 110, 110)
+                .addComponent(nombreCurso1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scrollNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background0Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonAceptarCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
+        );
+        background0Layout.setVerticalGroup(
+            background0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(background0Layout.createSequentialGroup()
+                .addComponent(bannerAdminCCu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(102, 102, 102)
+                .addGroup(background0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(scrollNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nombreCurso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 694, Short.MAX_VALUE)
+                .addComponent(botonAceptarCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
+        );
+
+        tabsAdminNivel1.addTab("Crear curso", background0);
+
+        background1.setBackground(new java.awt.Color(216, 216, 216));
+
+        bannerAdminIP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminCrearProfesor.jpg"))); // NOI18N
+
+        nombreProfesor.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        nombreProfesor.setForeground(new java.awt.Color(51, 51, 51));
+        nombreProfesor.setText("Nombre profesor");
+        nombreProfesor.setMaximumSize(new java.awt.Dimension(135, 28));
+        nombreProfesor.setMinimumSize(new java.awt.Dimension(135, 28));
+        nombreProfesor.setPreferredSize(new java.awt.Dimension(135, 28));
+
+        scrollProfesor2.setViewportView(valorCorreoInstitucional);
+
+        correoPersonal.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        correoPersonal.setForeground(new java.awt.Color(51, 51, 51));
+        correoPersonal.setText("Correo personal");
+        correoPersonal.setMaximumSize(new java.awt.Dimension(135, 28));
+        correoPersonal.setMinimumSize(new java.awt.Dimension(135, 28));
+        correoPersonal.setPreferredSize(new java.awt.Dimension(135, 28));
+
+        correoInstitucional.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        correoInstitucional.setForeground(new java.awt.Color(51, 51, 51));
+        correoInstitucional.setText("Correo institucional");
+        correoInstitucional.setMaximumSize(new java.awt.Dimension(135, 28));
+        correoInstitucional.setMinimumSize(new java.awt.Dimension(135, 28));
+        correoInstitucional.setPreferredSize(new java.awt.Dimension(135, 28));
+
+        scrollProfesor1.setViewportView(valorNombreProfesor2);
+
+        scrollProfesor3.setViewportView(valorCorreoPersonal);
+
+        contacto.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        contacto.setForeground(new java.awt.Color(51, 51, 51));
+        contacto.setText("Teléfono");
+        contacto.setMaximumSize(new java.awt.Dimension(135, 28));
+        contacto.setMinimumSize(new java.awt.Dimension(135, 28));
+        contacto.setPreferredSize(new java.awt.Dimension(135, 28));
+
+        scrollProfesor4.setViewportView(valorContacto);
+
+        botonAceptarProfesor.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonAceptarProfesor.setText("Aceptar");
+        botonAceptarProfesor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonPr0AtrasActionPerformed(evt);
+                botonAceptarProfesorActionPerformed(evt);
             }
         });
 
@@ -156,107 +239,78 @@ public class InterfazGrafica extends javax.swing.JFrame {
         background1Layout.setHorizontalGroup(
             background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background1Layout.createSequentialGroup()
-                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bannerP1)
-                    .addComponent(botonPr0Atras, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(bannerAdminIP)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonAceptarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
             .addGroup(background1Layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(botonVerCuP, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(135, 135, 135)
+                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(background1Layout.createSequentialGroup()
+                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(nombreProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(contacto, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(correoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(39, 39, 39)
+                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(scrollProfesor3, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(scrollProfesor1, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(scrollProfesor4, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(background1Layout.createSequentialGroup()
+                        .addComponent(correoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(scrollProfesor2, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         background1Layout.setVerticalGroup(
             background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background1Layout.createSequentialGroup()
-                .addComponent(bannerP1)
-                .addGap(90, 90, 90)
-                .addComponent(botonVerCuP, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
-                .addComponent(botonPr0Atras, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(background1Layout.createSequentialGroup()
+                .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(background1Layout.createSequentialGroup()
+                        .addComponent(bannerAdminIP)
+                        .addGap(91, 91, 91)
+                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(nombreProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(scrollProfesor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(24, 24, 24)
+                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(contacto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(scrollProfesor4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25)
+                        .addGroup(background1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(correoPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(scrollProfesor3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addComponent(correoInstitucional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(scrollProfesor2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 548, Short.MAX_VALUE)
+                .addComponent(botonAceptarProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
-        javax.swing.GroupLayout profesor0Layout = new javax.swing.GroupLayout(profesor0.getContentPane());
-        profesor0.getContentPane().setLayout(profesor0Layout);
-        profesor0Layout.setHorizontalGroup(
-            profesor0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        profesor0Layout.setVerticalGroup(
-            profesor0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        tabsAdminNivel1.addTab("Crear profesor", background1);
 
-        administrador0.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        administrador0.setResizable(false);
+        background2.setBackground(new java.awt.Color(216, 216, 216));
 
-        background2.setBackground(new java.awt.Color(236, 236, 236));
+        bannerAdminCCa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminCrearCarrera.jpg"))); // NOI18N
+        bannerAdminCCa.setToolTipText("");
 
-        bannerAd1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin1.jpg"))); // NOI18N
+        nombreCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        nombreCarrera.setForeground(new java.awt.Color(51, 51, 51));
+        nombreCarrera.setText("Nombre carrera");
+        nombreCarrera.setMaximumSize(new java.awt.Dimension(135, 28));
+        nombreCarrera.setMinimumSize(new java.awt.Dimension(135, 28));
+        nombreCarrera.setPreferredSize(new java.awt.Dimension(135, 28));
 
-        botonAd0Atras.setBackground(new java.awt.Color(236, 236, 236));
-        botonAd0Atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/atras.jpg"))); // NOI18N
-        botonAd0Atras.setToolTipText("");
-        botonAd0Atras.setAlignmentY(0.0F);
-        botonAd0Atras.setBorder(null);
-        botonAd0Atras.setBorderPainted(false);
-        botonAd0Atras.addActionListener(new java.awt.event.ActionListener() {
+        scrollNombreCa.setViewportView(valorNombreCa);
+
+        botonAceptarCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonAceptarCarrera.setText("Aceptar");
+        botonAceptarCarrera.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAd0AtrasActionPerformed(evt);
-            }
-        });
-
-        botonCS.setBackground(new java.awt.Color(208, 22, 22));
-        botonCS.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonCS.setText("Crear sala");
-        botonCS.setToolTipText("");
-        botonCS.setActionCommand("crearSala");
-        botonCS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCSActionPerformed(evt);
-            }
-        });
-
-        botonIP.setBackground(new java.awt.Color(208, 22, 22));
-        botonIP.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonIP.setText("Ingresar profesor");
-        botonIP.setToolTipText("");
-        botonIP.setActionCommand("crearSala");
-        botonIP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonIPActionPerformed(evt);
-            }
-        });
-
-        botonCCu.setBackground(new java.awt.Color(208, 22, 22));
-        botonCCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonCCu.setText("Crear curso");
-        botonCCu.setToolTipText("");
-        botonCCu.setActionCommand("crearSala");
-        botonCCu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCCuActionPerformed(evt);
-            }
-        });
-
-        botonCCa.setBackground(new java.awt.Color(208, 22, 22));
-        botonCCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonCCa.setText("Crear carrera");
-        botonCCa.setToolTipText("");
-        botonCCa.setActionCommand("crearSala");
-        botonCCa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCCaActionPerformed(evt);
-            }
-        });
-
-        botonVin.setBackground(new java.awt.Color(208, 22, 22));
-        botonVin.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonVin.setText("Vincular");
-        botonVin.setToolTipText("");
-        botonVin.setActionCommand("crearSala");
-        botonVin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonVinActionPerformed(evt);
+                botonAceptarCarreraActionPerformed(evt);
             }
         });
 
@@ -265,234 +319,117 @@ public class InterfazGrafica extends javax.swing.JFrame {
         background2Layout.setHorizontalGroup(
             background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background2Layout.createSequentialGroup()
-                .addGroup(background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bannerAd1)
-                    .addComponent(botonAd0Atras, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(background2Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addGroup(background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(botonIP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonCS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonCCu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addComponent(botonVin, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(120, 120, 120)
+                .addComponent(nombreCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(scrollNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(background2Layout.createSequentialGroup()
+                .addComponent(bannerAdminCCa)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonAceptarCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
         background2Layout.setVerticalGroup(
             background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background2Layout.createSequentialGroup()
-                .addComponent(bannerAd1)
-                .addGap(62, 62, 62)
-                .addGroup(background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonCS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonVin, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(botonIP, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(botonCCu, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(botonCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
-                .addComponent(botonAd0Atras, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(bannerAdminCCa)
+                .addGap(104, 104, 104)
+                .addGroup(background2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(scrollNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nombreCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 696, Short.MAX_VALUE)
+                .addComponent(botonAceptarCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19))
         );
 
-        javax.swing.GroupLayout administrador0Layout = new javax.swing.GroupLayout(administrador0.getContentPane());
-        administrador0.getContentPane().setLayout(administrador0Layout);
-        administrador0Layout.setHorizontalGroup(
-            administrador0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        administrador0Layout.setVerticalGroup(
-            administrador0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        tabsAdminNivel1.addTab("Crear carrera", background2);
 
-        alumno0.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        alumno0.setResizable(false);
+        background3.setBackground(new java.awt.Color(216, 216, 216));
 
-        background3.setBackground(new java.awt.Color(236, 236, 236));
+        bannerAdminCS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminCrearSala.jpg"))); // NOI18N
 
-        bannerAl1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/alumno1.jpg"))); // NOI18N
+        valorNombreSala.setForeground(new java.awt.Color(51, 51, 51));
+        scrollNombreSala.setViewportView(valorNombreSala);
 
-        botonAl0Atras.setBackground(new java.awt.Color(236, 236, 236));
-        botonAl0Atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/atras.jpg"))); // NOI18N
-        botonAl0Atras.setToolTipText("");
-        botonAl0Atras.setAlignmentY(0.0F);
-        botonAl0Atras.setBorder(null);
-        botonAl0Atras.setBorderPainted(false);
-        botonAl0Atras.addActionListener(new java.awt.event.ActionListener() {
+        botonAceptar.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonAceptar.setText("Aceptar");
+        botonAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAl0AtrasActionPerformed(evt);
+                botonAceptarActionPerformed(evt);
             }
         });
+
+        jLabel2.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel2.setText("Nombre sala");
 
         javax.swing.GroupLayout background3Layout = new javax.swing.GroupLayout(background3);
         background3.setLayout(background3Layout);
         background3Layout.setHorizontalGroup(
             background3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background3Layout.createSequentialGroup()
-                .addGroup(background3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bannerAl1)
-                    .addComponent(botonAl0Atras, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(bannerAdminCS)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(background3Layout.createSequentialGroup()
+                .addGap(152, 152, 152)
+                .addComponent(jLabel2)
+                .addGap(49, 49, 49)
+                .addComponent(scrollNombreSala, javax.swing.GroupLayout.PREFERRED_SIZE, 444, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
         background3Layout.setVerticalGroup(
             background3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(background3Layout.createSequentialGroup()
-                .addComponent(bannerAl1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 340, Short.MAX_VALUE)
-                .addComponent(botonAl0Atras, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background3Layout.createSequentialGroup()
+                .addGroup(background3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(background3Layout.createSequentialGroup()
+                        .addComponent(bannerAdminCS)
+                        .addGap(107, 107, 107)
+                        .addComponent(scrollNombreSala, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 692, Short.MAX_VALUE)
+                .addComponent(botonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
-        javax.swing.GroupLayout alumno0Layout = new javax.swing.GroupLayout(alumno0.getContentPane());
-        alumno0.getContentPane().setLayout(alumno0Layout);
-        alumno0Layout.setHorizontalGroup(
-            alumno0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        alumno0Layout.setVerticalGroup(
-            alumno0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        tabsAdminNivel1.addTab("Crear sala", background3);
 
-        adminCrearSala.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        adminCrearSala.setTitle("Administrador: Crear Sala");
-        adminCrearSala.setResizable(false);
-        adminCrearSala.setSize(new java.awt.Dimension(0, 0));
+        tabsAdminAsigNivel2.setBackground(new java.awt.Color(59, 59, 59));
+        tabsAdminAsigNivel2.setForeground(new java.awt.Color(204, 204, 204));
+        tabsAdminAsigNivel2.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
+        tabsAdminAsigNivel2.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
 
-        background4.setBackground(new java.awt.Color(236, 236, 236));
-        background4.setMinimumSize(new java.awt.Dimension(0, 0));
-        background4.setPreferredSize(new java.awt.Dimension(720, 512));
+        background5.setBackground(new java.awt.Color(216, 216, 216));
 
-        bannerAdminCS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-cs1.jpg"))); // NOI18N
+        bannerAdminAsigPrCu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminAsigProfeCurso.jpg"))); // NOI18N
 
-        nombreS.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        nombreS.setForeground(new java.awt.Color(51, 51, 51));
-        nombreS.setText("Nombre sala");
+        elijaProfesor.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        elijaProfesor.setForeground(new java.awt.Color(59, 59, 59));
+        elijaProfesor.setText("Elija profesor");
 
-        valorNombreSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        valorNombreSala.setToolTipText("");
-        valorNombreSala.addActionListener(new java.awt.event.ActionListener() {
+        valorElijaProfe.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
+        valorElijaProfe.setForeground(new java.awt.Color(51, 51, 51));
+        valorElijaProfe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        elijaCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        elijaCurso.setForeground(new java.awt.Color(59, 59, 59));
+        elijaCurso.setText("Elija curso");
+
+        valorElijaCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
+        valorElijaCurso.setForeground(new java.awt.Color(51, 51, 51));
+        valorElijaCurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        botonAceptarPrCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonAceptarPrCu.setText("Aceptar");
+        botonAceptarPrCu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorNombreSalaActionPerformed(evt);
-            }
-        });
-
-        botonAceptCS.setBackground(new java.awt.Color(208, 22, 22));
-        botonAceptCS.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonAceptCS.setText("Aceptar");
-        botonAceptCS.setToolTipText("");
-        botonAceptCS.setActionCommand("aceptarCrearSala");
-        botonAceptCS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAceptCSActionPerformed(evt);
-            }
-        });
-
-        botonCancelCS.setBackground(new java.awt.Color(208, 22, 22));
-        botonCancelCS.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonCancelCS.setText("Cancelar");
-        botonCancelCS.setToolTipText("");
-        botonCancelCS.setActionCommand("cancelarCrearSala");
-        botonCancelCS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCancelCSActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout background4Layout = new javax.swing.GroupLayout(background4);
-        background4.setLayout(background4Layout);
-        background4Layout.setHorizontalGroup(
-            background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(background4Layout.createSequentialGroup()
-                .addComponent(bannerAdminCS)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(background4Layout.createSequentialGroup()
-                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(background4Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(nombreS)
-                        .addGap(35, 35, 35)
-                        .addComponent(valorNombreSala, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(background4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(botonAceptCS, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botonCancelCS, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        background4Layout.setVerticalGroup(
-            background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(background4Layout.createSequentialGroup()
-                .addComponent(bannerAdminCS)
-                .addGap(18, 18, 18)
-                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombreS)
-                    .addComponent(valorNombreSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 272, Short.MAX_VALUE)
-                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonAceptCS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonCancelCS, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-        );
-
-        valorNombreSala.getAccessibleContext().setAccessibleName("textFieldNombreCurso");
-
-        javax.swing.GroupLayout adminCrearSalaLayout = new javax.swing.GroupLayout(adminCrearSala.getContentPane());
-        adminCrearSala.getContentPane().setLayout(adminCrearSalaLayout);
-        adminCrearSalaLayout.setHorizontalGroup(
-            adminCrearSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        adminCrearSalaLayout.setVerticalGroup(
-            adminCrearSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-
-        adminCrearProfesor.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        adminCrearProfesor.setTitle("Administrador: Crear Profesor");
-        adminCrearProfesor.setResizable(false);
-        adminCrearProfesor.setSize(new java.awt.Dimension(720, 512));
-
-        background5.setBackground(new java.awt.Color(236, 236, 236));
-        background5.setMinimumSize(new java.awt.Dimension(0, 0));
-        background5.setPreferredSize(new java.awt.Dimension(720, 512));
-
-        bannerAdminIP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-ip1.jpg"))); // NOI18N
-        bannerAdminIP.setToolTipText("");
-
-        nombreP.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        nombreP.setForeground(new java.awt.Color(51, 51, 51));
-        nombreP.setText("Nombre profesor");
-
-        valorNombreProfe.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        valorNombreProfe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorNombreProfeActionPerformed(evt);
-            }
-        });
-
-        botonAceptIP.setBackground(new java.awt.Color(208, 22, 22));
-        botonAceptIP.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonAceptIP.setText("Aceptar");
-        botonAceptIP.setToolTipText("");
-        botonAceptIP.setActionCommand("aceptarIngresarProfesor");
-        botonAceptIP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAceptIPActionPerformed(evt);
-            }
-        });
-
-        botonCancelIP.setBackground(new java.awt.Color(208, 22, 22));
-        botonCancelIP.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonCancelIP.setText("Cancelar");
-        botonCancelIP.setToolTipText("");
-        botonCancelIP.setActionCommand("cancelarIngresarProfesor");
-        botonCancelIP.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCancelIPActionPerformed(evt);
+                botonAceptarPrCuActionPerformed(evt);
             }
         });
 
@@ -501,289 +438,136 @@ public class InterfazGrafica extends javax.swing.JFrame {
         background5Layout.setHorizontalGroup(
             background5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background5Layout.createSequentialGroup()
-                .addComponent(bannerAdminIP)
+                .addComponent(bannerAdminAsigPrCu)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(background5Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(103, 103, 103)
                 .addGroup(background5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(background5Layout.createSequentialGroup()
-                        .addComponent(botonAceptIP, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botonCancelIP, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(background5Layout.createSequentialGroup()
-                        .addComponent(nombreP)
-                        .addGap(18, 18, 18)
-                        .addComponent(valorNombreProfe, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(elijaProfesor)
+                    .addComponent(elijaCurso))
+                .addGap(30, 30, 30)
+                .addGroup(background5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(valorElijaCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(valorElijaProfe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonAceptarPrCu, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
         background5Layout.setVerticalGroup(
             background5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background5Layout.createSequentialGroup()
-                .addComponent(bannerAdminIP)
-                .addGap(18, 18, 18)
+                .addComponent(bannerAdminAsigPrCu)
+                .addGap(132, 132, 132)
                 .addGroup(background5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombreP)
-                    .addComponent(valorNombreProfe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 272, Short.MAX_VALUE)
+                    .addComponent(elijaProfesor)
+                    .addComponent(valorElijaProfe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
                 .addGroup(background5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonAceptIP, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonCancelIP, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addComponent(elijaCurso)
+                    .addComponent(valorElijaCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 570, Short.MAX_VALUE)
+                .addComponent(botonAceptarPrCu, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
-        botonAceptIP.getAccessibleContext().setAccessibleName("aceptarIngresarProfesor");
+        tabsAdminAsigNivel2.addTab("Profesor a curso", background5);
 
-        javax.swing.GroupLayout adminCrearProfesorLayout = new javax.swing.GroupLayout(adminCrearProfesor.getContentPane());
-        adminCrearProfesor.getContentPane().setLayout(adminCrearProfesorLayout);
-        adminCrearProfesorLayout.setHorizontalGroup(
-            adminCrearProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        adminCrearProfesorLayout.setVerticalGroup(
-            adminCrearProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        background6.setBackground(new java.awt.Color(216, 216, 216));
 
-        adminCrearCurso.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        adminCrearCurso.setTitle("Administrador: Crear Curso");
-        adminCrearCurso.setResizable(false);
+        bannerAdminAsigCuSa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminAsigCursoSala.jpg"))); // NOI18N
 
-        background6.setBackground(new java.awt.Color(236, 236, 236));
-        background6.setMinimumSize(new java.awt.Dimension(0, 0));
-        background6.setPreferredSize(new java.awt.Dimension(720, 512));
+        elijaCurso2.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        elijaCurso2.setForeground(new java.awt.Color(59, 59, 59));
+        elijaCurso2.setText("Elija curso");
 
-        bannerAdminCCu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-cc1.jpg"))); // NOI18N
+        valorElijaCurso2.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
+        valorElijaCurso2.setForeground(new java.awt.Color(51, 51, 51));
+        valorElijaCurso2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        nombreCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-        nombreCu.setForeground(new java.awt.Color(51, 51, 51));
-        nombreCu.setText("Nombre curso");
+        elijaSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        elijaSala.setForeground(new java.awt.Color(59, 59, 59));
+        elijaSala.setText("Elija sala");
 
-        valorNombreCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-        valorNombreCu.addActionListener(new java.awt.event.ActionListener() {
+        valorElijaSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
+        valorElijaSala.setForeground(new java.awt.Color(51, 51, 51));
+        valorElijaSala.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        botonAceptarCuSa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonAceptarCuSa.setText("Aceptar");
+        botonAceptarCuSa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorNombreCuActionPerformed(evt);
+                botonAceptarCuSaActionPerformed(evt);
             }
         });
-
-        anual.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-        anual.setForeground(new java.awt.Color(51, 51, 51));
-        anual.setText("Anual");
-
-        horario.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-        horario.setForeground(new java.awt.Color(51, 51, 51));
-        horario.setText("Carrera");
-
-        tablaValorHorario.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"1", null, null, null, null, null, null},
-                {"2", null, null, null, null, null, null},
-                {"3", null, null, null, null, null, null},
-                {"4", null, null, null, null, null, null},
-                {"5", null, null, null, null, null, null},
-                {"6", null, null, null, null, null, null},
-                {"7", null, null, null, null, null, null},
-                {"8", null, null, null, null, null, null},
-                {"9", null, null, null, null, null, null},
-                {"10", null, null, null, null, null, null},
-                {"11", null, null, null, null, null, null}
-            },
-            new String [] {
-                "Bloque", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Boolean.class, java.lang.Boolean.class, java.lang.Boolean.class, java.lang.Boolean.class, java.lang.Boolean.class, java.lang.Boolean.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, true, true, true, true, true, true
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        scrollHorario.setViewportView(tablaValorHorario);
-        if (tablaValorHorario.getColumnModel().getColumnCount() > 0) {
-            tablaValorHorario.getColumnModel().getColumn(0).setResizable(false);
-            tablaValorHorario.getColumnModel().getColumn(1).setResizable(false);
-            tablaValorHorario.getColumnModel().getColumn(2).setResizable(false);
-            tablaValorHorario.getColumnModel().getColumn(3).setResizable(false);
-            tablaValorHorario.getColumnModel().getColumn(4).setResizable(false);
-            tablaValorHorario.getColumnModel().getColumn(5).setResizable(false);
-            tablaValorHorario.getColumnModel().getColumn(6).setResizable(false);
-        }
-
-        botonAcepCCu.setBackground(new java.awt.Color(208, 22, 22));
-        botonAcepCCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonAcepCCu.setText("Aceptar");
-        botonAcepCCu.setToolTipText("");
-        botonAcepCCu.setActionCommand("aceptarIngresarProfesor");
-        botonAcepCCu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAcepCCuActionPerformed(evt);
-            }
-        });
-
-        botonCancelCCu.setBackground(new java.awt.Color(208, 22, 22));
-        botonCancelCCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonCancelCCu.setText("Cancelar");
-        botonCancelCCu.setToolTipText("");
-        botonCancelCCu.setActionCommand("cancelarIngresarProfesor");
-        botonCancelCCu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCancelCCuActionPerformed(evt);
-            }
-        });
-
-        horario1.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-        horario1.setForeground(new java.awt.Color(51, 51, 51));
-        horario1.setText("Horario");
-
-        crearCursoVincularCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 14)); // NOI18N
-        crearCursoVincularCarrera.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        crearCursoVincularCarrera.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                crearCursoVincularCarreraActionPerformed(evt);
-            }
-        });
-
-        horario2.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-        horario2.setForeground(new java.awt.Color(51, 51, 51));
-        horario2.setText("Sala");
-
-        crearCursoVincularSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 14)); // NOI18N
-        crearCursoVincularSala.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout background6Layout = new javax.swing.GroupLayout(background6);
         background6.setLayout(background6Layout);
         background6Layout.setHorizontalGroup(
             background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background6Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(107, 107, 107)
                 .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(background6Layout.createSequentialGroup()
-                        .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(anual)
-                            .addComponent(horario1)
-                            .addComponent(horario)
-                            .addComponent(horario2))
-                        .addGap(91, 91, 91)
-                        .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(crearCursoVincularCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(boolAnual)
-                            .addComponent(crearCursoVincularSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(scrollHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(valorNombreCu, javax.swing.GroupLayout.PREFERRED_SIZE, 514, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(nombreCu)
-                    .addGroup(background6Layout.createSequentialGroup()
-                        .addComponent(botonAcepCCu, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(botonCancelCCu, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(elijaCurso2)
+                    .addComponent(elijaSala))
+                .addGap(44, 44, 44)
+                .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(valorElijaSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(valorElijaCurso2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(background6Layout.createSequentialGroup()
-                .addComponent(bannerAdminCCu)
+                .addComponent(bannerAdminAsigCuSa)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonAceptarCuSa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33))
         );
         background6Layout.setVerticalGroup(
             background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background6Layout.createSequentialGroup()
-                .addComponent(bannerAdminCCu)
-                .addGap(8, 8, 8)
+                .addComponent(bannerAdminAsigCuSa)
+                .addGap(129, 129, 129)
                 .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombreCu)
-                    .addComponent(valorNombreCu, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addGap(7, 7, 7)
-                .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(anual, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(background6Layout.createSequentialGroup()
-                        .addComponent(boolAnual, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(9, 9, 9)
-                        .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(crearCursoVincularCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(horario))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(background6Layout.createSequentialGroup()
-                        .addComponent(horario2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(horario1))
-                    .addGroup(background6Layout.createSequentialGroup()
-                        .addComponent(crearCursoVincularSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(scrollHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(elijaCurso2)
+                    .addComponent(valorElijaCurso2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
                 .addGroup(background6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonCancelCCu, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonAcepCCu))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(elijaSala)
+                    .addComponent(valorElijaSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 575, Short.MAX_VALUE)
+                .addComponent(botonAceptarCuSa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
-        javax.swing.GroupLayout adminCrearCursoLayout = new javax.swing.GroupLayout(adminCrearCurso.getContentPane());
-        adminCrearCurso.getContentPane().setLayout(adminCrearCursoLayout);
-        adminCrearCursoLayout.setHorizontalGroup(
-            adminCrearCursoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        adminCrearCursoLayout.setVerticalGroup(
-            adminCrearCursoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        tabsAdminAsigNivel2.addTab("Curso a sala", background6);
 
-        adminCrearCarrera.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        adminCrearCarrera.setTitle("Administrador: Crear Carrera");
+        background7.setBackground(new java.awt.Color(216, 216, 216));
 
-        background7.setBackground(new java.awt.Color(236, 236, 236));
-        background7.setMinimumSize(new java.awt.Dimension(0, 0));
-        background7.setName(""); // NOI18N
-        background7.setPreferredSize(new java.awt.Dimension(720, 512));
+        bannerAdminAsigCuCa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminAsigCursoCarrera.jpg"))); // NOI18N
 
-        bannerAdminCCa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-cca1.jpg"))); // NOI18N
+        elijaCurso3.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        elijaCurso3.setForeground(new java.awt.Color(51, 51, 51));
+        elijaCurso3.setText("Elija curso");
 
-        nombreCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        nombreCa.setForeground(new java.awt.Color(51, 51, 51));
-        nombreCa.setText("Nombre carrera");
+        valorElijaCurso3.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
+        valorElijaCurso3.setForeground(new java.awt.Color(51, 51, 51));
+        valorElijaCurso3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        valorNombreCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        valorNombreCa.addActionListener(new java.awt.event.ActionListener() {
+        elijaCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        elijaCarrera.setForeground(new java.awt.Color(51, 51, 51));
+        elijaCarrera.setText("Elija carrera");
+
+        valorElijaCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
+        valorElijaCarrera.setForeground(new java.awt.Color(51, 51, 51));
+        valorElijaCarrera.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        botonAceptarCuCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonAceptarCuCa.setText("Aceptar");
+        botonAceptarCuCa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorNombreCaActionPerformed(evt);
-            }
-        });
-
-        numCreditos.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        numCreditos.setForeground(new java.awt.Color(51, 51, 51));
-        numCreditos.setText("Número de creditos");
-
-        valorCreditos.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        valorCreditos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorCreditosActionPerformed(evt);
-            }
-        });
-
-        botonAceptCCa.setBackground(new java.awt.Color(208, 22, 22));
-        botonAceptCCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonAceptCCa.setText("Aceptar");
-        botonAceptCCa.setToolTipText("");
-        botonAceptCCa.setActionCommand("aceptarIngresarProfesor");
-        botonAceptCCa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAceptCCaActionPerformed(evt);
-            }
-        });
-
-        botonCancelCCa.setBackground(new java.awt.Color(208, 22, 22));
-        botonCancelCCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonCancelCCa.setText("Cancelar");
-        botonCancelCCa.setToolTipText("");
-        botonCancelCCa.setActionCommand("cancelarIngresarProfesor");
-        botonCancelCCa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCancelCCaActionPerformed(evt);
+                botonAceptarCuCaActionPerformed(evt);
             }
         });
 
@@ -792,713 +576,340 @@ public class InterfazGrafica extends javax.swing.JFrame {
         background7Layout.setHorizontalGroup(
             background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background7Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(107, 107, 107)
                 .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(background7Layout.createSequentialGroup()
-                        .addComponent(botonAceptCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(botonCancelCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(numCreditos))
+                    .addComponent(elijaCurso3)
+                    .addComponent(elijaCarrera))
+                .addGap(44, 44, 44)
+                .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(valorElijaCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(valorElijaCurso3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(background7Layout.createSequentialGroup()
+                .addComponent(bannerAdminAsigCuCa)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background7Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(valorCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, 447, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(valorNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, 447, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31))
-            .addComponent(bannerAdminCCa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(background7Layout.createSequentialGroup()
-                    .addGap(22, 22, 22)
-                    .addComponent(nombreCa)
-                    .addContainerGap(536, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonAceptarCuCa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
         background7Layout.setVerticalGroup(
             background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background7Layout.createSequentialGroup()
-                .addComponent(bannerAdminCCa)
-                .addGap(19, 19, 19)
-                .addComponent(valorNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(bannerAdminAsigCuCa)
+                .addGap(129, 129, 129)
                 .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numCreditos)
-                    .addComponent(valorCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE)
+                    .addComponent(elijaCurso3)
+                    .addComponent(valorElijaCurso3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
                 .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonAceptCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonCancelCCa, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23))
-            .addGroup(background7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(background7Layout.createSequentialGroup()
-                    .addGap(152, 152, 152)
-                    .addComponent(nombreCa)
-                    .addContainerGap(332, Short.MAX_VALUE)))
-        );
-
-        javax.swing.GroupLayout adminCrearCarreraLayout = new javax.swing.GroupLayout(adminCrearCarrera.getContentPane());
-        adminCrearCarrera.getContentPane().setLayout(adminCrearCarreraLayout);
-        adminCrearCarreraLayout.setHorizontalGroup(
-            adminCrearCarreraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        adminCrearCarreraLayout.setVerticalGroup(
-            adminCrearCarreraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        adminVincular.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        adminVincular.setTitle("Administrador: Vincular");
-        adminVincular.setResizable(false);
-        adminVincular.setSize(new java.awt.Dimension(720, 512));
-
-        background8.setBackground(new java.awt.Color(236, 236, 236));
-        background8.setMinimumSize(new java.awt.Dimension(0, 0));
-        background8.setPreferredSize(new java.awt.Dimension(720, 512));
-
-        bannerVin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/admin-v.jpg"))); // NOI18N
-        bannerVin.setText("jLabel1");
-
-        elijaCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        elijaCurso.setForeground(new java.awt.Color(51, 51, 51));
-        elijaCurso.setText("Elija curso");
-
-        elijaSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        elijaSala.setForeground(new java.awt.Color(51, 51, 51));
-        elijaSala.setText("Elija sala");
-
-        elijaCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        elijaCarrera.setForeground(new java.awt.Color(51, 51, 51));
-        elijaCarrera.setText("Elija carrera");
-
-        valorCursoV.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        valorCursoV.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        valorCursoV.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorCursoVActionPerformed(evt);
-            }
-        });
-
-        valorSalaV.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        valorSalaV.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        valorCarreraV.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        valorCarreraV.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        botonAceptV.setBackground(new java.awt.Color(208, 22, 22));
-        botonAceptV.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonAceptV.setText("Aceptar");
-        botonAceptV.setToolTipText("");
-        botonAceptV.setActionCommand("aceptarCrearSala");
-        botonAceptV.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAceptVActionPerformed(evt);
-            }
-        });
-
-        botonCancelV.setBackground(new java.awt.Color(208, 22, 22));
-        botonCancelV.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonCancelV.setText("Cancelar");
-        botonCancelV.setToolTipText("");
-        botonCancelV.setActionCommand("cancelarCrearSala");
-        botonCancelV.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCancelVActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout background8Layout = new javax.swing.GroupLayout(background8);
-        background8.setLayout(background8Layout);
-        background8Layout.setHorizontalGroup(
-            background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background8Layout.createSequentialGroup()
-                .addComponent(bannerVin, javax.swing.GroupLayout.PREFERRED_SIZE, 722, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(background8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(background8Layout.createSequentialGroup()
-                            .addComponent(elijaSala)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(valorSalaV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(background8Layout.createSequentialGroup()
-                            .addComponent(elijaCurso)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(valorCursoV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(background8Layout.createSequentialGroup()
-                            .addComponent(elijaCarrera)
-                            .addGap(18, 18, 18)
-                            .addComponent(valorCarreraV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(background8Layout.createSequentialGroup()
-                        .addComponent(botonAceptV, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botonCancelV, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        background8Layout.setVerticalGroup(
-            background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(background8Layout.createSequentialGroup()
-                .addComponent(bannerVin)
-                .addGap(59, 59, 59)
-                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(elijaCurso)
-                    .addComponent(valorCursoV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(elijaSala)
-                    .addComponent(valorSalaV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(elijaCarrera)
-                    .addComponent(valorCarreraV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
-                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonAceptV, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonCancelV, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addComponent(valorElijaCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 574, Short.MAX_VALUE)
+                .addComponent(botonAceptarCuCa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
         );
 
-        javax.swing.GroupLayout adminVincularLayout = new javax.swing.GroupLayout(adminVincular.getContentPane());
-        adminVincular.getContentPane().setLayout(adminVincularLayout);
-        adminVincularLayout.setHorizontalGroup(
-            adminVincularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(adminVincularLayout.createSequentialGroup()
-                .addComponent(background8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        adminVincularLayout.setVerticalGroup(
-            adminVincularLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(adminVincularLayout.createSequentialGroup()
-                .addComponent(background8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        tabsAdminAsigNivel2.addTab("Curso a carrera", background7);
 
-        verCursos.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        verCursos.setTitle("Ver Cursos");
-        verCursos.setPreferredSize(new java.awt.Dimension(720, 512));
-        verCursos.setResizable(false);
-        verCursos.setSize(new java.awt.Dimension(720, 512));
+        tabsAdminNivel1.addTab("Asignaciones", tabsAdminAsigNivel2);
 
-        background9.setBackground(new java.awt.Color(236, 236, 236));
-        background9.setPreferredSize(new java.awt.Dimension(720, 512));
+        background4.setBackground(new java.awt.Color(216, 216, 216));
 
-        bannerVerCu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profe-vCu.jpg"))); // NOI18N
-        bannerVerCu.setText("jLabel1");
+        bannerAdminVi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bannerAdminVisualizar.jpg"))); // NOI18N
 
-        botonAceptVCu.setBackground(new java.awt.Color(208, 22, 22));
-        botonAceptVCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonAceptVCu.setText("Aceptar");
-        botonAceptVCu.setToolTipText("");
-        botonAceptVCu.setActionCommand("aceptarCrearSala");
-        botonAceptVCu.addActionListener(new java.awt.event.ActionListener() {
+        profesoresV.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        profesoresV.setForeground(new java.awt.Color(59, 59, 59));
+        profesoresV.setText("Profesores");
+
+        salasV.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        salasV.setForeground(new java.awt.Color(59, 59, 59));
+        salasV.setText("Salas");
+
+        valorSalaVi.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
+        valorSalaVi.setModel(new javax.swing.AbstractListModel<String>() {
+
+            ArrayList<String> strings = g.visualizarSalas();
+            public int getSize() { return strings.size(); }
+            public String getElementAt(int i) { return strings.get(i); }
+        });
+        scrollSalaVi.setViewportView(valorSalaVi);
+
+        botonAceptarVi.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonAceptarVi.setText("Aceptar");
+        botonAceptarVi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAceptVCuActionPerformed(evt);
+                botonAceptarViActionPerformed(evt);
             }
         });
 
-        botonCancelVCu.setBackground(new java.awt.Color(208, 22, 22));
-        botonCancelVCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonCancelVCu.setText("Cancelar");
-        botonCancelVCu.setToolTipText("");
-        botonCancelVCu.setActionCommand("cancelarCrearSala");
-        botonCancelVCu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCancelVCuActionPerformed(evt);
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            g.visualizarProfesores(),
+            new String [] {
+                "Nombre", "Contacto", "Correo Personal", "Correo Institucional"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
             }
         });
+        jScrollPane2.setViewportView(jTable2);
 
-        valorListaCu.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Curso 1", "Curso 2", "Curso 3", "Curso 4", "Curso 5", "Curso 6", "Curso 7", "Curso 8", "...", "Curso N" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        valorListaCu.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        valorListaCu.setToolTipText("");
-        valorListaCu.setVisibleRowCount(50);
-        valorListaCu.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                valorListaCuMouseClicked(evt);
-            }
-        });
-        scrollListaCu.setViewportView(valorListaCu);
-
-        javax.swing.GroupLayout background9Layout = new javax.swing.GroupLayout(background9);
-        background9.setLayout(background9Layout);
-        background9Layout.setHorizontalGroup(
-            background9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background9Layout.createSequentialGroup()
-                .addComponent(bannerVerCu, javax.swing.GroupLayout.PREFERRED_SIZE, 722, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout background4Layout = new javax.swing.GroupLayout(background4);
+        background4.setLayout(background4Layout);
+        background4Layout.setHorizontalGroup(
+            background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(background4Layout.createSequentialGroup()
+                .addComponent(bannerAdminVi)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(background9Layout.createSequentialGroup()
-                .addGroup(background9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(background9Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(botonAceptVCu)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botonCancelVCu))
-                    .addGroup(background9Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(scrollListaCu, javax.swing.GroupLayout.PREFERRED_SIZE, 622, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonAceptarVi, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
+            .addGroup(background4Layout.createSequentialGroup()
+                .addGap(106, 106, 106)
+                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(profesoresV)
+                    .addComponent(salasV)
+                    .addComponent(scrollSalaVi, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        background9Layout.setVerticalGroup(
-            background9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(background9Layout.createSequentialGroup()
-                .addComponent(bannerVerCu)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(scrollListaCu, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
+        background4Layout.setVerticalGroup(
+            background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(background4Layout.createSequentialGroup()
+                .addComponent(bannerAdminVi)
+                .addGap(43, 43, 43)
+                .addComponent(profesoresV)
+                .addGap(31, 31, 31)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(background9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonAceptVCu)
-                    .addComponent(botonCancelVCu))
-                .addContainerGap())
+                .addComponent(salasV)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(scrollSalaVi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 364, Short.MAX_VALUE)
+                .addComponent(botonAceptarVi, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
         );
 
-        javax.swing.GroupLayout verCursosLayout = new javax.swing.GroupLayout(verCursos.getContentPane());
-        verCursos.getContentPane().setLayout(verCursosLayout);
-        verCursosLayout.setHorizontalGroup(
-            verCursosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(verCursosLayout.createSequentialGroup()
-                .addComponent(background9, javax.swing.GroupLayout.DEFAULT_SIZE, 722, Short.MAX_VALUE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        verCursosLayout.setVerticalGroup(
-            verCursosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(verCursosLayout.createSequentialGroup()
-                .addComponent(background9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        tabsAdminNivel1.addTab("Visualizar", background4);
 
-        background10.setBackground(new java.awt.Color(236, 236, 236));
+        tabsNivel0.addTab("Administrador", tabsAdminNivel1);
+        tabsAdminNivel1.getAccessibleContext().setAccessibleName("Crear Sala");
+        tabsAdminNivel1.getAccessibleContext().setAccessibleDescription("");
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profe-vCu-info.jpg"))); // NOI18N
-        jLabel1.setText("[nombre curso]");
+        tabsProfeNivel1.setBackground(new java.awt.Color(59, 59, 59));
+        tabsProfeNivel1.setMinimumSize(new java.awt.Dimension(0, 0));
+        tabsNivel0.addTab("Profesor", tabsProfeNivel1);
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel3.setText("Anual: Si");
-
-        jLabel2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel2.setText("Carrera: ICC");
-
-        jLabel4.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel4.setText("Sala: 28");
-
-        jLabel5.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel5.setText("Horarios: Lunes 8:30 a 9:30... etc.");
-
-        javax.swing.GroupLayout background10Layout = new javax.swing.GroupLayout(background10);
-        background10.setLayout(background10Layout);
-        background10Layout.setHorizontalGroup(
-            background10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(background10Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(background10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE)
-        );
-        background10Layout.setVerticalGroup(
-            background10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(background10Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
-                .addGap(0, 31, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout verCursosInfoLayout = new javax.swing.GroupLayout(verCursosInfo.getContentPane());
-        verCursosInfo.getContentPane().setLayout(verCursosInfoLayout);
-        verCursosInfoLayout.setHorizontalGroup(
-            verCursosInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        verCursosInfoLayout.setVerticalGroup(
-            verCursosInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Menu Inicial");
-        setBackground(new java.awt.Color(0, 0, 0));
-        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setLocation(new java.awt.Point(0, 0));
-        setResizable(false);
-
-        background.setBackground(new java.awt.Color(236, 236, 236));
-        background.setPreferredSize(new java.awt.Dimension(720, 512));
-
-        banner.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/menu.jpg"))); // NOI18N
-
-        ingComo.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        ingComo.setForeground(new java.awt.Color(51, 51, 51));
-        ingComo.setText("Ingresar como:");
-
-        botonProfe.setBackground(new java.awt.Color(208, 22, 22));
-        botonProfe.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonProfe.setText("Profesor");
-        botonProfe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonProfeActionPerformed(evt);
-            }
-        });
-
-        botonAdmin.setBackground(new java.awt.Color(208, 22, 22));
-        botonAdmin.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonAdmin.setText("Administrador");
-        botonAdmin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAdminActionPerformed(evt);
-            }
-        });
-
-        botonAlumno.setBackground(new java.awt.Color(208, 22, 22));
-        botonAlumno.setFont(new java.awt.Font("Eras Medium ITC", 0, 22)); // NOI18N
-        botonAlumno.setText("Alumno");
-        botonAlumno.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAlumnoActionPerformed(evt);
-            }
-        });
-
-        logoUniversidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logouni.jpg"))); // NOI18N
-
-        javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
-        background.setLayout(backgroundLayout);
-        backgroundLayout.setHorizontalGroup(
-            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ingComo)
-                    .addGroup(backgroundLayout.createSequentialGroup()
-                        .addComponent(botonProfe, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(68, 68, 68)
-                        .addComponent(botonAdmin)
-                        .addGap(74, 74, 74)
-                        .addComponent(botonAlumno)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(banner)
-                    .addComponent(logoUniversidad))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        backgroundLayout.setVerticalGroup(
-            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addComponent(banner)
-                .addGap(59, 59, 59)
-                .addComponent(ingComo)
-                .addGap(36, 36, 36)
-                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonProfe, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonAlumno, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
-                .addComponent(logoUniversidad))
-        );
+        tabsAlumnoNivel1.setMinimumSize(new java.awt.Dimension(0, 0));
+        tabsNivel0.addTab("Alumno", tabsAlumnoNivel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(tabsNivel0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(tabsNivel0, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonProfeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonProfeActionPerformed
-        this.profesor0.pack();
-        this.profesor0.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_botonProfeActionPerformed
-
-    private void botonAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAdminActionPerformed
-        this.administrador0.pack();
-        this.administrador0.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_botonAdminActionPerformed
-
-    private void botonAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlumnoActionPerformed
-        this.alumno0.pack();
-        this.alumno0.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_botonAlumnoActionPerformed
-
-    private void botonPr0AtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPr0AtrasActionPerformed
-        this.profesor0.setVisible(false);
-        this.setVisible(true);
-    }//GEN-LAST:event_botonPr0AtrasActionPerformed
-
-    private void botonAd0AtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAd0AtrasActionPerformed
-        this.administrador0.setVisible(false);
-        this.setVisible(true);
-    }//GEN-LAST:event_botonAd0AtrasActionPerformed
-
-    private void botonAl0AtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAl0AtrasActionPerformed
-        this.alumno0.setVisible(false);
-        this.setVisible(true);
-    }//GEN-LAST:event_botonAl0AtrasActionPerformed
-
-    private void valorNombreSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorNombreSalaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_valorNombreSalaActionPerformed
-
-    private void botonAceptCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptCSActionPerformed
-        if (this.valorNombreSala.getText().equals("")) {
-                JOptionPane.showMessageDialog(null,"Nombre de sala no válido, inténtelo nuevamente");
-            }
-            else {
-                gestion.addSala(new Sala(this.valorNombreSala.getText())); //Llamada clase gestión. Hacer merge con La Gripe para que funcione
-                JOptionPane.showMessageDialog(null,"Sala creada con éxito");
-                this.administrador0.setVisible(true);
-                this.adminCrearSala.setVisible(false);
-            }
-    }//GEN-LAST:event_botonAceptCSActionPerformed
-
-    private void botonCancelCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelCSActionPerformed
-        this.administrador0.setVisible(true);
-        this.adminCrearSala.setVisible(false);
-    }//GEN-LAST:event_botonCancelCSActionPerformed
-
-    private void botonCSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCSActionPerformed
-        this.adminCrearSala.pack();
-        this.adminCrearSala.setVisible(true);
-        this.administrador0.setVisible(false);
-    }//GEN-LAST:event_botonCSActionPerformed
-
-    private void botonIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIPActionPerformed
-        this.adminCrearProfesor.pack();
-        this.adminCrearProfesor.setVisible(true);
-        this.administrador0.setVisible(false);        
-    }//GEN-LAST:event_botonIPActionPerformed
-
-    private void botonAceptIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptIPActionPerformed
-        this.administrador0.setVisible(true);
-        this.adminCrearProfesor.setVisible(false);
-    }//GEN-LAST:event_botonAceptIPActionPerformed
-
-    private void valorNombreProfeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorNombreProfeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_valorNombreProfeActionPerformed
-
-    private void botonCancelIPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelIPActionPerformed
-        this.administrador0.setVisible(true);
-        this.adminCrearProfesor.setVisible(false);
-    }//GEN-LAST:event_botonCancelIPActionPerformed
-
-    private void botonCancelCCuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelCCuActionPerformed
-        this.adminCrearCurso.setVisible(false);
-        this.administrador0.setVisible(true);
-    }//GEN-LAST:event_botonCancelCCuActionPerformed
-
-    private void valorNombreCuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorNombreCuActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_valorNombreCuActionPerformed
-
-    private void botonAcepCCuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAcepCCuActionPerformed
-        this.adminCrearCurso.setVisible(false);
-        this.administrador0.setVisible(true);
-    }//GEN-LAST:event_botonAcepCCuActionPerformed
-
-    private void botonCCuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCCuActionPerformed
-        this.adminCrearCurso.pack();
-        this.adminCrearCurso.setVisible(true);
-        this.administrador0.setVisible(false);
-    }//GEN-LAST:event_botonCCuActionPerformed
-
-    private void valorCreditosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorCreditosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_valorCreditosActionPerformed
-
-    private void valorNombreCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorNombreCaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_valorNombreCaActionPerformed
-
-    private void botonAceptCCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptCCaActionPerformed
-        this.adminCrearCarrera.setVisible(false);
-        this.administrador0.setVisible(true);
-    }//GEN-LAST:event_botonAceptCCaActionPerformed
-
-    private void botonCancelCCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelCCaActionPerformed
-        this.adminCrearCarrera.setVisible(false);
-        this.administrador0.setVisible(true);
-    }//GEN-LAST:event_botonCancelCCaActionPerformed
-
-    private void botonCCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCCaActionPerformed
-        this.adminCrearCarrera.pack();
-        this.adminCrearCarrera.setVisible(true);
-        this.administrador0.setVisible(false);
-    }//GEN-LAST:event_botonCCaActionPerformed
-
-    private void valorCursoVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorCursoVActionPerformed
-        
-    }//GEN-LAST:event_valorCursoVActionPerformed
-
-    private void botonAceptVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptVActionPerformed
-        this.administrador0.setVisible(true);
-        this.adminVincular.setVisible(false);
-    }//GEN-LAST:event_botonAceptVActionPerformed
-
-    private void botonCancelVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelVActionPerformed
-        this.administrador0.setVisible(true);
-        this.adminVincular.setVisible(false);
-    }//GEN-LAST:event_botonCancelVActionPerformed
-
-    private void crearCursoVincularCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearCursoVincularCarreraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_crearCursoVincularCarreraActionPerformed
-
-    private void botonAceptVCuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptVCuActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonAceptVCuActionPerformed
-
-    private void botonCancelVCuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCancelVCuActionPerformed
-        this.profesor0.setVisible(true);
-        this.verCursos.setVisible(false);
-    }//GEN-LAST:event_botonCancelVCuActionPerformed
-
-    private void valorListaCuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_valorListaCuMouseClicked
-        if(evt.getClickCount() == 2 && !evt.isConsumed()){
-            evt.consume();
-            if(this.valorListaCu.getSelectedValue() != null ){
-                this.verCursosInfo.pack();
-                this.verCursosInfo.setVisible(true);
-            }
+    private void botonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarActionPerformed
+        String a = this.valorNombreSala.getText();
+        if (a.equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "Ingrese un nombre válido para la sala");
         }
-    }//GEN-LAST:event_valorListaCuMouseClicked
+        else {
+            g.crearSala(a);
+            valorSalaVi.setModel(new javax.swing.AbstractListModel<String>() {
+                ArrayList<String> strings = g.visualizarSalas();
+                public int getSize() { return strings.size(); }
+                public String getElementAt(int i) { return strings.get(i); }
+            });
 
-    private void botonVerCuPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVerCuPActionPerformed
-        this.verCursos.pack();
-        this.verCursos.setVisible(true);
-        this.profesor0.setVisible(false);
-    }//GEN-LAST:event_botonVerCuPActionPerformed
+            JOptionPane.showMessageDialog(rootPane, "Sala creada con éxito");
+        }
+    }//GEN-LAST:event_botonAceptarActionPerformed
 
-    private void botonVinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVinActionPerformed
-        this.adminVincular.pack();
-        this.adminVincular.setVisible(true);
-        this.administrador0.setVisible(false);
-    }//GEN-LAST:event_botonVinActionPerformed
-  
-    
-    
-    /**
-     * @param args the command line arguments
-     */
-    
-    
+    private void botonAceptarCarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarCarreraActionPerformed
+        String a = this.valorNombreCa.getText();
+        if (a.equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "Ingrese un nombre válido para la carrera");
+        }
+        else {
+            g.crearCarrera(a);
+            JOptionPane.showMessageDialog(rootPane, "Carrera creada con éxito");
+        }
+    }//GEN-LAST:event_botonAceptarCarreraActionPerformed
+
+    private void botonAceptarProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarProfesorActionPerformed
+        String a = this.valorNombreProfesor2.getText();
+        String b = this.valorCorreoInstitucional.getText();
+        String c = this.valorCorreoPersonal.getText();
+        String d = this.valorContacto.getText();
+        if (a.equals("") || b.equals("") || c.equals("") || d.equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "Faltan datos por ingresar. Asegurese de completar todas las casillas");
+        }
+        else {
+            Profesor p = new Profesor(a, c, d, b);
+            g.crearProfesor(a, c, d, b);
+            jTable2.setModel(new javax.swing.table.DefaultTableModel(
+                g.visualizarProfesores(),
+                new String [] {
+                    "Nombre", "Contacto", "Correo Personal", "Correo Institucional"
+                }
+            ) {
+                Class[] types = new Class [] {
+                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                };
+
+                public Class getColumnClass(int columnIndex) {
+                    return types [columnIndex];
+                }
+            });
+            JOptionPane.showMessageDialog(rootPane, "Profesor creado y añadido con éxito");
+        }
+    }//GEN-LAST:event_botonAceptarProfesorActionPerformed
+
+    private void botonAceptarCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarCursoActionPerformed
+        String a = this.valorNombreCurso1.getText();
+        if (a.equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "Ingrese un nombre válido para el curso");
+        }
+        else {
+            g.crearCurso(a);
+            JOptionPane.showMessageDialog(rootPane, "Curso creado con éxito");
+        }
+    }//GEN-LAST:event_botonAceptarCursoActionPerformed
+
+    private void botonAceptarPrCuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarPrCuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonAceptarPrCuActionPerformed
+
+    private void botonAceptarCuSaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarCuSaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonAceptarCuSaActionPerformed
+
+    private void botonAceptarCuCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarCuCaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonAceptarCuCaActionPerformed
+
+    private void botonAceptarViActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarViActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonAceptarViActionPerformed
+
+//    /**
+//     * @param args the command line arguments
+//     */
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(InterfazGrafica.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new InterfazGrafica().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFrame adminCrearCarrera;
-    private javax.swing.JFrame adminCrearCurso;
-    private javax.swing.JFrame adminCrearProfesor;
-    private javax.swing.JFrame adminCrearSala;
-    private javax.swing.JFrame adminVincular;
-    private javax.swing.JFrame administrador0;
-    private javax.swing.JFrame alumno0;
-    private javax.swing.JLabel anual;
-    private javax.swing.JPanel background;
+    private javax.swing.JPanel background0;
     private javax.swing.JPanel background1;
-    private javax.swing.JPanel background10;
     private javax.swing.JPanel background2;
     private javax.swing.JPanel background3;
     private javax.swing.JPanel background4;
     private javax.swing.JPanel background5;
     private javax.swing.JPanel background6;
     private javax.swing.JPanel background7;
-    private javax.swing.JPanel background8;
-    private javax.swing.JPanel background9;
-    private javax.swing.JLabel banner;
-    private javax.swing.JLabel bannerAd1;
+    private javax.swing.JLabel bannerAdminAsigCuCa;
+    private javax.swing.JLabel bannerAdminAsigCuSa;
+    private javax.swing.JLabel bannerAdminAsigPrCu;
     private javax.swing.JLabel bannerAdminCCa;
     private javax.swing.JLabel bannerAdminCCu;
     private javax.swing.JLabel bannerAdminCS;
     private javax.swing.JLabel bannerAdminIP;
-    private javax.swing.JLabel bannerAl1;
-    private javax.swing.JLabel bannerP1;
-    private javax.swing.JLabel bannerVerCu;
-    private javax.swing.JLabel bannerVin;
-    private javax.swing.JRadioButton boolAnual;
-    private javax.swing.JButton botonAcepCCu;
-    private javax.swing.JButton botonAceptCCa;
-    private javax.swing.JButton botonAceptCS;
-    private javax.swing.JButton botonAceptIP;
-    private javax.swing.JButton botonAceptV;
-    private javax.swing.JButton botonAceptVCu;
-    private javax.swing.JButton botonAd0Atras;
-    private javax.swing.JButton botonAdmin;
-    private javax.swing.JButton botonAl0Atras;
-    private javax.swing.JButton botonAlumno;
-    private javax.swing.JButton botonCCa;
-    private javax.swing.JButton botonCCu;
-    private javax.swing.JButton botonCS;
-    private javax.swing.JButton botonCancelCCa;
-    private javax.swing.JButton botonCancelCCu;
-    private javax.swing.JButton botonCancelCS;
-    private javax.swing.JButton botonCancelIP;
-    private javax.swing.JButton botonCancelV;
-    private javax.swing.JButton botonCancelVCu;
-    private javax.swing.JButton botonIP;
-    private javax.swing.JButton botonPr0Atras;
-    private javax.swing.JButton botonProfe;
-    private javax.swing.JButton botonVerCuP;
-    private javax.swing.JButton botonVin;
-    private javax.swing.JComboBox<String> crearCursoVincularCarrera;
-    private javax.swing.JComboBox<String> crearCursoVincularSala;
+    private javax.swing.JLabel bannerAdminVi;
+    private javax.swing.JButton botonAceptar;
+    private javax.swing.JButton botonAceptarCarrera;
+    private javax.swing.JButton botonAceptarCuCa;
+    private javax.swing.JButton botonAceptarCuSa;
+    private javax.swing.JButton botonAceptarCurso;
+    private javax.swing.JButton botonAceptarPrCu;
+    private javax.swing.JButton botonAceptarProfesor;
+    private javax.swing.JButton botonAceptarVi;
+    private javax.swing.JLabel contacto;
+    private javax.swing.JLabel correoInstitucional;
+    private javax.swing.JLabel correoPersonal;
     private javax.swing.JLabel elijaCarrera;
     private javax.swing.JLabel elijaCurso;
+    private javax.swing.JLabel elijaCurso2;
+    private javax.swing.JLabel elijaCurso3;
+    private javax.swing.JLabel elijaProfesor;
     private javax.swing.JLabel elijaSala;
-    private javax.swing.JLabel horario;
-    private javax.swing.JLabel horario1;
-    private javax.swing.JLabel horario2;
-    private javax.swing.JLabel ingComo;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel logoUniversidad;
-    private javax.swing.JLabel nombreCa;
-    private javax.swing.JLabel nombreCu;
-    private javax.swing.JLabel nombreP;
-    private javax.swing.JLabel nombreS;
-    private javax.swing.JLabel numCreditos;
-    private javax.swing.JFrame profesor0;
-    private javax.swing.JScrollPane scrollHorario;
-    private javax.swing.JScrollPane scrollListaCu;
-    private javax.swing.JTable tablaValorHorario;
-    private javax.swing.JComboBox<String> valorCarreraV;
-    private javax.swing.JTextField valorCreditos;
-    private javax.swing.JComboBox<String> valorCursoV;
-    private javax.swing.JList<String> valorListaCu;
-    private javax.swing.JTextField valorNombreCa;
-    private javax.swing.JTextField valorNombreCu;
-    private javax.swing.JTextField valorNombreProfe;
-    private javax.swing.JTextField valorNombreSala;
-    private javax.swing.JComboBox<String> valorSalaV;
-    private javax.swing.JFrame verCursos;
-    private javax.swing.JFrame verCursosInfo;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JLabel nombreCarrera;
+    private javax.swing.JLabel nombreCurso1;
+    private javax.swing.JLabel nombreProfesor;
+    private javax.swing.JLabel profesoresV;
+    private javax.swing.JLabel salasV;
+    private javax.swing.JScrollPane scrollNombreCa;
+    private javax.swing.JScrollPane scrollNombreCurso;
+    private javax.swing.JScrollPane scrollNombreSala;
+    private javax.swing.JScrollPane scrollProfesor1;
+    private javax.swing.JScrollPane scrollProfesor2;
+    private javax.swing.JScrollPane scrollProfesor3;
+    private javax.swing.JScrollPane scrollProfesor4;
+    private javax.swing.JScrollPane scrollSalaVi;
+    private javax.swing.JTabbedPane tabsAdminAsigNivel2;
+    private javax.swing.JTabbedPane tabsAdminNivel1;
+    private javax.swing.JTabbedPane tabsAlumnoNivel1;
+    private javax.swing.JTabbedPane tabsNivel0;
+    private javax.swing.JTabbedPane tabsProfeNivel1;
+    private javax.swing.JTextPane valorContacto;
+    private javax.swing.JTextPane valorCorreoInstitucional;
+    private javax.swing.JTextPane valorCorreoPersonal;
+    private javax.swing.JComboBox<String> valorElijaCarrera;
+    private javax.swing.JComboBox<String> valorElijaCurso;
+    private javax.swing.JComboBox<String> valorElijaCurso2;
+    private javax.swing.JComboBox<String> valorElijaCurso3;
+    private javax.swing.JComboBox<String> valorElijaProfe;
+    private javax.swing.JComboBox<String> valorElijaSala;
+    private javax.swing.JTextPane valorNombreCa;
+    private javax.swing.JTextPane valorNombreCurso1;
+    private javax.swing.JTextPane valorNombreProfesor2;
+    private javax.swing.JTextPane valorNombreSala;
+    private javax.swing.JList<String> valorSalaVi;
     // End of variables declaration//GEN-END:variables
 }
