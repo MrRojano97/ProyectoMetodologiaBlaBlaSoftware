@@ -1,6 +1,8 @@
 package main;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -16,6 +18,7 @@ public class Gestion{
     HashMap<String, Profesor> profesores = new HashMap<>();
     HashMap<String, Curso> cursos = new HashMap<>();
     HashMap<String, Sala> salas = new HashMap<>();
+    private Persistor persistor = new Persistor();
     
     Semestre semestre;
     Carrera carrera;
@@ -26,7 +29,8 @@ public class Gestion{
     Cuenta cuenta_en_sesion; //cuenta logeada actualmente
     ArrayList<Cuenta> cuentas=new ArrayList<>(); //cuentas registradas en el sistema
     
-    public Gestion(){
+    public Gestion() throws IOException
+    {
         this.inicio();
     }
     /**
@@ -163,6 +167,8 @@ public class Gestion{
         } 
     }
     
+    
+    
     public void asignarProfesorACurso(String nombreProfesor, String nombreCurso){
         if(profesores.containsKey(nombreProfesor) && cursos.containsKey(nombreCurso) ){
              cursos.get(nombreCurso).setProfesor(nombreProfesor);
@@ -183,6 +189,16 @@ public class Gestion{
         for (Map.Entry<String, Curso> entry : cursos.entrySet()) {
             curs[i][0]=entry.getValue().getNombre();
             curs[i][1]=entry.getValue().getProfesor();
+            i++;
+        }
+        return curs;
+    }
+    
+    public String[] arregloCursos() {
+        String[]curs=new String[this.cursos.size()];
+        int i=0;
+        for (Map.Entry<String, Curso> entry : cursos.entrySet()) {
+            curs[i]=entry.getValue().getNombre();
             i++;
         }
         return curs;
@@ -214,10 +230,12 @@ public class Gestion{
          }
      }
     // RETORNA ArrayLis CON NOMBRES DE SALAS
-    public ArrayList<String> visualizarSalas(){
-        ArrayList<String> s= new ArrayList<>();
+    public String[] visualizarSalas(){
+        String[] s= new String[this.salas.size()];
+        int i=0;
         for (Map.Entry<String, Sala> entry : salas.entrySet()) {
-            s.add(entry.getValue().getNumero());
+            s[i] = entry.getValue().getNumero();
+            i++;
         }
         return s;
     }
@@ -269,10 +287,12 @@ public class Gestion{
      }
      }
     //RETORNA ArrayLis CON NOMBRES DE CARRERAS
-    public ArrayList<String> visualizarCarreras(){
-        ArrayList<String> c=new ArrayList<>();
+    public String[] visualizarCarreras(){
+        String[] c=new String[this.carreras.size()];
+        int i=0;
         for (Map.Entry<String, Carrera> entry : carreras.entrySet()) {
-            c.add(entry.getValue().getNombre());
+            c[i] = entry.getValue().getNombre();
+            i++;
         }
         return c;
     }
@@ -343,4 +363,45 @@ public class Gestion{
          }
         
     }
+    
+    public boolean agregarCursoAProfesor(String nombreProfesor, String nombreCurso)
+    {
+        
+        if(this.profesores.containsKey(nombreProfesor))
+        {
+            Profesor profe = this.profesores.get(nombreProfesor);
+            if(this.cursos.containsKey(nombreCurso))
+            {
+                Curso curso =this.cursos.get(nombreCurso);
+                return profe.agregarCurso(curso);
+            }
+        }
+        
+        return false;
+    }
+    
+    public void escribirSalas() throws IOException
+    {
+        Collection<Sala> co =this.salas.values();
+        Sala[] salidaSalas = new Sala[co.size()];
+        int i=0;
+        for(Sala salal:co)
+        {
+            salidaSalas[i]=salal;
+            i++; 
+        }
+        
+        this.persistor.escribirSalas(salidaSalas );
+    }
+   
+    public void cargarSalas() throws IOException
+    {
+        ArrayList<Sala> salidaFile =this.persistor.leerSalasJson();
+        for(Sala contenedor: salidaFile)
+        {
+            this.salas.put(contenedor.getNumero(), contenedor);
+        }
+    }
+    
+    
 }
