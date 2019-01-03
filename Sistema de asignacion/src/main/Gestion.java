@@ -140,6 +140,16 @@ public class Gestion{
         }
         return curs;
     }
+    
+    public String[] arregloCursos() {
+        String[]curs=new String[this.cursos.size()];
+        int i=0;
+        for (Map.Entry<String, Curso> entry : cursos.entrySet()) {
+            curs[i]=entry.getValue().getNombre();
+            i++;
+        }
+        return curs;
+    }
      
     // SALA  //
     public void crearSala(String numero){
