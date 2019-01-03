@@ -26,6 +26,8 @@ public class Gestion{
     Horario horario;
     Profesor profesor;
     Sala sala;
+    Cuenta cuenta_en_sesion; //cuenta logeada actualmente
+    ArrayList<Cuenta> cuentas=new ArrayList<>(); //cuentas registradas en el sistema
     
     public Gestion() throws IOException
     {
@@ -36,6 +38,13 @@ public class Gestion{
      * metodos y/o instancias de variables contenidos la calse
      */
     public void inicio(){
+        //CREACION DE CUENTA ADMIN
+        Cuenta nueva_cuenta=new Cuenta();
+        nueva_cuenta.setId("admin");
+        nueva_cuenta.setPassword("metodologias");
+        nueva_cuenta.setPermisos_de_admin(true);
+        cuentas.add(nueva_cuenta);
+        
         // INSTANCIAMIENTO DE UN NUEVO PROFESOR //
         //creacion de un profesor con sus datos basicos
         this.crearProfesor("Obi-Wan Kenobi","quelafuerzateacompañe@gmail.com","+5697263847", "OWKenobi@alianza.com");
@@ -89,8 +98,74 @@ public class Gestion{
         //asignarCursoABloque Y quitarCursoDeBloque
         //CAMBIAMOS EL NUMERO DE LA SALA Y MANTENEMOS SU PLANIFICACION SEMANAL
         this.modificarSala(sala.getNumero(), "12");
-    
+        this.visualizarSalas();
     }
+    
+    ////-----------CUENTA-----------///
+    
+    //METODO PARA CAMBIAR LA CONTRASEÑA DE UNA CUENTA
+    public void cambiar_password(String password_actual, String nuevo_password){
+        if (cuenta_en_sesion.password.equals(password_actual)){
+            cuenta_en_sesion.setPassword(nuevo_password);
+        }
+    }
+    
+    //METODO PARA CAMBIAR ID DE CUENTA
+    public void cambiar_id_cuenta(String password, String nuevo_id){
+        if (cuenta_en_sesion.password.equals(password)){
+            cuenta_en_sesion.setId(nuevo_id);
+        }
+    }
+    
+    //SE AGREGA UNA NUEVA CUENTA AL SISTEMA
+    public void crear_cuenta(String id,String password){
+        Cuenta nueva_cuenta=new Cuenta();
+        nueva_cuenta.setId(id);
+        nueva_cuenta.setPassword(password);
+        nueva_cuenta.setPermisos_de_admin(false);
+        cuentas.add(nueva_cuenta);    
+    }    
+    //Este buscara si la cuenta existe y comprobara si la clave corresponde//
+    public void verificarCuenta(String id, String pass){
+        for(int i=0; i<cuentas.size();i++){
+            if(id.equals(cuentas.get(i).id)){
+                if(cuentas.get(i).verificarClave(pass)){
+                    this.cuenta_en_sesion= cuentas.get(i);
+                    return;
+                }
+                else{
+                    System.out.println("Contraseña incorrecta.");
+                    return;
+                }
+            }
+        }
+        System.out.println("No existe ese usuario.");
+     }
+    
+    public String quienAdmin(String pass){
+        for(int i=0; i<cuentas.size();i++){
+            if(cuentas.get(i).isPermisos_de_admin()){
+               return cuentas.get(i).getId();
+               }
+            }
+           return "";
+        }
+    //Revisara quien es el admin en caso de algun cambio, (Se puede eliminar si el Admin no cambia)//
+    /**
+     * Metodo encargado de mostrar por consola
+     * los profesores contenidos en la lista profesoresContratados
+     */
+//    public void mostrarListaDeProfesores(){
+//        Iterator<Profesor> it;
+//        Profesor p;
+//        it = this.profesoresContratados.iterator();
+//        System.out.println("Listado de profesores contratados ");
+//        while (it.hasNext() ) {
+//                p = it.next();
+//                System.out.println("\n Nombre: "+p.getNombre()+"\n Correo: "+p.getCorreoPersonal()+"\n Correo institucional: "+p.getCorreoInstitucional());
+//                System.out.println(" Numero de contato: "+p.getNumeroContacto()+"\n Fecha/Hora de contratacion: "+p.getFechaContratacion());
+//            }
+//    }
     // CURSO //
     public void crearCurso(String nombre){
         //si el curso no existe lo creamos
@@ -127,6 +202,7 @@ public class Gestion{
         if(cursos.containsKey(nombreCurso)){
             cursos.remove(nombreCurso);
         }
+        //return salas;
     }
     //Retorna String[][] "curs" con nombre del curso
     //en curs[0] y su profesor asignado en curs[1]
