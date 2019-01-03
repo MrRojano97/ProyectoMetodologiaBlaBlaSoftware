@@ -7,9 +7,6 @@
         <Property name="defaultCloseOperation" type="int" value="0"/>
         <Property name="title" type="java.lang.String" value="Inicio De Sesi&#xf3;n"/>
         <Property name="alwaysOnTop" type="boolean" value="true"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[400, 550]"/>
-        </Property>
         <Property name="resizable" type="boolean" value="false"/>
       </Properties>
 
@@ -913,15 +910,10 @@
                               </Group>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="valorElijaProfe" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="valorElijaCurso" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="612" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="valorElijaProfe" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="valorElijaCurso" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
@@ -975,16 +967,11 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Eras Medium ITC" size="18" style="0"/>
                         </Property>
-                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor" postCode="String p[][]=g.visualizarProfesores();&#xa;String[] prof=new String[p.length];&#xa;for(int x=0; x&lt;p.length;x++){&#xa;    prof[x]=p[x][0];&#xa;}">
                           <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
-                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="4">
-                            <StringItem index="0" value="Item 1"/>
-                            <StringItem index="1" value="Item 2"/>
-                            <StringItem index="2" value="Item 3"/>
-                            <StringItem index="3" value="Item 4"/>
-                          </StringArray>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(prof)" type="code"/>
                         </Property>
                       </Properties>
                       <AuxValues>
@@ -1052,23 +1039,31 @@
                               <Component id="bannerAdminAsigCuSa" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="elijaCurso2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="elijaSala" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="valorElijaSala" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="valorElijaCurso2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="botonAceptarCuSa" min="-2" pref="156" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="636" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="elijaCurso2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="elijaSala" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="elijaSala2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="valorElijaDía" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                                      <Component id="elijaSala1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="valorElijaBloque" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="valorElijaSala" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="valorElijaCurso2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1086,7 +1081,14 @@
                                   <Component id="elijaSala" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="valorElijaSala" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="184" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="valorElijaDía" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="elijaSala2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="elijaSala1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="valorElijaBloque" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="119" max="32767" attributes="0"/>
                               <Component id="botonAceptarCuSa" min="-2" pref="57" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -1165,6 +1167,79 @@
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAceptarCuSaActionPerformed"/>
                       </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="elijaSala1">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Eras Medium ITC" size="24" style="0"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="3b" green="3b" red="3b" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Elija bloque:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="valorElijaD&#xed;a">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Eras Medium ITC" size="18" style="0"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="33" green="33" red="33" type="rgb"/>
+                        </Property>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="6">
+                            <StringItem index="0" value="Lunes"/>
+                            <StringItem index="1" value="Martes"/>
+                            <StringItem index="2" value="Miercoles"/>
+                            <StringItem index="3" value="Jueves"/>
+                            <StringItem index="4" value="Viernes"/>
+                            <StringItem index="5" value="Sabado"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="elijaSala2">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Eras Medium ITC" size="24" style="0"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="3b" green="3b" red="3b" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Elija d&#xed;a"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="valorElijaBloque">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Eras Medium ITC" size="18" style="0"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="33" green="33" red="33" type="rgb"/>
+                        </Property>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="11">
+                            <StringItem index="0" value="1    08:30-09:30 "/>
+                            <StringItem index="1" value="2    09:40-10:40 "/>
+                            <StringItem index="2" value="3    10:50-11:50 "/>
+                            <StringItem index="3" value="4    12:00-13:00  "/>
+                            <StringItem index="4" value="5    13:10-14:10 "/>
+                            <StringItem index="5" value="6    14:20-15:20 "/>
+                            <StringItem index="6" value="7    15:30-16:30 "/>
+                            <StringItem index="7" value="8    16:40-17:40 "/>
+                            <StringItem index="8" value="9    17:50-18:50 "/>
+                            <StringItem index="9" value="10  19:00-20:00 "/>
+                            <StringItem index="10" value="11  20:10-21:10 "/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1257,13 +1332,8 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
-                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="4">
-                            <StringItem index="0" value="Item 1"/>
-                            <StringItem index="1" value="Item 2"/>
-                            <StringItem index="2" value="Item 3"/>
-                            <StringItem index="3" value="Item 4"/>
-                          </StringArray>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(g.arregloCursos())" type="code"/>
                         </Property>
                       </Properties>
                       <AuxValues>
@@ -1339,22 +1409,13 @@
                               <Component id="salasV" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="scrollProfesoresVi" alignment="0" min="-2" pref="631" max="-2" attributes="0"/>
                               <Component id="profesoresV" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="profesoresV" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="scrollSalaVi" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="salasV" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Component id="scrollSalaVi" min="-2" pref="137" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
-                                  <Component id="botonAceptarVi" min="-2" pref="156" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
+                          <Component id="botonAceptarVi" min="-2" pref="156" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="scrollCursosVi" min="-2" max="-2" attributes="0"/>
                                       <Component id="cursosV" min="-2" max="-2" attributes="0"/>
@@ -1389,43 +1450,28 @@
                                       <Component id="scrollSalaVi" max="32767" attributes="0"/>
                                       <Component id="scrollProfesoresVi" pref="369" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="372" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="botonAceptarVi" min="-2" pref="57" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="bannerAdminVi" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="profesoresV" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="cursosV" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="11" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="scrollCursosVi" pref="207" max="32767" attributes="0"/>
-                                      <Component id="scrollProfesoresVi" pref="0" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="cursosV" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="scrollCursosVi" pref="27" max="32767" attributes="0"/>
                                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="salasV" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="carrerasV" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="carrerasV" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                  <Component id="scrollSalaVi" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   <Component id="scrollCarrerasVi" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="298" max="-2" attributes="0"/>
-                          <Component id="botonAceptarVi" min="-2" pref="57" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="321" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1671,9 +1717,9 @@
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="botonEliminarGeCu" min="-2" pref="156" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="botonModificarGeCu" min="-2" pref="156" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="644" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1696,12 +1742,12 @@
                                   <Component id="scrollNewNombreCurso" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="nuevoNombreCurso" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="652" max="32767" attributes="0"/>
+                              <EmptySpace pref="261" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="botonModificarGeCu" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
                                   <Component id="botonEliminarGeCu" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1823,105 +1869,6 @@
                       </JTabbedPaneConstraints>
                     </Constraint>
                   </Constraints>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="bannerAdminGePr" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="135" pref="135" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="nuevoNombreProfesor" alignment="1" min="-2" pref="192" max="-2" attributes="0"/>
-                                          <Component id="nuevoTelefono" alignment="1" min="-2" pref="192" max="-2" attributes="0"/>
-                                          <Component id="profesorGe" alignment="1" min="-2" pref="192" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
-                                              <Component id="valorGeProfesor" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="scrollNewProfesor" min="-2" pref="437" max="-2" attributes="0"/>
-                                                  <Component id="scrollNewTelefono" min="-2" pref="437" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="nuevoCorreoInstitu" min="-2" pref="290" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="scrollNewCorreoInstitu" min="-2" pref="437" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="nuevoCorreoPersonal" min="-2" pref="261" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                      <Component id="scrollNewCorreoP" min="-2" pref="437" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="botonAceptarGePr" min="-2" pref="156" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="640" max="-2" attributes="0"/>
-                              <Component id="botonEliminarGePr" min="-2" pref="156" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="botonModificarGePr" min="-2" pref="156" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="bannerAdminGePr" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="profesorGe" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="valorGeProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="nuevoNombreProfesor" min="-2" max="-2" attributes="0"/>
-                                  <Component id="scrollNewProfesor" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="nuevoTelefono" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="scrollNewTelefono" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="nuevoCorreoPersonal" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="scrollNewCorreoP" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="nuevoCorreoInstitu" min="-2" max="-2" attributes="0"/>
-                                  <Component id="scrollNewCorreoInstitu" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="125" max="32767" attributes="0"/>
-                              <Component id="botonAceptarGePr" min="-2" pref="57" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <EmptySpace pref="505" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="botonModificarGePr" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="botonEliminarGePr" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="bannerAdminGePr">
                       <Properties>
@@ -2124,65 +2071,6 @@
                       </JTabbedPaneConstraints>
                     </Constraint>
                   </Constraints>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="bannerAdminGeCa" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="carrera1" min="-2" pref="176" max="-2" attributes="0"/>
-                                  <Component id="nuevoNombreCarrera" min="-2" pref="286" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="scrollNewNombreCa" min="-2" pref="437" max="-2" attributes="0"/>
-                                  <Component id="valorCarreraGe" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="botonAceptarGeCa" min="-2" pref="156" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="639" max="-2" attributes="0"/>
-                              <Component id="botonEliminarGeCa" min="-2" pref="156" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="botonModificarGeCa" min="-2" pref="156" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="bannerAdminGeCa" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="carrera1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="valorCarreraGe" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="scrollNewNombreCa" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nuevoNombreCarrera" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="275" max="32767" attributes="0"/>
-                              <Component id="botonAceptarGeCa" min="-2" pref="57" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <EmptySpace pref="648" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="botonModificarGeCa" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="botonEliminarGeCa" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="bannerAdminGeCa">
                       <Properties>
@@ -2293,65 +2181,6 @@
                       </JTabbedPaneConstraints>
                     </Constraint>
                   </Constraints>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="bannerAdminGeSa" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="nuevoNombreSala" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="sala1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="scrollNewNombreSala" min="-2" pref="444" max="-2" attributes="0"/>
-                                  <Component id="valorSalaGe" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="botonAceptarGeSa" min="-2" pref="156" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="640" max="-2" attributes="0"/>
-                              <Component id="botonEliminarGeSa" min="-2" pref="156" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Component id="botonModificarGeSa" min="-2" pref="156" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="bannerAdminGeSa" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="sala1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="valorSalaGe" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="scrollNewNombreSala" alignment="1" min="-2" pref="28" max="-2" attributes="0"/>
-                                  <Component id="nuevoNombreSala" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="264" max="32767" attributes="0"/>
-                              <Component id="botonAceptarGeSa" min="-2" pref="57" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <EmptySpace pref="652" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="botonModificarGeSa" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                                  <Component id="botonEliminarGeSa" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="bannerAdminGeSa">
                       <Properties>
@@ -2435,7 +2264,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JPanel" name="background8">
+                <Container class="javax.swing.JPanel" name="background12">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="d8" green="d8" red="d8" type="rgb"/>
@@ -2451,62 +2280,8 @@
                       </JTabbedPaneConstraints>
                     </Constraint>
                   </Constraints>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="bannerAdminGeCu" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="nuevoNombreCurso" alignment="0" min="-2" pref="260" max="-2" attributes="0"/>
-                                  <Component id="cursoGe" alignment="0" min="-2" pref="176" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="valorGeCurso" min="-2" max="-2" attributes="0"/>
-                                  <Component id="scrollNewNombreCurso" min="-2" pref="437" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="botonAceptarGeCu" min="-2" pref="156" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="640" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="bannerAdminGeCu" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                                      <Component id="cursoGe" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="valorGeCurso" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="scrollNewNombreCurso" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="nuevoNombreCurso" alignment="1" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace pref="270" max="32767" attributes="0"/>
-                              <Component id="botonAceptarGeCu" min="-2" pref="57" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="bannerAdminGeCu">
+                    <Component class="javax.swing.JLabel" name="bannerAdminGeCu1">
                       <Properties>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/images/bannerAdminGestCursos.jpg"/>
@@ -2518,7 +2293,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="cursoGe">
+                    <Component class="javax.swing.JLabel" name="cursoGe1">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Eras Medium ITC" size="24" style="0"/>
@@ -2538,7 +2313,7 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="valorGeCurso">
+                    <Component class="javax.swing.JComboBox" name="valorGeCurso1">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Eras Medium ITC" size="18" style="0"/>
@@ -2554,7 +2329,7 @@
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="nuevoNombreCurso">
+                    <Component class="javax.swing.JLabel" name="nuevoNombreCurso1">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Eras Medium ITC" size="24" style="0"/>
@@ -2574,14 +2349,14 @@
                         </Property>
                       </Properties>
                     </Component>
-                    <Container class="javax.swing.JScrollPane" name="scrollNewNombreCurso">
+                    <Container class="javax.swing.JScrollPane" name="scrollNewNombreCurso1">
                       <AuxValues>
                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                       </AuxValues>
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTextPane" name="valorNewNombreCurso">
+                        <Component class="javax.swing.JTextPane" name="valorNewNombreCurso1">
                         </Component>
                       </SubComponents>
                     </Container>
@@ -2592,9 +2367,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Aceptar"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAceptarGeCuActionPerformed"/>
-                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>

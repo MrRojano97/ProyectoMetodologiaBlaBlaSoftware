@@ -70,12 +70,12 @@ public class Gestion{
         curso.setProfesor(profesores.get("Chewbacca").getNombre());
         //para modificar un HORARIO (esto aplica a todo lo que posea un horario)
        //verificamos que el bloque al cual deseamos asignar un curso este disponible 
-        if(curso.getHorario().verificarDisponibilidadDeBloque(1, 3)==false){
-            curso.getHorario().asignarCursoABloque(curso.getNombre(), 1, 3);//asigamos el curso al dia martes, bloque 4
-        }
-        if(curso.getHorario().verificarDisponibilidadDeBloque(1, 4)==false){
-            curso.getHorario().asignarCursoABloque(curso.getNombre(), 1, 4);//asigamos el curso al dia martes, bloque 5
-        }
+//        if(curso.getHorario().verificarDisponibilidadDeBloque(1, 3)==false){
+//            curso.getHorario().asignarCursoABloque(curso.getNombre(), 1, 3);//asigamos el curso al dia martes, bloque 4
+//        }
+//        if(curso.getHorario().verificarDisponibilidadDeBloque(1, 4)==false){
+//            curso.getHorario().asignarCursoABloque(curso.getNombre(), 1, 4);//asigamos el curso al dia martes, bloque 5
+//        }
         
         //verifica si el bloque esta disponible, esto se debe hacer al tratar de asiganr un bloque
         System.out.println("\n 111111 ");
