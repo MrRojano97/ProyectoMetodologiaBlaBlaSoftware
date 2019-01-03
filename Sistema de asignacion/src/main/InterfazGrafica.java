@@ -109,7 +109,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
         nuevoNombreCurso = new javax.swing.JLabel();
         scrollNewNombreCurso = new javax.swing.JScrollPane();
         valorNewNombreCurso = new javax.swing.JTextPane();
-        botonAceptarGeCu = new javax.swing.JButton();
+        botonModificarGeCu = new javax.swing.JButton();
+        botonEliminarGeCu1 = new javax.swing.JButton();
         background9 = new javax.swing.JPanel();
         bannerAdminGePr = new javax.swing.JLabel();
         profesorGe = new javax.swing.JLabel();
@@ -126,7 +127,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
         nuevoCorreoInstitu = new javax.swing.JLabel();
         scrollNewCorreoInstitu = new javax.swing.JScrollPane();
         valorNewCorreoInstitucional = new javax.swing.JTextPane();
-        botonAceptarGePr = new javax.swing.JButton();
+        botonModificarGePr = new javax.swing.JButton();
+        botonEliminarGePr = new javax.swing.JButton();
         background10 = new javax.swing.JPanel();
         bannerAdminGeCa = new javax.swing.JLabel();
         carrera1 = new javax.swing.JLabel();
@@ -134,7 +136,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
         nuevoNombreCarrera = new javax.swing.JLabel();
         scrollNewNombreCa = new javax.swing.JScrollPane();
         valorNewNombreCarrera = new javax.swing.JTextPane();
-        botonAceptarGeCa = new javax.swing.JButton();
+        botonModificarGeCa = new javax.swing.JButton();
+        botonEliminarGeCa = new javax.swing.JButton();
         background11 = new javax.swing.JPanel();
         bannerAdminGeSa = new javax.swing.JLabel();
         sala1 = new javax.swing.JLabel();
@@ -142,7 +145,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
         nuevoNombreSala = new javax.swing.JLabel();
         scrollNewNombreSala = new javax.swing.JScrollPane();
         valorNewNombreSala = new javax.swing.JTextPane();
-        botonAceptarGeSa = new javax.swing.JButton();
+        botonModificarGeSa = new javax.swing.JButton();
+        botonEliminarGeSa = new javax.swing.JButton();
         tabsProfeNivel1 = new javax.swing.JTabbedPane();
         tabsAlumnoNivel1 = new javax.swing.JTabbedPane();
 
@@ -533,7 +537,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         valorElijaSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
         valorElijaSala.setForeground(new java.awt.Color(51, 51, 51));
-        valorElijaSala.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        valorElijaSala.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarSalas()));
 
         botonAceptarCuSa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
         botonAceptarCuSa.setText("Aceptar");
@@ -602,7 +606,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         valorElijaCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
         valorElijaCarrera.setForeground(new java.awt.Color(51, 51, 51));
-        valorElijaCarrera.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        valorElijaCarrera.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
 
         botonAceptarCuCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
         botonAceptarCuCa.setText("Aceptar");
@@ -773,11 +777,19 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         scrollNewNombreCurso.setViewportView(valorNewNombreCurso);
 
-        botonAceptarGeCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        botonAceptarGeCu.setText("Aceptar");
-        botonAceptarGeCu.addActionListener(new java.awt.event.ActionListener() {
+        botonModificarGeCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonModificarGeCu.setText("Modificar");
+        botonModificarGeCu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAceptarGeCuActionPerformed(evt);
+                botonModificarGeCuActionPerformed(evt);
+            }
+        });
+
+        botonEliminarGeCu1.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonEliminarGeCu1.setText("Eliminar");
+        botonEliminarGeCu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarGeCu1ActionPerformed(evt);
             }
         });
 
@@ -800,7 +812,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background8Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonAceptarGeCu, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonEliminarGeCu1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(botonModificarGeCu, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
         );
         background8Layout.setVerticalGroup(
@@ -819,7 +833,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                     .addComponent(scrollNewNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nuevoNombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 652, Short.MAX_VALUE)
-                .addComponent(botonAceptarGeCu, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(background8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonModificarGeCu, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonEliminarGeCu1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25))
         );
 
@@ -875,11 +891,19 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         scrollNewCorreoInstitu.setViewportView(valorNewCorreoInstitucional);
 
-        botonAceptarGePr.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        botonAceptarGePr.setText("Aceptar");
-        botonAceptarGePr.addActionListener(new java.awt.event.ActionListener() {
+        botonModificarGePr.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonModificarGePr.setText("Modificar");
+        botonModificarGePr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAceptarGePrActionPerformed(evt);
+                botonModificarGePrActionPerformed(evt);
+            }
+        });
+
+        botonEliminarGePr.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonEliminarGePr.setText("Eliminar");
+        botonEliminarGePr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarGePrActionPerformed(evt);
             }
         });
 
@@ -918,7 +942,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background9Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonAceptarGePr, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonEliminarGePr, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(botonModificarGePr, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33))
         );
         background9Layout.setVerticalGroup(
@@ -947,7 +973,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                     .addComponent(nuevoCorreoInstitu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(scrollNewCorreoInstitu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 505, Short.MAX_VALUE)
-                .addComponent(botonAceptarGePr, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(background9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonModificarGePr, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonEliminarGePr, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27))
         );
 
@@ -977,11 +1005,19 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         scrollNewNombreCa.setViewportView(valorNewNombreCarrera);
 
-        botonAceptarGeCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        botonAceptarGeCa.setText("Aceptar");
-        botonAceptarGeCa.addActionListener(new java.awt.event.ActionListener() {
+        botonModificarGeCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonModificarGeCa.setText("Modificar");
+        botonModificarGeCa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAceptarGeCaActionPerformed(evt);
+                botonModificarGeCaActionPerformed(evt);
+            }
+        });
+
+        botonEliminarGeCa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonEliminarGeCa.setText("Eliminar");
+        botonEliminarGeCa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarGeCaActionPerformed(evt);
             }
         });
 
@@ -1004,8 +1040,10 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background10Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonAceptarGeCa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31))
+                .addComponent(botonEliminarGeCa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(botonModificarGeCa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77))
         );
         background10Layout.setVerticalGroup(
             background10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1020,7 +1058,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                     .addComponent(scrollNewNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nuevoNombreCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 660, Short.MAX_VALUE)
-                .addComponent(botonAceptarGeCa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(background10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonModificarGeCa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonEliminarGeCa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22))
         );
 
@@ -1044,11 +1084,19 @@ public class InterfazGrafica extends javax.swing.JFrame {
         valorNewNombreSala.setForeground(new java.awt.Color(51, 51, 51));
         scrollNewNombreSala.setViewportView(valorNewNombreSala);
 
-        botonAceptarGeSa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
-        botonAceptarGeSa.setText("Aceptar");
-        botonAceptarGeSa.addActionListener(new java.awt.event.ActionListener() {
+        botonModificarGeSa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonModificarGeSa.setText("Modificar");
+        botonModificarGeSa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAceptarGeSaActionPerformed(evt);
+                botonModificarGeSaActionPerformed(evt);
+            }
+        });
+
+        botonEliminarGeSa.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        botonEliminarGeSa.setText("Eliminar");
+        botonEliminarGeSa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarGeSaActionPerformed(evt);
             }
         });
 
@@ -1071,7 +1119,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background11Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonAceptarGeSa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonEliminarGeSa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(botonModificarGeSa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37))
         );
         background11Layout.setVerticalGroup(
@@ -1087,7 +1137,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
                     .addComponent(scrollNewNombreSala, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nuevoNombreSala, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 652, Short.MAX_VALUE)
-                .addComponent(botonAceptarGeSa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(background11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonModificarGeSa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonEliminarGeSa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25))
         );
 
@@ -1132,7 +1184,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 public int getSize() { return strings.length; }
                 public String getElementAt(int i) { return strings[i]; }
             });
-
+            valorElijaSala.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarSalas()));
+            valorSalaGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarSalas()));
             JOptionPane.showMessageDialog(rootPane, "Sala creada con éxito");
         }
     }//GEN-LAST:event_botonAceptarSalaActionPerformed
@@ -1145,6 +1198,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         else {
             g.crearCarrera(a);
             valorCarreraGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
+            valorElijaCarrera.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
             JOptionPane.showMessageDialog(rootPane, "Carrera creada con éxito");
         }
     }//GEN-LAST:event_botonAceptarCarreraActionPerformed
@@ -1205,23 +1259,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonAceptarViActionPerformed
 
-    private void botonAceptarGePrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarGePrActionPerformed
+    private void botonModificarGePrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarGePrActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonAceptarGePrActionPerformed
+    }//GEN-LAST:event_botonModificarGePrActionPerformed
 
-    private void botonAceptarGeCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarGeCaActionPerformed
-        if (this.valorNewNombreCarrera.equals("")) {
-            JOptionPane.showMessageDialog(rootPane, "Ingrese un nombre válido para la carrera");
-        }
-        else {
-            g.modificarNombreCarrera(valorCarreraGe.getSelectedItem().toString(), this.valorNewNombreCarrera.getText());
-            valorCarreraGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
-            JOptionPane.showMessageDialog(rootPane, "Carrera modificada con éxito");
-        }
-
-    }//GEN-LAST:event_botonAceptarGeCaActionPerformed
-
-    private void botonAceptarGeSaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarGeSaActionPerformed
+    private void botonModificarGeSaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarGeSaActionPerformed
         if (this.valorNewNombreSala.equals("")) {
             JOptionPane.showMessageDialog(rootPane, "Ingrese un nombre válido para la sala");
         }
@@ -1229,14 +1271,20 @@ public class InterfazGrafica extends javax.swing.JFrame {
             g.modificarSala(this.valorSalaGe.getSelectedItem().toString(), this.valorNewNombreSala.getText());
             valorSalaGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarSalas()));
             JOptionPane.showMessageDialog(rootPane, "Sala modificada con éxito");
+            valorSalaVi.setModel(new javax.swing.AbstractListModel<String>() {
+                String[] strings = g.visualizarSalas();
+                public int getSize() { return strings.length; }
+                public String getElementAt(int i) { return strings[i]; }
+            });
+            valorElijaSala.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarSalas()));
         }
-    }//GEN-LAST:event_botonAceptarGeSaActionPerformed
+    }//GEN-LAST:event_botonModificarGeSaActionPerformed
 
     private void valorGeCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorGeCursoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_valorGeCursoActionPerformed
 
-    private void botonAceptarGeCuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAceptarGeCuActionPerformed
+    private void botonModificarGeCuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarGeCuActionPerformed
         String a = this.valorNewNombreCurso.getText();
         String old = this.valorGeCurso.getSelectedItem().toString();
         if (a.equals("")) {
@@ -1246,7 +1294,42 @@ public class InterfazGrafica extends javax.swing.JFrame {
             g.modificarCurso(old, a, "");
             JOptionPane.showMessageDialog(rootPane, "Curso modificado con éxito");
         }
-    }//GEN-LAST:event_botonAceptarGeCuActionPerformed
+    }//GEN-LAST:event_botonModificarGeCuActionPerformed
+
+    private void botonEliminarGeCu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarGeCu1ActionPerformed
+        g.eliminarCurso(this.valorGeCurso.getSelectedItem().toString());
+        JOptionPane.showMessageDialog(rootPane, "Se ha eliminado el curso seleccionado");
+    }//GEN-LAST:event_botonEliminarGeCu1ActionPerformed
+
+    private void botonEliminarGePrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarGePrActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonEliminarGePrActionPerformed
+
+    private void botonModificarGeCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarGeCaActionPerformed
+        if (this.valorNewNombreCarrera.equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "Ingrese un nombre válido para la carrera");
+        }
+        else {
+            g.modificarNombreCarrera(valorCarreraGe.getSelectedItem().toString(), this.valorNewNombreCarrera.getText());
+            valorCarreraGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
+            valorElijaCarrera.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
+            JOptionPane.showMessageDialog(rootPane, "Carrera modificada con éxito");
+        }
+    }//GEN-LAST:event_botonModificarGeCaActionPerformed
+
+    private void botonEliminarGeSaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarGeSaActionPerformed
+        g.eliminarSala(this.valorSalaGe.getSelectedItem().toString());
+        valorElijaSala.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarSalas()));
+        valorSalaGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarSalas()));
+        JOptionPane.showMessageDialog(rootPane, "Se ha eliminado la sala seleccionada");
+    }//GEN-LAST:event_botonEliminarGeSaActionPerformed
+
+    private void botonEliminarGeCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarGeCaActionPerformed
+        g.eliminarCarrera(this.valorCarreraGe.getSelectedItem().toString());
+        valorCarreraGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
+        valorElijaCarrera.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
+        JOptionPane.showMessageDialog(rootPane, "Se ha eliminado la carrera seleccionada");
+    }//GEN-LAST:event_botonEliminarGeCaActionPerformed
 
 //    /**
 //     * @param args the command line arguments
@@ -1312,14 +1395,18 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JButton botonAceptarCuCa;
     private javax.swing.JButton botonAceptarCuSa;
     private javax.swing.JButton botonAceptarCurso;
-    private javax.swing.JButton botonAceptarGeCa;
-    private javax.swing.JButton botonAceptarGeCu;
-    private javax.swing.JButton botonAceptarGePr;
-    private javax.swing.JButton botonAceptarGeSa;
     private javax.swing.JButton botonAceptarPrCu;
     private javax.swing.JButton botonAceptarProfesor;
     private javax.swing.JButton botonAceptarSala;
     private javax.swing.JButton botonAceptarVi;
+    private javax.swing.JButton botonEliminarGeCa;
+    private javax.swing.JButton botonEliminarGeCu1;
+    private javax.swing.JButton botonEliminarGePr;
+    private javax.swing.JButton botonEliminarGeSa;
+    private javax.swing.JButton botonModificarGeCa;
+    private javax.swing.JButton botonModificarGeCu;
+    private javax.swing.JButton botonModificarGePr;
+    private javax.swing.JButton botonModificarGeSa;
     private javax.swing.JLabel carrera1;
     private javax.swing.JLabel contacto;
     private javax.swing.JLabel correoInstitucional;

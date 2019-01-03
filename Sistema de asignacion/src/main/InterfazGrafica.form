@@ -940,13 +940,8 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
-                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="4">
-                            <StringItem index="0" value="Item 1"/>
-                            <StringItem index="1" value="Item 2"/>
-                            <StringItem index="2" value="Item 3"/>
-                            <StringItem index="3" value="Item 4"/>
-                          </StringArray>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(g.visualizarSalas())" type="code"/>
                         </Property>
                       </Properties>
                       <AuxValues>
@@ -1087,13 +1082,8 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
-                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="4">
-                            <StringItem index="0" value="Item 1"/>
-                            <StringItem index="1" value="Item 2"/>
-                            <StringItem index="2" value="Item 3"/>
-                            <StringItem index="3" value="Item 4"/>
-                          </StringArray>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(g.visualizarCarreras())" type="code"/>
                         </Property>
                       </Properties>
                       <AuxValues>
@@ -1335,7 +1325,9 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="botonAceptarGeCu" min="-2" pref="156" max="-2" attributes="0"/>
+                              <Component id="botonEliminarGeCu1" min="-2" pref="156" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="botonModificarGeCu" min="-2" pref="156" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1360,7 +1352,10 @@
                                   <Component id="nuevoNombreCurso" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="652" max="32767" attributes="0"/>
-                              <Component id="botonAceptarGeCu" min="-2" pref="57" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="botonModificarGeCu" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                                  <Component id="botonEliminarGeCu1" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1446,15 +1441,26 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JButton" name="botonAceptarGeCu">
+                    <Component class="javax.swing.JButton" name="botonModificarGeCu">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Eras Medium ITC" size="24" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Aceptar"/>
+                        <Property name="text" type="java.lang.String" value="Modificar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAceptarGeCuActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonModificarGeCuActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="botonEliminarGeCu1">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Eras Medium ITC" size="24" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Eliminar"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEliminarGeCu1ActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
@@ -1518,7 +1524,9 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="botonAceptarGePr" min="-2" pref="156" max="-2" attributes="0"/>
+                              <Component id="botonEliminarGePr" min="-2" pref="156" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="botonModificarGePr" min="-2" pref="156" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1555,7 +1563,10 @@
                                   <Component id="scrollNewCorreoInstitu" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="505" max="32767" attributes="0"/>
-                              <Component id="botonAceptarGePr" min="-2" pref="57" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="botonModificarGePr" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                                  <Component id="botonEliminarGePr" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1731,15 +1742,26 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JButton" name="botonAceptarGePr">
+                    <Component class="javax.swing.JButton" name="botonModificarGePr">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Eras Medium ITC" size="24" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Aceptar"/>
+                        <Property name="text" type="java.lang.String" value="Modificar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAceptarGePrActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonModificarGePrActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="botonEliminarGePr">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Eras Medium ITC" size="24" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Eliminar"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEliminarGePrActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
@@ -1780,8 +1802,10 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="botonAceptarGeCa" min="-2" pref="156" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                              <Component id="botonEliminarGeCa" min="-2" pref="156" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                              <Component id="botonModificarGeCa" min="-2" pref="156" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1800,7 +1824,10 @@
                                   <Component id="nuevoNombreCarrera" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="660" max="32767" attributes="0"/>
-                              <Component id="botonAceptarGeCa" min="-2" pref="57" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="botonModificarGeCa" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                                  <Component id="botonEliminarGeCa" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1879,15 +1906,26 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JButton" name="botonAceptarGeCa">
+                    <Component class="javax.swing.JButton" name="botonModificarGeCa">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Eras Medium ITC" size="24" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Aceptar"/>
+                        <Property name="text" type="java.lang.String" value="Modificar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAceptarGeCaActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonModificarGeCaActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="botonEliminarGeCa">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Eras Medium ITC" size="24" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Eliminar"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEliminarGeCaActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
@@ -1928,7 +1966,9 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="botonAceptarGeSa" min="-2" pref="156" max="-2" attributes="0"/>
+                              <Component id="botonEliminarGeSa" min="-2" pref="156" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="botonModificarGeSa" min="-2" pref="156" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1948,7 +1988,10 @@
                                   <Component id="nuevoNombreSala" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="652" max="32767" attributes="0"/>
-                              <Component id="botonAceptarGeSa" min="-2" pref="57" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="botonModificarGeSa" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                                  <Component id="botonEliminarGeSa" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                              </Group>
                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -2013,15 +2056,26 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JButton" name="botonAceptarGeSa">
+                    <Component class="javax.swing.JButton" name="botonModificarGeSa">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Eras Medium ITC" size="24" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Aceptar"/>
+                        <Property name="text" type="java.lang.String" value="Modificar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAceptarGeSaActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonModificarGeSaActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="botonEliminarGeSa">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Eras Medium ITC" size="24" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Eliminar"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEliminarGeSaActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
