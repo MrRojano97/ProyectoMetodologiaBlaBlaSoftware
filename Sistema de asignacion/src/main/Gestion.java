@@ -158,17 +158,17 @@ public class Gestion{
      * Metodo encargado de mostrar por consola
      * los profesores contenidos en la lista profesoresContratados
      */
-    public void mostrarListaDeProfesores(){
-        Iterator<Profesor> it;
-        Profesor p;
-        it = this.profesoresContratados.iterator();
-        System.out.println("Listado de profesores contratados ");
-        while (it.hasNext() ) {
-                p = it.next();
-                System.out.println("\n Nombre: "+p.getNombre()+"\n Correo: "+p.getCorreoPersonal()+"\n Correo institucional: "+p.getCorreoInstitucional());
-                System.out.println(" Numero de contato: "+p.getNumeroContacto()+"\n Fecha/Hora de contratacion: "+p.getFechaContratacion());
-            }
-    }
+//    public void mostrarListaDeProfesores(){
+//        Iterator<Profesor> it;
+//        Profesor p;
+//        it = this.profesoresContratados.iterator();
+//        System.out.println("Listado de profesores contratados ");
+//        while (it.hasNext() ) {
+//                p = it.next();
+//                System.out.println("\n Nombre: "+p.getNombre()+"\n Correo: "+p.getCorreoPersonal()+"\n Correo institucional: "+p.getCorreoInstitucional());
+//                System.out.println(" Numero de contato: "+p.getNumeroContacto()+"\n Fecha/Hora de contratacion: "+p.getFechaContratacion());
+//            }
+//    }
     // CURSO //
     public void crearCurso(String nombre){
         //si el curso no existe lo creamos
@@ -205,7 +205,7 @@ public class Gestion{
         if(cursos.containsKey(nombreCurso)){
             cursos.remove(nombreCurso);
         }
-        return salas;
+        //return salas;
     }
     //Retorna String[][] "curs" con nombre del curso
     //en curs[0] y su profesor asignado en curs[1]
