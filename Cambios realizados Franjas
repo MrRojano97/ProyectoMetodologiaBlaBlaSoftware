@@ -78,3 +78,18 @@ Nombre Javiera Cabrera Fecha: 20-12-2018
 
 1.- Testeo de la calidad del modelo
 	Creacionde objetos de clases
+	
+Nombre Javiera Cabrera Fecha 24-12-2018
+
+1.- Implementacion de interface cambios para agregar los metodos que se repiten en varias clases. En esta ocasión los métodos serian modificar curso y eliminar un curso.
+
+2,- Se implemento la interface en las clases; Profesor, Semestre, Carrera
+
+
+Nombre: Francisco Gamboa Fecha 31-12-2018
+
+1.- Se cambiaron las listas por hash map en la calse gestion y todos sus metodos para que funcionen correctamente.
+2.- Se cambió el tipo de datos de los ArryList de la calse Semestre a String, para poder usarlos como punteros a la key 
+de su respectivo hash en la calse Gestion.
+3.- Ahora los metodos Visualizar en la clase gestion retornan ArrayList o String[][] para facilitar el manejo de datos al 
+momento de desplegarlos en la interfaz.
