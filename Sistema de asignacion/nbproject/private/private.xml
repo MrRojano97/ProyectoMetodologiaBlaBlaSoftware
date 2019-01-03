@@ -3,12 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/FrancsicoGP/Documents/NetBeansProjects/Metodología/test/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Gestion.java</file>
             <file>file:/C:/Users/FrancsicoGP/Documents/NetBeansProjects/Metodología/test/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/cambios.java</file>
             <file>file:/C:/Users/FrancsicoGP/Documents/NetBeansProjects/Metodología/test/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Profesor.java</file>
             <file>file:/C:/Users/FrancsicoGP/Documents/NetBeansProjects/Metodología/test/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Main.java</file>
             <file>file:/C:/Users/Hugo/Documents/Proyecto%20MeDaPlaSo/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/InterfazGrafica.java</file>
             <file>file:/C:/Users/Hugo/Documents/Proyecto%20MeDaPlaSo/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Main.java</file>
+=======
+            <file>file:/C:/Users/Cepe/Documents/Repo%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Gestion.java</file>
+            <file>file:/C:/Users/Cepe/Documents/Repo%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Profesor.java</file>
+            <file>file:/C:/Users/Cepe/Documents/Repo%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Carrera.java</file>
+            <file>file:/C:/Users/Cepe/Documents/Repo%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Main.java</file>
+            <file>file:/C:/Users/Cepe/Documents/Repo%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Horario.java</file>
+            <file>file:/C:/Users/Cepe/Documents/Repo%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Bloque.java</file>
+            <file>file:/C:/Users/Cepe/Documents/Repo%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/InterfazGrafica.java</file>
+            <file>file:/C:/Users/Cepe/Documents/Repo%202/ProyectoMetodologiaBlaBlaSoftware/Sistema%20de%20asignacion/src/main/Cuenta.java</file>
+>>>>>>> LaGripe
         </group>
     </open-files>
 </project-private>

@@ -56,3 +56,17 @@ Sprint 3:
 		Marcelo Muñoz: Visualizar Salas
         	Eduardo Soto: Crear Carrera, Eliminar Carrera, Modificar Carrera
         	Juan Nuñez: Visualizar Carrera, Vincular carrera con Interfaz
+
+Sprint 4:
+	Daily 03/01/19
+
+	Tareas tomadas para Sprint: 	Creación de clase y manejo de cuentas en main (3)	
+					Creación lógica inicio de sesión y verificación de cuenta (3)
+					Integración inicio de sesión y verificación de cuenta a interfaz gráfica y pruebas (3)
+
+					Total esfuerzo: 9
+
+	Asignacion tareas:
+				Creación de clase y manejo de cuentas en main (3): Juan Nuñez
+				Creación lógica inicio de sesión y verificación de cuenta (3): Eduardo Soto
+				Integración inicio de sesión y verificación de cuenta a interfaz gráfica y pruebas(3): Marcelo Muñoz junto a Hugo Rodriguez
