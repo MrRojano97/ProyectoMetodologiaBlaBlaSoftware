@@ -33,6 +33,12 @@ public class Cuenta {
     public void setId(String id) {
         this.id = id;
     }
+    public boolean verificarClave(String a){
+        if(a.equals(this.password))
+            return true;
+        else
+            return false;
+    }
 
     public String getPassword() {
         return password;
