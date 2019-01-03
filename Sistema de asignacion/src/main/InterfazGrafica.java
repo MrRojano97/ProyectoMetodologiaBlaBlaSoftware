@@ -101,6 +101,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
         scrollSalaVi = new javax.swing.JScrollPane();
         valorSalaVi = new javax.swing.JList<>();
         botonAceptarVi = new javax.swing.JButton();
+        CursosV = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        valorCursosVi = new javax.swing.JTable();
+        scrollSalaVi1 = new javax.swing.JScrollPane();
+        valorCarrerasVi = new javax.swing.JList<>();
+        CarrerasV = new javax.swing.JLabel();
         tabsAdminGestNivel2 = new javax.swing.JTabbedPane();
         background8 = new javax.swing.JPanel();
         bannerAdminGeCu = new javax.swing.JLabel();
@@ -704,6 +710,39 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
         });
 
+        CursosV.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        CursosV.setForeground(new java.awt.Color(59, 59, 59));
+        CursosV.setText("Cursos");
+
+        valorCursosVi.setModel(new javax.swing.table.DefaultTableModel(
+            g.visualizarCursos(),
+            new String [] {
+                "Curso", "Profesor"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(valorCursosVi);
+
+        valorCarrerasVi.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
+        valorCarrerasVi.setModel(new javax.swing.AbstractListModel<String>() {
+
+            String[] strings = g.visualizarCarreras();
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        scrollSalaVi1.setViewportView(valorCarrerasVi);
+
+        CarrerasV.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
+        CarrerasV.setForeground(new java.awt.Color(59, 59, 59));
+        CarrerasV.setText("Carreras");
+
         javax.swing.GroupLayout background4Layout = new javax.swing.GroupLayout(background4);
         background4.setLayout(background4Layout);
         background4Layout.setHorizontalGroup(
@@ -718,25 +757,48 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(background4Layout.createSequentialGroup()
                 .addGap(106, 106, 106)
                 .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(profesoresV)
                     .addComponent(salasV)
-                    .addComponent(scrollSalaVi, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(scrollProfesoresVi, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(scrollProfesoresVi, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(profesoresV)
+                    .addComponent(scrollSalaVi, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(background4Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CursosV))
+                        .addGap(511, 511, 511))
+                    .addGroup(background4Layout.createSequentialGroup()
+                        .addGap(269, 269, 269)
+                        .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CarrerasV)
+                            .addComponent(scrollSalaVi1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         background4Layout.setVerticalGroup(
             background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(background4Layout.createSequentialGroup()
-                .addComponent(bannerAdminVi)
-                .addGap(43, 43, 43)
-                .addComponent(profesoresV)
-                .addGap(31, 31, 31)
-                .addComponent(scrollProfesoresVi, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(salasV)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(scrollSalaVi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 364, Short.MAX_VALUE)
+                .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(background4Layout.createSequentialGroup()
+                        .addComponent(bannerAdminVi)
+                        .addGap(43, 43, 43)
+                        .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(profesoresV)
+                            .addComponent(CursosV))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                        .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
+                            .addComponent(scrollProfesoresVi, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addGap(34, 34, 34)
+                        .addGroup(background4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(salasV)
+                            .addComponent(CarrerasV))
+                        .addGap(44, 44, 44)
+                        .addComponent(scrollSalaVi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(background4Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(scrollSalaVi1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(298, 298, 298)
                 .addComponent(botonAceptarVi, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
@@ -853,7 +915,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         profesorGe.setPreferredSize(new java.awt.Dimension(135, 28));
 
         valorGeProfesor.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-        valorGeProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        valorGeProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Item 1", "Item 2", "Item 3"}));
 
         nuevoNombreProfesor.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
         nuevoNombreProfesor.setForeground(new java.awt.Color(51, 51, 51));
@@ -1199,6 +1261,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
             g.crearCarrera(a);
             valorCarreraGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
             valorElijaCarrera.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
+            valorCarrerasVi.setModel(new javax.swing.AbstractListModel<String>() {
+
+                String[] strings = g.visualizarCarreras();
+                public int getSize() { return strings.length; }
+                public String getElementAt(int i) { return strings[i]; }
+            });
             JOptionPane.showMessageDialog(rootPane, "Carrera creada con éxito");
         }
     }//GEN-LAST:event_botonAceptarCarreraActionPerformed
@@ -1239,6 +1307,20 @@ public class InterfazGrafica extends javax.swing.JFrame {
         }
         else {
             g.crearCurso(a);
+            valorCursosVi.setModel(new javax.swing.table.DefaultTableModel(
+            g.visualizarCursos(),
+            new String [] {
+                "Curso", "Profesor"
+            }
+            ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+            });
             JOptionPane.showMessageDialog(rootPane, "Curso creado con éxito");
         }
     }//GEN-LAST:event_botonAceptarCursoActionPerformed
@@ -1298,11 +1380,25 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
     private void botonEliminarGeCu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarGeCu1ActionPerformed
         g.eliminarCurso(this.valorGeCurso.getSelectedItem().toString());
+        valorCursosVi.setModel(new javax.swing.table.DefaultTableModel(
+            g.visualizarCursos(),
+            new String [] {
+                "Curso", "Profesor"
+            }
+            ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+            });
         JOptionPane.showMessageDialog(rootPane, "Se ha eliminado el curso seleccionado");
     }//GEN-LAST:event_botonEliminarGeCu1ActionPerformed
 
     private void botonEliminarGePrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarGePrActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here: elimianr profesor
     }//GEN-LAST:event_botonEliminarGePrActionPerformed
 
     private void botonModificarGeCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarGeCaActionPerformed
@@ -1313,6 +1409,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
             g.modificarNombreCarrera(valorCarreraGe.getSelectedItem().toString(), this.valorNewNombreCarrera.getText());
             valorCarreraGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
             valorElijaCarrera.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
+            valorCarrerasVi.setModel(new javax.swing.AbstractListModel<String>() {
+
+                String[] strings = g.visualizarCarreras();
+                public int getSize() { return strings.length; }
+                public String getElementAt(int i) { return strings[i]; }
+            });
             JOptionPane.showMessageDialog(rootPane, "Carrera modificada con éxito");
         }
     }//GEN-LAST:event_botonModificarGeCaActionPerformed
@@ -1328,6 +1430,12 @@ public class InterfazGrafica extends javax.swing.JFrame {
         g.eliminarCarrera(this.valorCarreraGe.getSelectedItem().toString());
         valorCarreraGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
         valorElijaCarrera.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarCarreras()));
+        valorCarrerasVi.setModel(new javax.swing.AbstractListModel<String>() {
+
+            String[] strings = g.visualizarCarreras();
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
         JOptionPane.showMessageDialog(rootPane, "Se ha eliminado la carrera seleccionada");
     }//GEN-LAST:event_botonEliminarGeCaActionPerformed
 
@@ -1367,6 +1475,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel CarrerasV;
+    private javax.swing.JLabel CursosV;
     private javax.swing.JPanel background0;
     private javax.swing.JPanel background1;
     private javax.swing.JPanel background10;
@@ -1418,6 +1528,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JLabel elijaCurso3;
     private javax.swing.JLabel elijaProfesor;
     private javax.swing.JLabel elijaSala;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel nombreCarrera;
     private javax.swing.JLabel nombreCurso;
     private javax.swing.JLabel nombreProfesor;
@@ -1448,6 +1559,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrollProfesor;
     private javax.swing.JScrollPane scrollProfesoresVi;
     private javax.swing.JScrollPane scrollSalaVi;
+    private javax.swing.JScrollPane scrollSalaVi1;
     private javax.swing.JScrollPane scrollTelefono;
     private javax.swing.JTabbedPane tabsAdminAsigNivel2;
     private javax.swing.JTabbedPane tabsAdminGestNivel2;
@@ -1456,9 +1568,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
     private javax.swing.JTabbedPane tabsNivel0;
     private javax.swing.JTabbedPane tabsProfeNivel1;
     private javax.swing.JComboBox<String> valorCarreraGe;
+    private javax.swing.JList<String> valorCarrerasVi;
     private javax.swing.JTextPane valorContacto;
     private javax.swing.JTextPane valorCorreoInstitucional;
     private javax.swing.JTextPane valorCorreoPersonal;
+    private javax.swing.JTable valorCursosVi;
     private javax.swing.JComboBox<String> valorElijaCarrera;
     private javax.swing.JComboBox<String> valorElijaCurso;
     private javax.swing.JComboBox<String> valorElijaCurso2;
