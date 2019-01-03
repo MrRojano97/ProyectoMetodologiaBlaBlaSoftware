@@ -93,3 +93,12 @@ Nombre: Francisco Gamboa Fecha 31-12-2018
 de su respectivo hash en la calse Gestion.
 3.- Ahora los metodos Visualizar en la clase gestion retornan ArrayList o String[][] para facilitar el manejo de datos al 
 momento de desplegarlos en la interfaz.
+
+Nombre: Javiera Cabrera Fecha 03-01-2019
+
+1.- Modificacion de tamaños a botones aceptar.
+2.- Vincular la creacion de un profesor a asignacion de profesor a curso.
+3.- Vincular la creacion de un curso a asignacion de profesor a curso, asignacion de curso a sala, asignacion de curso a carrera.
+4.- Vincular la creacion de sala a asignacion de curso a sala.
+5.- Vincular la creacion de carrera a asignacion de curso a carrera.
+
