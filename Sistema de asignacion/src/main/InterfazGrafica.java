@@ -474,7 +474,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         valorElijaCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
         valorElijaCurso.setForeground(new java.awt.Color(51, 51, 51));
-        valorElijaCurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        valorElijaCurso.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
 
         botonAceptarPrCu.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
         botonAceptarPrCu.setText("Aceptar");
@@ -535,7 +535,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         valorElijaCurso2.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
         valorElijaCurso2.setForeground(new java.awt.Color(51, 51, 51));
-        valorElijaCurso2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        valorElijaCurso2.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
 
         elijaSala.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
         elijaSala.setForeground(new java.awt.Color(59, 59, 59));
@@ -823,7 +823,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         cursoGe.setPreferredSize(new java.awt.Dimension(135, 28));
 
         valorGeCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-        valorGeCurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Progra", "Interfaz"}));
+        valorGeCurso.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
         valorGeCurso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 valorGeCursoActionPerformed(evt);
@@ -1103,9 +1103,9 @@ public class InterfazGrafica extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, background10Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botonEliminarGeCa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(18, 18, 18)
                 .addComponent(botonModificarGeCa, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77))
+                .addGap(43, 43, 43))
         );
         background10Layout.setVerticalGroup(
             background10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1119,11 +1119,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 .addGroup(background10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(scrollNewNombreCa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nuevoNombreCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 660, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 648, Short.MAX_VALUE)
                 .addGroup(background10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonModificarGeCa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonEliminarGeCa, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22))
+                .addGap(34, 34, 34))
         );
 
         tabsAdminGestNivel2.addTab("Carreras", background10);
@@ -1307,6 +1307,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
         }
         else {
             g.crearCurso(a);
+            valorElijaCurso.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
+            valorGeCurso.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
             valorCursosVi.setModel(new javax.swing.table.DefaultTableModel(
             g.visualizarCursos(),
             new String [] {
@@ -1321,6 +1323,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 return types [columnIndex];
             }
             });
+            valorElijaCurso2.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
             JOptionPane.showMessageDialog(rootPane, "Curso creado con éxito");
         }
     }//GEN-LAST:event_botonAceptarCursoActionPerformed
@@ -1374,12 +1377,31 @@ public class InterfazGrafica extends javax.swing.JFrame {
         }
         else {
             g.modificarCurso(old, a, "");
+            valorGeCurso.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
+            valorCursosVi.setModel(new javax.swing.table.DefaultTableModel(
+            g.visualizarCursos(),
+            new String [] {
+                "Curso", "Profesor"
+            }
+            ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+            });
+            valorElijaCurso.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
+            valorElijaCurso2.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
             JOptionPane.showMessageDialog(rootPane, "Curso modificado con éxito");
         }
     }//GEN-LAST:event_botonModificarGeCuActionPerformed
 
     private void botonEliminarGeCu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarGeCu1ActionPerformed
         g.eliminarCurso(this.valorGeCurso.getSelectedItem().toString());
+        valorElijaCurso.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
+        valorElijaCurso2.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
         valorCursosVi.setModel(new javax.swing.table.DefaultTableModel(
             g.visualizarCursos(),
             new String [] {
@@ -1394,6 +1416,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
                 return types [columnIndex];
             }
             });
+        valorGeCurso.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
         JOptionPane.showMessageDialog(rootPane, "Se ha eliminado el curso seleccionado");
     }//GEN-LAST:event_botonEliminarGeCu1ActionPerformed
 
