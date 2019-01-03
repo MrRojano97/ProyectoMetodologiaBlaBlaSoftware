@@ -1,6 +1,8 @@
 package main;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -16,6 +18,7 @@ public class Gestion{
     HashMap<String, Profesor> profesores = new HashMap<>();
     HashMap<String, Curso> cursos = new HashMap<>();
     HashMap<String, Sala> salas = new HashMap<>();
+    private Persistor persistor = new Persistor();
     
     Semestre semestre;
     Carrera carrera;
@@ -24,7 +27,8 @@ public class Gestion{
     Profesor profesor;
     Sala sala;
     
-    public Gestion(){
+    public Gestion() throws IOException
+    {
         this.inicio();
     }
     /**
@@ -110,6 +114,8 @@ public class Gestion{
             
         } 
     }
+    
+    
     
     public void asignarProfesorACurso(String nombreProfesor, String nombreCurso){
         if(profesores.containsKey(nombreProfesor) && cursos.containsKey(nombreCurso) ){
@@ -294,4 +300,45 @@ public class Gestion{
          }
         
     }
+    
+    public boolean agregarCursoAProfesor(String nombreProfesor, String nombreCurso)
+    {
+        
+        if(this.profesores.containsKey(nombreProfesor))
+        {
+            Profesor profe = this.profesores.get(nombreProfesor);
+            if(this.cursos.containsKey(nombreCurso))
+            {
+                Curso curso =this.cursos.get(nombreCurso);
+                return profe.agregarCurso(curso);
+            }
+        }
+        
+        return false;
+    }
+    
+    public void escribirSalas() throws IOException
+    {
+        Collection<Sala> co =this.salas.values();
+        Sala[] salidaSalas = new Sala[co.size()];
+        int i=0;
+        for(Sala salal:co)
+        {
+            salidaSalas[i]=salal;
+            i++; 
+        }
+        
+        this.persistor.escribirSalas(salidaSalas );
+    }
+   
+    public void cargarSalas() throws IOException
+    {
+        ArrayList<Sala> salidaFile =this.persistor.leerSalasJson();
+        for(Sala contenedor: salidaFile)
+        {
+            this.salas.put(contenedor.getNumero(), contenedor);
+        }
+    }
+    
+    
 }

@@ -7,6 +7,7 @@ package main;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -21,7 +22,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
     /**
      * Creates new form InterfazGrafica
      */
-    public InterfazGrafica() {
+    public InterfazGrafica() throws IOException{
         initComponents();
 
     }
