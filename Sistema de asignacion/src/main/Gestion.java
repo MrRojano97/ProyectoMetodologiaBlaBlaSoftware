@@ -284,6 +284,17 @@ public class Gestion{
         }
         return prof;
     }
+     
+     public String[] arregloProfesores() {
+         String[] prof=new String[this.profesores.size()];
+        int i=0;
+        for (Map.Entry<String, Profesor> entry : profesores.entrySet()) {
+            prof[i]=entry.getValue().getNombre();
+            i++;
+        }
+        return prof;
+     }
+     
     //------------------------------ Semestre ------------------------------ //
     // recordar validar las fechas
     public void crearSemestre(String nombreSemestre,String fechainicio,String fechaFin){

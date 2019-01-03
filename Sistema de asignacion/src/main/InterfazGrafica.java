@@ -7,6 +7,7 @@ package main;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Date;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -170,7 +171,6 @@ public class InterfazGrafica extends javax.swing.JFrame {
         inicioDeSesion.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         inicioDeSesion.setTitle("Inicio De Sesión");
         inicioDeSesion.setAlwaysOnTop(true);
-        inicioDeSesion.setPreferredSize(new java.awt.Dimension(400, 550));
         inicioDeSesion.setResizable(false);
 
         backgroundI0.setBackground(new java.awt.Color(216, 216, 216));
@@ -570,7 +570,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         valorElijaProfe.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
         valorElijaProfe.setForeground(new java.awt.Color(51, 51, 51));
-        valorElijaProfe.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        valorElijaProfe.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloProfesores()));
 
         elijaCurso.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
         elijaCurso.setForeground(new java.awt.Color(59, 59, 59));
@@ -708,7 +708,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
 
         valorElijaCurso3.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
         valorElijaCurso3.setForeground(new java.awt.Color(51, 51, 51));
-        valorElijaCurso3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        valorElijaCurso3.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
 
         elijaCarrera.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
         elijaCarrera.setForeground(new java.awt.Color(51, 51, 51));
@@ -1019,7 +1019,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         profesorGe.setPreferredSize(new java.awt.Dimension(135, 28));
 
         valorGeProfesor.setFont(new java.awt.Font("Eras Medium ITC", 0, 18)); // NOI18N
-        valorGeProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Item 1", "Item 2", "Item 3"}));
+        valorGeProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloProfesores()));
 
         nuevoNombreProfesor.setFont(new java.awt.Font("Eras Medium ITC", 0, 24)); // NOI18N
         nuevoNombreProfesor.setForeground(new java.awt.Color(51, 51, 51));
@@ -1400,6 +1400,8 @@ public class InterfazGrafica extends javax.swing.JFrame {
                     return types [columnIndex];
                 }
             });
+            valorGeProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloProfesores()));
+            this.valorElijaProfe.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloProfesores()));
             JOptionPane.showMessageDialog(rootPane, "Profesor creado y añadido con éxito");
         }
     }//GEN-LAST:event_botonAceptarProfesorActionPerformed
@@ -1428,6 +1430,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             }
             });
             valorElijaCurso2.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
+            valorElijaCurso3.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
             JOptionPane.showMessageDialog(rootPane, "Curso creado con éxito");
         }
     }//GEN-LAST:event_botonAceptarCursoActionPerformed
@@ -1449,7 +1452,35 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }//GEN-LAST:event_botonAceptarViActionPerformed
 
     private void botonModificarGePrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarGePrActionPerformed
-        // TODO add your handling code here:
+        String a = this.valorNewNombreProfe.getText();
+        String b = this.valorNewCorreoInstitucional.getText();
+        String c = this.valorNewCorreoPersonal.getText();
+        String d = this.valorNewContacto.getText();
+        if (a.equals("") || b.equals("") || c.equals("") || d.equals("")) {
+            JOptionPane.showMessageDialog(rootPane, "Faltan datos por ingresar. Asegurese de completar todas las casillas");
+        }
+        else {
+            g.modificarProfesor(this.valorGeProfesor.getSelectedItem().toString(), a, c, d, b, new Date());
+            valorProfesoresVi.setModel(new javax.swing.table.DefaultTableModel(
+                g.visualizarProfesores(),
+                new String [] {
+                    "Nombre", "Contacto", "Correo Personal", "Correo Institucional"
+                }
+            ) {
+                Class[] types = new Class [] {
+                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                };
+
+                public Class getColumnClass(int columnIndex) {
+                    return types [columnIndex];
+                }
+            });
+            valorGeProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloProfesores()));
+            this.valorElijaProfe.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloProfesores()));
+            JOptionPane.showMessageDialog(rootPane, "Profesor modificado con éxito");
+        }
+        
+        
     }//GEN-LAST:event_botonModificarGePrActionPerformed
 
     private void botonModificarGeSaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarGeSaActionPerformed
@@ -1498,6 +1529,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
             });
             valorElijaCurso.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
             valorElijaCurso2.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
+            valorElijaCurso3.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
             JOptionPane.showMessageDialog(rootPane, "Curso modificado con éxito");
         }
     }//GEN-LAST:event_botonModificarGeCuActionPerformed
@@ -1506,6 +1538,7 @@ public class InterfazGrafica extends javax.swing.JFrame {
         g.eliminarCurso(this.valorGeCurso.getSelectedItem().toString());
         valorElijaCurso.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
         valorElijaCurso2.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
+        valorElijaCurso3.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloCursos()));
         valorCursosVi.setModel(new javax.swing.table.DefaultTableModel(
             g.visualizarCursos(),
             new String [] {
@@ -1525,7 +1558,25 @@ public class InterfazGrafica extends javax.swing.JFrame {
     }//GEN-LAST:event_botonEliminarGeCuActionPerformed
 
     private void botonEliminarGePrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarGePrActionPerformed
-        // TODO add your handling code here: elimianr profesor
+        g.eliminarProfesor(this.valorGeProfesor.getSelectedItem().toString());
+        valorGeProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloProfesores()));
+        valorProfesoresVi.setModel(new javax.swing.table.DefaultTableModel(
+                g.visualizarProfesores(),
+                new String [] {
+                    "Nombre", "Contacto", "Correo Personal", "Correo Institucional"
+                }
+            ) {
+                Class[] types = new Class [] {
+                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                };
+
+                public Class getColumnClass(int columnIndex) {
+                    return types [columnIndex];
+                }
+            });
+        this.valorElijaProfe.setModel(new javax.swing.DefaultComboBoxModel<>(g.arregloProfesores()));
+        JOptionPane.showMessageDialog(rootPane, "Se ha eliminado el profesor seleccionado");
+        
     }//GEN-LAST:event_botonEliminarGePrActionPerformed
 
     private void botonModificarGeCaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarGeCaActionPerformed
@@ -1550,6 +1601,11 @@ public class InterfazGrafica extends javax.swing.JFrame {
         g.eliminarSala(this.valorSalaGe.getSelectedItem().toString());
         valorElijaSala.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarSalas()));
         valorSalaGe.setModel(new javax.swing.DefaultComboBoxModel<>(g.visualizarSalas()));
+        valorSalaVi.setModel(new javax.swing.AbstractListModel<String>() {
+                String[] strings = g.visualizarSalas();
+                public int getSize() { return strings.length; }
+                public String getElementAt(int i) { return strings[i]; }
+            });
         JOptionPane.showMessageDialog(rootPane, "Se ha eliminado la sala seleccionada");
     }//GEN-LAST:event_botonEliminarGeSaActionPerformed
 
