@@ -161,10 +161,12 @@ public class Gestion{
          }
      }
     // RETORNA ArrayLis CON NOMBRES DE SALAS
-    public ArrayList<String> visualizarSalas(){
-        ArrayList<String> s= new ArrayList<>();
+    public String[] visualizarSalas(){
+        String[] s= new String[this.salas.size()];
+        int i=0;
         for (Map.Entry<String, Sala> entry : salas.entrySet()) {
-            s.add(entry.getValue().getNumero());
+            s[i] = entry.getValue().getNumero();
+            i++;
         }
         return s;
     }
@@ -216,10 +218,12 @@ public class Gestion{
      }
      }
     //RETORNA ArrayLis CON NOMBRES DE CARRERAS
-    public ArrayList<String> visualizarCarreras(){
-        ArrayList<String> c=new ArrayList<>();
+    public String[] visualizarCarreras(){
+        String[] c=new String[this.carreras.size()];
+        int i=0;
         for (Map.Entry<String, Carrera> entry : carreras.entrySet()) {
-            c.add(entry.getValue().getNombre());
+            c[i] = entry.getValue().getNombre();
+            i++;
         }
         return c;
     }
