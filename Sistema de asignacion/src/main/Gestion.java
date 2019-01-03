@@ -77,6 +77,32 @@ public class Gestion {
         nueva_cuenta.setPermisos_de_admin(false);
         cuentas.add(nueva_cuenta);    
     }    
+    //Este buscara si la cuenta existe y comprobara si la clave corresponde//
+    public void verificarCuenta(String id, String pass){
+        for(int i=0; i<cuentas.size();i++){
+            if(id.equals(cuentas.get(i).id)){
+                if(cuentas.get(i).verificarClave(pass)){
+                    this.cuenta_en_sesion= cuentas.get(i);
+                    return;
+                }
+                else{
+                    System.out.println("Contraseña incorrecta.");
+                    return;
+                }
+            }
+        }
+        System.out.println("No existe ese usuario.");
+     }
+    
+    public String quienAdmin(String pass){
+        for(int i=0; i<cuentas.size();i++){
+            if(cuentas.get(i).isPermisos_de_admin()){
+               return cuentas.get(i).getId();
+               }
+            }
+           return "";
+        }
+    //Revisara quien es el admin en caso de algun cambio, (Se puede eliminar si el Admin no cambia)//
     /**
      * Metodo encargado de mostrar por consola
      * los profesores contenidos en la lista profesoresContratados
